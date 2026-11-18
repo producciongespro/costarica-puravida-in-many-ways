@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@theme {
+  --font-amaranth: 'Amaranth', sans-serif;
+  --font-exo: 'Exo2', sans-serif;
+  --font-fredoka: 'FredokaOne', cursive, sans-serif;
+  --font-hanken: 'Hanken', sans-serif;
+  --font-opensans: 'OpenSans', sans-serif;
+  --font-display: 'FredokaOne', 'Amaranth', sans-serif;
+  --color-crBlue: #479BD6;
+  --color-crDark: #231F20;
+  --color-crGold: #F2A830;
+  --color-crGreen: #3F9D21;
+}
+
+/* ==========================================================================
+   Original Extracted Fonts (@font-face)
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Amaranth';
+  src: url('/assets/fonts/Amaranth-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amaranth';
+  src: url('/assets/fonts/Amaranth-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amaranth';
+  src: url('/assets/fonts/Amaranth-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amaranth';
+  src: url('/assets/fonts/Amaranth-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Exo2';
+  src: url('/assets/fonts/Exo2-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Exo2';
+  src: url('/assets/fonts/Exo2-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FredokaOne';
+  src: url('/assets/fonts/FredokaOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hanken';
+  src: url('/assets/fonts/Hanken-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hanken';
+  src: url('/assets/fonts/Hanken-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hanken';
+  src: url('/assets/fonts/Hanken-Book.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/assets/fonts/OpenSansLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/assets/fonts/OpenSansRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/assets/fonts/OpenSansSemibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/assets/fonts/OpenSansBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    font-family: 'Hanken', 'OpenSans', sans-serif;
+    user-select: none;
+  }
+}
+
+/* Custom Scrollbar for Glossary, Credits & Debug Panel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(71, 155, 214, 0.7);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(71, 155, 214, 1);
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: floatSlow 2.6s ease-in-out infinite;
+}

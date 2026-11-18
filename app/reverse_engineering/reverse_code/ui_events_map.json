@@ -1,0 +1,2193 @@
+{
+  "sourceFile": "methods_pointedto_by_uievents.xml",
+  "assemblies": [
+    {
+      "assemblyName": "Assembly-CSharp",
+      "typesCount": 48,
+      "types": [
+        {
+          "typeName": "GameMenu",
+          "totalBindingsInScenes": 424,
+          "uniqueMethodsCount": 7,
+          "methods": [
+            {
+              "methodName": "DesactivatePanelMenu",
+              "uiEventBindingCount": 53,
+              "signatures": [
+                {
+                  "signature": "public void DesactivatePanelMenu()",
+                  "asmFuncName": "IAh",
+                  "fnPtr": 9878
+                }
+              ]
+            },
+            {
+              "methodName": "ActivatePanelMenu",
+              "uiEventBindingCount": 53,
+              "signatures": [
+                {
+                  "signature": "public void ActivatePanelMenu()",
+                  "asmFuncName": "pBh",
+                  "fnPtr": 9877
+                }
+              ]
+            },
+            {
+              "methodName": "RunCancel",
+              "uiEventBindingCount": 106,
+              "signatures": [
+                {
+                  "signature": "public void RunCancel()",
+                  "asmFuncName": "tBh",
+                  "fnPtr": 9882
+                }
+              ]
+            },
+            {
+              "methodName": "ReloadCurrentScene",
+              "uiEventBindingCount": 53,
+              "signatures": [
+                {
+                  "signature": "public void ReloadCurrentScene()",
+                  "asmFuncName": "vBh",
+                  "fnPtr": 9884
+                }
+              ]
+            },
+            {
+              "methodName": "ReturnToGame",
+              "uiEventBindingCount": 53,
+              "signatures": [
+                {
+                  "signature": "public void ReturnToGame()",
+                  "asmFuncName": "uBh",
+                  "fnPtr": 9883
+                }
+              ]
+            },
+            {
+              "methodName": "HideEnding",
+              "uiEventBindingCount": 53,
+              "signatures": [
+                {
+                  "signature": "public void HideEnding()",
+                  "asmFuncName": "xBh",
+                  "fnPtr": 9887
+                }
+              ]
+            },
+            {
+              "methodName": "ShowConfirmCancelPanel",
+              "uiEventBindingCount": 53,
+              "signatures": [
+                {
+                  "signature": "public void ShowConfirmCancelPanel()",
+                  "asmFuncName": "sBh",
+                  "fnPtr": 9881
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "MCR_CargarEscena",
+          "totalBindingsInScenes": 265,
+          "uniqueMethodsCount": 1,
+          "methods": [
+            {
+              "methodName": "CargarEscenaConCarga",
+              "uiEventBindingCount": 265,
+              "signatures": [
+                {
+                  "signature": "public void CargarEscenaConCarga(string value)",
+                  "asmFuncName": "YQi",
+                  "fnPtr": 7861
+                },
+                {
+                  "signature": "public void CargarEscenaConCarga(int value)",
+                  "asmFuncName": "ZQi",
+                  "fnPtr": 7862
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "GameControl",
+          "totalBindingsInScenes": 106,
+          "uniqueMethodsCount": 2,
+          "methods": [
+            {
+              "methodName": "ExitApp",
+              "uiEventBindingCount": 53,
+              "signatures": [
+                {
+                  "signature": "public void ExitApp()",
+                  "asmFuncName": "TAh",
+                  "fnPtr": 9859
+                }
+              ]
+            },
+            {
+              "methodName": "CargarEscenaConCarga",
+              "uiEventBindingCount": 53,
+              "signatures": [
+                {
+                  "signature": "public void CargarEscenaConCarga(string name)",
+                  "asmFuncName": "KAh",
+                  "fnPtr": 7770
+                },
+                {
+                  "signature": "public void CargarEscenaConCarga(int value)",
+                  "asmFuncName": "QAh",
+                  "fnPtr": 7773
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "UIMisc",
+          "totalBindingsInScenes": 271,
+          "uniqueMethodsCount": 11,
+          "methods": [
+            {
+              "methodName": "CallNewSceneContinue",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void CallNewSceneContinue(int value)",
+                  "asmFuncName": "AMr",
+                  "fnPtr": 8476
+                }
+              ]
+            },
+            {
+              "methodName": "CallNewScene",
+              "uiEventBindingCount": 11,
+              "signatures": [
+                {
+                  "signature": "public void CallNewScene(int value)",
+                  "asmFuncName": "zMr",
+                  "fnPtr": 8475
+                }
+              ]
+            },
+            {
+              "methodName": "CallNewSceneErase",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void CallNewSceneErase(int value)",
+                  "asmFuncName": "BMr",
+                  "fnPtr": 8477
+                }
+              ]
+            },
+            {
+              "methodName": "GameMap",
+              "uiEventBindingCount": 4,
+              "signatures": [
+                {
+                  "signature": "public void GameMap()",
+                  "asmFuncName": "EMr",
+                  "fnPtr": 10888
+                }
+              ]
+            },
+            {
+              "methodName": "MaxVolume",
+              "uiEventBindingCount": 123,
+              "signatures": [
+                {
+                  "signature": "public void MaxVolume()",
+                  "asmFuncName": "HMr",
+                  "fnPtr": 10891
+                }
+              ]
+            },
+            {
+              "methodName": "LowVolume",
+              "uiEventBindingCount": 123,
+              "signatures": [
+                {
+                  "signature": "public void LowVolume()",
+                  "asmFuncName": "GMr",
+                  "fnPtr": 10890
+                }
+              ]
+            },
+            {
+              "methodName": "DefinirPersonaje",
+              "uiEventBindingCount": 4,
+              "signatures": [
+                {
+                  "signature": "public void DefinirPersonaje(int value)",
+                  "asmFuncName": "CMr",
+                  "fnPtr": 8478
+                }
+              ]
+            },
+            {
+              "methodName": "FirstDialog",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void FirstDialog()",
+                  "asmFuncName": "DMr",
+                  "fnPtr": 10887
+                }
+              ]
+            },
+            {
+              "methodName": "MusicPlay",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void MusicPlay()",
+                  "asmFuncName": "IMr",
+                  "fnPtr": 10892
+                }
+              ]
+            },
+            {
+              "methodName": "MusicStop",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void MusicStop()",
+                  "asmFuncName": "JMr",
+                  "fnPtr": 10893
+                }
+              ]
+            },
+            {
+              "methodName": "RunCancel",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void RunCancel()",
+                  "asmFuncName": "FMr",
+                  "fnPtr": 10889
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "MenuBar",
+          "totalBindingsInScenes": 18,
+          "uniqueMethodsCount": 1,
+          "methods": [
+            {
+              "methodName": "changeScene",
+              "uiEventBindingCount": 18,
+              "signatures": [
+                {
+                  "signature": "public void changeScene(int number)",
+                  "asmFuncName": "kRi",
+                  "fnPtr": 7868
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "ManagerLogin",
+          "totalBindingsInScenes": 82,
+          "uniqueMethodsCount": 16,
+          "methods": [
+            {
+              "methodName": "SetAvatarItem",
+              "uiEventBindingCount": 32,
+              "signatures": [
+                {
+                  "signature": "public void SetAvatarItem(int color)",
+                  "asmFuncName": "XPi",
+                  "fnPtr": 7858
+                }
+              ]
+            },
+            {
+              "methodName": "AvatarOptionSelected",
+              "uiEventBindingCount": 16,
+              "signatures": [
+                {
+                  "signature": "public void AvatarOptionSelected(int selection)",
+                  "asmFuncName": "GPi",
+                  "fnPtr": 7857
+                }
+              ]
+            },
+            {
+              "methodName": "SetSex",
+              "uiEventBindingCount": 6,
+              "signatures": [
+                {
+                  "signature": "public void SetSex(int i)",
+                  "asmFuncName": "YPi",
+                  "fnPtr": 7859
+                }
+              ]
+            },
+            {
+              "methodName": "CloseErrorMesage",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void CloseErrorMesage()",
+                  "asmFuncName": "JPi",
+                  "fnPtr": 10225
+                }
+              ]
+            },
+            {
+              "methodName": "LogOut",
+              "uiEventBindingCount": 4,
+              "signatures": [
+                {
+                  "signature": "public void LogOut()",
+                  "asmFuncName": "QPi",
+                  "fnPtr": 10229
+                }
+              ]
+            },
+            {
+              "methodName": "prevChoice",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void prevChoice()",
+                  "asmFuncName": "UPi",
+                  "fnPtr": 10235
+                }
+              ]
+            },
+            {
+              "methodName": "ResetAvatar",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void ResetAvatar()",
+                  "asmFuncName": "DPi",
+                  "fnPtr": 10242
+                }
+              ]
+            },
+            {
+              "methodName": "NewUserScreen",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void NewUserScreen()",
+                  "asmFuncName": "KPi",
+                  "fnPtr": 10226
+                }
+              ]
+            },
+            {
+              "methodName": "nextChoice",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void nextChoice()",
+                  "asmFuncName": "TPi",
+                  "fnPtr": 10234
+                }
+              ]
+            },
+            {
+              "methodName": "NextAvatar",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void NextAvatar()",
+                  "asmFuncName": "_Pi",
+                  "fnPtr": 10239
+                }
+              ]
+            },
+            {
+              "methodName": "PreviousAvatar",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void PreviousAvatar()",
+                  "asmFuncName": "$Pi",
+                  "fnPtr": 10240
+                }
+              ]
+            },
+            {
+              "methodName": "CreateNewUser",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void CreateNewUser()",
+                  "asmFuncName": "MPi",
+                  "fnPtr": 10227
+                }
+              ]
+            },
+            {
+              "methodName": "SendLoginServer",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void SendLoginServer()",
+                  "asmFuncName": "OPi",
+                  "fnPtr": 10228
+                }
+              ]
+            },
+            {
+              "methodName": "PrevColor",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void PrevColor()",
+                  "asmFuncName": "WPi",
+                  "fnPtr": 10237
+                }
+              ]
+            },
+            {
+              "methodName": "NextColor",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void NextColor()",
+                  "asmFuncName": "VPi",
+                  "fnPtr": 10236
+                }
+              ]
+            },
+            {
+              "methodName": "GoBackToMainLogin",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void GoBackToMainLogin()",
+                  "asmFuncName": "IPi",
+                  "fnPtr": 10224
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "SwithSceneUtility",
+          "totalBindingsInScenes": 43,
+          "uniqueMethodsCount": 3,
+          "methods": [
+            {
+              "methodName": "DeleteContinue",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void DeleteContinue()",
+                  "asmFuncName": "BIr",
+                  "fnPtr": 10768
+                }
+              ]
+            },
+            {
+              "methodName": "CargarJuego",
+              "uiEventBindingCount": 40,
+              "signatures": [
+                {
+                  "signature": "public void CargarJuego(string levelName)",
+                  "asmFuncName": "CIr",
+                  "fnPtr": 8443
+                }
+              ]
+            },
+            {
+              "methodName": "SendAvatarData",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void SendAvatarData()",
+                  "asmFuncName": "AIr",
+                  "fnPtr": 10767
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "Fungus.DialogInput",
+          "totalBindingsInScenes": 110,
+          "uniqueMethodsCount": 2,
+          "methods": [
+            {
+              "methodName": "SetDialogClickedFlag",
+              "uiEventBindingCount": 55,
+              "signatures": [
+                {
+                  "signature": "public virtual void SetDialogClickedFlag()",
+                  "asmFuncName": "Q3h",
+                  "fnPtr": 9151
+                }
+              ]
+            },
+            {
+              "methodName": "SetButtonClickedFlag",
+              "uiEventBindingCount": 55,
+              "signatures": [
+                {
+                  "signature": "public virtual void SetButtonClickedFlag()",
+                  "asmFuncName": "R3h",
+                  "fnPtr": 9152
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "PreguntaController",
+          "totalBindingsInScenes": 17,
+          "uniqueMethodsCount": 8,
+          "methods": [
+            {
+              "methodName": "RespuestaMultiple",
+              "uiEventBindingCount": 10,
+              "signatures": [
+                {
+                  "signature": "public void RespuestaMultiple(int value)",
+                  "asmFuncName": "aDr",
+                  "fnPtr": 8418
+                }
+              ]
+            },
+            {
+              "methodName": "Respuesta4",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void Respuesta4()",
+                  "asmFuncName": "ZCr",
+                  "fnPtr": 10632
+                }
+              ]
+            },
+            {
+              "methodName": "EvaluateMultipleScores",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void EvaluateMultipleScores()",
+                  "asmFuncName": "bDr",
+                  "fnPtr": 10635
+                }
+              ]
+            },
+            {
+              "methodName": "Respuesta5",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void Respuesta5()",
+                  "asmFuncName": "_Cr",
+                  "fnPtr": 10633
+                }
+              ]
+            },
+            {
+              "methodName": "Respuesta6",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void Respuesta6()",
+                  "asmFuncName": "$Cr",
+                  "fnPtr": 10634
+                }
+              ]
+            },
+            {
+              "methodName": "Respuesta2",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void Respuesta2()",
+                  "asmFuncName": "XCr",
+                  "fnPtr": 10630
+                }
+              ]
+            },
+            {
+              "methodName": "Respuesta3",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void Respuesta3()",
+                  "asmFuncName": "YCr",
+                  "fnPtr": 10631
+                }
+              ]
+            },
+            {
+              "methodName": "Respuesta1",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void Respuesta1()",
+                  "asmFuncName": "VCr",
+                  "fnPtr": 10629
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "MCR_MostrarJuegos",
+          "totalBindingsInScenes": 29,
+          "uniqueMethodsCount": 2,
+          "methods": [
+            {
+              "methodName": "OcultarPanelJuego",
+              "uiEventBindingCount": 8,
+              "signatures": [
+                {
+                  "signature": "public void OcultarPanelJuego()",
+                  "asmFuncName": "gRi",
+                  "fnPtr": 10253
+                },
+                {
+                  "signature": "private void OcultarPanelJuego(int provincia)",
+                  "asmFuncName": "hRi",
+                  "fnPtr": 7866
+                }
+              ]
+            },
+            {
+              "methodName": "CargarJuego",
+              "uiEventBindingCount": 21,
+              "signatures": [
+                {
+                  "signature": "public void CargarJuego(string levelName)",
+                  "asmFuncName": "iRi",
+                  "fnPtr": 7867
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "PopQuiz",
+          "totalBindingsInScenes": 7,
+          "uniqueMethodsCount": 1,
+          "methods": [
+            {
+              "methodName": "MostrarJuegosPanel",
+              "uiEventBindingCount": 7,
+              "signatures": [
+                {
+                  "signature": "public void MostrarJuegosPanel()",
+                  "asmFuncName": "Mki",
+                  "fnPtr": 10540
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "MiscHidePanel",
+          "totalBindingsInScenes": 3,
+          "uniqueMethodsCount": 2,
+          "methods": [
+            {
+              "methodName": "HidePanel",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void HidePanel()",
+                  "asmFuncName": "mRi",
+                  "fnPtr": 10256
+                }
+              ]
+            },
+            {
+              "methodName": "CambiarRegion",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void CambiarRegion()",
+                  "asmFuncName": "nRi",
+                  "fnPtr": 10257
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "CT_Sanatorio_Duran_GameControl",
+          "totalBindingsInScenes": 35,
+          "uniqueMethodsCount": 8,
+          "methods": [
+            {
+              "methodName": "Salir",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void Salir()",
+                  "asmFuncName": "wVh",
+                  "fnPtr": 8926
+                }
+              ]
+            },
+            {
+              "methodName": "ActivarControles",
+              "uiEventBindingCount": 14,
+              "signatures": [
+                {
+                  "signature": "public void ActivarControles()",
+                  "asmFuncName": "mli",
+                  "fnPtr": 8924
+                }
+              ]
+            },
+            {
+              "methodName": "DesactivarControles",
+              "uiEventBindingCount": 13,
+              "signatures": [
+                {
+                  "signature": "public void DesactivarControles()",
+                  "asmFuncName": "lli",
+                  "fnPtr": 8923
+                }
+              ]
+            },
+            {
+              "methodName": "GanarMonedas",
+              "uiEventBindingCount": 3,
+              "signatures": [
+                {
+                  "signature": "public void GanarMonedas(int monedas)",
+                  "asmFuncName": "xVh",
+                  "fnPtr": 7282
+                }
+              ]
+            },
+            {
+              "methodName": "CargarEscena",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void CargarEscena()",
+                  "asmFuncName": "vVh",
+                  "fnPtr": 8925
+                }
+              ]
+            },
+            {
+              "methodName": "ReproducirMusicaFondo",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ReproducirMusicaFondo()",
+                  "asmFuncName": "rVh",
+                  "fnPtr": 8921
+                }
+              ]
+            },
+            {
+              "methodName": "QuitarMuneca",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void QuitarMuneca()",
+                  "asmFuncName": "CVh",
+                  "fnPtr": 8929
+                }
+              ]
+            },
+            {
+              "methodName": "CorrectSound",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void CorrectSound()",
+                  "asmFuncName": "yVh",
+                  "fnPtr": 8927
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "TextoEspirituNinia",
+          "totalBindingsInScenes": 4,
+          "uniqueMethodsCount": 2,
+          "methods": [
+            {
+              "methodName": "ActivarJugador",
+              "uiEventBindingCount": 3,
+              "signatures": [
+                {
+                  "signature": "public void ActivarJugador()",
+                  "asmFuncName": "EJr",
+                  "fnPtr": 10798
+                }
+              ]
+            },
+            {
+              "methodName": "DesactivarBloqueo",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void DesactivarBloqueo()",
+                  "asmFuncName": "FJr",
+                  "fnPtr": 10799
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "TextoEventos",
+          "totalBindingsInScenes": 3,
+          "uniqueMethodsCount": 1,
+          "methods": [
+            {
+              "methodName": "ActivarJugador",
+              "uiEventBindingCount": 3,
+              "signatures": [
+                {
+                  "signature": "public void ActivarJugador()",
+                  "asmFuncName": "IJr",
+                  "fnPtr": 10801
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "CT_Sanatorio_Duran_Mision2_Fantasma",
+          "totalBindingsInScenes": 5,
+          "uniqueMethodsCount": 1,
+          "methods": [
+            {
+              "methodName": "ActivarJugador",
+              "uiEventBindingCount": 5,
+              "signatures": [
+                {
+                  "signature": "public void ActivarJugador()",
+                  "asmFuncName": "JVh",
+                  "fnPtr": 8933
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "DisableHelper",
+          "totalBindingsInScenes": 6,
+          "uniqueMethodsCount": 2,
+          "methods": [
+            {
+              "methodName": "EnableColliders",
+              "uiEventBindingCount": 4,
+              "signatures": [
+                {
+                  "signature": "public void EnableColliders()",
+                  "asmFuncName": "KXh",
+                  "fnPtr": 8989
+                }
+              ]
+            },
+            {
+              "methodName": "DisenableColliders",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void DisenableColliders()",
+                  "asmFuncName": "LXh",
+                  "fnPtr": 8990
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "CT_Sanatorio_Duran_Fantasma_Tercera_Mision",
+          "totalBindingsInScenes": 1,
+          "uniqueMethodsCount": 1,
+          "methods": [
+            {
+              "methodName": "ActivarJugador",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ActivarJugador()",
+                  "asmFuncName": "kVh",
+                  "fnPtr": 8915
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "Player_Top_Down_General",
+          "totalBindingsInScenes": 6,
+          "uniqueMethodsCount": 2,
+          "methods": [
+            {
+              "methodName": "DesactivarJugador",
+              "uiEventBindingCount": 4,
+              "signatures": [
+                {
+                  "signature": "public void DesactivarJugador()",
+                  "asmFuncName": "Qji",
+                  "fnPtr": 10521
+                }
+              ]
+            },
+            {
+              "methodName": "ActivarJugador",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void ActivarJugador()",
+                  "asmFuncName": "Pji",
+                  "fnPtr": 10520
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "RegisterStar",
+          "totalBindingsInScenes": 4,
+          "uniqueMethodsCount": 1,
+          "methods": [
+            {
+              "methodName": "RegisterComplete",
+              "uiEventBindingCount": 4,
+              "signatures": [
+                {
+                  "signature": "public void RegisterComplete()",
+                  "asmFuncName": "mDr",
+                  "fnPtr": 10641
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "CT_Volcanes_GameControl",
+          "totalBindingsInScenes": 8,
+          "uniqueMethodsCount": 3,
+          "methods": [
+            {
+              "methodName": "ChangeToMap",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void ChangeToMap()",
+                  "asmFuncName": "bWh",
+                  "fnPtr": 8944
+                }
+              ]
+            },
+            {
+              "methodName": "ReloadCurrentScene",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void ReloadCurrentScene()",
+                  "asmFuncName": "cWh",
+                  "fnPtr": 8945
+                }
+              ]
+            },
+            {
+              "methodName": "EmpiezaJuego",
+              "uiEventBindingCount": 4,
+              "signatures": [
+                {
+                  "signature": "public void EmpiezaJuego()",
+                  "asmFuncName": "YVh",
+                  "fnPtr": 8942
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "GNBH_TerminarJuego",
+          "totalBindingsInScenes": 6,
+          "uniqueMethodsCount": 4,
+          "methods": [
+            {
+              "methodName": "ChangeToMap",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ChangeToMap()",
+                  "asmFuncName": "$Dh",
+                  "fnPtr": 9991
+                }
+              ]
+            },
+            {
+              "methodName": "ActivarControles",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void ActivarControles()",
+                  "asmFuncName": "eEh",
+                  "fnPtr": 9994
+                }
+              ]
+            },
+            {
+              "methodName": "DesactivarControles",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void DesactivarControles()",
+                  "asmFuncName": "dEh",
+                  "fnPtr": 9993
+                }
+              ]
+            },
+            {
+              "methodName": "ReloadCurrentScene",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ReloadCurrentScene()",
+                  "asmFuncName": "aEh",
+                  "fnPtr": 9992
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "PlayMusic",
+          "totalBindingsInScenes": 9,
+          "uniqueMethodsCount": 1,
+          "methods": [
+            {
+              "methodName": "PlayMusicIndex",
+              "uiEventBindingCount": 9,
+              "signatures": [
+                {
+                  "signature": "public void PlayMusicIndex()",
+                  "asmFuncName": "Hki",
+                  "fnPtr": 10536
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "GN_Buceo_GameController",
+          "totalBindingsInScenes": 8,
+          "uniqueMethodsCount": 7,
+          "methods": [
+            {
+              "methodName": "ChangeToMap",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ChangeToMap()",
+                  "asmFuncName": "eCh",
+                  "fnPtr": 9909
+                }
+              ]
+            },
+            {
+              "methodName": "ReloadCurrentScene",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ReloadCurrentScene()",
+                  "asmFuncName": "fCh",
+                  "fnPtr": 9910
+                }
+              ]
+            },
+            {
+              "methodName": "EmpezarJuego",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void EmpezarJuego()",
+                  "asmFuncName": "$Bh",
+                  "fnPtr": 9905
+                }
+              ]
+            },
+            {
+              "methodName": "CargarEscena",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void CargarEscena()",
+                  "asmFuncName": "aCh",
+                  "fnPtr": 9906
+                }
+              ]
+            },
+            {
+              "methodName": "DesactivarJugador",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void DesactivarJugador()",
+                  "asmFuncName": "bCh",
+                  "fnPtr": 9907
+                }
+              ]
+            },
+            {
+              "methodName": "ActivarJugador",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ActivarJugador()",
+                  "asmFuncName": "cCh",
+                  "fnPtr": 9908
+                }
+              ]
+            },
+            {
+              "methodName": "ReproducirMusicaFinal",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ReproducirMusicaFinal()",
+                  "asmFuncName": "_Bh",
+                  "fnPtr": 9904
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "GN_Buseo_EndGame",
+          "totalBindingsInScenes": 1,
+          "uniqueMethodsCount": 1,
+          "methods": [
+            {
+              "methodName": "EndGame",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void EndGame()",
+                  "asmFuncName": "zCh",
+                  "fnPtr": 9929
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "GN_ST_GameControl",
+          "totalBindingsInScenes": 5,
+          "uniqueMethodsCount": 4,
+          "methods": [
+            {
+              "methodName": "IniciarJuego",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void IniciarJuego()",
+                  "asmFuncName": "UCh",
+                  "fnPtr": 9940
+                }
+              ]
+            },
+            {
+              "methodName": "CargarEscena",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void CargarEscena()",
+                  "asmFuncName": "VCh",
+                  "fnPtr": 9941
+                }
+              ]
+            },
+            {
+              "methodName": "ActivarJugador",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ActivarJugador()",
+                  "asmFuncName": "XCh",
+                  "fnPtr": 9944
+                }
+              ]
+            },
+            {
+              "methodName": "DesactivarJugador",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void DesactivarJugador()",
+                  "asmFuncName": "WCh",
+                  "fnPtr": 9943
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "HD_Entrega_Flores_Game_Control",
+          "totalBindingsInScenes": 67,
+          "uniqueMethodsCount": 9,
+          "methods": [
+            {
+              "methodName": "ReloadCurrentScene",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ReloadCurrentScene()",
+                  "asmFuncName": "KEh",
+                  "fnPtr": 10017
+                }
+              ]
+            },
+            {
+              "methodName": "ChangeToMap",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ChangeToMap()",
+                  "asmFuncName": "JEh",
+                  "fnPtr": 10016
+                }
+              ]
+            },
+            {
+              "methodName": "FlowersOn",
+              "uiEventBindingCount": 6,
+              "signatures": [
+                {
+                  "signature": "public void FlowersOn()",
+                  "asmFuncName": "LEh",
+                  "fnPtr": 10018
+                }
+              ]
+            },
+            {
+              "methodName": "FlowersOff",
+              "uiEventBindingCount": 5,
+              "signatures": [
+                {
+                  "signature": "public void FlowersOff()",
+                  "asmFuncName": "MEh",
+                  "fnPtr": 10019
+                }
+              ]
+            },
+            {
+              "methodName": "ShowGameOver",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ShowGameOver(string replaceMessage)",
+                  "asmFuncName": "IEh",
+                  "fnPtr": 7802
+                }
+              ]
+            },
+            {
+              "methodName": "ActivarControles",
+              "uiEventBindingCount": 25,
+              "signatures": [
+                {
+                  "signature": "public void ActivarControles()",
+                  "asmFuncName": "GEh",
+                  "fnPtr": 10015
+                }
+              ]
+            },
+            {
+              "methodName": "DesactivarControles",
+              "uiEventBindingCount": 26,
+              "signatures": [
+                {
+                  "signature": "public void DesactivarControles()",
+                  "asmFuncName": "FEh",
+                  "fnPtr": 10014
+                }
+              ]
+            },
+            {
+              "methodName": "GanarMonedas",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void GanarMonedas(int money)",
+                  "asmFuncName": "HEh",
+                  "fnPtr": 7801
+                }
+              ]
+            },
+            {
+              "methodName": "ReproducirMusicaFinal",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ReproducirMusicaFinal()",
+                  "asmFuncName": "DEh",
+                  "fnPtr": 10013
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "Player_Top_Down_Limitado",
+          "totalBindingsInScenes": 124,
+          "uniqueMethodsCount": 2,
+          "methods": [
+            {
+              "methodName": "ActivarJugador",
+              "uiEventBindingCount": 63,
+              "signatures": [
+                {
+                  "signature": "public void ActivarJugador()",
+                  "asmFuncName": "Wji",
+                  "fnPtr": 10527
+                }
+              ]
+            },
+            {
+              "methodName": "DesactivarJugador",
+              "uiEventBindingCount": 61,
+              "signatures": [
+                {
+                  "signature": "public void DesactivarJugador()",
+                  "asmFuncName": "Xji",
+                  "fnPtr": 10528
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "HD_MascaradaController",
+          "totalBindingsInScenes": 5,
+          "uniqueMethodsCount": 3,
+          "methods": [
+            {
+              "methodName": "ReloadCurrentScene",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ReloadCurrentScene()",
+                  "asmFuncName": "$Eh",
+                  "fnPtr": 10029
+                }
+              ]
+            },
+            {
+              "methodName": "startCounter",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void startCounter()",
+                  "asmFuncName": "bFh",
+                  "fnPtr": 10031
+                }
+              ]
+            },
+            {
+              "methodName": "DisbalePlayer",
+              "uiEventBindingCount": 3,
+              "signatures": [
+                {
+                  "signature": "public void DisbalePlayer()",
+                  "asmFuncName": "XEh",
+                  "fnPtr": 10027
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "CancelOff",
+          "totalBindingsInScenes": 1,
+          "uniqueMethodsCount": 1,
+          "methods": [
+            {
+              "methodName": "EndGameOrReload",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void EndGameOrReload()",
+                  "asmFuncName": "GUh",
+                  "fnPtr": 8893
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "HD_WinCollider",
+          "totalBindingsInScenes": 4,
+          "uniqueMethodsCount": 2,
+          "methods": [
+            {
+              "methodName": "ActivarControles",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ActivarControles()",
+                  "asmFuncName": "vFh",
+                  "fnPtr": 10042
+                }
+              ]
+            },
+            {
+              "methodName": "DesactivarControles",
+              "uiEventBindingCount": 3,
+              "signatures": [
+                {
+                  "signature": "public void DesactivarControles()",
+                  "asmFuncName": "uFh",
+                  "fnPtr": 10041
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "TayassuGames.HD_MontainBikeController",
+          "totalBindingsInScenes": 8,
+          "uniqueMethodsCount": 3,
+          "methods": [
+            {
+              "methodName": "ReloadCurrentScene",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void ReloadCurrentScene()",
+                  "asmFuncName": "cJr",
+                  "fnPtr": 10782
+                }
+              ]
+            },
+            {
+              "methodName": "ChangeToMap",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void ChangeToMap()",
+                  "asmFuncName": "bJr",
+                  "fnPtr": 10781
+                }
+              ]
+            },
+            {
+              "methodName": "StartRace",
+              "uiEventBindingCount": 4,
+              "signatures": [
+                {
+                  "signature": "public void StartRace()",
+                  "asmFuncName": "WIr",
+                  "fnPtr": 10778
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "LM_Cocina_Controller",
+          "totalBindingsInScenes": 5,
+          "uniqueMethodsCount": 5,
+          "methods": [
+            {
+              "methodName": "RegresarEscenaAnterior",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void RegresarEscenaAnterior(string name)",
+                  "asmFuncName": "NJi",
+                  "fnPtr": 7832
+                }
+              ]
+            },
+            {
+              "methodName": "GanarMonedas",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void GanarMonedas()",
+                  "asmFuncName": "MJi",
+                  "fnPtr": 10094
+                }
+              ]
+            },
+            {
+              "methodName": "CargarEscena",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void CargarEscena()",
+                  "asmFuncName": "LJi",
+                  "fnPtr": 10093
+                }
+              ]
+            },
+            {
+              "methodName": "ComenzarJuego",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ComenzarJuego()",
+                  "asmFuncName": "KJi",
+                  "fnPtr": 10092
+                }
+              ]
+            },
+            {
+              "methodName": "ConfirmarRecetas",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ConfirmarRecetas()",
+                  "asmFuncName": "JJi",
+                  "fnPtr": 10091
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "PlayAudioAyudas",
+          "totalBindingsInScenes": 10,
+          "uniqueMethodsCount": 2,
+          "methods": [
+            {
+              "methodName": "PlayAudioB",
+              "uiEventBindingCount": 5,
+              "signatures": [
+                {
+                  "signature": "public void PlayAudioB()",
+                  "asmFuncName": "Jji",
+                  "fnPtr": 10514
+                }
+              ]
+            },
+            {
+              "methodName": "PlayAudioA",
+              "uiEventBindingCount": 5,
+              "signatures": [
+                {
+                  "signature": "public void PlayAudioA()",
+                  "asmFuncName": "Iji",
+                  "fnPtr": 10513
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "LM_Recipes",
+          "totalBindingsInScenes": 7,
+          "uniqueMethodsCount": 3,
+          "methods": [
+            {
+              "methodName": "CerrarAyuda",
+              "uiEventBindingCount": 5,
+              "signatures": [
+                {
+                  "signature": "public void CerrarAyuda()",
+                  "asmFuncName": "xLi",
+                  "fnPtr": 10152
+                }
+              ]
+            },
+            {
+              "methodName": "Cocinar",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void Cocinar()",
+                  "asmFuncName": "qLi",
+                  "fnPtr": 10144
+                }
+              ]
+            },
+            {
+              "methodName": "BotonAyudaFinal",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void BotonAyudaFinal()",
+                  "asmFuncName": "wLi",
+                  "fnPtr": 10151
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "LM_Cocina_Panel_Control",
+          "totalBindingsInScenes": 4,
+          "uniqueMethodsCount": 1,
+          "methods": [
+            {
+              "methodName": "ActivarPanel",
+              "uiEventBindingCount": 4,
+              "signatures": [
+                {
+                  "signature": "public void ActivarPanel(int valorPanel)",
+                  "asmFuncName": "QJi",
+                  "fnPtr": 7833
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "LM_T_GameControl",
+          "totalBindingsInScenes": 4,
+          "uniqueMethodsCount": 3,
+          "methods": [
+            {
+              "methodName": "StartGame",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void StartGame()",
+                  "asmFuncName": "KLi",
+                  "fnPtr": 10160
+                }
+              ]
+            },
+            {
+              "methodName": "ReloadCurrentScene",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ReloadCurrentScene()",
+                  "asmFuncName": "ULi",
+                  "fnPtr": 10162
+                }
+              ]
+            },
+            {
+              "methodName": "ChangeToMap",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ChangeToMap()",
+                  "asmFuncName": "TLi",
+                  "fnPtr": 10161
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "LM_DV_GameController",
+          "totalBindingsInScenes": 2,
+          "uniqueMethodsCount": 1,
+          "methods": [
+            {
+              "methodName": "IniciarJuego",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void IniciarJuego()",
+                  "asmFuncName": "uKi",
+                  "fnPtr": 10114
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "PR_MA_Game_Control",
+          "totalBindingsInScenes": 53,
+          "uniqueMethodsCount": 5,
+          "methods": [
+            {
+              "methodName": "ActivarControles",
+              "uiEventBindingCount": 24,
+              "signatures": [
+                {
+                  "signature": "public void ActivarControles()",
+                  "asmFuncName": "mli",
+                  "fnPtr": 10555
+                }
+              ]
+            },
+            {
+              "methodName": "DesactivarControles",
+              "uiEventBindingCount": 24,
+              "signatures": [
+                {
+                  "signature": "public void DesactivarControles()",
+                  "asmFuncName": "lli",
+                  "fnPtr": 10554
+                }
+              ]
+            },
+            {
+              "methodName": "ArbolesCounter",
+              "uiEventBindingCount": 3,
+              "signatures": [
+                {
+                  "signature": "public void ArbolesCounter(int value)",
+                  "asmFuncName": "vli",
+                  "fnPtr": 8395
+                }
+              ]
+            },
+            {
+              "methodName": "ActivarTronco",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ActivarTronco()",
+                  "asmFuncName": "tli",
+                  "fnPtr": 10557
+                }
+              ]
+            },
+            {
+              "methodName": "QuitarTronco",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void QuitarTronco()",
+                  "asmFuncName": "uli",
+                  "fnPtr": 10558
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "PR_PT_GameControl",
+          "totalBindingsInScenes": 18,
+          "uniqueMethodsCount": 4,
+          "methods": [
+            {
+              "methodName": "ActivarControles",
+              "uiEventBindingCount": 7,
+              "signatures": [
+                {
+                  "signature": "public void ActivarControles()",
+                  "asmFuncName": "mli",
+                  "fnPtr": 10580
+                }
+              ]
+            },
+            {
+              "methodName": "DesactivarControles",
+              "uiEventBindingCount": 7,
+              "signatures": [
+                {
+                  "signature": "public void DesactivarControles()",
+                  "asmFuncName": "lli",
+                  "fnPtr": 10579
+                }
+              ]
+            },
+            {
+              "methodName": "ComenzarJuego",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void ComenzarJuego()",
+                  "asmFuncName": "fmi",
+                  "fnPtr": 10581
+                }
+              ]
+            },
+            {
+              "methodName": "ReproducirMusicaFondo",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void ReproducirMusicaFondo()",
+                  "asmFuncName": "cmi",
+                  "fnPtr": 10577
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "PR_Tarcoles_GameCotroller",
+          "totalBindingsInScenes": 2,
+          "uniqueMethodsCount": 2,
+          "methods": [
+            {
+              "methodName": "StartGame",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void StartGame()",
+                  "asmFuncName": "KCr",
+                  "fnPtr": 10620
+                }
+              ]
+            },
+            {
+              "methodName": "BackToMap",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void BackToMap()",
+                  "asmFuncName": "MCr",
+                  "fnPtr": 10622
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "PR_T_Cam",
+          "totalBindingsInScenes": 1,
+          "uniqueMethodsCount": 1,
+          "methods": [
+            {
+              "methodName": "ObjectiveFocus",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ObjectiveFocus()",
+                  "asmFuncName": "Hmi",
+                  "fnPtr": 10600
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "SJ_FC_Pausa",
+          "totalBindingsInScenes": 3,
+          "uniqueMethodsCount": 2,
+          "methods": [
+            {
+              "methodName": "Pausa",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void Pausa()",
+                  "asmFuncName": "GHr",
+                  "fnPtr": 10729
+                }
+              ]
+            },
+            {
+              "methodName": "Reanudar",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void Reanudar()",
+                  "asmFuncName": "HHr",
+                  "fnPtr": 10730
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "SJ_FC_Guia",
+          "totalBindingsInScenes": 1,
+          "uniqueMethodsCount": 1,
+          "methods": [
+            {
+              "methodName": "ActivarMenuJuego",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ActivarMenuJuego()",
+                  "asmFuncName": "AHr",
+                  "fnPtr": 10724
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "SJ_FC_GameController",
+          "totalBindingsInScenes": 7,
+          "uniqueMethodsCount": 5,
+          "methods": [
+            {
+              "methodName": "ActivarJugador",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ActivarJugador()",
+                  "asmFuncName": "aHr",
+                  "fnPtr": 10710
+                }
+              ]
+            },
+            {
+              "methodName": "ActivarControles",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void ActivarControles()",
+                  "asmFuncName": "cHr",
+                  "fnPtr": 10712
+                }
+              ]
+            },
+            {
+              "methodName": "DesactivarJugador",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void DesactivarJugador()",
+                  "asmFuncName": "$Gr",
+                  "fnPtr": 10709
+                }
+              ]
+            },
+            {
+              "methodName": "DesactivarControles",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void DesactivarControles()",
+                  "asmFuncName": "bHr",
+                  "fnPtr": 10711
+                }
+              ]
+            },
+            {
+              "methodName": "ReproducirMusicaFondo",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ReproducirMusicaFondo()",
+                  "asmFuncName": "_Gr",
+                  "fnPtr": 10708
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "SJ_FC_Cargar_Escena",
+          "totalBindingsInScenes": 2,
+          "uniqueMethodsCount": 2,
+          "methods": [
+            {
+              "methodName": "CargarEscenaConCarga",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void CargarEscenaConCarga(string name)",
+                  "asmFuncName": "JGr",
+                  "fnPtr": 8435
+                }
+              ]
+            },
+            {
+              "methodName": "CargarEscenaAnterior",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void CargarEscenaAnterior()",
+                  "asmFuncName": "IGr",
+                  "fnPtr": 10696
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "SJ_Museo_Oro_GameControl",
+          "totalBindingsInScenes": 18,
+          "uniqueMethodsCount": 6,
+          "methods": [
+            {
+              "methodName": "ReloadCurrentScene",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ReloadCurrentScene()",
+                  "asmFuncName": "kIr",
+                  "fnPtr": 10755
+                }
+              ]
+            },
+            {
+              "methodName": "ChangeToMap",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ChangeToMap()",
+                  "asmFuncName": "jIr",
+                  "fnPtr": 10754
+                }
+              ]
+            },
+            {
+              "methodName": "ActivarControles",
+              "uiEventBindingCount": 8,
+              "signatures": [
+                {
+                  "signature": "public void ActivarControles()",
+                  "asmFuncName": "hIr",
+                  "fnPtr": 10753
+                }
+              ]
+            },
+            {
+              "methodName": "ReproducirMusicaFondo",
+              "uiEventBindingCount": 1,
+              "signatures": [
+                {
+                  "signature": "public void ReproducirMusicaFondo()",
+                  "asmFuncName": "fIr",
+                  "fnPtr": 10751
+                }
+              ]
+            },
+            {
+              "methodName": "DesactivarControles",
+              "uiEventBindingCount": 5,
+              "signatures": [
+                {
+                  "signature": "public void DesactivarControles()",
+                  "asmFuncName": "gIr",
+                  "fnPtr": 10752
+                }
+              ]
+            },
+            {
+              "methodName": "ShowGameOver",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void ShowGameOver(string replaceMessage)",
+                  "asmFuncName": "iIr",
+                  "fnPtr": 8440
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "typeName": "SJ_MO_FechaHelp",
+          "totalBindingsInScenes": 2,
+          "uniqueMethodsCount": 1,
+          "methods": [
+            {
+              "methodName": "AskHelp",
+              "uiEventBindingCount": 2,
+              "signatures": [
+                {
+                  "signature": "public void AskHelp()",
+                  "asmFuncName": "UHr",
+                  "fnPtr": 10743
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assemblyName": "UnityEngine",
+      "typesCount": 1,
+      "types": [
+        {
+          "typeName": "UnityEngine.GameObject",
+          "totalBindingsInScenes": 12,
+          "uniqueMethodsCount": 1,
+          "methods": [
+            {
+              "methodName": "SetActive",
+              "uiEventBindingCount": 12,
+              "signatures": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assemblyName": "Assembly-CSharp-firstpass",
+      "typesCount": 1,
+      "types": [
+        {
+          "typeName": "UnityStandardAssets.CrossPlatformInput.ButtonHandler",
+          "totalBindingsInScenes": 56,
+          "uniqueMethodsCount": 4,
+          "methods": [
+            {
+              "methodName": "SetAxisPositiveState",
+              "uiEventBindingCount": 7,
+              "signatures": [
+                {
+                  "signature": "public void SetAxisPositiveState()",
+                  "asmFuncName": "DCw",
+                  "fnPtr": 8816
+                }
+              ]
+            },
+            {
+              "methodName": "SetAxisNeutralState",
+              "uiEventBindingCount": 7,
+              "signatures": [
+                {
+                  "signature": "public void SetAxisNeutralState()",
+                  "asmFuncName": "FCw",
+                  "fnPtr": 8817
+                }
+              ]
+            },
+            {
+              "methodName": "SetDownState",
+              "uiEventBindingCount": 21,
+              "signatures": [
+                {
+                  "signature": "public void SetDownState()",
+                  "asmFuncName": "zCw",
+                  "fnPtr": 8814
+                }
+              ]
+            },
+            {
+              "methodName": "SetUpState",
+              "uiEventBindingCount": 21,
+              "signatures": [
+                {
+                  "signature": "public void SetUpState()",
+                  "asmFuncName": "BCw",
+                  "fnPtr": 8815
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assemblyName": "UnityEngine",
+      "typesCount": 1,
+      "types": [
+        {
+          "typeName": "UnityEngine.CanvasRenderer",
+          "totalBindingsInScenes": 24,
+          "uniqueMethodsCount": 1,
+          "methods": [
+            {
+              "methodName": "SetAlpha",
+              "uiEventBindingCount": 24,
+              "signatures": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

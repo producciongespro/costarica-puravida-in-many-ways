@@ -1,0 +1,5436 @@
+{
+  "totalNarrativeScenesWithFungus": 42,
+  "totalFungusDialogueLines": 380,
+  "coreScreensNarrative": {
+    "mainTitle": {
+      "sceneIndex": 0,
+      "sceneName": "Main",
+      "buttons": [
+        "New Game",
+        "Continue"
+      ]
+    },
+    "newGameWarning": {
+      "sceneIndex": 3,
+      "sceneName": "NewGameWarning",
+      "warningText": "Warning: starting a new game will delete all your previous data.\n\nAre you sure you want to go on?",
+      "confirmLabel": "Yes, start a new game",
+      "cancelLabel": "No, go back"
+    },
+    "characterSelect": {
+      "sceneIndex": 5,
+      "sceneName": "SelecGenero",
+      "header": "Choose a \ncharacter",
+      "prompt": "Please tell me.\nAre you a boy? \nOr are you a girl?",
+      "options": [
+        "Mike",
+        "Lisa"
+      ]
+    },
+    "characterIntroConversation": {
+      "sceneIndex": 4,
+      "sceneName": "SelecScreen",
+      "musicFile": "audio/dialogos.m4a",
+      "maleBannerText": "Mike, Costa Rica it's a wonderful country, a lot of adventures waits!",
+      "femaleBannerText": "Lisa, Costa Rica it's a wonderful country, a lot of adventures waits!",
+      "dialogues": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 523,
+          "character": "Daniel",
+          "portraitSprite": null,
+          "text": "Hi! I´m Daniel. Welcome to Costa Rica! ",
+          "voiceAudio": {
+            "clipName": "MASTER MENU DANIEL 001",
+            "file": "audio/MASTER MENU DANIEL 001.m4a",
+            "durationSeconds": 3.6571
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 2,
+          "componentPathID": 520,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Hi! Thanks, I'm Mike. \nWhat places can I visit in Costa Rica?",
+          "voiceAudio": {
+            "clipName": "MASTER MENU MIKE 002",
+            "file": "audio/MASTER MENU MIKE 002.m4a",
+            "durationSeconds": 4.6643
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 3,
+          "componentPathID": 522,
+          "character": "Daniel",
+          "portraitSprite": null,
+          "text": "Well, it depends on how long you are staying. You can walk around San José and visit the Gold Museum or if you’re planning to stay a bit longer, there are plenty of places to visit in the provinces.",
+          "voiceAudio": {
+            "clipName": "MASTER MENU DANIEL 002",
+            "file": "audio/MASTER MENU DANIEL 002.m4a",
+            "durationSeconds": 13.0049
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 4,
+          "componentPathID": 521,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Let’s start with San José province!",
+          "voiceAudio": {
+            "clipName": "MASTER MENU MIKE OO3",
+            "file": "audio/MASTER MENU MIKE OO3.m4a",
+            "durationSeconds": 2.0916
+          }
+        },
+        {
+          "order": 5,
+          "itemId": 7,
+          "componentPathID": 530,
+          "character": "Daniel",
+          "portraitSprite": null,
+          "text": "Hi! I'm Daniel. Welcome to Costa Rica! ",
+          "voiceAudio": {
+            "clipName": "MASTER MENU DANIEL 001",
+            "file": "audio/MASTER MENU DANIEL 001.m4a",
+            "durationSeconds": 3.6571
+          }
+        },
+        {
+          "order": 6,
+          "itemId": 8,
+          "componentPathID": 529,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Hi! Thanks, I'm Lisa. \nWhat places can I visit in Costa Rica?",
+          "voiceAudio": {
+            "clipName": "MASTER MENU LISA 002",
+            "file": "audio/MASTER MENU LISA 002.m4a",
+            "durationSeconds": 5.0874
+          }
+        },
+        {
+          "order": 7,
+          "itemId": 9,
+          "componentPathID": 528,
+          "character": "Daniel",
+          "portraitSprite": null,
+          "text": "Well, it depends on how long you are staying. You can walk around San José and visit the Gold Museum or if you’re planning to stay a bit longer, there are plenty of places to visit in the provinces.",
+          "voiceAudio": {
+            "clipName": "MASTER MENU DANIEL 002",
+            "file": "audio/MASTER MENU DANIEL 002.m4a",
+            "durationSeconds": 13.0049
+          }
+        },
+        {
+          "order": 8,
+          "itemId": 10,
+          "componentPathID": 527,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Let’s start with San José province!",
+          "voiceAudio": {
+            "clipName": "MASTER MENU LISA 003",
+            "file": "audio/MASTER MENU LISA 003.m4a",
+            "durationSeconds": 2.1264
+          }
+        }
+      ]
+    },
+    "adventureStart": {
+      "sceneIndex": 6,
+      "sceneName": "AdventureStart",
+      "narrativeText": "Costa Rica is a wonderful country!\n\nLots of adventures await for you.\n\nLet's get started!",
+      "buttonLabel": "START"
+    },
+    "gameEnding": {
+      "sceneIndex": 7,
+      "triggerComponent": "GameEnding.CheckEnding (level7) -> GameMenu.ShowEnding (level0)",
+      "musicIndex": 26,
+      "musicFile": "audio/Ganar (largo).m4a",
+      "finalMessage": "Hope you have enjoyed \nyour stay in Costa Rica!  \n\n\nWe hope to see you back soon!",
+      "creditsButtonLabel": "Credits"
+    },
+    "credits": {
+      "sceneIndex": 9,
+      "sceneName": "Creditos",
+      "musicIndex": 23,
+      "musicFile": "audio/Credits Costa Rica Pura Vida.m4a",
+      "backButtonLabel": "Back to game title",
+      "sections": [
+        {
+          "id": "Mep3",
+          "text": "Derechos de Uso"
+        },
+        {
+          "id": "LaMontana3-1",
+          "text": "Voces\n\nRosa Chinchilla\nAndré Mendez\n"
+        },
+        {
+          "id": "TayassuTeam5",
+          "text": "Composición músical original\n\nAntonio Loria"
+        },
+        {
+          "id": "Mep2",
+          "text": "Departamento de Tercer Ciclo \ny Educación Diversificada \n\nAsesora nacional de Inglés\r\nMarianella Granados Sirias\r\n\nAsesor nacional de Inglés\r\nAlfredo Ortega Cordero\r"
+        },
+        {
+          "id": "Mep4",
+          "text": "San José, Costa Rica.\n\n2018"
+        },
+        {
+          "id": "LaMontana2",
+          "text": "Producciones de la Montaña\n\nAdrian Jurburg"
+        },
+        {
+          "id": "Mep1",
+          "text": "Departamento de Gestión y \nProducción de Recursos \n\nAsesora nacional de inglés\nKatherine Williams Jiménez\r"
+        },
+        {
+          "id": "TayassuTeam3",
+          "text": "Desarrollo de software\n\nJuan Navarro\nJean Arias\nGabriel Aguiar\nWillbert Sibaja"
+        },
+        {
+          "id": "TayassuTeam2",
+          "text": "Administrador de proyecto\nOscar Loria"
+        },
+        {
+          "id": "LaMontana1",
+          "text": "Desarrollado por\r\n\n\n\n\n\n\n"
+        },
+        {
+          "id": "Title",
+          "text": "Costa Rica \nPura Vida \nIn Many Ways"
+        },
+        {
+          "id": "LaMontana4",
+          "text": "Coordinación\n\nAdrian Jurburg Gruskin"
+        },
+        {
+          "id": "LaMontana3",
+          "text": "Música adicional\n\nDario Jurburg Chaves\n"
+        },
+        {
+          "id": "Text",
+          "text": "Back to game title"
+        },
+        {
+          "id": "TayassuTeam4",
+          "text": "Programación adicional\n\nAdrian Fernández"
+        },
+        {
+          "id": "Text",
+          "text": "Credits"
+        },
+        {
+          "id": "TayassuTeam6",
+          "text": "Artes y dirección de diseño\n\nKristoffer Vela"
+        }
+      ]
+    }
+  },
+  "provinceWelcomeVoiceOvers": [
+    {
+      "provinceId": 0,
+      "provinceName": "San José",
+      "welcomeTitle": "Welcome to San José!",
+      "femaleAudio": {
+        "soundIndex": 53,
+        "clipName": "welcome san jose fem",
+        "file": "audio/welcome san jose fem.m4a",
+        "durationSeconds": 1.5699
+      },
+      "maleAudio": {
+        "soundIndex": 52,
+        "clipName": "welcome san jose male",
+        "file": "audio/welcome san jose male.m4a",
+        "durationSeconds": 1.401
+      }
+    },
+    {
+      "provinceId": 1,
+      "provinceName": "Heredia",
+      "welcomeTitle": "Welcome to Heredia!",
+      "femaleAudio": {
+        "soundIndex": 59,
+        "clipName": "welcome heredia fem",
+        "file": "audio/welcome heredia fem.m4a",
+        "durationSeconds": 1.6097
+      },
+      "maleAudio": {
+        "soundIndex": 58,
+        "clipName": "welcome heredia male",
+        "file": "audio/welcome heredia male.m4a",
+        "durationSeconds": 1.4308
+      }
+    },
+    {
+      "provinceId": 2,
+      "provinceName": "Cartago",
+      "welcomeTitle": "Welcome to Cartago!",
+      "femaleAudio": {
+        "soundIndex": 51,
+        "clipName": "welcome to cartago fem",
+        "file": "audio/welcome to cartago fem.m4a",
+        "durationSeconds": 1.5898
+      },
+      "maleAudio": {
+        "soundIndex": 50,
+        "clipName": "welcome to cartago male",
+        "file": "audio/welcome to cartago male.m4a",
+        "durationSeconds": 1.406
+      }
+    },
+    {
+      "provinceId": 3,
+      "provinceName": "Alajuela",
+      "welcomeTitle": "Welcome to Alajuela!",
+      "femaleAudio": {
+        "soundIndex": 49,
+        "clipName": "welcome alajuela fem",
+        "file": "audio/welcome alajuela fem.m4a",
+        "durationSeconds": 1.6395
+      },
+      "maleAudio": {
+        "soundIndex": 48,
+        "clipName": "welcome alajuela male",
+        "file": "audio/welcome alajuela male.m4a",
+        "durationSeconds": 1.5451
+      }
+    },
+    {
+      "provinceId": 4,
+      "provinceName": "Puntarenas",
+      "welcomeTitle": "Welcome to Puntarenas!",
+      "femaleAudio": {
+        "soundIndex": 55,
+        "clipName": "welcome puntarenas fem",
+        "file": "audio/welcome puntarenas fem.m4a",
+        "durationSeconds": 1.5898
+      },
+      "maleAudio": {
+        "soundIndex": 54,
+        "clipName": "welcome puntarenas male",
+        "file": "audio/welcome puntarenas male.m4a",
+        "durationSeconds": 1.9277
+      }
+    },
+    {
+      "provinceId": 5,
+      "provinceName": "Guanacaste",
+      "welcomeTitle": "Welcome to Guanacaste!",
+      "femaleAudio": {
+        "soundIndex": 61,
+        "clipName": "welcome guanacaste fem",
+        "file": "audio/welcome guanacaste fem.m4a",
+        "durationSeconds": 1.6892
+      },
+      "maleAudio": {
+        "soundIndex": 60,
+        "clipName": "welcome guanacaste male",
+        "file": "audio/welcome guanacaste male.m4a",
+        "durationSeconds": 1.5923
+      }
+    },
+    {
+      "provinceId": 6,
+      "provinceName": "Limón",
+      "welcomeTitle": "Welcome to Limón!",
+      "femaleAudio": {
+        "soundIndex": 57,
+        "clipName": "welcome limon fem",
+        "file": "audio/welcome limon fem.m4a",
+        "durationSeconds": 1.3911
+      },
+      "maleAudio": {
+        "soundIndex": 56,
+        "clipName": "welcome limon male",
+        "file": "audio/welcome limon male.m4a",
+        "durationSeconds": 1.4507
+      }
+    }
+  ],
+  "fungusScenes": [
+    {
+      "sceneIndex": 4,
+      "sceneName": "SelecScreen",
+      "totalLines": 8,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 523,
+          "character": "Daniel",
+          "portraitSprite": null,
+          "text": "Hi! I´m Daniel. Welcome to Costa Rica! ",
+          "voiceAudio": {
+            "clipName": "MASTER MENU DANIEL 001",
+            "file": "audio/MASTER MENU DANIEL 001.m4a",
+            "durationSeconds": 3.6571
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 2,
+          "componentPathID": 520,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Hi! Thanks, I'm Mike. \nWhat places can I visit in Costa Rica?",
+          "voiceAudio": {
+            "clipName": "MASTER MENU MIKE 002",
+            "file": "audio/MASTER MENU MIKE 002.m4a",
+            "durationSeconds": 4.6643
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 3,
+          "componentPathID": 522,
+          "character": "Daniel",
+          "portraitSprite": null,
+          "text": "Well, it depends on how long you are staying. You can walk around San José and visit the Gold Museum or if you’re planning to stay a bit longer, there are plenty of places to visit in the provinces.",
+          "voiceAudio": {
+            "clipName": "MASTER MENU DANIEL 002",
+            "file": "audio/MASTER MENU DANIEL 002.m4a",
+            "durationSeconds": 13.0049
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 4,
+          "componentPathID": 521,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Let’s start with San José province!",
+          "voiceAudio": {
+            "clipName": "MASTER MENU MIKE OO3",
+            "file": "audio/MASTER MENU MIKE OO3.m4a",
+            "durationSeconds": 2.0916
+          }
+        },
+        {
+          "order": 5,
+          "itemId": 7,
+          "componentPathID": 530,
+          "character": "Daniel",
+          "portraitSprite": null,
+          "text": "Hi! I'm Daniel. Welcome to Costa Rica! ",
+          "voiceAudio": {
+            "clipName": "MASTER MENU DANIEL 001",
+            "file": "audio/MASTER MENU DANIEL 001.m4a",
+            "durationSeconds": 3.6571
+          }
+        },
+        {
+          "order": 6,
+          "itemId": 8,
+          "componentPathID": 529,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Hi! Thanks, I'm Lisa. \nWhat places can I visit in Costa Rica?",
+          "voiceAudio": {
+            "clipName": "MASTER MENU LISA 002",
+            "file": "audio/MASTER MENU LISA 002.m4a",
+            "durationSeconds": 5.0874
+          }
+        },
+        {
+          "order": 7,
+          "itemId": 9,
+          "componentPathID": 528,
+          "character": "Daniel",
+          "portraitSprite": null,
+          "text": "Well, it depends on how long you are staying. You can walk around San José and visit the Gold Museum or if you’re planning to stay a bit longer, there are plenty of places to visit in the provinces.",
+          "voiceAudio": {
+            "clipName": "MASTER MENU DANIEL 002",
+            "file": "audio/MASTER MENU DANIEL 002.m4a",
+            "durationSeconds": 13.0049
+          }
+        },
+        {
+          "order": 8,
+          "itemId": 10,
+          "componentPathID": 527,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Let’s start with San José province!",
+          "voiceAudio": {
+            "clipName": "MASTER MENU LISA 003",
+            "file": "audio/MASTER MENU LISA 003.m4a",
+            "durationSeconds": 2.1264
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 11,
+      "sceneName": "AL_Ciclismo_Intro",
+      "totalLines": 4,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 10,
+          "componentPathID": 497,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "\"Laguna del Hule\" is located in Bosque Alegre National Wildlife Refuge in Los Angeles Sur of Río Cuarto de Grecia, in the province of Alajuela.\r\n\r\nIt is surrounded by ever green rain forest with large trees, ferns, palms and epiphytes.\r",
+          "voiceAudio": {
+            "clipName": "Alajuela Triathlon laguna del Hule Locutror Masc",
+            "file": "audio/Alajuela Triathlon laguna del Hule Locutror Masc.m4a",
+            "durationSeconds": 16.6908
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 11,
+          "componentPathID": 496,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Today I feel a bit sporty, I´m thinking about participating in the “Laguna del Hule” triathlon.",
+          "voiceAudio": {
+            "clipName": "Alajuela Triathlon laguna del Hule Mike 1",
+            "file": "audio/Alajuela Triathlon laguna del Hule Mike 1.m4a",
+            "durationSeconds": 6.3347
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 14,
+          "componentPathID": 492,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "\"Laguna del Hule\" is located in Bosque Alegre National Wildlife Refuge in Los Angeles Sur of Río Cuarto de Grecia, in the province of Alajuela.\r\n\r\nIt is surrounded by ever green rain forest with large trees, ferns, palms and epiphytes.\r",
+          "voiceAudio": {
+            "clipName": "Alajuela Triathlon laguna del Hule Locutror Masc",
+            "file": "audio/Alajuela Triathlon laguna del Hule Locutror Masc.m4a",
+            "durationSeconds": 16.6908
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 15,
+          "componentPathID": 491,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Today I feel a bit sporty, I'm thinking about participating in the “Laguna del Hule” triathlon.",
+          "voiceAudio": {
+            "clipName": "Alajuela Triathlon laguna del Hulke Lisa 1",
+            "file": "audio/Alajuela Triathlon laguna del Hulke Lisa 1.m4a",
+            "durationSeconds": 6.3811
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 12,
+      "sceneName": "AL_Ciclismo",
+      "totalLines": 1,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 406,
+          "componentPathID": 866,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use space bar to move.",
+          "voiceAudio": null
+        }
+      ]
+    },
+    {
+      "sceneIndex": 13,
+      "sceneName": "AL_Correr_Intro",
+      "totalLines": 4,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 10,
+          "componentPathID": 493,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "“Laguna del Hule! is located in Bosque Alegre National Wildlife Refuge in Los Angeles Sur of Río Cuarto de Grecia, in the province of Alajuela.\r\n\r\nIt is surrounded by ever green rain forest with large trees, ferns, palms and epiphytes.\r",
+          "voiceAudio": {
+            "clipName": "Alajuela Triathlon laguna del Hule Locutror Masc",
+            "file": "audio/Alajuela Triathlon laguna del Hule Locutror Masc.m4a",
+            "durationSeconds": 16.6908
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 11,
+          "componentPathID": 492,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Today I feel a bit sporty, I´m thinking about participating in the “Laguna del Hule” triathlon.",
+          "voiceAudio": {
+            "clipName": "Alajuela Triathlon laguna del Hule Mike 1",
+            "file": "audio/Alajuela Triathlon laguna del Hule Mike 1.m4a",
+            "durationSeconds": 6.3347
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 14,
+          "componentPathID": 488,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "“Laguna del Hule\" is located in Bosque Alegre National Wildlife Refuge in Los Angeles Sur of Río Cuarto de Grecia, in the province of Alajuela.\r\n\r\nIt is surrounded by ever green rain forest with large trees, ferns, palms and epiphytes.\r",
+          "voiceAudio": {
+            "clipName": "Alajuela Triathlon laguna del Hule Locutror Masc",
+            "file": "audio/Alajuela Triathlon laguna del Hule Locutror Masc.m4a",
+            "durationSeconds": 16.6908
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 15,
+          "componentPathID": 487,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Today I feel a bit sporty, I'm thinking about participating in the “Laguna del Hule” triathlon.",
+          "voiceAudio": {
+            "clipName": "Alajuela Triathlon laguna del Hule Mike 1",
+            "file": "audio/Alajuela Triathlon laguna del Hule Mike 1.m4a",
+            "durationSeconds": 6.3347
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 14,
+      "sceneName": "AL_Correr",
+      "totalLines": 1,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 406,
+          "componentPathID": 771,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use space bar to move.",
+          "voiceAudio": null
+        }
+      ]
+    },
+    {
+      "sceneIndex": 15,
+      "sceneName": "AL_Natacion_Intro",
+      "totalLines": 4,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 484,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "\"Laguna del Hule\" is located in Bosque Alegre National Wildlife Refuge in Los Angeles Sur of Río Cuarto de Grecia, in the province of Alajuela.\r\n\r\nIt is surrounded by ever green rain forest with large trees, ferns, palms and epiphytes.\r",
+          "voiceAudio": {
+            "clipName": "Alajuela Triathlon laguna del Hule Locutror Masc",
+            "file": "audio/Alajuela Triathlon laguna del Hule Locutror Masc.m4a",
+            "durationSeconds": 16.6908
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 7,
+          "componentPathID": 478,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Today I feel a bit sporty, I´m thinking about participating in the “Laguna del Hule” triathlon.",
+          "voiceAudio": {
+            "clipName": "Alajuela Triathlon laguna del Hule Mike 1",
+            "file": "audio/Alajuela Triathlon laguna del Hule Mike 1.m4a",
+            "durationSeconds": 6.3347
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 10,
+          "componentPathID": 482,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "\"Laguna del Hule\" is located in Bosque Alegre National Wildlife Refuge in Los Angeles Sur of Río Cuarto de Grecia, in the province of Alajuela.\r\n\r\nIt is surrounded by ever green rain forest with large trees, ferns, palms and epiphytes.\r",
+          "voiceAudio": {
+            "clipName": "Alajuela Triathlon laguna del Hule Locutror Masc",
+            "file": "audio/Alajuela Triathlon laguna del Hule Locutror Masc.m4a",
+            "durationSeconds": 16.6908
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 11,
+          "componentPathID": 481,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Today I feel a bit sporty, I'm thinking about participating in the \"Laguna del Hule\" triathlon.",
+          "voiceAudio": {
+            "clipName": "Alajuela Triathlon laguna del Hulke Lisa 1",
+            "file": "audio/Alajuela Triathlon laguna del Hulke Lisa 1.m4a",
+            "durationSeconds": 6.3811
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 16,
+      "sceneName": "Al_Natacion",
+      "totalLines": 1,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 406,
+          "componentPathID": 1146,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use space bar to move.",
+          "voiceAudio": null
+        }
+      ]
+    },
+    {
+      "sceneIndex": 17,
+      "sceneName": "CT_Sanatorio_Duran_Intro",
+      "totalLines": 1,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 129,
+          "componentPathID": 477,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "You are trapped in the old and creepy Sanatorio Durán!\r",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Locutor 001 MASC",
+            "file": "audio/Sanatorio Duran Locutor 001 MASC.m4a",
+            "durationSeconds": 4.9383
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 18,
+      "sceneName": "CT_Sanatorio_Duran",
+      "totalLines": 34,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 2,
+          "componentPathID": 1130,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I want my doll.\nCan you help me?",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 1 001 Fem",
+            "file": "audio/Sanatorio Duran Fantasma 1 001 Fem.m4a",
+            "durationSeconds": 4.1041
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 4,
+          "componentPathID": 1128,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I want my doll, dropped it and I'm scare to go back and look for it.",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 1 003 Fem",
+            "file": "audio/Sanatorio Duran Fantasma 1 003 Fem.m4a",
+            "durationSeconds": 5.1627
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 6,
+          "componentPathID": 1136,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I feel lonely without my doll.",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 1 002 Fem",
+            "file": "audio/Sanatorio Duran Fantasma 1 002 Fem.m4a",
+            "durationSeconds": 2.3371
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 10,
+          "componentPathID": 1142,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "whoo-oo-oo-oo... come closer....",
+          "voiceAudio": {
+            "clipName": "ghostlymoan",
+            "file": "audio/ghostlymoan.m4a",
+            "durationSeconds": 2.999
+          }
+        },
+        {
+          "order": 5,
+          "itemId": 19,
+          "componentPathID": 1149,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Something is blocking the way.",
+          "voiceAudio": null
+        },
+        {
+          "order": 6,
+          "itemId": 24,
+          "componentPathID": 1158,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Hi, did you find the doll?",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 1 004 Fem",
+            "file": "audio/Sanatorio Duran Fantasma 1 004 Fem.m4a",
+            "durationSeconds": 2.8362
+          }
+        },
+        {
+          "order": 7,
+          "itemId": 26,
+          "componentPathID": 1156,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Yes! That´s my doll!",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 1 006 Fem",
+            "file": "audio/Sanatorio Duran Fantasma 1 006 Fem.m4a",
+            "durationSeconds": 2.9696
+          }
+        },
+        {
+          "order": 8,
+          "itemId": 27,
+          "componentPathID": 1155,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Someone told me, there were ghosts and I was afraid to be alone.",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 1 007 Fem",
+            "file": "audio/Sanatorio Duran Fantasma 1 007 Fem.m4a",
+            "durationSeconds": 4.1708
+          }
+        },
+        {
+          "order": 9,
+          "itemId": 31,
+          "componentPathID": 1161,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Too bad, I thought you had my doll.",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 1 005 Fem",
+            "file": "audio/Sanatorio Duran Fantasma 1 005 Fem.m4a",
+            "durationSeconds": 2.9029
+          }
+        },
+        {
+          "order": 10,
+          "itemId": 36,
+          "componentPathID": 1168,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The only way to go out of this room is to open the doors in the wright order. \nAre you ready?\r\n",
+          "voiceAudio": null
+        },
+        {
+          "order": 11,
+          "itemId": 38,
+          "componentPathID": 1187,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I’m so bored… Would you like to play with me?\r\n",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 2 001 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 2 001 Masc.m4a",
+            "durationSeconds": 4.6713
+          }
+        },
+        {
+          "order": 12,
+          "itemId": 47,
+          "componentPathID": 1177,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I don’t mind! You are trapped here with me,\n",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 2 002 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 2 002 Masc.m4a",
+            "durationSeconds": 3.392
+          }
+        },
+        {
+          "order": 13,
+          "itemId": 48,
+          "componentPathID": 1176,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "and the only way to get out of this room is to open the doors following the correct order.",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 2 003 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 2 003 Masc.m4a",
+            "durationSeconds": 6.8068
+          }
+        },
+        {
+          "order": 14,
+          "itemId": 49,
+          "componentPathID": 1175,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I am going to give you some clues to get to the correct door. Are you ready?\r",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 2 004 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 2 004 Masc.m4a",
+            "durationSeconds": 6.4288
+          }
+        },
+        {
+          "order": 15,
+          "itemId": 52,
+          "componentPathID": 1190,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Fourth door, from left to right.\r",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 2 007 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 2 007 Masc.m4a",
+            "durationSeconds": 4.2709
+          }
+        },
+        {
+          "order": 16,
+          "itemId": 54,
+          "componentPathID": 1194,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Fifth door, from right to left.\r\n",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 2 008 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 2 008 Masc.m4a",
+            "durationSeconds": 3.5702
+          }
+        },
+        {
+          "order": 17,
+          "itemId": 56,
+          "componentPathID": 1191,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "It is not the second door to your left, nor the first one to your right, and none of the ones you have openned so far.\r",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 2 009 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 2 009 Masc.m4a",
+            "durationSeconds": 9.7312
+          }
+        },
+        {
+          "order": 18,
+          "itemId": 60,
+          "componentPathID": 1199,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "That was fun! Hope to play with you again!\r",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 2 010 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 2 010 Masc.m4a",
+            "durationSeconds": 4.8715
+          }
+        },
+        {
+          "order": 19,
+          "itemId": 80,
+          "componentPathID": 1220,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I’m so bored, it’s been a long time since I played with a human!\r",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 3 001 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 3 001 Masc.m4a",
+            "durationSeconds": 6.5226
+          }
+        },
+        {
+          "order": 20,
+          "itemId": 87,
+          "componentPathID": 1232,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "You found me!\r\n",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 3 003 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 3 003 Masc.m4a",
+            "durationSeconds": 1.2198
+          }
+        },
+        {
+          "order": 21,
+          "itemId": 92,
+          "componentPathID": 1235,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "It looks that there is an exit in the other side.",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Locutor EXIT MASC",
+            "file": "audio/Sanatorio Duran Locutor EXIT MASC.m4a",
+            "durationSeconds": 3.6036
+          }
+        },
+        {
+          "order": 22,
+          "itemId": 119,
+          "componentPathID": 1244,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "See you soon... \n",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 3 006 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 3 006 Masc.m4a",
+            "durationSeconds": 1.6883
+          }
+        },
+        {
+          "order": 23,
+          "itemId": 129,
+          "componentPathID": 1259,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Look around! \nYou’ll never know what you can find.",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Locutor 002 MASC",
+            "file": "audio/Sanatorio Duran Locutor 002 MASC.m4a",
+            "durationSeconds": 4.8774
+          }
+        },
+        {
+          "order": 24,
+          "itemId": 137,
+          "componentPathID": 1272,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Bye, Bye.\r..",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 2 011 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 2 011 Masc.m4a",
+            "durationSeconds": 1.9019
+          }
+        },
+        {
+          "order": 25,
+          "itemId": 138,
+          "componentPathID": 1276,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Let’s play hide and seek, if you find me, I will turn on the lights… ha ha ha!",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Find and Seek",
+            "file": "audio/Sanatorio Duran Find and Seek.m4a",
+            "durationSeconds": 8.1749
+          }
+        },
+        {
+          "order": 26,
+          "itemId": 139,
+          "componentPathID": 1275,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "As I promised, I will turn on the lights.\r",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 3 004 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 3 004 Masc.m4a",
+            "durationSeconds": 3.3833
+          }
+        },
+        {
+          "order": 27,
+          "itemId": 140,
+          "componentPathID": 1274,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Hope someday, we can play again.\r.. \n",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 3 005 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 3 005 Masc.m4a",
+            "durationSeconds": 2.2755
+          }
+        },
+        {
+          "order": 28,
+          "itemId": 145,
+          "componentPathID": 1182,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "and the only way to get out of this room, is to open the doors following the correct order.",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 2 003 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 2 003 Masc.m4a",
+            "durationSeconds": 6.8068
+          }
+        },
+        {
+          "order": 29,
+          "itemId": 146,
+          "componentPathID": 1183,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I going to give you some clues to get to the correct door. Are you ready?\r",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 2 004 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 2 004 Masc.m4a",
+            "durationSeconds": 6.4288
+          }
+        },
+        {
+          "order": 30,
+          "itemId": 400,
+          "componentPathID": 1302,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use the arrow keys to move and space bar to interact.",
+          "voiceAudio": null
+        },
+        {
+          "order": 31,
+          "itemId": 411,
+          "componentPathID": 1317,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I don’t mind! You are trapped here with me,\n",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 2 002 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 2 002 Masc.m4a",
+            "durationSeconds": 3.392
+          }
+        },
+        {
+          "order": 32,
+          "itemId": 413,
+          "componentPathID": 1316,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I am going to give you some clues to get to the correct door. Are you ready?\r",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 2 004 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 2 004 Masc.m4a",
+            "durationSeconds": 6.4288
+          }
+        },
+        {
+          "order": 33,
+          "itemId": 415,
+          "componentPathID": 1315,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "and the only way to get out of this room, is to open the doors following the correct order.",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 2 003 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 2 003 Masc.m4a",
+            "durationSeconds": 6.8068
+          }
+        },
+        {
+          "order": 34,
+          "itemId": 416,
+          "componentPathID": 1314,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Fourth door, from left to right.\r",
+          "voiceAudio": {
+            "clipName": "Sanatorio Duran Fantasma 2 007 Masc",
+            "file": "audio/Sanatorio Duran Fantasma 2 007 Masc.m4a",
+            "durationSeconds": 4.2709
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 19,
+      "sceneName": "CT_Volcanes_Intro",
+      "totalLines": 4,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 449,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Costa Rica is a volcanic country. Costa Rica is home of a great number of volcanoes. There are six active volcanoes and another 61 inactive or extinct ones.\r",
+          "voiceAudio": {
+            "clipName": "Volcanes, Irazú Volcano park ranger, 001",
+            "file": "audio/Volcanes, Irazú Volcano park ranger, 001.m4a",
+            "durationSeconds": 11.4837
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 2,
+          "componentPathID": 448,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "For the past fifty years, Arenal was the country’s most active volcano. Although its eruptions haven't occurred. Arenal still is one of the country´s best known and most visited volcanoes.",
+          "voiceAudio": {
+            "clipName": "Volcanes, Irazú Volcano park ranger, 002",
+            "file": "audio/Volcanes, Irazú Volcano park ranger, 002.m4a",
+            "durationSeconds": 13.6316
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 3,
+          "componentPathID": 447,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "There are, however, many other volcanoes, Poás Volcano, Turrialba Volcano. Both had activity in these past months.\r",
+          "voiceAudio": {
+            "clipName": "Volcanes, Irazú Volcano park ranger, 003",
+            "file": "audio/Volcanes, Irazú Volcano park ranger, 003.m4a",
+            "durationSeconds": 9.2865
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 4,
+          "componentPathID": 446,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Help us calm the volcanoes!",
+          "voiceAudio": {
+            "clipName": "Volcanes, Irazú Volcano park ranger, 004",
+            "file": "audio/Volcanes, Irazú Volcano park ranger, 004.m4a",
+            "durationSeconds": 1.8939
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 20,
+      "sceneName": "CT_Volcanes",
+      "totalLines": 4,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 3,
+          "componentPathID": 668,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The volcanoes in Costa Rica have awakened!!!\r Tap them before they erupt but be careful, they are getting stronger!\r\n",
+          "voiceAudio": {
+            "clipName": "Volcanes, Irazú Volcano narradorr, 001 FEM B",
+            "file": "audio/Volcanes, Irazú Volcano narradorr, 001 FEM B.m4a",
+            "durationSeconds": 6.7716
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 5,
+          "componentPathID": 666,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "\rGood luck!",
+          "voiceAudio": {
+            "clipName": "Volcanes, Irazú Volcano narradorr, 003 FEM",
+            "file": "audio/Volcanes, Irazú Volcano narradorr, 003 FEM.m4a",
+            "durationSeconds": 0.4789
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 11,
+          "componentPathID": 673,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The volcanoes in Costa Rica have awakened!!!\r Tap them before they erupt but be careful, they are getting stronger!\r\n",
+          "voiceAudio": {
+            "clipName": "Volcanes, Irazú Volcano narradorr, 001 MASC B",
+            "file": "audio/Volcanes, Irazú Volcano narradorr, 001 MASC B.m4a",
+            "durationSeconds": 6.8018
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 12,
+          "componentPathID": 672,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "\r\nGood luck!",
+          "voiceAudio": {
+            "clipName": "Volcanes, Irazú Volcano narradorr, 003 MASC",
+            "file": "audio/Volcanes, Irazú Volcano narradorr, 003 MASC.m4a",
+            "durationSeconds": 0.4818
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 21,
+      "sceneName": "CT_Volcanes2_Intro",
+      "totalLines": 4,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 10,
+          "componentPathID": 453,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Costa Rica is a volcanic country. Costa Rica is home of a great number of volcanoes. There are six active volcanoes and another 61 inactive or extinct ones.\r",
+          "voiceAudio": {
+            "clipName": "Volcanes, Irazú Volcano park ranger, 001",
+            "file": "audio/Volcanes, Irazú Volcano park ranger, 001.m4a",
+            "durationSeconds": 11.4837
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 11,
+          "componentPathID": 452,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "For the past fifty years, Arenal was the country’s most active volcano. Although its eruptions haven´t occurred, Arenal still is one of the country’s best-known and most-visited volcanoes.\r",
+          "voiceAudio": {
+            "clipName": "Volcanes, Irazú Volcano park ranger, 002",
+            "file": "audio/Volcanes, Irazú Volcano park ranger, 002.m4a",
+            "durationSeconds": 13.6316
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 12,
+          "componentPathID": 451,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "There are, however, many other volcanoes, Poas Volcano, Turrialba Volcano, both had activity in these past months.\r",
+          "voiceAudio": {
+            "clipName": "Volcanes, Irazú Volcano park ranger, 003",
+            "file": "audio/Volcanes, Irazú Volcano park ranger, 003.m4a",
+            "durationSeconds": 9.2865
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 13,
+          "componentPathID": 450,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Help us calm the volcanoes!",
+          "voiceAudio": {
+            "clipName": "Volcanes, Irazú Volcano park ranger, 004",
+            "file": "audio/Volcanes, Irazú Volcano park ranger, 004.m4a",
+            "durationSeconds": 1.8939
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 22,
+      "sceneName": "CT_Volcanes2",
+      "totalLines": 4,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 2,
+          "componentPathID": 1001,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The volcanoes in Costa Rica have awakened!!!\r Tap them before they erupt but be careful, they are getting stronger!\r\n",
+          "voiceAudio": {
+            "clipName": "Volcanes, Irazú Volcano narradorr, 001 MASC B",
+            "file": "audio/Volcanes, Irazú Volcano narradorr, 001 MASC B.m4a",
+            "durationSeconds": 6.8018
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 3,
+          "componentPathID": 1000,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "\r\nGood luck!",
+          "voiceAudio": {
+            "clipName": "Volcanes, Irazú Volcano narradorr, 003 MASC",
+            "file": "audio/Volcanes, Irazú Volcano narradorr, 003 MASC.m4a",
+            "durationSeconds": 0.4818
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 18,
+          "componentPathID": 1007,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The volcanoes in Costa Rica have awakened!!!\r Tap them before they erupt but be careful, they are getting stronger!\r",
+          "voiceAudio": {
+            "clipName": "Volcanes, Irazú Volcano narradorr, 001 FEM B",
+            "file": "audio/Volcanes, Irazú Volcano narradorr, 001 FEM B.m4a",
+            "durationSeconds": 6.7716
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 19,
+          "componentPathID": 1006,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "\r\nGood luck!",
+          "voiceAudio": {
+            "clipName": "Volcanes, Irazú Volcano narradorr, 003 FEM",
+            "file": "audio/Volcanes, Irazú Volcano narradorr, 003 FEM.m4a",
+            "durationSeconds": 0.4789
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 23,
+      "sceneName": "GN_BarraHonda_Intro",
+      "totalLines": 6,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 459,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Barra Honda is unique among the National Parks of Costa Rica. Its main attraction is a large system of limestone caverns. Until now, only 19 out of Barra Honda's 42 caves have been explored.",
+          "voiceAudio": {
+            "clipName": "001 Guanacaste, Barra Honda Park ranger 001",
+            "file": "audio/001 Guanacaste, Barra Honda Park ranger 001.m4a",
+            "durationSeconds": 13.8376
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 2,
+          "componentPathID": 458,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The bat cave, called Pozo Hediondo (Fetid Cave), is home to a colony of around 5000 bats.",
+          "voiceAudio": {
+            "clipName": "002 Guanacaste, Barra Honda Park ranger 002",
+            "file": "audio/002 Guanacaste, Barra Honda Park ranger 002.m4a",
+            "durationSeconds": 7.3419
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 3,
+          "componentPathID": 457,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Let’s go to Pozo Hediondo!!!",
+          "voiceAudio": {
+            "clipName": "004 Guanacaste, Barra Honda mike 001",
+            "file": "audio/004 Guanacaste, Barra Honda mike 001.m4a",
+            "durationSeconds": 1.9244
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 10,
+          "componentPathID": 461,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Barra Honda is unique among the National Parks of Costa Rica. Its main attraction is a large system of limestone caverns. Until now, only 19 out of Barra Honda's 42 caves have been explored.",
+          "voiceAudio": {
+            "clipName": "001 Guanacaste, Barra Honda Park ranger 001",
+            "file": "audio/001 Guanacaste, Barra Honda Park ranger 001.m4a",
+            "durationSeconds": 13.8376
+          }
+        },
+        {
+          "order": 5,
+          "itemId": 11,
+          "componentPathID": 456,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The bat cave, called Pozo Hediondo (Fetid Cave), is home to a colony of around 5000 bats.",
+          "voiceAudio": {
+            "clipName": "002 Guanacaste, Barra Honda Park ranger 002",
+            "file": "audio/002 Guanacaste, Barra Honda Park ranger 002.m4a",
+            "durationSeconds": 7.3419
+          }
+        },
+        {
+          "order": 6,
+          "itemId": 12,
+          "componentPathID": 455,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Let’s go to Pozo Hediondo!!!",
+          "voiceAudio": {
+            "clipName": "005 Guanacaste, Barra Honda Lisa 001",
+            "file": "audio/005 Guanacaste, Barra Honda Lisa 001.m4a",
+            "durationSeconds": 1.8416
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 24,
+      "sceneName": "GN_BarraHonda",
+      "totalLines": 4,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 3,
+          "componentPathID": 1059,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "It´s said that \"Barra Honda\" caves are incredible places to explore, but you have to be careful not to harm the animals while you are inside.\r\nGood luck!",
+          "voiceAudio": {
+            "clipName": "003 Guanacaste, Barra Honda Park ranger 002, locutor 1 MASC",
+            "file": "audio/003 Guanacaste, Barra Honda Park ranger 002, locutor 1 MASC.m4a",
+            "durationSeconds": 9.6377
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 12,
+          "componentPathID": 1053,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "It's said that “Barra Honda” caves are incredible places to explore, but you have to be careful not to harm the animals while you are inside.\r\nGood luck! \r",
+          "voiceAudio": {
+            "clipName": "003 Guanacaste, Barra Honda Park ranger 002, locutor 1 FEM",
+            "file": "audio/003 Guanacaste, Barra Honda Park ranger 002, locutor 1 FEM.m4a",
+            "durationSeconds": 10.2632
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 399,
+          "componentPathID": 1068,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use the arrow keys to move and space bar to jump.",
+          "voiceAudio": null
+        },
+        {
+          "order": 4,
+          "itemId": 405,
+          "componentPathID": 1073,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use the arrow keys to move and space bar to jump.",
+          "voiceAudio": null
+        }
+      ]
+    },
+    {
+      "sceneIndex": 25,
+      "sceneName": "GN_Buceo_Intro",
+      "totalLines": 2,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 7,
+          "componentPathID": 483,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Some locals told me that I must experience diving in Coco Beach. So, I’m going there to take some underwater pictures to share them with my family and friends. ",
+          "voiceAudio": {
+            "clipName": "002 Guanacaste, Diving in coco, MIKE 001",
+            "file": "audio/002 Guanacaste, Diving in coco, MIKE 001.m4a",
+            "durationSeconds": 8.7496
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 10,
+          "componentPathID": 486,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Some locals told me that I must experience diving in Coco Beach. So, I’m going there to take some underwater pictures to share them with my family and friends. ",
+          "voiceAudio": {
+            "clipName": "001 Guanacaste, Diving in coco, Lisa 001",
+            "file": "audio/001 Guanacaste, Diving in coco, Lisa 001.m4a",
+            "durationSeconds": 10.2356
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 26,
+      "sceneName": "GN_Buceo",
+      "totalLines": 7,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 1565,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The waters of “Playa del Coco” are full of incredible animals that you can photograph (if you are lucky enough to see them).",
+          "voiceAudio": {
+            "clipName": "003 Guanacaste, diving in coco, locutor 001 MASC",
+            "file": "audio/003 Guanacaste, diving in coco, locutor 001 MASC.m4a",
+            "durationSeconds": 7.6321
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 5,
+          "componentPathID": 1568,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Touch the screen to dive!",
+          "voiceAudio": {
+            "clipName": "005 Guanacaste, diving in coco, locutor 003 Masc",
+            "file": "audio/005 Guanacaste, diving in coco, locutor 003 Masc.m4a",
+            "durationSeconds": 1.7429
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 7,
+          "componentPathID": 1569,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "When diving you must be very careful not to alter the ecosystem. Don't touch the seafloor!",
+          "voiceAudio": {
+            "clipName": "004 Guanacaste, diving in coco, locutor 002 Masc",
+            "file": "audio/004 Guanacaste, diving in coco, locutor 002 Masc.m4a",
+            "durationSeconds": 5.8877
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 9,
+          "componentPathID": 1570,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "You lost the game",
+          "voiceAudio": null
+        },
+        {
+          "order": 5,
+          "itemId": 11,
+          "componentPathID": 1573,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Excellent, you could photograph several animals!",
+          "voiceAudio": null
+        },
+        {
+          "order": 6,
+          "itemId": 18,
+          "componentPathID": 1564,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Good luck!",
+          "voiceAudio": {
+            "clipName": "006 Guanacaste, diving in coco, locutor 004 Masc",
+            "file": "audio/006 Guanacaste, diving in coco, locutor 004 Masc.m4a",
+            "durationSeconds": 0.5471
+          }
+        },
+        {
+          "order": 7,
+          "itemId": 42,
+          "componentPathID": 1594,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Tap the mouse to dive!",
+          "voiceAudio": null
+        }
+      ]
+    },
+    {
+      "sceneIndex": 27,
+      "sceneName": "GN_Surf_Tamarindo_Intro",
+      "totalLines": 3,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 485,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Tamarindo town is known for beaches with big waves for surfing such as  “Playa Tamarindo” and “Playa Langosta”. To the north, “Playa Grande”  is a major nesting site for huge leatherback turtles, and forms part of Las Baulas National Marine Park. \r\n\r\nThe mangrove-lined estuary of Tamarindo Wildlife Refuge protects animals such as howler monkeys and crocodiles. \r",
+          "voiceAudio": {
+            "clipName": "001 Tamarindo, surf, Locutor 001 Fem",
+            "file": "audio/001 Tamarindo, surf, Locutor 001 Fem.m4a",
+            "durationSeconds": 27.192
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 10,
+          "componentPathID": 483,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Tamarindo town is known for beaches with big waves for surfing such as  “Playa Tamarindo” and “Playa Langosta”. To the north, “Playa Grande”  is a major nesting site for huge leatherback turtles, and forms part of Las Baulas National Marine Park. \r\n\r\nThe mangrove-lined estuary of Tamarindo Wildlife Refuge protects animals such as howler monkeys and crocodiles. \r",
+          "voiceAudio": {
+            "clipName": "001 Tamarindo, surf, Locutor 001 Fem",
+            "file": "audio/001 Tamarindo, surf, Locutor 001 Fem.m4a",
+            "durationSeconds": 27.192
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 11,
+          "componentPathID": 482,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "I love surfing in Tamarindo!!",
+          "voiceAudio": {
+            "clipName": "002 Guanacaste, tamarindoi, surf lisa 001",
+            "file": "audio/002 Guanacaste, tamarindoi, surf lisa 001.m4a",
+            "durationSeconds": 2.1435
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 28,
+      "sceneName": "GN_Surf_Tamarindo",
+      "totalLines": 6,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 1230,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Sun, waves, surf and coins! What else does it take to have a good time?\n",
+          "voiceAudio": {
+            "clipName": "004 Guanacaste, tamarindo, Locutor 002 FEM 2",
+            "file": "audio/004 Guanacaste, tamarindo, Locutor 002 FEM 2.m4a",
+            "durationSeconds": 5.6816
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 4,
+          "componentPathID": 1234,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "You won!",
+          "voiceAudio": null
+        },
+        {
+          "order": 3,
+          "itemId": 7,
+          "componentPathID": 1238,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Wipe Out!",
+          "voiceAudio": null
+        },
+        {
+          "order": 4,
+          "itemId": 9,
+          "componentPathID": 1241,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Touch the screen to avoid falling off the surfboard!",
+          "voiceAudio": {
+            "clipName": "005 Guanacaste, tamarindo, Locutor 002 FEM 3",
+            "file": "audio/005 Guanacaste, tamarindo, Locutor 002 FEM 3.m4a",
+            "durationSeconds": 2.8894
+          }
+        },
+        {
+          "order": 5,
+          "itemId": 10,
+          "componentPathID": 1240,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Have fun and good luck!",
+          "voiceAudio": {
+            "clipName": "006 Guanacaste, tamarindo, Locutor 002 FEM 4",
+            "file": "audio/006 Guanacaste, tamarindo, Locutor 002 FEM 4.m4a",
+            "durationSeconds": 1.8474
+          }
+        },
+        {
+          "order": 6,
+          "itemId": 39,
+          "componentPathID": 1260,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Tap the mouse to avoid falling off the surfboard!",
+          "voiceAudio": null
+        }
+      ]
+    },
+    {
+      "sceneIndex": 29,
+      "sceneName": "HD_Entregar_Flores_Intro",
+      "totalLines": 10,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 471,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Hi! I’m Mike.",
+          "voiceAudio": {
+            "clipName": "OK MIKE 001",
+            "file": "audio/OK MIKE 001.m4a",
+            "durationSeconds": 0.9854
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 2,
+          "componentPathID": 470,
+          "character": "Daniela",
+          "portraitSprite": null,
+          "text": "Hi! I’m Daniela the owner of the flower shop.  Are you a tourist? Where are you from?",
+          "voiceAudio": {
+            "clipName": "OK Daniela 001",
+            "file": "audio/OK Daniela 001.m4a",
+            "durationSeconds": 6.4972
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 3,
+          "componentPathID": 469,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Yes, I'm  visiting Costa Rica and I love it!! I'm from the States.  I see that you are busy today. Do you need some help?\r",
+          "voiceAudio": {
+            "clipName": "OK Mike 002",
+            "file": "audio/OK Mike 002.m4a",
+            "durationSeconds": 8.3156
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 4,
+          "componentPathID": 468,
+          "character": "Daniela",
+          "portraitSprite": null,
+          "text": "Yes! I can use some help.\r I will pay you if you help me with today's deliveries.",
+          "voiceAudio": {
+            "clipName": "OK Daniela 002",
+            "file": "audio/OK Daniela 002.m4a",
+            "durationSeconds": 5.8819
+          }
+        },
+        {
+          "order": 5,
+          "itemId": 12,
+          "componentPathID": 474,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Let’s start delivering flowers!",
+          "voiceAudio": {
+            "clipName": "OK Mike 003",
+            "file": "audio/OK Mike 003.m4a",
+            "durationSeconds": 2.2509
+          }
+        },
+        {
+          "order": 6,
+          "itemId": 14,
+          "componentPathID": 477,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Hi! I’m Lisa.",
+          "voiceAudio": {
+            "clipName": "OK Lisa 001",
+            "file": "audio/OK Lisa 001.m4a",
+            "durationSeconds": 1.502
+          }
+        },
+        {
+          "order": 7,
+          "itemId": 15,
+          "componentPathID": 476,
+          "character": "Daniela",
+          "portraitSprite": null,
+          "text": "Hi! I’m Daniela the owner of the flower shop.  Are you a tourist? Where are you from?",
+          "voiceAudio": {
+            "clipName": "OK Daniela 001",
+            "file": "audio/OK Daniela 001.m4a",
+            "durationSeconds": 6.4972
+          }
+        },
+        {
+          "order": 8,
+          "itemId": 16,
+          "componentPathID": 475,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Yes, I'm  visiting Costa Rica and I love it!! I'm from the States.  I see that you are busy today. Do you need some help?\r",
+          "voiceAudio": {
+            "clipName": "OK Lisa 002 B",
+            "file": "audio/OK Lisa 002 B.m4a",
+            "durationSeconds": 9.3638
+          }
+        },
+        {
+          "order": 9,
+          "itemId": 17,
+          "componentPathID": 473,
+          "character": "Daniela",
+          "portraitSprite": null,
+          "text": "Yes! I can use some help.\r I will pay you if you help me with today's deliveries.",
+          "voiceAudio": {
+            "clipName": "OK Daniela 002",
+            "file": "audio/OK Daniela 002.m4a",
+            "durationSeconds": 5.8819
+          }
+        },
+        {
+          "order": 10,
+          "itemId": 18,
+          "componentPathID": 467,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Let’s start delivering flowers!",
+          "voiceAudio": {
+            "clipName": "OK Lisa 003",
+            "file": "audio/OK Lisa 003.m4a",
+            "durationSeconds": 2.4947
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 30,
+      "sceneName": "HD_Entregar_Flores",
+      "totalLines": 52,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 2,
+          "componentPathID": 2550,
+          "character": "María",
+          "portraitSprite": null,
+          "text": "These flowers are for a boy who is a little shy. The instructions say he will be near the church.",
+          "voiceAudio": {
+            "clipName": "OK 003 Heredia entrega de Flores, Maria 002",
+            "file": "audio/OK 003 Heredia entrega de Flores, Maria 002.m4a",
+            "durationSeconds": 7.3426
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 7,
+          "componentPathID": 2558,
+          "character": "María",
+          "portraitSprite": null,
+          "text": "These flowers are for a boy who is a little shy. The instructions say he will be near the church.",
+          "voiceAudio": {
+            "clipName": "OK 003 Heredia entrega de Flores, Maria 002",
+            "file": "audio/OK 003 Heredia entrega de Flores, Maria 002.m4a",
+            "durationSeconds": 7.3426
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 11,
+          "componentPathID": 2561,
+          "character": "Daniela",
+          "portraitSprite": null,
+          "text": "The next delivery is for the owner of the supermarket, located across from the park's southwest corner.",
+          "voiceAudio": {
+            "clipName": "OK 005 Heredia flores, supermercado Daniela 001",
+            "file": "audio/OK 005 Heredia flores, supermercado Daniela 001.m4a",
+            "durationSeconds": 8.0358
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 15,
+          "componentPathID": 2570,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Flowers?\r",
+          "voiceAudio": {
+            "clipName": "OK Heredia, Flores Shy guy 001",
+            "file": "audio/OK Heredia, Flores Shy guy 001.m4a",
+            "durationSeconds": 1.1863
+          }
+        },
+        {
+          "order": 5,
+          "itemId": 17,
+          "componentPathID": 2569,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "For me? Thank you.\r",
+          "voiceAudio": {
+            "clipName": "OK Heredia, Flores Shy guy 002",
+            "file": "audio/OK Heredia, Flores Shy guy 002.m4a",
+            "durationSeconds": 1.635
+          }
+        },
+        {
+          "order": 6,
+          "itemId": 18,
+          "componentPathID": 2566,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I'm sorry I hid from you, but I'm a bit shy.",
+          "voiceAudio": {
+            "clipName": "OK Heredia, Flores Shy guy 003",
+            "file": "audio/OK Heredia, Flores Shy guy 003.m4a",
+            "durationSeconds": 3.5837
+          }
+        },
+        {
+          "order": 7,
+          "itemId": 22,
+          "componentPathID": 2576,
+          "character": "Daniela",
+          "portraitSprite": null,
+          "text": "This flower bouquet is for María. She's a dancer who is performing today at the park.\r ",
+          "voiceAudio": {
+            "clipName": "OK Heredia, Flores, entrega Entrega Maria, Daniela 001",
+            "file": "audio/OK Heredia, Flores, entrega Entrega Maria, Daniela 001.m4a",
+            "durationSeconds": 7.6484
+          }
+        },
+        {
+          "order": 8,
+          "itemId": 26,
+          "componentPathID": 2579,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Thank you! I didn't expect my wife would remember our anniversary. Have a chocolate.",
+          "voiceAudio": {
+            "clipName": "OK Heredia, Flores,, Supermarket owner 001 B",
+            "file": "audio/OK Heredia, Flores,, Supermarket owner 001 B.m4a",
+            "durationSeconds": 5.122
+          }
+        },
+        {
+          "order": 9,
+          "itemId": 33,
+          "componentPathID": 2584,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Time to come back to the flower shop for the next order!\r",
+          "voiceAudio": {
+            "clipName": "Heredia entrega de Flores, Mike Time to come back to tthe flower shop, for the next order 1",
+            "file": "audio/Heredia entrega de Flores, Mike Time to come back to tthe flower shop, for the next order 1.m4a",
+            "durationSeconds": 3.6703
+          }
+        },
+        {
+          "order": 10,
+          "itemId": 44,
+          "componentPathID": 2593,
+          "character": "María",
+          "portraitSprite": null,
+          "text": "Is it from a fan? That's so sweet! I love flowers... and fans. Hee, hee.",
+          "voiceAudio": {
+            "clipName": "OK Heredia, Flores entrega Maria (Centro del parque) Maria 001",
+            "file": "audio/OK Heredia, Flores entrega Maria (Centro del parque) Maria 001.m4a",
+            "durationSeconds": 7.0955
+          }
+        },
+        {
+          "order": 11,
+          "itemId": 52,
+          "componentPathID": 2603,
+          "character": "Daniela",
+          "portraitSprite": null,
+          "text": "The girl's boyfriend said she likes to run around the park. She must be very fast so stay alert.\r",
+          "voiceAudio": {
+            "clipName": "OK Heredia, Flores, entrega chica corriendo Daniela 001",
+            "file": "audio/OK Heredia, Flores, entrega chica corriendo Daniela 001.m4a",
+            "durationSeconds": 8.27
+          }
+        },
+        {
+          "order": 12,
+          "itemId": 59,
+          "componentPathID": 2616,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Awww, my boyfriend is so romantic!!!\r\nI love him so much!!!!",
+          "voiceAudio": {
+            "clipName": "OK Heredia, Flores, Chica corredora 001",
+            "file": "audio/OK Heredia, Flores, Chica corredora 001.m4a",
+            "durationSeconds": 6.4079
+          }
+        },
+        {
+          "order": 13,
+          "itemId": 65,
+          "componentPathID": 2609,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "From now on, we will run together!",
+          "voiceAudio": {
+            "clipName": "OK Heredia, Flores, Chica corredora 002",
+            "file": "audio/OK Heredia, Flores, Chica corredora 002.m4a",
+            "durationSeconds": 2.6484
+          }
+        },
+        {
+          "order": 14,
+          "itemId": 68,
+          "componentPathID": 2632,
+          "character": "Daniela",
+          "portraitSprite": null,
+          "text": "We received a letter asking for you to go to the park's southwest corner... And the letter said you should not bring flowers... That's odd...",
+          "voiceAudio": {
+            "clipName": "OK Heredia, Flores, Entrega admirador, Daniela 001",
+            "file": "audio/OK Heredia, Flores, Entrega admirador, Daniela 001.m4a",
+            "durationSeconds": 9.6824
+          }
+        },
+        {
+          "order": 15,
+          "itemId": 74,
+          "componentPathID": 2619,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Are you the flower shop´s delivery boy? ",
+          "voiceAudio": {
+            "clipName": "Delivery boy",
+            "file": "audio/Delivery boy.m4a",
+            "durationSeconds": 2.0303
+          }
+        },
+        {
+          "order": 16,
+          "itemId": 85,
+          "componentPathID": 2635,
+          "character": "Daniela",
+          "portraitSprite": null,
+          "text": "These are for me? I have never received flowers before! I'm so happy!\r",
+          "voiceAudio": {
+            "clipName": "OK Heredia, Flores, Entrega admirador, Daniela 002",
+            "file": "audio/OK Heredia, Flores, Entrega admirador, Daniela 002.m4a",
+            "durationSeconds": 7.0306
+          }
+        },
+        {
+          "order": 17,
+          "itemId": 88,
+          "componentPathID": 2640,
+          "character": "Daniela",
+          "portraitSprite": null,
+          "text": "Thank you for helping me today. I hope you enjoy the rest of your trip. Take care!",
+          "voiceAudio": {
+            "clipName": "OK Heredia, Flores, Entrega admirador, Daniela 003",
+            "file": "audio/OK Heredia, Flores, Entrega admirador, Daniela 003.m4a",
+            "durationSeconds": 6.6842
+          }
+        },
+        {
+          "order": 18,
+          "itemId": 122,
+          "componentPathID": 2671,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Looking for the church? Go north.",
+          "voiceAudio": {
+            "clipName": "OK 004 NPC 1 (Cerca de la cancha de basket)",
+            "file": "audio/OK 004 NPC 1 (Cerca de la cancha de basket).m4a",
+            "durationSeconds": 2.3973
+          }
+        },
+        {
+          "order": 19,
+          "itemId": 126,
+          "componentPathID": 2686,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Are you delivering flowers? I would love to recibe some.",
+          "voiceAudio": {
+            "clipName": "OK NPC VARIOS 10",
+            "file": "audio/OK NPC VARIOS 10.m4a",
+            "durationSeconds": 4.2269
+          }
+        },
+        {
+          "order": 20,
+          "itemId": 132,
+          "componentPathID": 2679,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Flower delivery? Looking for the church? You are lost, go north and you will find it.",
+          "voiceAudio": {
+            "clipName": "Primera entrega Flower delibery",
+            "file": "audio/Primera entrega Flower delibery.m4a",
+            "durationSeconds": 5.3449
+          }
+        },
+        {
+          "order": 21,
+          "itemId": 142,
+          "componentPathID": 2716,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Flower delivery? It looks like a good idea to send her some.",
+          "voiceAudio": {
+            "clipName": "OK NPC 3 Esq. Oeste de la Iglesia 003",
+            "file": "audio/OK NPC 3 Esq. Oeste de la Iglesia 003.m4a",
+            "durationSeconds": 4.9275
+          }
+        },
+        {
+          "order": 22,
+          "itemId": 148,
+          "componentPathID": 2709,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The supermarket? You have to go one block west and then one block south.\r",
+          "voiceAudio": {
+            "clipName": "Segunda entregaThe supermarket",
+            "file": "audio/Segunda entregaThe supermarket.m4a",
+            "durationSeconds": 5.1447
+          }
+        },
+        {
+          "order": 23,
+          "itemId": 155,
+          "componentPathID": 2701,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The supermarket? I think there is one going south.",
+          "voiceAudio": {
+            "clipName": "OK NPC 5 Oeste del Parque",
+            "file": "audio/OK NPC 5 Oeste del Parque.m4a",
+            "durationSeconds": 3.8778
+          }
+        },
+        {
+          "order": 24,
+          "itemId": 162,
+          "componentPathID": 2690,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I will check again to see if she's going to get the flowers.",
+          "voiceAudio": {
+            "clipName": "OK NPC 4 Cancha de Basket 002 XXXXXXX",
+            "file": "audio/OK NPC 4 Cancha de Basket 002 XXXXXXX.m4a",
+            "durationSeconds": 3.6652
+          }
+        },
+        {
+          "order": 25,
+          "itemId": 172,
+          "componentPathID": 2748,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I hope María gets the flowers.",
+          "voiceAudio": {
+            "clipName": "OK NPC 7 Centro del parque",
+            "file": "audio/OK NPC 7 Centro del parque.m4a",
+            "durationSeconds": 2.3925
+          }
+        },
+        {
+          "order": 26,
+          "itemId": 181,
+          "componentPathID": 2741,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "María is a great dancer. I love to see her performing.",
+          "voiceAudio": {
+            "clipName": "OK NPC 6 Centro del parque",
+            "file": "audio/OK NPC 6 Centro del parque.m4a",
+            "durationSeconds": 4.4536
+          }
+        },
+        {
+          "order": 27,
+          "itemId": 187,
+          "componentPathID": 2734,
+          "character": "María",
+          "portraitSprite": null,
+          "text": "María is the blond dancer on stage.",
+          "voiceAudio": {
+            "clipName": "Tercera entrega Maria is the blond dancer on stage",
+            "file": "audio/Tercera entrega Maria is the blond dancer on stage.m4a",
+            "durationSeconds": 2.3467
+          }
+        },
+        {
+          "order": 28,
+          "itemId": 188,
+          "componentPathID": 2733,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "By the way, send my regards to the flower shop owner.",
+          "voiceAudio": {
+            "clipName": "By the way, send my regards to the flower shop owner",
+            "file": "audio/By the way, send my regards to the flower shop owner.m4a",
+            "durationSeconds": 3.4496
+          }
+        },
+        {
+          "order": 29,
+          "itemId": 194,
+          "componentPathID": 2721,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Oops! I have to go home, my wife is waiting fo me.",
+          "voiceAudio": {
+            "clipName": "OK NPC 3 Esq. Oeste de la Iglesia 002",
+            "file": "audio/OK NPC 3 Esq. Oeste de la Iglesia 002.m4a",
+            "durationSeconds": 3.2968
+          }
+        },
+        {
+          "order": 30,
+          "itemId": 198,
+          "componentPathID": 2729,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The show is over.",
+          "voiceAudio": null
+        },
+        {
+          "order": 31,
+          "itemId": 202,
+          "componentPathID": 2771,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I love María’s dance. It´s a shame that’s she’s gone.",
+          "voiceAudio": {
+            "clipName": "OK NPC 008 001",
+            "file": "audio/OK NPC 008 001.m4a",
+            "durationSeconds": 3.0697
+          }
+        },
+        {
+          "order": 32,
+          "itemId": 212,
+          "componentPathID": 2764,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "You've seen a girl running around the park?",
+          "voiceAudio": null
+        },
+        {
+          "order": 33,
+          "itemId": 218,
+          "componentPathID": 2757,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I’m thinking about sending some flowers.",
+          "voiceAudio": {
+            "clipName": "Cuarta entrega I´m thinking about sending some flowers",
+            "file": "audio/Cuarta entrega I´m thinking about sending some flowers.m4a",
+            "durationSeconds": 2.4889
+          }
+        },
+        {
+          "order": 34,
+          "itemId": 219,
+          "componentPathID": 2756,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Yes, I’ve seen a woman running around. I think she stopped near the car.\r",
+          "voiceAudio": {
+            "clipName": "Cuarta entrega Yes I've seen a  woman",
+            "file": "audio/Cuarta entrega Yes I've seen a  woman.m4a",
+            "durationSeconds": 4.5322
+          }
+        },
+        {
+          "order": 35,
+          "itemId": 222,
+          "componentPathID": 2752,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I hope my girlfriend got the flowers. I think she was running.\r",
+          "voiceAudio": {
+            "clipName": "OK NPC 008 2",
+            "file": "audio/OK NPC 008 2.m4a",
+            "durationSeconds": 4.429
+          }
+        },
+        {
+          "order": 36,
+          "itemId": 231,
+          "componentPathID": 2775,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Time to come back to the flower shop for the next order!\r",
+          "voiceAudio": {
+            "clipName": "OK Heredia entrega de Flores, Lisa Time to come back to tthe flower shop, for the next order 3",
+            "file": "audio/OK Heredia entrega de Flores, Lisa Time to come back to tthe flower shop, for the next order 3.m4a",
+            "durationSeconds": 2.827
+          }
+        },
+        {
+          "order": 37,
+          "itemId": 233,
+          "componentPathID": 2781,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Time to come back to the flower shop for the next order!\r",
+          "voiceAudio": {
+            "clipName": "Heredia entrega de Flores, Mike Time to come back to tthe flower shop, for the next order 1",
+            "file": "audio/Heredia entrega de Flores, Mike Time to come back to tthe flower shop, for the next order 1.m4a",
+            "durationSeconds": 3.6703
+          }
+        },
+        {
+          "order": 38,
+          "itemId": 235,
+          "componentPathID": 2779,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Time to come back to the flower shop for the next order!\r",
+          "voiceAudio": {
+            "clipName": "OK Heredia entrega de Flores, Lisa Time to come back to tthe flower shop, for the next order 3",
+            "file": "audio/OK Heredia entrega de Flores, Lisa Time to come back to tthe flower shop, for the next order 3.m4a",
+            "durationSeconds": 2.827
+          }
+        },
+        {
+          "order": 39,
+          "itemId": 238,
+          "componentPathID": 2784,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Time to come back to the flower shop for the next order!\r",
+          "voiceAudio": {
+            "clipName": "Heredia entrega de Flores, Mike Time to come back to tthe flower shop, for the next order 1",
+            "file": "audio/Heredia entrega de Flores, Mike Time to come back to tthe flower shop, for the next order 1.m4a",
+            "durationSeconds": 3.6703
+          }
+        },
+        {
+          "order": 40,
+          "itemId": 240,
+          "componentPathID": 2596,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Time to come back to the flower shop for the next order!\r",
+          "voiceAudio": {
+            "clipName": "OK Heredia entrega de Flores, Lisa Time to come back to tthe flower shop, for the next order 3",
+            "file": "audio/OK Heredia entrega de Flores, Lisa Time to come back to tthe flower shop, for the next order 3.m4a",
+            "durationSeconds": 2.827
+          }
+        },
+        {
+          "order": 41,
+          "itemId": 243,
+          "componentPathID": 2789,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Time to come back to the flower shop for the next order!\r",
+          "voiceAudio": {
+            "clipName": "Heredia entrega de Flores, Mike Time to come back to tthe flower shop, for the next order 1",
+            "file": "audio/Heredia entrega de Flores, Mike Time to come back to tthe flower shop, for the next order 1.m4a",
+            "durationSeconds": 3.6703
+          }
+        },
+        {
+          "order": 42,
+          "itemId": 245,
+          "componentPathID": 2787,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Time to come back to the flower shop for the next order!\r",
+          "voiceAudio": {
+            "clipName": "OK Heredia entrega de Flores, Lisa Time to come back to tthe flower shop, for the next order 3",
+            "file": "audio/OK Heredia entrega de Flores, Lisa Time to come back to tthe flower shop, for the next order 3.m4a",
+            "durationSeconds": 2.827
+          }
+        },
+        {
+          "order": 43,
+          "itemId": 247,
+          "componentPathID": 2612,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The show is over.",
+          "voiceAudio": null
+        },
+        {
+          "order": 44,
+          "itemId": 248,
+          "componentPathID": 2708,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "By the way, send my regards to the flower shop owner.",
+          "voiceAudio": {
+            "clipName": "By the way, send my regards to the flower shop owner",
+            "file": "audio/By the way, send my regards to the flower shop owner.m4a",
+            "durationSeconds": 3.4496
+          }
+        },
+        {
+          "order": 45,
+          "itemId": 249,
+          "componentPathID": 2678,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "By the way, send my regards to the flower shop owner.",
+          "voiceAudio": {
+            "clipName": "By the way, send my regards to the flower shop owner",
+            "file": "audio/By the way, send my regards to the flower shop owner.m4a",
+            "durationSeconds": 3.4496
+          }
+        },
+        {
+          "order": 46,
+          "itemId": 250,
+          "componentPathID": 2791,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "María sing for my wedding anniversary.",
+          "voiceAudio": {
+            "clipName": "OK NPC 4 Oeste de la Iglesia 1",
+            "file": "audio/OK NPC 4 Oeste de la Iglesia 1.m4a",
+            "durationSeconds": 2.1806
+          }
+        },
+        {
+          "order": 47,
+          "itemId": 251,
+          "componentPathID": 2694,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I am waiting for María, the dancer. She´s delay.",
+          "voiceAudio": {
+            "clipName": "OK NPC 4 Cancha de Basket 001",
+            "file": "audio/OK NPC 4 Cancha de Basket 001.m4a",
+            "durationSeconds": 3.8038
+          }
+        },
+        {
+          "order": 48,
+          "itemId": 398,
+          "componentPathID": 2880,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use the arrow keys to move and space bar to interact.",
+          "voiceAudio": null
+        },
+        {
+          "order": 49,
+          "itemId": 402,
+          "componentPathID": 2883,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Could you give these to the flower shop owner? Tell her they are from me.\r",
+          "voiceAudio": {
+            "clipName": "Entrega final",
+            "file": "audio/Entrega final.m4a",
+            "durationSeconds": 4.3871
+          }
+        },
+        {
+          "order": 50,
+          "itemId": 403,
+          "componentPathID": 2882,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Are you the flower shop´s delivery girl? ",
+          "voiceAudio": {
+            "clipName": "Delivery girl",
+            "file": "audio/Delivery girl.m4a",
+            "durationSeconds": 2.2393
+          }
+        },
+        {
+          "order": 51,
+          "itemId": 407,
+          "componentPathID": 2887,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Yes, I saw a woman running in the park. I think I saw her a little further to the southwest in front of a car.",
+          "voiceAudio": {
+            "clipName": "NPC VARIOS 11",
+            "file": "audio/NPC VARIOS 11.m4a",
+            "durationSeconds": 9.5429
+          }
+        },
+        {
+          "order": 52,
+          "itemId": 408,
+          "componentPathID": 2890,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "You've seen a girl running around the park?",
+          "voiceAudio": null
+        }
+      ]
+    },
+    {
+      "sceneIndex": 31,
+      "sceneName": "HD_Mascarada_Intro",
+      "totalLines": 6,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 2,
+          "componentPathID": 443,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "A “mascarada”? What’s that?",
+          "voiceAudio": {
+            "clipName": "Mascarada Mike 001",
+            "file": "audio/Mascarada Mike 001.m4a",
+            "durationSeconds": 2.9363
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 3,
+          "componentPathID": 442,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The “mascarada” is a Costa Rican tradition. People dress in costumes and masks for many types of occasions. Many towns celebrate holidays with “mascaradas”. Kids enjoy them a lot. Also typical music is played while the clowns dance along the streets.",
+          "voiceAudio": {
+            "clipName": "Mascarada Locutor Masc 001",
+            "file": "audio/Mascarada Locutor Masc 001.m4a",
+            "durationSeconds": 17.8315
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 4,
+          "componentPathID": 441,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Wow! That sounds fun!",
+          "voiceAudio": {
+            "clipName": "Mascarada Mike 002 wow that sounds fun",
+            "file": "audio/Mascarada Mike 002 wow that sounds fun.m4a",
+            "durationSeconds": 1.7351
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 10,
+          "componentPathID": 446,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "A “mascarada”? What’s that?",
+          "voiceAudio": {
+            "clipName": "Mascarada Lisa 001",
+            "file": "audio/Mascarada Lisa 001.m4a",
+            "durationSeconds": 2.4429
+          }
+        },
+        {
+          "order": 5,
+          "itemId": 11,
+          "componentPathID": 444,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The “mascarada” is a Costa Rican tradition. People dress in costumes and masks for many types of occasions. Many towns celebrate holidays with “mascaradas”. Kids enjoy them a lot. Also typical music is played while the clowns dance along the streets.",
+          "voiceAudio": {
+            "clipName": "Mascarada Locutor Masc 001",
+            "file": "audio/Mascarada Locutor Masc 001.m4a",
+            "durationSeconds": 17.8315
+          }
+        },
+        {
+          "order": 6,
+          "itemId": 12,
+          "componentPathID": 440,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Wow! That sounds fun!",
+          "voiceAudio": {
+            "clipName": "Mascarada Lisa 002",
+            "file": "audio/Mascarada Lisa 002.m4a",
+            "durationSeconds": 2.0354
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 32,
+      "sceneName": "HD_Mascarada",
+      "totalLines": 4,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 4293,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "In this challenge, you must scape from the noisy \"mascarada\" and collect the coins along the way.",
+          "voiceAudio": {
+            "clipName": "Instrucciones locutor masc",
+            "file": "audio/Instrucciones locutor masc.m4a",
+            "durationSeconds": 5.8058
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 3,
+          "componentPathID": 4299,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "You have been beated by the mascarae party!!! No coins awarded.",
+          "voiceAudio": {
+            "clipName": "locutor masc BEATEN",
+            "file": "audio/locutor masc BEATEN.m4a",
+            "durationSeconds": 4.9383
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 6,
+          "componentPathID": 4302,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Well done!",
+          "voiceAudio": {
+            "clipName": "locutor masc WELL DONE",
+            "file": "audio/locutor masc WELL DONE.m4a",
+            "durationSeconds": 1.1345
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 7,
+          "componentPathID": 4300,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "You can keep all the collected coins",
+          "voiceAudio": {
+            "clipName": "locutor masc KEEP COINS",
+            "file": "audio/locutor masc KEEP COINS.m4a",
+            "durationSeconds": 2.2022
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 33,
+      "sceneName": "HD_Mountainbike_Intro",
+      "totalLines": 2,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 7,
+          "componentPathID": 464,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "“Bosque de la Hoja” is a wonderful place to go mountain biking. Enjoy the scenery and the fresh air.",
+          "voiceAudio": {
+            "clipName": "Alajuela Bosque de la hoja Locutor 1 Masc",
+            "file": "audio/Alajuela Bosque de la hoja Locutor 1 Masc.m4a",
+            "durationSeconds": 6.4305
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 11,
+          "componentPathID": 467,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "“Bosque de la Hoja” is a wonderful place to go mountain biking. Enjoy the scenery and the fresh air.",
+          "voiceAudio": {
+            "clipName": "Alajuela Bosque de la hoja Locutor 1 Fem",
+            "file": "audio/Alajuela Bosque de la hoja Locutor 1 Fem.m4a",
+            "durationSeconds": 6.2447
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 34,
+      "sceneName": "HD_Mountainbike",
+      "totalLines": 4,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 7,
+          "componentPathID": 1501,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Go as fast as you can, but be careful not to fall into the cliffs.",
+          "voiceAudio": {
+            "clipName": "Alajuela Bosque de la hoja Locutor 2 Masc",
+            "file": "audio/Alajuela Bosque de la hoja Locutor 2 Masc.m4a",
+            "durationSeconds": 4.0417
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 11,
+          "componentPathID": 1498,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Go as fast as you can, but be careful not to fall into the cliffs.",
+          "voiceAudio": {
+            "clipName": "Alajuela Bosque de la hoja Locutor 2 Fem",
+            "file": "audio/Alajuela Bosque de la hoja Locutor 2 Fem.m4a",
+            "durationSeconds": 4.4452
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 29,
+          "componentPathID": 1510,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use the arrow keys to move and space bar to jump",
+          "voiceAudio": null
+        },
+        {
+          "order": 4,
+          "itemId": 34,
+          "componentPathID": 1515,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use the arrow keys to move and space bar to jump",
+          "voiceAudio": null
+        }
+      ]
+    },
+    {
+      "sceneIndex": 36,
+      "sceneName": "Lm_Cocina",
+      "totalLines": 14,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 928,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Learn how to cook some of the most delicious Caribbean foods!\r\n",
+          "voiceAudio": {
+            "clipName": "OK Limon cocina locutor 001",
+            "file": "audio/OK Limon cocina locutor 001.m4a",
+            "durationSeconds": 3.6336
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 3,
+          "componentPathID": 933,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Remember that the recipe has: {$ingrediente} and do not forget that they are {$totalIngredientes} ingredients in total.",
+          "voiceAudio": null
+        },
+        {
+          "order": 3,
+          "itemId": 5,
+          "componentPathID": 936,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Excellent! Well done!",
+          "voiceAudio": {
+            "clipName": "OK Excellent Well Done",
+            "file": "audio/OK Excellent Well Done.m4a",
+            "durationSeconds": 2.2198
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 7,
+          "componentPathID": 939,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Mm, mm, mm... no, no, no...\nThis is not what I was expecting!!!",
+          "voiceAudio": {
+            "clipName": "OK Cocinera 004",
+            "file": "audio/OK Cocinera 004.m4a",
+            "durationSeconds": 5.1718
+          }
+        },
+        {
+          "order": 5,
+          "itemId": 10,
+          "componentPathID": 931,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Time is up! You will have to do this in less time. Good luck next time!",
+          "voiceAudio": {
+            "clipName": "OK Time is out",
+            "file": "audio/OK Time is out.m4a",
+            "durationSeconds": 5.5722
+          }
+        },
+        {
+          "order": 6,
+          "itemId": 13,
+          "componentPathID": 948,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "For your cooking, you earned 1000 coins!\nCongrats!",
+          "voiceAudio": {
+            "clipName": "OK Dialogos en el gameplay) Cocinera 002",
+            "file": "audio/OK Dialogos en el gameplay) Cocinera 002.m4a",
+            "durationSeconds": 4.8968
+          }
+        },
+        {
+          "order": 7,
+          "itemId": 16,
+          "componentPathID": 949,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I think that for this recipe you will have to use more ingredients.",
+          "voiceAudio": {
+            "clipName": "OK Ingredients Mising",
+            "file": "audio/OK Ingredients Mising.m4a",
+            "durationSeconds": 4.6046
+          }
+        },
+        {
+          "order": 8,
+          "itemId": 19,
+          "componentPathID": 945,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Could you help me prepare \"{$nombreReceta}\" ?",
+          "voiceAudio": {
+            "clipName": "OK Could you help me prepare Paty",
+            "file": "audio/OK Could you help me prepare Paty.m4a",
+            "durationSeconds": 2.0688
+          }
+        },
+        {
+          "order": 9,
+          "itemId": 23,
+          "componentPathID": 958,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "You can learn how to cook \"Caribbean Rice n' Beans\", \"Patty\", \"Rondón\", \"Pan Bon\" and prepare \"Agua de Sapo\".",
+          "voiceAudio": {
+            "clipName": "OK Limon cocina locutor 002",
+            "file": "audio/OK Limon cocina locutor 002.m4a",
+            "durationSeconds": 7.6304
+          }
+        },
+        {
+          "order": 10,
+          "itemId": 26,
+          "componentPathID": 961,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Check carefully each recipe and then choose the right ingredients for each food.\n",
+          "voiceAudio": {
+            "clipName": "OK Limon cocina locutor 003",
+            "file": "audio/OK Limon cocina locutor 003.m4a",
+            "durationSeconds": 4.7568
+          }
+        },
+        {
+          "order": 11,
+          "itemId": 33,
+          "componentPathID": 967,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Could you help me prepare \"Rondón\" ?",
+          "voiceAudio": {
+            "clipName": "OK Could you help me prepare rondon",
+            "file": "audio/OK Could you help me prepare rondon.m4a",
+            "durationSeconds": 2.369
+          }
+        },
+        {
+          "order": 12,
+          "itemId": 34,
+          "componentPathID": 965,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Could you help me prepare \"{$nombreReceta}\" ?",
+          "voiceAudio": {
+            "clipName": "OK Could you help me prepare agua de sapo",
+            "file": "audio/OK Could you help me prepare agua de sapo.m4a",
+            "durationSeconds": 2.9029
+          }
+        },
+        {
+          "order": 13,
+          "itemId": 36,
+          "componentPathID": 969,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Could you help me prepare \"{$nombreReceta}\" ?",
+          "voiceAudio": {
+            "clipName": "OK Could you help me prepare Pan Bon",
+            "file": "audio/OK Could you help me prepare Pan Bon.m4a",
+            "durationSeconds": 2.3023
+          }
+        },
+        {
+          "order": 14,
+          "itemId": 38,
+          "componentPathID": 971,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Could you help me prepare Caribbean Rice n' Beans ?",
+          "voiceAudio": {
+            "clipName": "OK Could you help me prepare rice n beans",
+            "file": "audio/OK Could you help me prepare rice n beans.m4a",
+            "durationSeconds": 3.0418
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 37,
+      "sceneName": "LM_Tortuguero_Intro",
+      "totalLines": 2,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 487,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Tortuguero National Park is on a rainforest-covered sandbank whose beaches are a major nesting site for green turtles. \n\nSea Turtle Conservancy runs a research station and visitor center with turtle-related exhibits. The park’s freshwater canals, wetlands and forests shelter wildlife like jaguars, tapirs and manatees.",
+          "voiceAudio": {
+            "clipName": "Limon Tortuguero Locutor 001 Masc",
+            "file": "audio/Limon Tortuguero Locutor 001 Masc.m4a",
+            "durationSeconds": 26.3909
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 10,
+          "componentPathID": 483,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Tortuguero National Park is on a rainforest-covered sandbank whose beaches are a major nesting site for green turtles. \n\nSea Turtle Conservancy runs a research station and visitor center with turtle-related exhibits. The park’s freshwater canals, wetlands and forests shelter wildlife like jaguars, tapirs and manatees.",
+          "voiceAudio": {
+            "clipName": "Limon Tortuguero Locutor 001 FEM",
+            "file": "audio/Limon Tortuguero Locutor 001 FEM.m4a",
+            "durationSeconds": 25.2938
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 38,
+      "sceneName": "LM_Tortuguero",
+      "totalLines": 8,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 1323,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Sail and explore the “Canales de Tortuguero” in this beautiful boat trip.",
+          "voiceAudio": {
+            "clipName": "Limon Tortuguero Locutor 002Masc",
+            "file": "audio/Limon Tortuguero Locutor 002Masc.m4a",
+            "durationSeconds": 4.9937
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 10,
+          "componentPathID": 1317,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Sail and explore the “Canales de Tortuguero” in this beautiful boat trip.",
+          "voiceAudio": {
+            "clipName": "Limon Tortuguero Locutor 002 FEM",
+            "file": "audio/Limon Tortuguero Locutor 002 FEM.m4a",
+            "durationSeconds": 5.0024
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 13,
+          "componentPathID": 1328,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Good luck!",
+          "voiceAudio": {
+            "clipName": "Limon Tortuguero Locutor 004 Masc",
+            "file": "audio/Limon Tortuguero Locutor 004 Masc.m4a",
+            "durationSeconds": 0.4426
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 14,
+          "componentPathID": 1327,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Be careful not to hit the manatees.",
+          "voiceAudio": {
+            "clipName": "Limon Tortuguero Locutor 003 Masc",
+            "file": "audio/Limon Tortuguero Locutor 003 Masc.m4a",
+            "durationSeconds": 1.8503
+          }
+        },
+        {
+          "order": 5,
+          "itemId": 15,
+          "componentPathID": 1325,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Good luck!",
+          "voiceAudio": {
+            "clipName": "Limon Tortuguero Locutor 004 FEM",
+            "file": "audio/Limon Tortuguero Locutor 004 FEM.m4a",
+            "durationSeconds": 1.2989
+          }
+        },
+        {
+          "order": 6,
+          "itemId": 16,
+          "componentPathID": 1326,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Be careful not to hit the manatees.",
+          "voiceAudio": {
+            "clipName": "Limon Tortuguero Locutor 003 FEM",
+            "file": "audio/Limon Tortuguero Locutor 003 FEM.m4a",
+            "durationSeconds": 2.5382
+          }
+        },
+        {
+          "order": 7,
+          "itemId": 398,
+          "componentPathID": 1338,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use the arrow keys to move and space bar to interact.",
+          "voiceAudio": null
+        },
+        {
+          "order": 8,
+          "itemId": 404,
+          "componentPathID": 1333,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use the arrow keys to move and space bar to interact.",
+          "voiceAudio": null
+        }
+      ]
+    },
+    {
+      "sceneIndex": 39,
+      "sceneName": "LM_Desove_Intro",
+      "totalLines": 10,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 449,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Hello! I'm Mike.",
+          "voiceAudio": {
+            "clipName": "Limon tortugas Mike 001",
+            "file": "audio/Limon tortugas Mike 001.m4a",
+            "durationSeconds": 1.0822
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 2,
+          "componentPathID": 448,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Hello, I’m Sara. I’m helping with the preservation of sea turtles.\r",
+          "voiceAudio": {
+            "clipName": "Limon tortugas Sara (conservacionista) 001",
+            "file": "audio/Limon tortugas Sara (conservacionista) 001.m4a",
+            "durationSeconds": 4.9967
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 3,
+          "componentPathID": 447,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "That sounds awesome. Can I help?",
+          "voiceAudio": {
+            "clipName": "Limon tortugas Mike 002",
+            "file": "audio/Limon tortugas Mike 002.m4a",
+            "durationSeconds": 2.002
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 4,
+          "componentPathID": 446,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Yes of course, we need as many people as possible.\r",
+          "voiceAudio": {
+            "clipName": "Limon tortugas Sara (conservacionista) 002",
+            "file": "audio/Limon tortugas Sara (conservacionista) 002.m4a",
+            "durationSeconds": 3.8761
+          }
+        },
+        {
+          "order": 5,
+          "itemId": 5,
+          "componentPathID": 445,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Let’s start helping the sea turtles!\r",
+          "voiceAudio": {
+            "clipName": "Limon tortugas Mike 003",
+            "file": "audio/Limon tortugas Mike 003.m4a",
+            "durationSeconds": 2.0687
+          }
+        },
+        {
+          "order": 6,
+          "itemId": 10,
+          "componentPathID": 455,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Hello! I'm Lisa.",
+          "voiceAudio": {
+            "clipName": "Limon tortugas Lisa 001",
+            "file": "audio/Limon tortugas Lisa 001.m4a",
+            "durationSeconds": 1.7223
+          }
+        },
+        {
+          "order": 7,
+          "itemId": 11,
+          "componentPathID": 454,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Hello, I’m Sara. I’m helping with the preservation of sea turtles.\r",
+          "voiceAudio": {
+            "clipName": "Limon tortugas Sara (conservacionista) 001",
+            "file": "audio/Limon tortugas Sara (conservacionista) 001.m4a",
+            "durationSeconds": 4.9967
+          }
+        },
+        {
+          "order": 8,
+          "itemId": 12,
+          "componentPathID": 453,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "That sounds awesome. Can I help?",
+          "voiceAudio": {
+            "clipName": "Limon tortugas Lisa 002",
+            "file": "audio/Limon tortugas Lisa 002.m4a",
+            "durationSeconds": 2.369
+          }
+        },
+        {
+          "order": 9,
+          "itemId": 13,
+          "componentPathID": 452,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Yes of course, we need as many people as possible.\r",
+          "voiceAudio": {
+            "clipName": "Limon tortugas Sara (conservacionista) 002",
+            "file": "audio/Limon tortugas Sara (conservacionista) 002.m4a",
+            "durationSeconds": 3.8761
+          }
+        },
+        {
+          "order": 10,
+          "itemId": 14,
+          "componentPathID": 451,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Let’s start helping the sea turtles!\r",
+          "voiceAudio": {
+            "clipName": "Limon tortugas Lisa 003",
+            "file": "audio/Limon tortugas Lisa 003.m4a",
+            "durationSeconds": 1.9686
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 40,
+      "sceneName": "LM_Desove",
+      "totalLines": 4,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 632,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The sea turtle eggs are about to hatch.",
+          "voiceAudio": {
+            "clipName": "Limon tortugas Locutor Masc 001",
+            "file": "audio/Limon tortugas Locutor Masc 001.m4a",
+            "durationSeconds": 2.4391
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 2,
+          "componentPathID": 631,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Tap on the screen to keep predators away from the little turtles.",
+          "voiceAudio": {
+            "clipName": "Limon tortugas Locutor Masc 002",
+            "file": "audio/Limon tortugas Locutor Masc 002.m4a",
+            "durationSeconds": 3.3113
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 62,
+          "componentPathID": 657,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The sea turtle eggs are about to hatch.",
+          "voiceAudio": {
+            "clipName": "Limon tortugas Locutor FEM 001",
+            "file": "audio/Limon tortugas Locutor FEM 001.m4a",
+            "durationSeconds": 2.1688
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 63,
+          "componentPathID": 628,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Tap on the screen to keep predators away from the little turtles.",
+          "voiceAudio": {
+            "clipName": "Limon tortugas Locutor FEM 002",
+            "file": "audio/Limon tortugas Locutor FEM 002.m4a",
+            "durationSeconds": 3.7037
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 41,
+      "sceneName": "PR_Manuel_Antonio_Intro",
+      "totalLines": 8,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 455,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Today, I’m going to Manuel Antonio National Park, Luis told me that it’s beautiful.",
+          "voiceAudio": {
+            "clipName": "Puntarenas Manuel Antonio Mike 001",
+            "file": "audio/Puntarenas Manuel Antonio Mike 001.m4a",
+            "durationSeconds": 5.1194
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 2,
+          "componentPathID": 454,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "Yes, it is beautiful. Manuel Antonio is a small oceanside village with plenty of great places to stay tucked into nature.",
+          "voiceAudio": {
+            "clipName": "Puntarenas Manuel Antonio Guardaparques 1",
+            "file": "audio/Puntarenas Manuel Antonio Guardaparques 1.m4a",
+            "durationSeconds": 9.0803
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 3,
+          "componentPathID": 453,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "Famous for its national park, this tiny yet bustling town is located off Costa Rica's central Pacific coast, just a stone thrown away from Quepos which is famous for sportfishing.\nThe region is a treasure for biodiversity attracting nature buffs, eco travelers and adventure seekers alike.",
+          "voiceAudio": {
+            "clipName": "Puntarenas Manuel Antonio Guardaparques 2",
+            "file": "audio/Puntarenas Manuel Antonio Guardaparques 2.m4a",
+            "durationSeconds": 21.4453
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 9,
+          "componentPathID": 449,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "Better yet, if you visit it, you can enjoy the white sand and soak in perfect waters. If you visit the  National Park, please read the precautions and remember not to feed the animals.",
+          "voiceAudio": {
+            "clipName": "Puntarenas Manuel Antonio Guardaparques 3",
+            "file": "audio/Puntarenas Manuel Antonio Guardaparques 3.m4a",
+            "durationSeconds": 12.6793
+          }
+        },
+        {
+          "order": 5,
+          "itemId": 11,
+          "componentPathID": 451,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Today, I’m going to Manuel Antonio National Park. Luis told me that it’s beautiful.",
+          "voiceAudio": {
+            "clipName": "Puntarenas Manuel Antonio Lisa 001",
+            "file": "audio/Puntarenas Manuel Antonio Lisa 001.m4a",
+            "durationSeconds": 5.1051
+          }
+        },
+        {
+          "order": 6,
+          "itemId": 12,
+          "componentPathID": 460,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "Yes, it is beautiful. Manuel Antonio is a small oceanside village with plenty of great places to stay tucked into nature.",
+          "voiceAudio": {
+            "clipName": "Puntarenas Manuel Antonio Guardaparques 1",
+            "file": "audio/Puntarenas Manuel Antonio Guardaparques 1.m4a",
+            "durationSeconds": 9.0803
+          }
+        },
+        {
+          "order": 7,
+          "itemId": 13,
+          "componentPathID": 459,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "Famous for its national park, this tiny yet bustling town is located off Costa Rica's central Pacific coast, just a stone thrown away from Quepos which is famous for sportfishing.\nThe region is a treasure for biodiversity attracting nature buffs, eco travelers and adventure seekers alike.",
+          "voiceAudio": {
+            "clipName": "Puntarenas Manuel Antonio Guardaparques 2",
+            "file": "audio/Puntarenas Manuel Antonio Guardaparques 2.m4a",
+            "durationSeconds": 21.4453
+          }
+        },
+        {
+          "order": 8,
+          "itemId": 14,
+          "componentPathID": 458,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "Better yet, if you visit it, you can enjoy the white sand and soak in perfect waters. If you visit the  National Park, please read the precautions and remember not to feed the animals.",
+          "voiceAudio": {
+            "clipName": "Puntarenas Manuel Antonio Guardaparques 3",
+            "file": "audio/Puntarenas Manuel Antonio Guardaparques 3.m4a",
+            "durationSeconds": 12.6793
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 42,
+      "sceneName": "PR_Manuel_Antonio",
+      "totalLines": 48,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 2603,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Manuel Antonio National Park is a natural conservation area located on the central Pacific coast of Costa Rica.\n",
+          "voiceAudio": null
+        },
+        {
+          "order": 2,
+          "itemId": 3,
+          "componentPathID": 2609,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The Manuel Antonio National Park has one of the most impressive landscapes in Costa Rica and the world.",
+          "voiceAudio": null
+        },
+        {
+          "order": 3,
+          "itemId": 7,
+          "componentPathID": 2613,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Among the most outstanding fauna of Manuel Antonio National Park, we find:",
+          "voiceAudio": null
+        },
+        {
+          "order": 4,
+          "itemId": 8,
+          "componentPathID": 2611,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "the raccoon, the coatis, the guatuza, the two-toed sloth and the three-toed sloth, felines of considerable size, the marmoset monkey and the capuchin monkey.\n",
+          "voiceAudio": null
+        },
+        {
+          "order": 5,
+          "itemId": 10,
+          "componentPathID": 2615,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "\"Warning: Trail being repaired\"...",
+          "voiceAudio": {
+            "clipName": "OK Trail being repair MASC",
+            "file": "audio/OK Trail being repair MASC.m4a",
+            "durationSeconds": 2.0542
+          }
+        },
+        {
+          "order": 6,
+          "itemId": 17,
+          "componentPathID": 2624,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Please read the precautions and remember not to feed the animals!",
+          "voiceAudio": {
+            "clipName": "PLEASE REEEAD",
+            "file": "audio/PLEASE REEEAD.m4a",
+            "durationSeconds": 3.5557
+          }
+        },
+        {
+          "order": 7,
+          "itemId": 19,
+          "componentPathID": 2627,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "In this part of the park, you can find very nice seashells.\r\n",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES Tercer guardaparques en el hub central 001",
+            "file": "audio/OK GUARDA PARQUES Tercer guardaparques en el hub central 001.m4a",
+            "durationSeconds": 4.638
+          }
+        },
+        {
+          "order": 8,
+          "itemId": 42,
+          "componentPathID": 2652,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "Are you looking for the herd of cappuccino monkeys that took away your picnic implements?",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES Primer guardaparques en el hub central 001",
+            "file": "audio/OK GUARDA PARQUES Primer guardaparques en el hub central 001.m4a",
+            "durationSeconds": 5.1718
+          }
+        },
+        {
+          "order": 9,
+          "itemId": 43,
+          "componentPathID": 2651,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "They just passed by. They went to the other side of the river. But if you don’t have a bridge in your backpack, I doubt you can pass…",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES Primer guardaparques en el hub central 002 B",
+            "file": "audio/OK GUARDA PARQUES Primer guardaparques en el hub central 002 B.m4a",
+            "durationSeconds": 8.3876
+          }
+        },
+        {
+          "order": 10,
+          "itemId": 48,
+          "componentPathID": 2647,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "Do you want to swim to cross the river? No, it is dangerous.",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES en el primer room (cruzar el río) 001 B",
+            "file": "audio/OK GUARDA PARQUES en el primer room (cruzar el río) 001 B.m4a",
+            "durationSeconds": 4.6299
+          }
+        },
+        {
+          "order": 11,
+          "itemId": 49,
+          "componentPathID": 2644,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "Why don´t you look for something that you can use to cross the river. Maybe you can find something on the beach.",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES en el primer room (cruzar el río) 002",
+            "file": "audio/OK GUARDA PARQUES en el primer room (cruzar el río) 002.m4a",
+            "durationSeconds": 5.9129
+          }
+        },
+        {
+          "order": 12,
+          "itemId": 58,
+          "componentPathID": 2665,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "I think that I can use the log to cross the river.",
+          "voiceAudio": {
+            "clipName": "OK Mike (cuando usa el tronco)",
+            "file": "audio/OK Mike (cuando usa el tronco).m4a",
+            "durationSeconds": 2.7894
+          }
+        },
+        {
+          "order": 13,
+          "itemId": 61,
+          "componentPathID": 2672,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "I think that this log can help me cross the river.",
+          "voiceAudio": {
+            "clipName": "OK MIKE (cuando encuentra el tronco)",
+            "file": "audio/OK MIKE (cuando encuentra el tronco).m4a",
+            "durationSeconds": 3.0434
+          }
+        },
+        {
+          "order": 14,
+          "itemId": 83,
+          "componentPathID": 2690,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "It looks like  the monkeys only wanted the seashells, they’ve returned  the tablecloth.",
+          "voiceAudio": {
+            "clipName": "OK LISA (cuando colocan las conchas en el centro) 002",
+            "file": "audio/OK LISA (cuando colocan las conchas en el centro) 002.m4a",
+            "durationSeconds": 4.9049
+          }
+        },
+        {
+          "order": 15,
+          "itemId": 88,
+          "componentPathID": 2701,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Hey look! \rSome monkeys appeared over there!",
+          "voiceAudio": {
+            "clipName": "OK LISA (cuando colocan las conchas en el centro) 001",
+            "file": "audio/OK LISA (cuando colocan las conchas en el centro) 001.m4a",
+            "durationSeconds": 3.7037
+          }
+        },
+        {
+          "order": 16,
+          "itemId": 93,
+          "componentPathID": 2703,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "It looks like all the seashells are here, now let’s put them in a visible spot.",
+          "voiceAudio": {
+            "clipName": "OK Inicio Conchas It looks that all the sea shells are here, now lets put them on a visible spot FEM",
+            "file": "audio/OK Inicio Conchas It looks that all the sea shells are here, now lets put them on a visible spot FEM.m4a",
+            "durationSeconds": 5.0717
+          }
+        },
+        {
+          "order": 17,
+          "itemId": 101,
+          "componentPathID": 2713,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "It looks like that´s not the right tree.",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES (al inicio del tercer room) 009",
+            "file": "audio/OK GUARDA PARQUES (al inicio del tercer room) 009.m4a",
+            "durationSeconds": 2.6026
+          }
+        },
+        {
+          "order": 18,
+          "itemId": 104,
+          "componentPathID": 2708,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "The monkeys just went back to the places they were when we started.",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES (al inicio del tercer room) 010",
+            "file": "audio/OK GUARDA PARQUES (al inicio del tercer room) 010.m4a",
+            "durationSeconds": 3.9373
+          }
+        },
+        {
+          "order": 19,
+          "itemId": 108,
+          "componentPathID": 2723,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "Are you looking for a herd of cappuccino monkeys that took away your stuff?",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES (al inicio del tercer room) 001",
+            "file": "audio/OK GUARDA PARQUES (al inicio del tercer room) 001.m4a",
+            "durationSeconds": 4.2725
+          }
+        },
+        {
+          "order": 20,
+          "itemId": 109,
+          "componentPathID": 2722,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "Those monkeys like to play hide and seek in those little trees. But don’t worry...  I just saw them hide.",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES (al inicio del tercer room) 002",
+            "file": "audio/OK GUARDA PARQUES (al inicio del tercer room) 002.m4a",
+            "durationSeconds": 7.6743
+          }
+        },
+        {
+          "order": 21,
+          "itemId": 110,
+          "componentPathID": 2721,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "There’s one monkey in each group of trees. \nI will tell you where they are hidden. Just follow my instructions.",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES (al inicio del tercer room) 003",
+            "file": "audio/OK GUARDA PARQUES (al inicio del tercer room) 003.m4a",
+            "durationSeconds": 7.3407
+          }
+        },
+        {
+          "order": 22,
+          "itemId": 111,
+          "componentPathID": 2719,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "There’s a monkey in the left tree of the upper group of trees.\n",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES (al inicio del tercer room) 004",
+            "file": "audio/OK GUARDA PARQUES (al inicio del tercer room) 004.m4a",
+            "durationSeconds": 4.4406
+          }
+        },
+        {
+          "order": 23,
+          "itemId": 116,
+          "componentPathID": 2737,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "The monkey, in the group of trees on the right, is on the tree at the bottom.",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES (al inicio del tercer room) 005",
+            "file": "audio/OK GUARDA PARQUES (al inicio del tercer room) 005.m4a",
+            "durationSeconds": 4.6978
+          }
+        },
+        {
+          "order": 24,
+          "itemId": 130,
+          "componentPathID": 2757,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "The monkey, in the group of trees at the bottom, is on the tree on the right.\r",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES (al inicio del tercer room) 006",
+            "file": "audio/OK GUARDA PARQUES (al inicio del tercer room) 006.m4a",
+            "durationSeconds": 4.2785
+          }
+        },
+        {
+          "order": 25,
+          "itemId": 135,
+          "componentPathID": 2751,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "The monkey, in the group of trees on the left, is on the tree at the top.",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES (al inicio del tercer room) 007",
+            "file": "audio/OK GUARDA PARQUES (al inicio del tercer room) 007.m4a",
+            "durationSeconds": 3.9606
+          }
+        },
+        {
+          "order": 26,
+          "itemId": 142,
+          "componentPathID": 2743,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "I’m glad that you could recover your cooler.\r",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES (al inicio del tercer room) 008",
+            "file": "audio/OK GUARDA PARQUES (al inicio del tercer room) 008.m4a",
+            "durationSeconds": 2.692
+          }
+        },
+        {
+          "order": 27,
+          "itemId": 148,
+          "componentPathID": 2768,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "I just found one!",
+          "voiceAudio": {
+            "clipName": "OK MIKE (cuando encuentra un mono)",
+            "file": "audio/OK MIKE (cuando encuentra un mono).m4a",
+            "durationSeconds": 1.2346
+          }
+        },
+        {
+          "order": 28,
+          "itemId": 152,
+          "componentPathID": 2764,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "I found the cooler!",
+          "voiceAudio": {
+            "clipName": "OK MIKE (cuando encuentra la hielera)",
+            "file": "audio/OK MIKE (cuando encuentra la hielera).m4a",
+            "durationSeconds": 1.0344
+          }
+        },
+        {
+          "order": 29,
+          "itemId": 159,
+          "componentPathID": 2775,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "The guide will help me find the monkeys with the cooler…",
+          "voiceAudio": {
+            "clipName": "OK MIKE (cuando entra en el tercer room)",
+            "file": "audio/OK MIKE (cuando entra en el tercer room).m4a",
+            "durationSeconds": 2.7361
+          }
+        },
+        {
+          "order": 30,
+          "itemId": 258,
+          "componentPathID": 2810,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Hey look! \rSome monkeys appeared over there!",
+          "voiceAudio": {
+            "clipName": "OK (cuando colocan las conchas en el centro) Mike 001",
+            "file": "audio/OK (cuando colocan las conchas en el centro) Mike 001.m4a",
+            "durationSeconds": 3.0683
+          }
+        },
+        {
+          "order": 31,
+          "itemId": 262,
+          "componentPathID": 2814,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "It looks like  the monkeys only wanted the seashells, they’ve returned  the tablecloth.",
+          "voiceAudio": {
+            "clipName": "OK (cuando colocan las conchas en el centro) Mike 002",
+            "file": "audio/OK (cuando colocan las conchas en el centro) Mike 002.m4a",
+            "durationSeconds": 4.6742
+          }
+        },
+        {
+          "order": 32,
+          "itemId": 263,
+          "componentPathID": 2820,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "\"Warning : Trail being repaired\"...",
+          "voiceAudio": {
+            "clipName": "OK Trail being repair FEM",
+            "file": "audio/OK Trail being repair FEM.m4a",
+            "durationSeconds": 2.2
+          }
+        },
+        {
+          "order": 33,
+          "itemId": 270,
+          "componentPathID": 2825,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "It looks like all the seashells are here, now let’s put them in a visible spot.",
+          "voiceAudio": {
+            "clipName": "OK INICIO CONCHAS Mike",
+            "file": "audio/OK INICIO CONCHAS Mike.m4a",
+            "durationSeconds": 5.3387
+          }
+        },
+        {
+          "order": 34,
+          "itemId": 274,
+          "componentPathID": 2826,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "I think that this log can help me cross the river.",
+          "voiceAudio": {
+            "clipName": "OK LISA (cuando encuentra el tronco) en el hub central",
+            "file": "audio/OK LISA (cuando encuentra el tronco) en el hub central.m4a",
+            "durationSeconds": 2.9029
+          }
+        },
+        {
+          "order": 35,
+          "itemId": 278,
+          "componentPathID": 2831,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "I think that I can use the log to cross the river.",
+          "voiceAudio": {
+            "clipName": "OK LISA (cuando usa el tronco) en el hub central",
+            "file": "audio/OK LISA (cuando usa el tronco) en el hub central.m4a",
+            "durationSeconds": 3.0364
+          }
+        },
+        {
+          "order": 36,
+          "itemId": 280,
+          "componentPathID": 2836,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "It looks you can't go forward, you need to bring something else.",
+          "voiceAudio": {
+            "clipName": "MIKE It looks you can't go forward, you need to bring something else",
+            "file": "audio/MIKE It looks you can't go forward, you need to bring something else.m4a",
+            "durationSeconds": 4.2066
+          }
+        },
+        {
+          "order": 37,
+          "itemId": 282,
+          "componentPathID": 2834,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "It looks you can't go forward, you need to bring something else.",
+          "voiceAudio": {
+            "clipName": "LISA It looks you can't go forward, you need to bring something else",
+            "file": "audio/LISA It looks you can't go forward, you need to bring something else.m4a",
+            "durationSeconds": 4.3714
+          }
+        },
+        {
+          "order": 38,
+          "itemId": 284,
+          "componentPathID": 2838,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "If you can pick up plenty, you may be lucky enough to exchange them with the monkeys for your stuff. Good luck!\r",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES Tercer guardaparques en el hub central 002",
+            "file": "audio/OK GUARDA PARQUES Tercer guardaparques en el hub central 002.m4a",
+            "durationSeconds": 8.1798
+          }
+        },
+        {
+          "order": 39,
+          "itemId": 289,
+          "componentPathID": 2843,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "I found the cooler!",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES (al inicio del tercer room) LIsa cuando encuentra la hielera",
+            "file": "audio/OK GUARDA PARQUES (al inicio del tercer room) LIsa cuando encuentra la hielera.m4a",
+            "durationSeconds": 1.3347
+          }
+        },
+        {
+          "order": 40,
+          "itemId": 295,
+          "componentPathID": 2850,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "I just found one!",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES (al inicio del tercer room) LIsa cuando encuentra un mono",
+            "file": "audio/OK GUARDA PARQUES (al inicio del tercer room) LIsa cuando encuentra un mono.m4a",
+            "durationSeconds": 1.6016
+          }
+        },
+        {
+          "order": 41,
+          "itemId": 297,
+          "componentPathID": 2851,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "The guide will help me find the monkeys with the cooler…",
+          "voiceAudio": {
+            "clipName": "OK LISA (cuando entra en el tercer room) 001",
+            "file": "audio/OK LISA (cuando entra en el tercer room) 001.m4a",
+            "durationSeconds": 3.003
+          }
+        },
+        {
+          "order": 42,
+          "itemId": 302,
+          "componentPathID": 2857,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "I just found one!",
+          "voiceAudio": {
+            "clipName": "OK MIKE (cuando encuentra un mono)",
+            "file": "audio/OK MIKE (cuando encuentra un mono).m4a",
+            "durationSeconds": 1.2346
+          }
+        },
+        {
+          "order": 43,
+          "itemId": 304,
+          "componentPathID": 2855,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "I just found one!",
+          "voiceAudio": {
+            "clipName": "OK GUARDA PARQUES (al inicio del tercer room) LIsa cuando encuentra un mono",
+            "file": "audio/OK GUARDA PARQUES (al inicio del tercer room) LIsa cuando encuentra un mono.m4a",
+            "durationSeconds": 1.6016
+          }
+        },
+        {
+          "order": 44,
+          "itemId": 378,
+          "componentPathID": 2926,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Yes!",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO MIKE 004 B",
+            "file": "audio/MASTER MUSEO ORO MIKE 004 B.m4a",
+            "durationSeconds": 0.546
+          }
+        },
+        {
+          "order": 45,
+          "itemId": 379,
+          "componentPathID": 2927,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Thanks!\n",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO LISA 002",
+            "file": "audio/MASTER MUSEO ORO LISA 002.m4a",
+            "durationSeconds": 0.8148
+          }
+        },
+        {
+          "order": 46,
+          "itemId": 380,
+          "componentPathID": 2929,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Thanks!",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO MIKE 002",
+            "file": "audio/MASTER MUSEO ORO MIKE 002.m4a",
+            "durationSeconds": 0.626
+          }
+        },
+        {
+          "order": 47,
+          "itemId": 381,
+          "componentPathID": 2928,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Yes!",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO LISA 004 B",
+            "file": "audio/MASTER MUSEO ORO LISA 004 B.m4a",
+            "durationSeconds": 0.4822
+          }
+        },
+        {
+          "order": 48,
+          "itemId": 392,
+          "componentPathID": 2939,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use the arrow keys to move and space bar to interact.",
+          "voiceAudio": null
+        }
+      ]
+    },
+    {
+      "sceneIndex": 43,
+      "sceneName": "PR_Paseo_Turistas_Intro",
+      "totalLines": 14,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 460,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Hi! I’m Mike.",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Mike 1",
+            "file": "audio/Puntarenas churchil Mike 1.m4a",
+            "durationSeconds": 1.3506
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 2,
+          "componentPathID": 459,
+          "character": "Luis",
+          "portraitSprite": null,
+          "text": "Hi! I’m Luis. How do you like Puntarenas?",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Luis vendedor1",
+            "file": "audio/Puntarenas churchil Luis vendedor1.m4a",
+            "durationSeconds": 3.0783
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 3,
+          "componentPathID": 458,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "I love it! It's a wonderful place. “Paseo de los Turistas” is a relaxing, fun and calm place.  I see families gathering to enjoy a picnic near the sea, tourists walking around tasting delicious food and buying jewelry and other beautiful handcrafts. Everyone seems to be enjoying the  wonderful coast life style. Oh! Those churchills look delicious!",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Mike 2",
+            "file": "audio/Puntarenas churchil Mike 2.m4a",
+            "durationSeconds": 24.8248
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 5,
+          "componentPathID": 456,
+          "character": "Luis",
+          "portraitSprite": null,
+          "text": "They do, but I have to prepare lots of them.",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Luis vendedor2",
+            "file": "audio/Puntarenas churchil Luis vendedor2.m4a",
+            "durationSeconds": 3.1031
+          }
+        },
+        {
+          "order": 5,
+          "itemId": 9,
+          "componentPathID": 454,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Do you need help?",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Mike 3",
+            "file": "audio/Puntarenas churchil Mike 3.m4a",
+            "durationSeconds": 0.9676
+          }
+        },
+        {
+          "order": 6,
+          "itemId": 10,
+          "componentPathID": 462,
+          "character": "Luis",
+          "portraitSprite": null,
+          "text": "Sure!",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Luis vendedor3",
+            "file": "audio/Puntarenas churchil Luis vendedor3.m4a",
+            "durationSeconds": 0.6034
+          }
+        },
+        {
+          "order": 7,
+          "itemId": 11,
+          "componentPathID": 455,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Let’s start!",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Mike 4",
+            "file": "audio/Puntarenas churchil Mike 4.m4a",
+            "durationSeconds": 1.2679
+          }
+        },
+        {
+          "order": 8,
+          "itemId": 13,
+          "componentPathID": 470,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Hi! I’m Lisa.",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Lisa 1",
+            "file": "audio/Puntarenas churchil Lisa 1.m4a",
+            "durationSeconds": 1.863
+          }
+        },
+        {
+          "order": 9,
+          "itemId": 14,
+          "componentPathID": 469,
+          "character": "Luis",
+          "portraitSprite": null,
+          "text": "Hi! I’m Luis. How do you like Puntarenas?",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Luis vendedor1",
+            "file": "audio/Puntarenas churchil Luis vendedor1.m4a",
+            "durationSeconds": 3.0783
+          }
+        },
+        {
+          "order": 10,
+          "itemId": 15,
+          "componentPathID": 468,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "I love it! It's a wonderful place. “Paseo de los Turistas” is a relaxing, fun and calm place.  I see families gathering to enjoy a picnic near the sea, tourists walking around tasting delicious food and buying jewelry and other beautiful handicrafts. Everyone seems to be enjoying the  wonderful coast life style. Oh! Those churchills look delicious!",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Lisa 2",
+            "file": "audio/Puntarenas churchil Lisa 2.m4a",
+            "durationSeconds": 24.2576
+          }
+        },
+        {
+          "order": 11,
+          "itemId": 16,
+          "componentPathID": 467,
+          "character": "Luis",
+          "portraitSprite": null,
+          "text": "They do, but I have to prepare lots of them.",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Luis vendedor2",
+            "file": "audio/Puntarenas churchil Luis vendedor2.m4a",
+            "durationSeconds": 3.1031
+          }
+        },
+        {
+          "order": 12,
+          "itemId": 17,
+          "componentPathID": 466,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Do you need help?",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Lisa 3",
+            "file": "audio/Puntarenas churchil Lisa 3.m4a",
+            "durationSeconds": 1.4014
+          }
+        },
+        {
+          "order": 13,
+          "itemId": 18,
+          "componentPathID": 465,
+          "character": "Luis",
+          "portraitSprite": null,
+          "text": "Sure!",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Luis vendedor3",
+            "file": "audio/Puntarenas churchil Luis vendedor3.m4a",
+            "durationSeconds": 0.6034
+          }
+        },
+        {
+          "order": 14,
+          "itemId": 19,
+          "componentPathID": 464,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Let’s start!",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Lisa 4",
+            "file": "audio/Puntarenas churchil Lisa 4.m4a",
+            "durationSeconds": 1.3013
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 44,
+      "sceneName": "PR_Paseo_Turistas",
+      "totalLines": 17,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 2187,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "We don’t have more churchills to deliver!",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil NPC 1",
+            "file": "audio/Puntarenas churchil NPC 1.m4a",
+            "durationSeconds": 2.5025
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 3,
+          "componentPathID": 2190,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Thank you for the churchill, Here´s your money.",
+          "voiceAudio": {
+            "clipName": "pickup",
+            "file": "audio/pickup.m4a",
+            "durationSeconds": 0.3438
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 5,
+          "componentPathID": 2196,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Thank you for the churchill, here is your money.",
+          "voiceAudio": {
+            "clipName": "pickup",
+            "file": "audio/pickup.m4a",
+            "durationSeconds": 0.3438
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 7,
+          "componentPathID": 2193,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Wow a churchill!",
+          "voiceAudio": {
+            "clipName": "pickup",
+            "file": "audio/pickup.m4a",
+            "durationSeconds": 0.3438
+          }
+        },
+        {
+          "order": 5,
+          "itemId": 12,
+          "componentPathID": 2199,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "\rA new churchill has been prepared.",
+          "voiceAudio": {
+            "clipName": "Locutor Masc a new churchil has been prepared",
+            "file": "audio/Locutor Masc a new churchil has been prepared.m4a",
+            "durationSeconds": 2.2689
+          }
+        },
+        {
+          "order": 6,
+          "itemId": 36,
+          "componentPathID": 2219,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "\rA churchill is a delicious dessert, very popular in Costa Rica.",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Locutor FEM 1",
+            "file": "audio/Puntarenas churchil Locutor FEM 1.m4a",
+            "durationSeconds": 4.3043
+          }
+        },
+        {
+          "order": 7,
+          "itemId": 37,
+          "componentPathID": 2218,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Help Luis sell churchills. You will win coins every time you deliver a churchill.",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Locutor FEM 2",
+            "file": "audio/Puntarenas churchil Locutor FEM 2.m4a",
+            "durationSeconds": 5.2052
+          }
+        },
+        {
+          "order": 8,
+          "itemId": 39,
+          "componentPathID": 2216,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Go back to the store or to the vending cart to get more churchills.",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Locutor FEM 3",
+            "file": "audio/Puntarenas churchil Locutor FEM 3.m4a",
+            "durationSeconds": 3.6335
+          }
+        },
+        {
+          "order": 9,
+          "itemId": 40,
+          "componentPathID": 2212,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "\rGood luck!",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Locutor FEM 4",
+            "file": "audio/Puntarenas churchil Locutor FEM 4.m4a",
+            "durationSeconds": 0.5005
+          }
+        },
+        {
+          "order": 10,
+          "itemId": 43,
+          "componentPathID": 2236,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "\rA new churchill has been prepared.",
+          "voiceAudio": {
+            "clipName": "Locutor FEM a new churchil has been prepared",
+            "file": "audio/Locutor FEM a new churchil has been prepared.m4a",
+            "durationSeconds": 1.9863
+          }
+        },
+        {
+          "order": 11,
+          "itemId": 50,
+          "componentPathID": 2247,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "\rA churchill is a delicious dessert, very popular in Costa Rica.",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Locutor Masc 1",
+            "file": "audio/Puntarenas churchil Locutor Masc 1.m4a",
+            "durationSeconds": 4.5045
+          }
+        },
+        {
+          "order": 12,
+          "itemId": 51,
+          "componentPathID": 2246,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Help Luis sell churchills. You will win coins every time you deliver a churchill.",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Locutor Masc 2",
+            "file": "audio/Puntarenas churchil Locutor Masc 2.m4a",
+            "durationSeconds": 5.6458
+          }
+        },
+        {
+          "order": 13,
+          "itemId": 52,
+          "componentPathID": 2245,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Go back to the store or to the vending cart to get more churchills.",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Locutor Masc 3",
+            "file": "audio/Puntarenas churchil Locutor Masc 3.m4a",
+            "durationSeconds": 4.0374
+          }
+        },
+        {
+          "order": 14,
+          "itemId": 53,
+          "componentPathID": 2244,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "\rGood luck!",
+          "voiceAudio": {
+            "clipName": "Puntarenas churchil Locutor Masc 4",
+            "file": "audio/Puntarenas churchil Locutor Masc 4.m4a",
+            "durationSeconds": 0.9343
+          }
+        },
+        {
+          "order": 15,
+          "itemId": 58,
+          "componentPathID": 2252,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "We don’t have more churchills to deliver!",
+          "voiceAudio": {
+            "clipName": "NPC 1 Fem",
+            "file": "audio/NPC 1 Fem.m4a",
+            "durationSeconds": 2.7027
+          }
+        },
+        {
+          "order": 16,
+          "itemId": 340,
+          "componentPathID": 2274,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use the arrow keys to move and space bar to interact.",
+          "voiceAudio": null
+        },
+        {
+          "order": 17,
+          "itemId": 345,
+          "componentPathID": 2279,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use the arrow keys to move and space bar to interact.",
+          "voiceAudio": null
+        }
+      ]
+    },
+    {
+      "sceneIndex": 45,
+      "sceneName": "PR_Tarcoles_Intro",
+      "totalLines": 8,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 452,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "You were right. It was amazing. What can I do next?\r",
+          "voiceAudio": {
+            "clipName": "Mike 001 dialogo finalizar",
+            "file": "audio/Mike 001 dialogo finalizar.m4a",
+            "durationSeconds": 4.6046
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 2,
+          "componentPathID": 451,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "This river is one of the most well known in the country, not just for the crocodiles but for other various reasons as well since about half of all Costa Rica’s population lives along the river basin.\r",
+          "voiceAudio": {
+            "clipName": "Guardaparques dialogo final 002",
+            "file": "audio/Guardaparques dialogo final 002.m4a",
+            "durationSeconds": 13.0673
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 9,
+          "componentPathID": 448,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "OK, let’s go to Tárcoles River.\r",
+          "voiceAudio": {
+            "clipName": "Mike 002 Dialogo finalizar B",
+            "file": "audio/Mike 002 Dialogo finalizar B.m4a",
+            "durationSeconds": 2.1777
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 10,
+          "componentPathID": 447,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "If you want to go and see some big crocodiles in Costa Rica, Tárcoles River is the one you should visit.\r\n",
+          "voiceAudio": {
+            "clipName": "Guardaparques dialogo final 001",
+            "file": "audio/Guardaparques dialogo final 001.m4a",
+            "durationSeconds": 6.9158
+          }
+        },
+        {
+          "order": 5,
+          "itemId": 12,
+          "componentPathID": 457,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "You were right. It was amazing. What can I do next?\r",
+          "voiceAudio": {
+            "clipName": "Lisa you were right it was amazing, what cai do next",
+            "file": "audio/Lisa you were right it was amazing, what cai do next.m4a",
+            "durationSeconds": 4.5712
+          }
+        },
+        {
+          "order": 6,
+          "itemId": 13,
+          "componentPathID": 456,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "If you want to go and see some big crocodiles in Costa Rica, Tárcoles River is the one you should visit.\r\n",
+          "voiceAudio": {
+            "clipName": "Guardaparques dialogo final 001",
+            "file": "audio/Guardaparques dialogo final 001.m4a",
+            "durationSeconds": 6.9158
+          }
+        },
+        {
+          "order": 7,
+          "itemId": 14,
+          "componentPathID": 455,
+          "character": "Park Ranger",
+          "portraitSprite": null,
+          "text": "This river is one of the most well known in the country, not just for the crocodiles but for other various reasons as well since about half of all Costa Rica’s population lives along the river basin.\r",
+          "voiceAudio": {
+            "clipName": "Guardaparques dialogo final 002",
+            "file": "audio/Guardaparques dialogo final 002.m4a",
+            "durationSeconds": 13.0673
+          }
+        },
+        {
+          "order": 8,
+          "itemId": 15,
+          "componentPathID": 454,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "OK, let’s go to Tárcoles River.\r",
+          "voiceAudio": {
+            "clipName": "Ok lets go to Tarcoles River LISA B",
+            "file": "audio/Ok lets go to Tarcoles River LISA B.m4a",
+            "durationSeconds": 2.6944
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 46,
+      "sceneName": "PR_Tarcoles",
+      "totalLines": 3,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 4,
+          "componentPathID": 828,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Help us clean Tárcoles River.",
+          "voiceAudio": {
+            "clipName": "Locutor Fem 001 B",
+            "file": "audio/Locutor Fem 001 B.m4a",
+            "durationSeconds": 1.9321
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 5,
+          "componentPathID": 830,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Pick up as may garbage bags as you can, but watch out for crocodiles.",
+          "voiceAudio": {
+            "clipName": "Locutor Fem 002",
+            "file": "audio/Locutor Fem 002.m4a",
+            "durationSeconds": 4.8048
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 339,
+          "componentPathID": 840,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use the arrow keys to move and space bar to interact.",
+          "voiceAudio": null
+        }
+      ]
+    },
+    {
+      "sceneIndex": 47,
+      "sceneName": "SJ_FincaCafetalera_Intro",
+      "totalLines": 14,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 464,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Hi, I’m Mike  from the United States.",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE MIKE 001",
+            "file": "audio/MASTER CAFE MIKE 001.m4a",
+            "durationSeconds": 2.7824
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 2,
+          "componentPathID": 463,
+          "character": "María",
+          "portraitSprite": null,
+          "text": "Hi, I’m María the owner of “El Grano” coffee plantation. ",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE MARIA 001",
+            "file": "audio/MASTER CAFE MARIA 001.m4a",
+            "durationSeconds": 4
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 3,
+          "componentPathID": 462,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "I have never visited a coffee plantation, it is so beautiful and fresh. Mmm, smells great! It is really incredible to picture all the process from a place like this to a cup of coffee. ",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE MIKE 002",
+            "file": "audio/MASTER CAFE MIKE 002.m4a",
+            "durationSeconds": 13.3478
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 4,
+          "componentPathID": 461,
+          "character": "María",
+          "portraitSprite": null,
+          "text": "Since we were little, our parents taught us the right way to pick the best grains. ",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE MARIA 002",
+            "file": "audio/MASTER CAFE MARIA 002.m4a",
+            "durationSeconds": 5.1568
+          }
+        },
+        {
+          "order": 5,
+          "itemId": 5,
+          "componentPathID": 460,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "I see you’re picking coffee right now, can I help?",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE MIKE 003",
+            "file": "audio/MASTER CAFE MIKE 003.m4a",
+            "durationSeconds": 3.3552
+          }
+        },
+        {
+          "order": 6,
+          "itemId": 6,
+          "componentPathID": 459,
+          "character": "María",
+          "portraitSprite": null,
+          "text": "Yes, of course! Pedro will tell you how. ",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE MARIA 003",
+            "file": "audio/MASTER CAFE MARIA 003.m4a",
+            "durationSeconds": 2.9926
+          }
+        },
+        {
+          "order": 7,
+          "itemId": 7,
+          "componentPathID": 458,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Let’s start picking coffee!",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE MIKE 004",
+            "file": "audio/MASTER CAFE MIKE 004.m4a",
+            "durationSeconds": 1.4629
+          }
+        },
+        {
+          "order": 8,
+          "itemId": 10,
+          "componentPathID": 474,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Hi, I’m Lisa  from the United States.",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE LISA 001",
+            "file": "audio/MASTER CAFE LISA 001.m4a",
+            "durationSeconds": 3.1454
+          }
+        },
+        {
+          "order": 9,
+          "itemId": 11,
+          "componentPathID": 473,
+          "character": "María",
+          "portraitSprite": null,
+          "text": "Hi, I’m María the owner of “El Grano” coffee plantation. ",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE MARIA 001",
+            "file": "audio/MASTER CAFE MARIA 001.m4a",
+            "durationSeconds": 4
+          }
+        },
+        {
+          "order": 10,
+          "itemId": 12,
+          "componentPathID": 472,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "I have never visited a coffee plantation, it is so beautiful and fresh. Mmm, smells great! It is really incredible to picture all the process from a place like this to a cup of coffee. ",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE LISA 002",
+            "file": "audio/MASTER CAFE LISA 002.m4a",
+            "durationSeconds": 14.3951
+          }
+        },
+        {
+          "order": 11,
+          "itemId": 13,
+          "componentPathID": 471,
+          "character": "María",
+          "portraitSprite": null,
+          "text": "Since we were little, our parents taught us the right way to pick the best grains. ",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE MARIA 002",
+            "file": "audio/MASTER CAFE MARIA 002.m4a",
+            "durationSeconds": 5.1568
+          }
+        },
+        {
+          "order": 12,
+          "itemId": 14,
+          "componentPathID": 470,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "I see you’re picking coffee right now, can I help?",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE LISA 003",
+            "file": "audio/MASTER CAFE LISA 003.m4a",
+            "durationSeconds": 3.4663
+          }
+        },
+        {
+          "order": 13,
+          "itemId": 15,
+          "componentPathID": 469,
+          "character": "María",
+          "portraitSprite": null,
+          "text": "Yes, of course! Pedro will tell you how. ",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE MARIA 003",
+            "file": "audio/MASTER CAFE MARIA 003.m4a",
+            "durationSeconds": 2.9926
+          }
+        },
+        {
+          "order": 14,
+          "itemId": 16,
+          "componentPathID": 468,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Let’s start picking coffee!",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE LISA 004",
+            "file": "audio/MASTER CAFE LISA 004.m4a",
+            "durationSeconds": 1.6012
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 48,
+      "sceneName": "SJ_FincaCafetalera",
+      "totalLines": 6,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 4948,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Pick up as many coffee beans as you can! \nBut remember, the RED beans are the best to make a delicious cup of coffee.",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE PEDRO 001B",
+            "file": "audio/MASTER CAFE PEDRO 001B.m4a",
+            "durationSeconds": 7.6025
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 3,
+          "componentPathID": 4950,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "When your bucket is full, you can empty it in front of the house.",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE PEDRO 002",
+            "file": "audio/MASTER CAFE PEDRO 002.m4a",
+            "durationSeconds": 3.8428
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 4,
+          "componentPathID": 4951,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Good luck!",
+          "voiceAudio": {
+            "clipName": "006 Guanacaste, diving in coco, locutor 004 Masc",
+            "file": "audio/006 Guanacaste, diving in coco, locutor 004 Masc.m4a",
+            "durationSeconds": 0.5471
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 6,
+          "componentPathID": 4954,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "What we know as coffee beans, in fact is a small fruit similar to a cherry.",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE PEDRO 003",
+            "file": "audio/MASTER CAFE PEDRO 003.m4a",
+            "durationSeconds": 5.4148
+          }
+        },
+        {
+          "order": 5,
+          "itemId": 7,
+          "componentPathID": 4952,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "These fruits turn RED when they are ripe and ready to be pick.",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE PEDRO 004",
+            "file": "audio/MASTER CAFE PEDRO 004.m4a",
+            "durationSeconds": 4.2285
+          }
+        },
+        {
+          "order": 6,
+          "itemId": 339,
+          "componentPathID": 4971,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use the arrow keys to move and space bar to interact.",
+          "voiceAudio": null
+        }
+      ]
+    },
+    {
+      "sceneIndex": 49,
+      "sceneName": "SJ_Museo_Oro_Intro",
+      "totalLines": 3,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 485,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The Precolumbian Gold Museum Álvaro Vargas Echeverría, is a historical, archeological and cultural museum located in San José city, the capital of Costa Rica.",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO TICO2NPC 002",
+            "file": "audio/MASTER MUSEO ORO TICO2NPC 002.m4a",
+            "durationSeconds": 12.6543
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 19,
+          "componentPathID": 482,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "It is an underground building underneath the Plaza de la Cultura, in 5th Street, between Central and Second Avenues, on downtown San José. There you can also find the Numismatics Museum Jaime Solera Bennett. ",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO TICO2NPC 003",
+            "file": "audio/MASTER MUSEO ORO TICO2NPC 003.m4a",
+            "durationSeconds": 14.0828
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 20,
+          "componentPathID": 483,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "In 2012, the website Trip Advisor awarded the Pre-Columbian Gold Museum with a certificate of excellence.",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO TICO2NPC 004",
+            "file": "audio/MASTER MUSEO ORO TICO2NPC 004.m4a",
+            "durationSeconds": 8.1779
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 50,
+      "sceneName": "SJ_Museo_Oro",
+      "totalLines": 37,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 3,
+          "componentPathID": 1517,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Hello, welcome to downtown San José.",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO TICO1NPC 001",
+            "file": "audio/MASTER MUSEO ORO TICO1NPC 001.m4a",
+            "durationSeconds": 3.2194
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 4,
+          "componentPathID": 1514,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Hi, can you tell me how to get to the Gold Museum please?\n",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO MIKE 001",
+            "file": "audio/MASTER MUSEO ORO MIKE 001.m4a",
+            "durationSeconds": 3.9944
+          }
+        },
+        {
+          "order": 3,
+          "itemId": 8,
+          "componentPathID": 1538,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I guess you mean the Precolumbian Gold Museum. People always shorten it... It's nearby!",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO TICO2NPC 001 V3",
+            "file": "audio/MASTER MUSEO ORO TICO2NPC 001 V3.m4a",
+            "durationSeconds": 6.1232
+          }
+        },
+        {
+          "order": 4,
+          "itemId": 18,
+          "componentPathID": 1529,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The Pre-Columbian Gold Museum \"Álvaro Vargas Echeverría\" is a historical, archaeological and cultural museum located in San José city, capital of Costa Rica.",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO TICO2NPC 002",
+            "file": "audio/MASTER MUSEO ORO TICO2NPC 002.m4a",
+            "durationSeconds": 12.6543
+          }
+        },
+        {
+          "order": 5,
+          "itemId": 19,
+          "componentPathID": 1528,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "It is an underground building underneath the Plaza de la Cultura, on 5th street, between Central and 2nd avenue in downtown San José, there you can also find the Numismatic Museum Jaime Solera Bennett.",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO TICO2NPC 003",
+            "file": "audio/MASTER MUSEO ORO TICO2NPC 003.m4a",
+            "durationSeconds": 14.0828
+          }
+        },
+        {
+          "order": 6,
+          "itemId": 21,
+          "componentPathID": 1526,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Do you want more information?",
+          "voiceAudio": null
+        },
+        {
+          "order": 7,
+          "itemId": 25,
+          "componentPathID": 1524,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "This building is the permanent seat of the collections belonging to the Central Bank of Costa Rica, and also houses the Numismatic Museum Jaime Solera Bennett.",
+          "voiceAudio": null
+        },
+        {
+          "order": 8,
+          "itemId": 26,
+          "componentPathID": 1523,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "In 2012, the website Trip Advisor awarded the Pre-Columbian Gold Museum with a certificate of excellence. It's always good to be in the loop, don't you think?",
+          "voiceAudio": null
+        },
+        {
+          "order": 9,
+          "itemId": 29,
+          "componentPathID": 1546,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "I'm not from around here, but I think the museum is on the next block. Central avenue is blocked, you will have to go around it.",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO TICO3NPC 001",
+            "file": "audio/MASTER MUSEO ORO TICO3NPC 001.m4a",
+            "durationSeconds": 9.3631
+          }
+        },
+        {
+          "order": 10,
+          "itemId": 36,
+          "componentPathID": 1572,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Hi! Welcome to the Pre-Columbian Gold Museum. Do you want any information about the museum?",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO TICO4NPC 001",
+            "file": "audio/MASTER MUSEO ORO TICO4NPC 001.m4a",
+            "durationSeconds": 6.0573
+          }
+        },
+        {
+          "order": 11,
+          "itemId": 41,
+          "componentPathID": 1568,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The museum has an extraordinary collection of objects made in gold. These artifacts reflect the \"Cosmovisión\", social structure and goldsmith of the Pre-Columbian societies that lived in the territory where Costa Rica is located now. ",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO TICO4NPC 002",
+            "file": "audio/MASTER MUSEO ORO TICO4NPC 002.m4a",
+            "durationSeconds": 15.5828
+          }
+        },
+        {
+          "order": 12,
+          "itemId": 42,
+          "componentPathID": 1567,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The exhibition reflects the purpose of the pieces as well as these communities' technology, their relationship with nature and how their everyday life developed.",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO TICO4NPC 003",
+            "file": "audio/MASTER MUSEO ORO TICO4NPC 003.m4a",
+            "durationSeconds": 10.8201
+          }
+        },
+        {
+          "order": 13,
+          "itemId": 43,
+          "componentPathID": 1566,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Do you want any information about the museum?",
+          "voiceAudio": {
+            "clipName": "do you want",
+            "file": "audio/do you want.m4a",
+            "durationSeconds": 2.4241
+          }
+        },
+        {
+          "order": 14,
+          "itemId": 48,
+          "componentPathID": 1562,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Come in, enjoy your visit.",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO TICO4NPC 007",
+            "file": "audio/MASTER MUSEO ORO TICO4NPC 007.m4a",
+            "durationSeconds": 1.8616
+          }
+        },
+        {
+          "order": 15,
+          "itemId": 53,
+          "componentPathID": 1557,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The Pre-Columbian craftsmen of this land worked the native gold they obtained from the river banks and coasts. The art of goldsmith required talent and a long and complicated training, which was provided by full-time specialists.",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO TICO4NPC 004",
+            "file": "audio/MASTER MUSEO ORO TICO4NPC 004.m4a",
+            "durationSeconds": 14.7509
+          }
+        },
+        {
+          "order": 16,
+          "itemId": 54,
+          "componentPathID": 1556,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Do you want any information about the museum?",
+          "voiceAudio": {
+            "clipName": "do you want",
+            "file": "audio/do you want.m4a",
+            "durationSeconds": 2.4241
+          }
+        },
+        {
+          "order": 17,
+          "itemId": 58,
+          "componentPathID": 1553,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The museum's collection is made up of one thousand and six hundred pieces of Pre-Columbian gold from the year 500 until 1500 A. D.",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO TICO4NPC 005",
+            "file": "audio/MASTER MUSEO ORO TICO4NPC 005.m4a",
+            "durationSeconds": 11.1078
+          }
+        },
+        {
+          "order": 18,
+          "itemId": 59,
+          "componentPathID": 1552,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "There's also pottery and stone objects from different regions of the country used in everyday life and ceremonial rituals.",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO TICO4NPC 006",
+            "file": "audio/MASTER MUSEO ORO TICO4NPC 006.m4a",
+            "durationSeconds": 8.6612
+          }
+        },
+        {
+          "order": 19,
+          "itemId": 61,
+          "componentPathID": 1550,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Come in, enjoy your visit.",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO TICO4NPC 007",
+            "file": "audio/MASTER MUSEO ORO TICO4NPC 007.m4a",
+            "durationSeconds": 1.8616
+          }
+        },
+        {
+          "order": 20,
+          "itemId": 66,
+          "componentPathID": 1580,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "In San José, you can find lots of museums with amazing things related to Costa Rica's past.",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO LOCUTOR 001",
+            "file": "audio/MASTER MUSEO ORO LOCUTOR 001.m4a",
+            "durationSeconds": 6.8064
+          }
+        },
+        {
+          "order": 21,
+          "itemId": 67,
+          "componentPathID": 1576,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Ask for the address and follow the instructions to get to the Gold Museum.\nGood luck!",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO LOCUTOR 002",
+            "file": "audio/MASTER MUSEO ORO LOCUTOR 002.m4a",
+            "durationSeconds": 5.5445
+          }
+        },
+        {
+          "order": 22,
+          "itemId": 87,
+          "componentPathID": 1600,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "The Gold Museum? \nSure, just go straight two blocks.",
+          "voiceAudio": {
+            "clipName": "TICO1NP V_2",
+            "file": "audio/TICO1NP V_2.m4a",
+            "durationSeconds": 4.9324
+          }
+        },
+        {
+          "order": 23,
+          "itemId": 88,
+          "componentPathID": 1599,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "It looks like they're doing some work. Don't get to close. It's dangerous!",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO TICO1NPC 003",
+            "file": "audio/MASTER MUSEO ORO TICO1NPC 003.m4a",
+            "durationSeconds": 5.0476
+          }
+        },
+        {
+          "order": 24,
+          "itemId": 89,
+          "componentPathID": 1598,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Thanks!",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO MIKE 002",
+            "file": "audio/MASTER MUSEO ORO MIKE 002.m4a",
+            "durationSeconds": 0.626
+          }
+        },
+        {
+          "order": 25,
+          "itemId": 92,
+          "componentPathID": 1601,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Hi, can you tell me how to get to the Gold Museum please?",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO LISA 001",
+            "file": "audio/MASTER MUSEO ORO LISA 001.m4a",
+            "durationSeconds": 3.9497
+          }
+        },
+        {
+          "order": 26,
+          "itemId": 97,
+          "componentPathID": 1535,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Thanks!",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO LISA 002",
+            "file": "audio/MASTER MUSEO ORO LISA 002.m4a",
+            "durationSeconds": 0.8148
+          }
+        },
+        {
+          "order": 27,
+          "itemId": 110,
+          "componentPathID": 1616,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Yes, please!",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO MIKE 004",
+            "file": "audio/MASTER MUSEO ORO MIKE 004.m4a",
+            "durationSeconds": 1.0532
+          }
+        },
+        {
+          "order": 28,
+          "itemId": 112,
+          "componentPathID": 1614,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Yes, please!",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO LISA 004",
+            "file": "audio/MASTER MUSEO ORO LISA 004.m4a",
+            "durationSeconds": 1.0334
+          }
+        },
+        {
+          "order": 29,
+          "itemId": 115,
+          "componentPathID": 1621,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Yes, please!",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO MIKE 004",
+            "file": "audio/MASTER MUSEO ORO MIKE 004.m4a",
+            "durationSeconds": 1.0532
+          }
+        },
+        {
+          "order": 30,
+          "itemId": 117,
+          "componentPathID": 1619,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Yes, please!",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO LISA 004",
+            "file": "audio/MASTER MUSEO ORO LISA 004.m4a",
+            "durationSeconds": 1.0334
+          }
+        },
+        {
+          "order": 31,
+          "itemId": 120,
+          "componentPathID": 1626,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Yes, please!",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO MIKE 004",
+            "file": "audio/MASTER MUSEO ORO MIKE 004.m4a",
+            "durationSeconds": 1.0532
+          }
+        },
+        {
+          "order": 32,
+          "itemId": 122,
+          "componentPathID": 1624,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Yes, please!",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO LISA 004",
+            "file": "audio/MASTER MUSEO ORO LISA 004.m4a",
+            "durationSeconds": 1.0334
+          }
+        },
+        {
+          "order": 33,
+          "itemId": 150,
+          "componentPathID": 1606,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Hi, can you tell me how to get to the Gold Museum please?",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO MIKE 001",
+            "file": "audio/MASTER MUSEO ORO MIKE 001.m4a",
+            "durationSeconds": 3.9944
+          }
+        },
+        {
+          "order": 34,
+          "itemId": 152,
+          "componentPathID": 1551,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Hi, can you tell me how to get to the Gold Museum please?",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO LISA 001",
+            "file": "audio/MASTER MUSEO ORO LISA 001.m4a",
+            "durationSeconds": 3.9497
+          }
+        },
+        {
+          "order": 35,
+          "itemId": 332,
+          "componentPathID": 1655,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "Hi, can you tell me how to get to the Gold Museum please?\n",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO MIKE 001",
+            "file": "audio/MASTER MUSEO ORO MIKE 001.m4a",
+            "durationSeconds": 3.9944
+          }
+        },
+        {
+          "order": 36,
+          "itemId": 334,
+          "componentPathID": 1657,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "Hi, can you tell me how to get to the Gold Museum please?",
+          "voiceAudio": {
+            "clipName": "MASTER MUSEO ORO LISA 001",
+            "file": "audio/MASTER MUSEO ORO LISA 001.m4a",
+            "durationSeconds": 3.9497
+          }
+        },
+        {
+          "order": 37,
+          "itemId": 338,
+          "componentPathID": 1668,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use the arrow keys to move and space bar to interact.",
+          "voiceAudio": null
+        }
+      ]
+    },
+    {
+      "sceneIndex": 51,
+      "sceneName": "SJ_Rafting_Intro",
+      "totalLines": 2,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 1,
+          "componentPathID": 492,
+          "character": "Mike",
+          "portraitSprite": null,
+          "text": "I´ve earned some money picking coffee. Now I’m going rafting!",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE MIKE 005",
+            "file": "audio/MASTER CAFE MIKE 005.m4a",
+            "durationSeconds": 3.7263
+          }
+        },
+        {
+          "order": 2,
+          "itemId": 10,
+          "componentPathID": 487,
+          "character": "Lisa",
+          "portraitSprite": null,
+          "text": "I´ve earned some money picking coffee. Now I’m going rafting!",
+          "voiceAudio": {
+            "clipName": "MASTER CAFE LISA 005",
+            "file": "audio/MASTER CAFE LISA 005.m4a",
+            "durationSeconds": 4.5415
+          }
+        }
+      ]
+    },
+    {
+      "sceneIndex": 52,
+      "sceneName": "SJ_Rafting",
+      "totalLines": 2,
+      "lines": [
+        {
+          "order": 1,
+          "itemId": 28,
+          "componentPathID": 1822,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use the arrow keys or WASD to control the character.\n",
+          "voiceAudio": null
+        },
+        {
+          "order": 2,
+          "itemId": 35,
+          "componentPathID": 1815,
+          "character": "Guide / Narrator",
+          "portraitSprite": null,
+          "text": "Use the arrow keys or WASD to control the character.\n",
+          "voiceAudio": null
+        }
+      ]
+    }
+  ]
+}

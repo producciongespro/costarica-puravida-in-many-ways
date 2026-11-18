@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+app/node_modules/
+
+# Build output
+dist/
+app/dist/
+
+# Reverse engineering heavy binary blobs & duplicate extracted assets
+app/reverse_engineering/raw_build/
+app/reverse_engineering/unpacked_data/
+app/reverse_engineering/extracted_assets/
+
+# Logs & OS files
+*.log
+.DS_Store
+Thumbs.db

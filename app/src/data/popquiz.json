@@ -1,0 +1,6024 @@
+{
+  "totalBanks": 7,
+  "totalQuestions": 68,
+  "rules": {
+    "triggerCondition": "Triggered when clicking a province on MapaCostaRica that is NOT the player’s currentLocation.",
+    "costCoins": 5000,
+    "deductionMoment": "Coins are checked (>= 5000) and deducted immediately upon confirming travel in NewRegion() before the random question from that province is shown.",
+    "selectionAlgorithm": "UnityEngine.Random.Range(0, questions.Length)",
+    "singleChoiceBehavior": "Rendered as up to 6 direct buttons (Respuesta1..Respuesta6). Clicking a correct option (+1 >= minScore) immediately unlocks travel, moves the player avatar, plays sfx 36 (win-sound.m4a), and if the province star state is \"000\", plays the province welcome voiceover.",
+    "multipleChoiceBehavior": "Rendered as up to 10 toggles in two columns (tglRespuesta1..10) with an \"Evaluate\" button (btnEvaluar). Each checked correct option adds +1 and each checked wrong option subtracts -1 (PreguntaController.OptionValue). Clicking \"Evaluate\" checks if currentScore >= minScore.",
+    "onWrongAnswer": "Plays sfx 37 (wrong.m4a), closes PanelPregunta without refunding the travel fee, and leaves player at previous location."
+  },
+  "byProvince": [
+    {
+      "provinceId": 0,
+      "provinceCode": "SJ",
+      "provinceName": "San José",
+      "coatOfArmsSprite": "sprites/EscudoSanJosé.png",
+      "questionCount": 10,
+      "questions": [
+        {
+          "id": "PQ_SJ_01",
+          "provinceId": 0,
+          "provinceCode": "SJ",
+          "provinceName": "San José",
+          "gameObjectName": "NivelSanJose",
+          "questionIndex": 0,
+          "questionText": "Has San José always been our capital",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "001 Has San Jose always been our capital city",
+            "file": "audio/001 Has San Jose always been our capital city.m4a",
+            "durationSeconds": 2.9363
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Yes",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "No",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_SJ_02",
+          "provinceId": 0,
+          "provinceCode": "SJ",
+          "provinceName": "San José",
+          "gameObjectName": "NivelSanJose",
+          "questionIndex": 1,
+          "questionText": "Is there a Pre-Columbian Gold Museum?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "002 Is there a Pre-Columbian Gold Museum",
+            "file": "audio/002 Is there a Pre-Columbian Gold Museum.m4a",
+            "durationSeconds": 2.369
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Yes",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "No",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_SJ_03",
+          "provinceId": 0,
+          "provinceCode": "SJ",
+          "provinceName": "San José",
+          "gameObjectName": "NivelSanJose",
+          "questionIndex": 2,
+          "questionText": "The National Theater is located near \"Plaza de la Cultura\"?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "003 3. The National Theater is located near “Plaza de la Cultura”",
+            "file": "audio/003 3. The National Theater is located near “Plaza de la Cultura”.m4a",
+            "durationSeconds": 3.7705
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "True",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "False",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_SJ_04",
+          "provinceId": 0,
+          "provinceCode": "SJ",
+          "provinceName": "San José",
+          "gameObjectName": "NivelSanJose",
+          "questionIndex": 3,
+          "questionText": "The National Stadium is located in \"Morazán\" Park?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "004 The National Stadium is located in “Morazán” Park",
+            "file": "audio/004 The National Stadium is located in “Morazán” Park.m4a",
+            "durationSeconds": 3.1698
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "True",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "False",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_SJ_05",
+          "provinceId": 0,
+          "provinceCode": "SJ",
+          "provinceName": "San José",
+          "gameObjectName": "NivelSanJose",
+          "questionIndex": 4,
+          "questionText": "At the Nationl Theater you can:",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 3,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "005 At the National Theater you can…",
+            "file": "audio/005 At the National Theater you can….m4a",
+            "durationSeconds": 2.2689
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Learn to dance traditional folk dances and perform.",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "Listen to performances by the Natonal Symphonic Orchestra.",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "Watch the most important football games of our National soccer team.",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_SJ_06",
+          "provinceId": 0,
+          "provinceCode": "SJ",
+          "provinceName": "San José",
+          "gameObjectName": "NivelSanJose",
+          "questionIndex": 5,
+          "questionText": "Mark activities that you can do at Sabana Park in San José",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 7,
+          "correctOptionsCount": 6,
+          "totalOptionsCount": 8,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "006 Mark activities you can do at “ The Sabana “ in San Jose",
+            "file": "audio/006 Mark activities you can do at “ The Sabana “ in San Jose.m4a",
+            "durationSeconds": 4.2042
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Camping",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "Cycling",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "Running",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "Having a picnic",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 4,
+              "text": "Playing ball",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 5,
+              "text": "Reading",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 6,
+              "text": "Watching a movie",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 7,
+              "text": "Taking pictures",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_SJ_07",
+          "provinceId": 0,
+          "provinceCode": "SJ",
+          "provinceName": "San José",
+          "gameObjectName": "NivelSanJose",
+          "questionIndex": 6,
+          "questionText": "What would you recommend tourists to buy at the Central Market? No answer is wrong.",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 0,
+          "correctOptionsCount": 6,
+          "totalOptionsCount": 6,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "007 What would you recommend tourists to buy at the Central Market",
+            "file": "audio/007 What would you recommend tourists to buy at the Central Market.m4a",
+            "durationSeconds": 5.5722
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Spices",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "Craft and souvenirs",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "Fruits and vegetables",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "Flowers",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 4,
+              "text": "Typical food",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 5,
+              "text": "Remedies and medicinal plants",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_SJ_08",
+          "provinceId": 0,
+          "provinceCode": "SJ",
+          "provinceName": "San José",
+          "gameObjectName": "NivelSanJose",
+          "questionIndex": 7,
+          "questionText": "What you can see at the Costa Rican National Museum? You can choose more than one answer.",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 5,
+          "correctOptionsCount": 5,
+          "totalOptionsCount": 6,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "008. What can you see at the Costa Rican National Museum",
+            "file": "audio/008. What can you see at the Costa Rican National Museum.m4a",
+            "durationSeconds": 5.7724
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Jade sculpyures",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "Stone spheres",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "World famous paintings",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "Old portraits",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 4,
+              "text": "Pre-Columbian stone carvings",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 5,
+              "text": "Indigenous pottery",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_SJ_09",
+          "provinceId": 0,
+          "provinceCode": "SJ",
+          "provinceName": "San José",
+          "gameObjectName": "NivelSanJose",
+          "questionIndex": 8,
+          "questionText": "Which one of these is your favorite exhibition at the \"Museo de los Niños\"? Choose from the ones below. No Answer is wrong.",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 0,
+          "correctOptionsCount": 6,
+          "totalOptionsCount": 6,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "009 Which one of these is your favorite exhibition at the “Museo de los Niños”",
+            "file": "audio/009 Which one of these is your favorite exhibition at the “Museo de los Niños”.m4a",
+            "durationSeconds": 9.1425
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Exploring outer space",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "Old-fashioned fun on the farm",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "History",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "Music",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 4,
+              "text": "Science",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 5,
+              "text": "Ecology",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_SJ_10",
+          "provinceId": 0,
+          "provinceCode": "SJ",
+          "provinceName": "San José",
+          "gameObjectName": "NivelSanJose",
+          "questionIndex": 9,
+          "questionText": "Which activities can people do in San José? You can choose more than one answer.",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 5,
+          "correctOptionsCount": 6,
+          "totalOptionsCount": 7,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "010 What activities can people do in San Jose",
+            "file": "audio/010 What activities can people do in San Jose.m4a",
+            "durationSeconds": 5.639
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Going to the theater",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "Visiting a famous palace",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 2,
+              "text": "Watching a movie",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "Visit a museum",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 4,
+              "text": "Going to a restaurant",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 5,
+              "text": "Going shopping",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 6,
+              "text": "Surfing",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provinceId": 1,
+      "provinceCode": "HD",
+      "provinceName": "Heredia",
+      "coatOfArmsSprite": "sprites/EscudoHeredia.png",
+      "questionCount": 9,
+      "questions": [
+        {
+          "id": "PQ_HD_01",
+          "provinceId": 1,
+          "provinceCode": "HD",
+          "provinceName": "Heredia",
+          "gameObjectName": "NivelHeredia",
+          "questionIndex": 0,
+          "questionText": "Is \"Bosque de la Hoja\" a place where you can enjoy nature?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "001 Is “Bosque de la Hoja” a place where you can enjoy nature",
+            "file": "audio/001 Is “Bosque de la Hoja” a place where you can enjoy nature.m4a",
+            "durationSeconds": 3.4844
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Yes",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "No",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_HD_02",
+          "provinceId": 1,
+          "provinceCode": "HD",
+          "provinceName": "Heredia",
+          "gameObjectName": "NivelHeredia",
+          "questionIndex": 1,
+          "questionText": "Can you go surfing in Heredia?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "002 Can you go surfing in Heredia",
+            "file": "audio/002 Can you go surfing in Heredia.m4a",
+            "durationSeconds": 1.8574
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Yes",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "No",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_HD_03",
+          "provinceId": 1,
+          "provinceCode": "HD",
+          "provinceName": "Heredia",
+          "gameObjectName": "NivelHeredia",
+          "questionIndex": 2,
+          "questionText": "Is Heredia called the city of flowers?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "003 Is Heredia called the city of flowers",
+            "file": "audio/003 Is Heredia called the city of flowers.m4a",
+            "durationSeconds": 2.4691
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Yes",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "No",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_HD_04",
+          "provinceId": 1,
+          "provinceCode": "HD",
+          "provinceName": "Heredia",
+          "gameObjectName": "NivelHeredia",
+          "questionIndex": 3,
+          "questionText": "Heredia is divided into six cantons?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "004 Heredia is divided into six cantons",
+            "file": "audio/004 Heredia is divided into six cantons.m4a",
+            "durationSeconds": 3.0363
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "True",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "False",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_HD_05",
+          "provinceId": 1,
+          "provinceCode": "HD",
+          "provinceName": "Heredia",
+          "gameObjectName": "NivelHeredia",
+          "questionIndex": 4,
+          "questionText": "Braulio Carrillo National Park is located in Heredia?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "005 Braulio Carrillo National Park is located in Heredia",
+            "file": "audio/005 Braulio Carrillo National Park is located in Heredia.m4a",
+            "durationSeconds": 3.8372
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "True",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "False",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_HD_06",
+          "provinceId": 1,
+          "provinceCode": "HD",
+          "provinceName": "Heredia",
+          "gameObjectName": "NivelHeredia",
+          "questionIndex": 5,
+          "questionText": "What can you buy at the \"Mercado Central de Heredia\"?",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 3,
+          "correctOptionsCount": 3,
+          "totalOptionsCount": 6,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "006 What can you buy at the “Mercado Central de Heredia”",
+            "file": "audio/006 What can you buy at the “Mercado Central de Heredia”.m4a",
+            "durationSeconds": 2.9363
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Tortillas",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "Fruits",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "Tires",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "Birds",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 4,
+              "text": "Puppies and Kittens",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 5,
+              "text": "Typical Food",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_HD_07",
+          "provinceId": 1,
+          "provinceCode": "HD",
+          "provinceName": "Heredia",
+          "gameObjectName": "NivelHeredia",
+          "questionIndex": 6,
+          "questionText": "Which of the following foods is a typical dish from Heredia?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "008 Which of the following is a typical dish from Heredia",
+            "file": "audio/008 Which of the following is a typical dish from Heredia.m4a",
+            "durationSeconds": 2.9696
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Picadillo de arracache",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "Rondón",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 2,
+              "text": "Pozol",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "Paella",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_HD_08",
+          "provinceId": 1,
+          "provinceCode": "HD",
+          "provinceName": "Heredia",
+          "gameObjectName": "NivelHeredia",
+          "questionIndex": 7,
+          "questionText": "If you went to Barva Volcano, what would you take?",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 4,
+          "correctOptionsCount": 4,
+          "totalOptionsCount": 6,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "009 If you went to Barva Volcano, what would you take",
+            "file": "audio/009 If you went to Barva Volcano, what would you take.m4a",
+            "durationSeconds": 3.1698
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "A rain coat",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "A sandwich",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "a soccer ball",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "A boat",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 4,
+              "text": "A camera",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 5,
+              "text": "A coat",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_HD_09",
+          "provinceId": 1,
+          "provinceCode": "HD",
+          "provinceName": "Heredia",
+          "gameObjectName": "NivelHeredia",
+          "questionIndex": 8,
+          "questionText": "What sports can you practice in Heredia?",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 3,
+          "correctOptionsCount": 3,
+          "totalOptionsCount": 6,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "010 What sports can you practice in Heredia",
+            "file": "audio/010 What sports can you practice in Heredia.m4a",
+            "durationSeconds": 2.2689
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Snorkeling",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "Mountain Bike",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "Hiking",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "Surfing",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 4,
+              "text": "Swimming",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 5,
+              "text": "Snowboarding",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provinceId": 2,
+      "provinceCode": "CT",
+      "provinceName": "Cartago",
+      "coatOfArmsSprite": "sprites/EscudoCartago.png",
+      "questionCount": 10,
+      "questions": [
+        {
+          "id": "PQ_CT_01",
+          "provinceId": 2,
+          "provinceCode": "CT",
+          "provinceName": "Cartago",
+          "gameObjectName": "NivelCartago",
+          "questionIndex": 0,
+          "questionText": "The Virgin of Los Angeles is located in the original cathedral of Cartago",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "001 The virgin of Los Angeles is located in the original cathedral of Cartago",
+            "file": "audio/001 The virgin of Los Angeles is located in the original cathedral of Cartago.m4a",
+            "durationSeconds": 5.005
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "True",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "False",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_CT_02",
+          "provinceId": 2,
+          "provinceCode": "CT",
+          "provinceName": "Cartago",
+          "gameObjectName": "NivelCartago",
+          "questionIndex": 1,
+          "questionText": "Every year, hundreds of Costa Rican travel to Cartago for religious reasons",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "002 Every year, hundreds of Costa Rican travel to Cartago for religious reasons",
+            "file": "audio/002 Every year, hundreds of Costa Rican travel to Cartago for religious reasons.m4a",
+            "durationSeconds": 5.1718
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "True",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "False",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_CT_03",
+          "provinceId": 2,
+          "provinceCode": "CT",
+          "provinceName": "Cartago",
+          "gameObjectName": "NivelCartago",
+          "questionIndex": 2,
+          "questionText": "What can you see at the Lankester Botanical Gardens?",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 2,
+          "correctOptionsCount": 2,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "003 What can you see at the Lankester Botanical Gardens",
+            "file": "audio/003 What can you see at the Lankester Botanical Gardens.m4a",
+            "durationSeconds": 3.5702
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Flowers",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "A cactus",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "Elephants",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "A crocodile",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_CT_04",
+          "provinceId": 2,
+          "provinceCode": "CT",
+          "provinceName": "Cartago",
+          "gameObjectName": "NivelCartago",
+          "questionIndex": 3,
+          "questionText": "Cartago was Costa Rica's first capital.",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "004 Cartago was Costa Rica’s first capital",
+            "file": "audio/004 Cartago was Costa Rica’s first capital.m4a",
+            "durationSeconds": 2.8695
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "True",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "False",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_CT_05",
+          "provinceId": 2,
+          "provinceCode": "CT",
+          "provinceName": "Cartago",
+          "gameObjectName": "NivelCartago",
+          "questionIndex": 4,
+          "questionText": "Turrialba is famous for producing high quality coffee.",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "005 Turrialba is famous for producing high quality coffee",
+            "file": "audio/005 Turrialba is famous for producing high quality coffee.m4a",
+            "durationSeconds": 3.4034
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "True",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "False",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_CT_06",
+          "provinceId": 2,
+          "provinceCode": "CT",
+          "provinceName": "Cartago",
+          "gameObjectName": "NivelCartago",
+          "questionIndex": 5,
+          "questionText": "What should you take with you on the Pacuare River for safety?",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 2,
+          "correctOptionsCount": 2,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "006 What should you take with you on the Pacuare River for safety",
+            "file": "audio/006 What should you take with you on the Pacuare River for safety.m4a",
+            "durationSeconds": 3.6703
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "A helmet",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "A lifejacket",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "Hiking boots",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "Soda",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_CT_07",
+          "provinceId": 2,
+          "provinceCode": "CT",
+          "provinceName": "Cartago",
+          "gameObjectName": "NivelCartago",
+          "questionIndex": 6,
+          "questionText": "What caused the destruction of the Santiago Apostle Church?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "007 What caused the destruction of the Santiago Apostle Church",
+            "file": "audio/007 What caused the destruction of the Santiago Apostle Church.m4a",
+            "durationSeconds": 4.371
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "A fire",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "A burglary",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 2,
+              "text": "An earthquake",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "A volcanic eruption",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_CT_08",
+          "provinceId": 2,
+          "provinceCode": "CT",
+          "provinceName": "Cartago",
+          "gameObjectName": "NivelCartago",
+          "questionIndex": 7,
+          "questionText": "In what direction is Cartago principally located from San José?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "008 In what direction is Cartago principally located from San Jose",
+            "file": "audio/008 In what direction is Cartago principally located from San Jose.m4a",
+            "durationSeconds": 4.2376
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "North",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "South",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 2,
+              "text": "East",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "West",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_CT_09",
+          "provinceId": 2,
+          "provinceCode": "CT",
+          "provinceName": "Cartago",
+          "gameObjectName": "NivelCartago",
+          "questionIndex": 8,
+          "questionText": "Cartago is Costa Rica's smallest province",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "009 Cartago is Costa Rica’s smallest province",
+            "file": "audio/009 Cartago is Costa Rica’s smallest province.m4a",
+            "durationSeconds": 2.7027
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "True",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "False",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_CT_10",
+          "provinceId": 2,
+          "provinceCode": "CT",
+          "provinceName": "Cartago",
+          "gameObjectName": "NivelCartago",
+          "questionIndex": 9,
+          "questionText": "Cartago has a coastline",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "010 Cartago has a coastline",
+            "file": "audio/010 Cartago has a coastline.m4a",
+            "durationSeconds": 1.5349
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "True",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "False",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provinceId": 3,
+      "provinceCode": "AL",
+      "provinceName": "Alajuela",
+      "coatOfArmsSprite": "sprites/EscudoAlajuela.png",
+      "questionCount": 9,
+      "questions": [
+        {
+          "id": "PQ_AL_01",
+          "provinceId": 3,
+          "provinceCode": "AL",
+          "provinceName": "Alajuela",
+          "gameObjectName": "NivelAlajuela",
+          "questionIndex": 0,
+          "questionText": "Is there an international airport in Alajuela?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "001. Is there an international airport in Alajuela",
+            "file": "audio/001. Is there an international airport in Alajuela.m4a",
+            "durationSeconds": 2.9363
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Yes",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "No",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_AL_02",
+          "provinceId": 3,
+          "provinceCode": "AL",
+          "provinceName": "Alajuela",
+          "gameObjectName": "NivelAlajuela",
+          "questionIndex": 1,
+          "questionText": "Was Costa Rica's national hero born in Alajuela?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "002. Was Costa Rica’s national hero born in Alajuela",
+            "file": "audio/002. Was Costa Rica’s national hero born in Alajuela.m4a",
+            "durationSeconds": 3.37
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Yes",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "No",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_AL_03",
+          "provinceId": 3,
+          "provinceCode": "AL",
+          "provinceName": "Alajuela",
+          "gameObjectName": "NivelAlajuela",
+          "questionIndex": 2,
+          "questionText": "What is Alajuela also called?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "003. What is Alajuela also called",
+            "file": "audio/003. What is Alajuela also called.m4a",
+            "durationSeconds": 1.9686
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "The City Flowers",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "The City of Mangoes",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "The City of Heros",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "The City of Poets",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_AL_04",
+          "provinceId": 3,
+          "provinceCode": "AL",
+          "provinceName": "Alajuela",
+          "gameObjectName": "NivelAlajuela",
+          "questionIndex": 3,
+          "questionText": "Which tourist attractions can you find in La Fortuna de San Carlos?",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 5,
+          "correctOptionsCount": 5,
+          "totalOptionsCount": 6,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "004 What tourist attractions can you find in La Fortuna de San Carlos",
+            "file": "audio/004 What tourist attractions can you find in La Fortuna de San Carlos.m4a",
+            "durationSeconds": 4.1375
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Hot springs",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "A volcano",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "A waterfall",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "Beaches",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 4,
+              "text": "Expensive resorts",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 5,
+              "text": "Hanging bridges",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_AL_05",
+          "provinceId": 3,
+          "provinceCode": "AL",
+          "provinceName": "Alajuela",
+          "gameObjectName": "NivelAlajuela",
+          "questionIndex": 4,
+          "questionText": "What would you take on a trip to Río Celeste?",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 3,
+          "correctOptionsCount": 3,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "005 What would you take on a trip to Rio Celeste",
+            "file": "audio/005 What would you take on a trip to Rio Celeste.m4a",
+            "durationSeconds": 2.4358
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Hiking boots",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "A bathing suit",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "A camera",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "A surfboard",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_AL_06",
+          "provinceId": 3,
+          "provinceCode": "AL",
+          "provinceName": "Alajuela",
+          "gameObjectName": "NivelAlajuela",
+          "questionIndex": 5,
+          "questionText": "Which means forms of transportation can you take to get to Nicaragua from Alajuela?",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 3,
+          "correctOptionsCount": 2,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "006 What forms of transportation can you take to get to Nicaragua from Alajuela",
+            "file": "audio/006 What forms of transportation can you take to get to Nicaragua from Alajuela.m4a",
+            "durationSeconds": 5.1718
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "An airplane",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "A boat",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "A train",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "A car",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_AL_07",
+          "provinceId": 3,
+          "provinceCode": "AL",
+          "provinceName": "Alajuela",
+          "gameObjectName": "NivelAlajuela",
+          "questionIndex": 6,
+          "questionText": "Which volcanoes are located in Alajuela?",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 3,
+          "correctOptionsCount": 3,
+          "totalOptionsCount": 5,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "007 What volcanoes are located in Alajuela",
+            "file": "audio/007 What volcanoes are located in Alajuela.m4a",
+            "durationSeconds": 2.8028
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Poas",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "Turrialba",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 2,
+              "text": "Chato",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "Arenal",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 4,
+              "text": "Orosi",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_AL_08",
+          "provinceId": 3,
+          "provinceCode": "AL",
+          "provinceName": "Alajuela",
+          "gameObjectName": "NivelAlajuela",
+          "questionIndex": 7,
+          "questionText": "What can you find in Alajuela's Historical Museum",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 3,
+          "correctOptionsCount": 3,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "008 What volcanoes are located in Alajuela",
+            "file": "audio/008 What volcanoes are located in Alajuela.m4a",
+            "durationSeconds": 3.2699
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Uniforms",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "Paintings",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "Clothing",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "A statue of the national hero",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_AL_09",
+          "provinceId": 3,
+          "provinceCode": "AL",
+          "provinceName": "Alajuela",
+          "gameObjectName": "NivelAlajuela",
+          "questionIndex": 8,
+          "questionText": "What is the most famous town in Alajuela for its cheese?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "010 What is the most famous town in Alajuela for its cheese",
+            "file": "audio/010 What is the most famous town in Alajuela for its cheese.m4a",
+            "durationSeconds": 3.3367
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Upala",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "Zarcero",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "Palmares",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "Pital",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provinceId": 4,
+      "provinceCode": "PR",
+      "provinceName": "Puntarenas",
+      "coatOfArmsSprite": "sprites/EscudoPuntarenas.png",
+      "questionCount": 10,
+      "questions": [
+        {
+          "id": "PQ_PR_01",
+          "provinceId": 4,
+          "provinceCode": "PR",
+          "provinceName": "Puntarenas",
+          "gameObjectName": "NivelPuntarenas",
+          "questionIndex": 0,
+          "questionText": "The following animal(s) can be found in Corcovado National Park:",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 2,
+          "correctOptionsCount": 2,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "001 The following animal(s) can be found in Corcovado National Park",
+            "file": "audio/001 The following animal(s) can be found in Corcovado National Park.m4a",
+            "durationSeconds": 4.4711
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Macaws",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "Lions",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 2,
+              "text": "Elephants",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "Jaguars",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_PR_02",
+          "provinceId": 4,
+          "provinceCode": "PR",
+          "provinceName": "Puntarenas",
+          "gameObjectName": "NivelPuntarenas",
+          "questionIndex": 1,
+          "questionText": "Which of the following is the largest city in the province of Puntarenas?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "002 Which of the following is the largest city in the province of Puntarenas",
+            "file": "audio/002 Which of the following is the largest city in the province of Puntarenas.m4a",
+            "durationSeconds": 3.8705
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "San Vito",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "Puntarenas",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "Buenos Aires",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "Ciudad Neily",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_PR_03",
+          "provinceId": 4,
+          "provinceCode": "PR",
+          "provinceName": "Puntarenas",
+          "gameObjectName": "NivelPuntarenas",
+          "questionIndex": 2,
+          "questionText": "San Vito was founded by French immigrants",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "003 San Vito was founded by French Immigrants",
+            "file": "audio/003 San Vito was founded by French Immigrants.m4a",
+            "durationSeconds": 3.2032
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "True",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "False",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_PR_04",
+          "provinceId": 4,
+          "provinceCode": "PR",
+          "provinceName": "Puntarenas",
+          "gameObjectName": "NivelPuntarenas",
+          "questionIndex": 3,
+          "questionText": "The province of Puntarenas is divided into 20 cantons.",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "004 The province of Puntarenas is divided into 20 cantons",
+            "file": "audio/004 The province of Puntarenas is divided into 20 cantons.m4a",
+            "durationSeconds": 4.004
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "True",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "False",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_PR_05",
+          "provinceId": 4,
+          "provinceCode": "PR",
+          "provinceName": "Puntarenas",
+          "gameObjectName": "NivelPuntarenas",
+          "questionIndex": 4,
+          "questionText": "Which of the following National Parks are not located in the province of Puntarenas?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 2,
+          "correctOptionsCount": 2,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "005 Which of the following National Parks are not located in the province of Puntarenas",
+            "file": "audio/005 Which of the following National Parks are not located in the province of Puntarenas.m4a",
+            "durationSeconds": 5.639
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Arenal Volcano National Park",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "Corcovado National Park",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 2,
+              "text": "Chirripo National Park",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "Piedras Blancas National Park",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_PR_06",
+          "provinceId": 4,
+          "provinceCode": "PR",
+          "provinceName": "Puntarenas",
+          "gameObjectName": "NivelPuntarenas",
+          "questionIndex": 5,
+          "questionText": "Isla del Coco is part of the provnce of Puntarenas",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "006 Isla de Coco is part of the province of Puntarenas",
+            "file": "audio/006 Isla de Coco is part of the province of Puntarenas.m4a",
+            "durationSeconds": 3.7037
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "True",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "False",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_PR_07",
+          "provinceId": 4,
+          "provinceCode": "PR",
+          "provinceName": "Puntarenas",
+          "gameObjectName": "NivelPuntarenas",
+          "questionIndex": 6,
+          "questionText": "The province of Puntarenas is home to which of following indigenous groups?",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 3,
+          "correctOptionsCount": 3,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "007 The Province of Puntarenas is home to which of the following Indigenous Groups",
+            "file": "audio/007 The Province of Puntarenas is home to which of the following Indigenous Groups.m4a",
+            "durationSeconds": 4.4044
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Boruca",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "Bri Bri",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "Cherokee",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "Ngabe",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_PR_08",
+          "provinceId": 4,
+          "provinceCode": "PR",
+          "provinceName": "Puntarenas",
+          "gameObjectName": "NivelPuntarenas",
+          "questionIndex": 7,
+          "questionText": "Which of the following provinces does Puntarenas NOT border",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 2,
+          "correctOptionsCount": 2,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "008 Which of the following provinces does Puntarenas NOT border",
+            "file": "audio/008 Which of the following provinces does Puntarenas NOT border.m4a",
+            "durationSeconds": 4.1375
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Heredia",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "Cartago",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "Limón",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "San José",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_PR_09",
+          "provinceId": 4,
+          "provinceCode": "PR",
+          "provinceName": "Puntarenas",
+          "gameObjectName": "NivelPuntarenas",
+          "questionIndex": 8,
+          "questionText": "The famous \"Whale's Tail\" is located in Jacó Beach.",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "009 The famous “Whale’s Tail” is located in Jaco Beach",
+            "file": "audio/009 The famous “Whale’s Tail” is located in Jaco Beach.m4a",
+            "durationSeconds": 3.7371
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "True",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "False",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_PR_10",
+          "provinceId": 4,
+          "provinceCode": "PR",
+          "provinceName": "Puntarenas",
+          "gameObjectName": "NivelPuntarenas",
+          "questionIndex": 9,
+          "questionText": "Puntarenas has the smallest population of any province in Costa Rica",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "010 Puntarenas has the smallest population of any province in Costa Rica",
+            "file": "audio/010 Puntarenas has the smallest population of any province in Costa Rica.m4a",
+            "durationSeconds": 4.6046
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "True",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "False",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provinceId": 5,
+      "provinceCode": "GN",
+      "provinceName": "Guanacaste",
+      "coatOfArmsSprite": "sprites/EscudoGuanacaste.png",
+      "questionCount": 10,
+      "questions": [
+        {
+          "id": "PQ_GN_01",
+          "provinceId": 5,
+          "provinceCode": "GN",
+          "provinceName": "Guanacaste",
+          "gameObjectName": "NivelGuanacaste",
+          "questionIndex": 0,
+          "questionText": "What is the main city of Guanacaste?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 2,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "001 What is the capital of Guanacaste",
+            "file": "audio/001 What is the capital of Guanacaste.m4a",
+            "durationSeconds": 2.3023
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Santa Cruz",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "Tamarindo",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 2,
+              "text": "Liberia",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "La Cruz",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_GN_02",
+          "provinceId": 5,
+          "provinceCode": "GN",
+          "provinceName": "Guanacaste",
+          "gameObjectName": "NivelGuanacaste",
+          "questionIndex": 1,
+          "questionText": "What is the base of the majority of foods in Guanacaste?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "002 What is the base of the majority of the foods in Guanacaste",
+            "file": "audio/002 What is the base of the majority of the foods in Guanacaste.m4a",
+            "durationSeconds": 3.8705
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Rice",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "Beans",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 2,
+              "text": "Milk",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "Corn",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_GN_03",
+          "provinceId": 5,
+          "provinceCode": "GN",
+          "provinceName": "Guanacaste",
+          "gameObjectName": "NivelGuanacaste",
+          "questionIndex": 2,
+          "questionText": "Which of the following are activities that you can do in Guanacaste? (Mark all that apply)",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 3,
+          "correctOptionsCount": 3,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "003 What is the base of the majority of the foods in Guanacaste",
+            "file": "audio/003 What is the base of the majority of the foods in Guanacaste.m4a",
+            "durationSeconds": 5.6723
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Zip lining",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "Scuba diving",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "Mountaing bike",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "Ice skating",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_GN_04",
+          "provinceId": 5,
+          "provinceCode": "GN",
+          "provinceName": "Guanacaste",
+          "gameObjectName": "NivelGuanacaste",
+          "questionIndex": 3,
+          "questionText": "Which of the following cities is best known for its \"fiestas típicas\"?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "004 Which of the following cities is best known for its “Fiestas Tipicas",
+            "file": "audio/004 Which of the following cities is best known for its “Fiestas Tipicas.m4a",
+            "durationSeconds": 4.1041
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Nandayure",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "Jicaral",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 2,
+              "text": "Santa Cruz",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "Liberia",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_GN_05",
+          "provinceId": 5,
+          "provinceCode": "GN",
+          "provinceName": "Guanacaste",
+          "gameObjectName": "NivelGuanacaste",
+          "questionIndex": 4,
+          "questionText": "What is Monteverde's most famous attraction?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "What is Monte Verde´s most famous attraction",
+            "file": "audio/What is Monte Verde´s most famous attraction.m4a",
+            "durationSeconds": 3.2032
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Scuba Diving",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "Mountain Bike",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 2,
+              "text": "Surfing",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "Zip Lining",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_GN_06",
+          "provinceId": 5,
+          "provinceCode": "GN",
+          "provinceName": "Guanacaste",
+          "gameObjectName": "NivelGuanacaste",
+          "questionIndex": 5,
+          "questionText": "All the following are beaches in Guanacaste except?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "006 All of the following are beaches in Guanacaste except",
+            "file": "audio/006 All of the following are beaches in Guanacaste except.m4a",
+            "durationSeconds": 3.6703
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Tamarindo Beach",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "Conchal Beach",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 2,
+              "text": "Grande Beach",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "Miami Beach",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_GN_07",
+          "provinceId": 5,
+          "provinceCode": "GN",
+          "provinceName": "Guanacaste",
+          "gameObjectName": "NivelGuanacaste",
+          "questionIndex": 6,
+          "questionText": "Which of the following is considered the cultural center of Guanacaste?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "007 Which of the following is considered the cultural center of Guanacaste",
+            "file": "audio/007 Which of the following is considered the cultural center of Guanacaste.m4a",
+            "durationSeconds": 4.4711
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Liberia",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "La Cruz",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 2,
+              "text": "Jicaral",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "Santa Cruz",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_GN_08",
+          "provinceId": 5,
+          "provinceCode": "GN",
+          "provinceName": "Guanacaste",
+          "gameObjectName": "NivelGuanacaste",
+          "questionIndex": 7,
+          "questionText": "In which area of Guanacaste is the \"Blue Zone\" located?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "008 In what area of Guanacaste is the “Blue Zone” located",
+            "file": "audio/008 In what area of Guanacaste is the “Blue Zone” located.m4a",
+            "durationSeconds": 3.7371
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Nandayure",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "Hojancha",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "Santa Cruz",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "Liberia",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_GN_09",
+          "provinceId": 5,
+          "provinceCode": "GN",
+          "provinceName": "Guanacaste",
+          "gameObjectName": "NivelGuanacaste",
+          "questionIndex": 8,
+          "questionText": "When did Guanacaste officially become part of Costa Rica?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "009 When did Guanacaste officially become part of Costa Rica",
+            "file": "audio/009 When did Guanacaste officially become part of Costa Rica.m4a",
+            "durationSeconds": 3.8038
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "July 25th, 1828",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "September 14th, 1876",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 2,
+              "text": "July 25th, 1824",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "December 24th, 1850",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_GN_10",
+          "provinceId": 5,
+          "provinceCode": "GN",
+          "provinceName": "Guanacaste",
+          "gameObjectName": "NivelGuanacaste",
+          "questionIndex": 9,
+          "questionText": "What is the name of the indigenous tribes that once populated in the majority of Guanacaste province?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "010 What is the name of the indigenous tribe that once populated the majority of Guanacaste",
+            "file": "audio/010 What is the name of the indigenous tribe that once populated the majority of Guanacaste.m4a",
+            "durationSeconds": 5.5389
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Chorotegas",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "Bri Bri",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 2,
+              "text": "Mayas",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 3,
+              "text": "Cherokees",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provinceId": 6,
+      "provinceCode": "LM",
+      "provinceName": "Limón",
+      "coatOfArmsSprite": "sprites/EscudoLimon.png",
+      "questionCount": 10,
+      "questions": [
+        {
+          "id": "PQ_LM_01",
+          "provinceId": 6,
+          "provinceCode": "LM",
+          "provinceName": "Limón",
+          "gameObjectName": "NivelLimon",
+          "questionIndex": 0,
+          "questionText": "Is Limón located on the Pacific coast of Costa Rica?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "001Is Limón located on the Pacific Coast",
+            "file": "audio/001Is Limón located on the Pacific Coast.m4a",
+            "durationSeconds": 2.6026
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Yes",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "No",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_LM_02",
+          "provinceId": 6,
+          "provinceCode": "LM",
+          "provinceName": "Limón",
+          "gameObjectName": "NivelLimon",
+          "questionIndex": 1,
+          "questionText": "Are the stunning Talamanca mountains located at the southern end of Limón?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "002. Are the stunning Talamanca Mountains Located at the southern end of Limon",
+            "file": "audio/002. Are the stunning Talamanca Mountains Located at the southern end of Limon.m4a",
+            "durationSeconds": 4.5379
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Yes",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "No",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_LM_03",
+          "provinceId": 6,
+          "provinceCode": "LM",
+          "provinceName": "Limón",
+          "gameObjectName": "NivelLimon",
+          "questionIndex": 2,
+          "questionText": "Limón has its own airport?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "003. Limón has its own airport",
+            "file": "audio/003. Limón has its own airport.m4a",
+            "durationSeconds": 2.2022
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "True",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "False",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_LM_04",
+          "provinceId": 6,
+          "provinceCode": "LM",
+          "provinceName": "Limón",
+          "gameObjectName": "NivelLimon",
+          "questionIndex": 3,
+          "questionText": "Tortuguero National Park is located in Limón.",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "004. Tortuguero National Park is located in Limón",
+            "file": "audio/004. Tortuguero National Park is located in Limón.m4a",
+            "durationSeconds": 3.3367
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "True",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "False",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_LM_05",
+          "provinceId": 6,
+          "provinceCode": "LM",
+          "provinceName": "Limón",
+          "gameObjectName": "NivelLimon",
+          "questionIndex": 4,
+          "questionText": "Limón is considered one of the country's most geographically diverse regions, since it features everything from mangrove wetlands to towering mountains.",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 2,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "005 Limon is consider",
+            "file": "audio/005 Limon is consider.m4a",
+            "durationSeconds": 11.8118
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "True",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "False",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_LM_06",
+          "provinceId": 6,
+          "provinceCode": "LM",
+          "provinceName": "Limón",
+          "gameObjectName": "NivelLimon",
+          "questionIndex": 5,
+          "questionText": "Mark the fauna you can see at Cahuita's National Park",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 7,
+          "correctOptionsCount": 7,
+          "totalOptionsCount": 10,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "006 fauna cahuita",
+            "file": "audio/006 fauna cahuita.m4a",
+            "durationSeconds": 4.0707
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Turttle nesting",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "Giraffes",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 2,
+              "text": "Howler monkeys",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "Sloths",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 4,
+              "text": "Elephants",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 5,
+              "text": "Iguanas",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 6,
+              "text": "Bats",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 7,
+              "text": "Snakes",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 8,
+              "text": "Hippopotamus",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 9,
+              "text": "Fish species",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_LM_07",
+          "provinceId": 6,
+          "provinceCode": "LM",
+          "provinceName": "Limón",
+          "gameObjectName": "NivelLimon",
+          "questionIndex": 6,
+          "questionText": "What sports can you practice in Limón?",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 3,
+          "correctOptionsCount": 3,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "007 What sports can you practice in Limón",
+            "file": "audio/007 What sports can you practice in Limón.m4a",
+            "durationSeconds": 2.2689
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Canoeing",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "Scuba diving",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "Snorkeling",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "Skiing",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_LM_08",
+          "provinceId": 6,
+          "provinceCode": "LM",
+          "provinceName": "Limón",
+          "gameObjectName": "NivelLimon",
+          "questionIndex": 7,
+          "questionText": "Indentify which of the following is an important event in Limón?",
+          "questionType": "single",
+          "uiMode": "direct_answer_buttons",
+          "minScore": 1,
+          "correctOptionsCount": 1,
+          "totalOptionsCount": 3,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "008. Identify which one of the following is an important event in Limón",
+            "file": "audio/008. Identify which one of the following is an important event in Limón.m4a",
+            "durationSeconds": 4.1041
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "The \"Festival de la Luz\"",
+              "isCorrect": false,
+              "scoreDelta": -1
+            },
+            {
+              "index": 1,
+              "text": "The Carnivals",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "The \"Pasada de la Virgen de Mar\"",
+              "isCorrect": false,
+              "scoreDelta": -1
+            }
+          ]
+        },
+        {
+          "id": "PQ_LM_09",
+          "provinceId": 6,
+          "provinceCode": "LM",
+          "provinceName": "Limón",
+          "gameObjectName": "NivelLimon",
+          "questionIndex": 8,
+          "questionText": "Which of the following are famous beaches in Limón?",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 3,
+          "correctOptionsCount": 4,
+          "totalOptionsCount": 4,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "009. Which of the following are famous beaches in Limón",
+            "file": "audio/009. Which of the following are famous beaches in Limón.m4a",
+            "durationSeconds": 3.0698
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Manzanillo",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "Cocles",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "Carrillo",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "Punta Uva",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        },
+        {
+          "id": "PQ_LM_10",
+          "provinceId": 6,
+          "provinceCode": "LM",
+          "provinceName": "Limón",
+          "gameObjectName": "NivelLimon",
+          "questionIndex": 9,
+          "questionText": "Mark the typical dishes from Limón that you have tasted? No answer is wrong.",
+          "questionType": "multiple",
+          "uiMode": "checkbox_grid_with_evaluate_button",
+          "minScore": 0,
+          "correctOptionsCount": 6,
+          "totalOptionsCount": 6,
+          "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+          "questionAudio": {
+            "clipName": "Mark the typical dishes form Limón that you have tasted",
+            "file": "audio/Mark the typical dishes form Limón that you have tasted.m4a",
+            "durationSeconds": 5.4054
+          },
+          "options": [
+            {
+              "index": 0,
+              "text": "Bami",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 1,
+              "text": "Rice and beans",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 2,
+              "text": "Black cake",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 3,
+              "text": "Baked fish with species",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 4,
+              "text": "\"Picadillo de papaya\"",
+              "isCorrect": true,
+              "scoreDelta": 1
+            },
+            {
+              "index": 5,
+              "text": "Patí",
+              "isCorrect": true,
+              "scoreDelta": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "PQ_SJ_01",
+      "provinceId": 0,
+      "provinceCode": "SJ",
+      "provinceName": "San José",
+      "gameObjectName": "NivelSanJose",
+      "questionIndex": 0,
+      "questionText": "Has San José always been our capital",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "001 Has San Jose always been our capital city",
+        "file": "audio/001 Has San Jose always been our capital city.m4a",
+        "durationSeconds": 2.9363
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Yes",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "No",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_SJ_02",
+      "provinceId": 0,
+      "provinceCode": "SJ",
+      "provinceName": "San José",
+      "gameObjectName": "NivelSanJose",
+      "questionIndex": 1,
+      "questionText": "Is there a Pre-Columbian Gold Museum?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "002 Is there a Pre-Columbian Gold Museum",
+        "file": "audio/002 Is there a Pre-Columbian Gold Museum.m4a",
+        "durationSeconds": 2.369
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Yes",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "No",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_SJ_03",
+      "provinceId": 0,
+      "provinceCode": "SJ",
+      "provinceName": "San José",
+      "gameObjectName": "NivelSanJose",
+      "questionIndex": 2,
+      "questionText": "The National Theater is located near \"Plaza de la Cultura\"?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "003 3. The National Theater is located near “Plaza de la Cultura”",
+        "file": "audio/003 3. The National Theater is located near “Plaza de la Cultura”.m4a",
+        "durationSeconds": 3.7705
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "True",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "False",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_SJ_04",
+      "provinceId": 0,
+      "provinceCode": "SJ",
+      "provinceName": "San José",
+      "gameObjectName": "NivelSanJose",
+      "questionIndex": 3,
+      "questionText": "The National Stadium is located in \"Morazán\" Park?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "004 The National Stadium is located in “Morazán” Park",
+        "file": "audio/004 The National Stadium is located in “Morazán” Park.m4a",
+        "durationSeconds": 3.1698
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "True",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "False",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_SJ_05",
+      "provinceId": 0,
+      "provinceCode": "SJ",
+      "provinceName": "San José",
+      "gameObjectName": "NivelSanJose",
+      "questionIndex": 4,
+      "questionText": "At the Nationl Theater you can:",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 3,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "005 At the National Theater you can…",
+        "file": "audio/005 At the National Theater you can….m4a",
+        "durationSeconds": 2.2689
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Learn to dance traditional folk dances and perform.",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "Listen to performances by the Natonal Symphonic Orchestra.",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "Watch the most important football games of our National soccer team.",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_SJ_06",
+      "provinceId": 0,
+      "provinceCode": "SJ",
+      "provinceName": "San José",
+      "gameObjectName": "NivelSanJose",
+      "questionIndex": 5,
+      "questionText": "Mark activities that you can do at Sabana Park in San José",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 7,
+      "correctOptionsCount": 6,
+      "totalOptionsCount": 8,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "006 Mark activities you can do at “ The Sabana “ in San Jose",
+        "file": "audio/006 Mark activities you can do at “ The Sabana “ in San Jose.m4a",
+        "durationSeconds": 4.2042
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Camping",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "Cycling",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "Running",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "Having a picnic",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 4,
+          "text": "Playing ball",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 5,
+          "text": "Reading",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 6,
+          "text": "Watching a movie",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 7,
+          "text": "Taking pictures",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_SJ_07",
+      "provinceId": 0,
+      "provinceCode": "SJ",
+      "provinceName": "San José",
+      "gameObjectName": "NivelSanJose",
+      "questionIndex": 6,
+      "questionText": "What would you recommend tourists to buy at the Central Market? No answer is wrong.",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 0,
+      "correctOptionsCount": 6,
+      "totalOptionsCount": 6,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "007 What would you recommend tourists to buy at the Central Market",
+        "file": "audio/007 What would you recommend tourists to buy at the Central Market.m4a",
+        "durationSeconds": 5.5722
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Spices",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "Craft and souvenirs",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "Fruits and vegetables",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "Flowers",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 4,
+          "text": "Typical food",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 5,
+          "text": "Remedies and medicinal plants",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_SJ_08",
+      "provinceId": 0,
+      "provinceCode": "SJ",
+      "provinceName": "San José",
+      "gameObjectName": "NivelSanJose",
+      "questionIndex": 7,
+      "questionText": "What you can see at the Costa Rican National Museum? You can choose more than one answer.",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 5,
+      "correctOptionsCount": 5,
+      "totalOptionsCount": 6,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "008. What can you see at the Costa Rican National Museum",
+        "file": "audio/008. What can you see at the Costa Rican National Museum.m4a",
+        "durationSeconds": 5.7724
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Jade sculpyures",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "Stone spheres",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "World famous paintings",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "Old portraits",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 4,
+          "text": "Pre-Columbian stone carvings",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 5,
+          "text": "Indigenous pottery",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_SJ_09",
+      "provinceId": 0,
+      "provinceCode": "SJ",
+      "provinceName": "San José",
+      "gameObjectName": "NivelSanJose",
+      "questionIndex": 8,
+      "questionText": "Which one of these is your favorite exhibition at the \"Museo de los Niños\"? Choose from the ones below. No Answer is wrong.",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 0,
+      "correctOptionsCount": 6,
+      "totalOptionsCount": 6,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "009 Which one of these is your favorite exhibition at the “Museo de los Niños”",
+        "file": "audio/009 Which one of these is your favorite exhibition at the “Museo de los Niños”.m4a",
+        "durationSeconds": 9.1425
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Exploring outer space",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "Old-fashioned fun on the farm",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "History",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "Music",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 4,
+          "text": "Science",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 5,
+          "text": "Ecology",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_SJ_10",
+      "provinceId": 0,
+      "provinceCode": "SJ",
+      "provinceName": "San José",
+      "gameObjectName": "NivelSanJose",
+      "questionIndex": 9,
+      "questionText": "Which activities can people do in San José? You can choose more than one answer.",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 5,
+      "correctOptionsCount": 6,
+      "totalOptionsCount": 7,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "010 What activities can people do in San Jose",
+        "file": "audio/010 What activities can people do in San Jose.m4a",
+        "durationSeconds": 5.639
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Going to the theater",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "Visiting a famous palace",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 2,
+          "text": "Watching a movie",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "Visit a museum",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 4,
+          "text": "Going to a restaurant",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 5,
+          "text": "Going shopping",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 6,
+          "text": "Surfing",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_HD_01",
+      "provinceId": 1,
+      "provinceCode": "HD",
+      "provinceName": "Heredia",
+      "gameObjectName": "NivelHeredia",
+      "questionIndex": 0,
+      "questionText": "Is \"Bosque de la Hoja\" a place where you can enjoy nature?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "001 Is “Bosque de la Hoja” a place where you can enjoy nature",
+        "file": "audio/001 Is “Bosque de la Hoja” a place where you can enjoy nature.m4a",
+        "durationSeconds": 3.4844
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Yes",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "No",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_HD_02",
+      "provinceId": 1,
+      "provinceCode": "HD",
+      "provinceName": "Heredia",
+      "gameObjectName": "NivelHeredia",
+      "questionIndex": 1,
+      "questionText": "Can you go surfing in Heredia?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "002 Can you go surfing in Heredia",
+        "file": "audio/002 Can you go surfing in Heredia.m4a",
+        "durationSeconds": 1.8574
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Yes",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "No",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_HD_03",
+      "provinceId": 1,
+      "provinceCode": "HD",
+      "provinceName": "Heredia",
+      "gameObjectName": "NivelHeredia",
+      "questionIndex": 2,
+      "questionText": "Is Heredia called the city of flowers?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "003 Is Heredia called the city of flowers",
+        "file": "audio/003 Is Heredia called the city of flowers.m4a",
+        "durationSeconds": 2.4691
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Yes",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "No",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_HD_04",
+      "provinceId": 1,
+      "provinceCode": "HD",
+      "provinceName": "Heredia",
+      "gameObjectName": "NivelHeredia",
+      "questionIndex": 3,
+      "questionText": "Heredia is divided into six cantons?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "004 Heredia is divided into six cantons",
+        "file": "audio/004 Heredia is divided into six cantons.m4a",
+        "durationSeconds": 3.0363
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "True",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "False",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_HD_05",
+      "provinceId": 1,
+      "provinceCode": "HD",
+      "provinceName": "Heredia",
+      "gameObjectName": "NivelHeredia",
+      "questionIndex": 4,
+      "questionText": "Braulio Carrillo National Park is located in Heredia?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "005 Braulio Carrillo National Park is located in Heredia",
+        "file": "audio/005 Braulio Carrillo National Park is located in Heredia.m4a",
+        "durationSeconds": 3.8372
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "True",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "False",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_HD_06",
+      "provinceId": 1,
+      "provinceCode": "HD",
+      "provinceName": "Heredia",
+      "gameObjectName": "NivelHeredia",
+      "questionIndex": 5,
+      "questionText": "What can you buy at the \"Mercado Central de Heredia\"?",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 3,
+      "correctOptionsCount": 3,
+      "totalOptionsCount": 6,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "006 What can you buy at the “Mercado Central de Heredia”",
+        "file": "audio/006 What can you buy at the “Mercado Central de Heredia”.m4a",
+        "durationSeconds": 2.9363
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Tortillas",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "Fruits",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "Tires",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "Birds",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 4,
+          "text": "Puppies and Kittens",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 5,
+          "text": "Typical Food",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_HD_07",
+      "provinceId": 1,
+      "provinceCode": "HD",
+      "provinceName": "Heredia",
+      "gameObjectName": "NivelHeredia",
+      "questionIndex": 6,
+      "questionText": "Which of the following foods is a typical dish from Heredia?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "008 Which of the following is a typical dish from Heredia",
+        "file": "audio/008 Which of the following is a typical dish from Heredia.m4a",
+        "durationSeconds": 2.9696
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Picadillo de arracache",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "Rondón",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 2,
+          "text": "Pozol",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "Paella",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_HD_08",
+      "provinceId": 1,
+      "provinceCode": "HD",
+      "provinceName": "Heredia",
+      "gameObjectName": "NivelHeredia",
+      "questionIndex": 7,
+      "questionText": "If you went to Barva Volcano, what would you take?",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 4,
+      "correctOptionsCount": 4,
+      "totalOptionsCount": 6,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "009 If you went to Barva Volcano, what would you take",
+        "file": "audio/009 If you went to Barva Volcano, what would you take.m4a",
+        "durationSeconds": 3.1698
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "A rain coat",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "A sandwich",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "a soccer ball",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "A boat",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 4,
+          "text": "A camera",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 5,
+          "text": "A coat",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_HD_09",
+      "provinceId": 1,
+      "provinceCode": "HD",
+      "provinceName": "Heredia",
+      "gameObjectName": "NivelHeredia",
+      "questionIndex": 8,
+      "questionText": "What sports can you practice in Heredia?",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 3,
+      "correctOptionsCount": 3,
+      "totalOptionsCount": 6,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "010 What sports can you practice in Heredia",
+        "file": "audio/010 What sports can you practice in Heredia.m4a",
+        "durationSeconds": 2.2689
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Snorkeling",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "Mountain Bike",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "Hiking",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "Surfing",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 4,
+          "text": "Swimming",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 5,
+          "text": "Snowboarding",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_CT_01",
+      "provinceId": 2,
+      "provinceCode": "CT",
+      "provinceName": "Cartago",
+      "gameObjectName": "NivelCartago",
+      "questionIndex": 0,
+      "questionText": "The Virgin of Los Angeles is located in the original cathedral of Cartago",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "001 The virgin of Los Angeles is located in the original cathedral of Cartago",
+        "file": "audio/001 The virgin of Los Angeles is located in the original cathedral of Cartago.m4a",
+        "durationSeconds": 5.005
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "True",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "False",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_CT_02",
+      "provinceId": 2,
+      "provinceCode": "CT",
+      "provinceName": "Cartago",
+      "gameObjectName": "NivelCartago",
+      "questionIndex": 1,
+      "questionText": "Every year, hundreds of Costa Rican travel to Cartago for religious reasons",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "002 Every year, hundreds of Costa Rican travel to Cartago for religious reasons",
+        "file": "audio/002 Every year, hundreds of Costa Rican travel to Cartago for religious reasons.m4a",
+        "durationSeconds": 5.1718
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "True",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "False",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_CT_03",
+      "provinceId": 2,
+      "provinceCode": "CT",
+      "provinceName": "Cartago",
+      "gameObjectName": "NivelCartago",
+      "questionIndex": 2,
+      "questionText": "What can you see at the Lankester Botanical Gardens?",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 2,
+      "correctOptionsCount": 2,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "003 What can you see at the Lankester Botanical Gardens",
+        "file": "audio/003 What can you see at the Lankester Botanical Gardens.m4a",
+        "durationSeconds": 3.5702
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Flowers",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "A cactus",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "Elephants",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "A crocodile",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_CT_04",
+      "provinceId": 2,
+      "provinceCode": "CT",
+      "provinceName": "Cartago",
+      "gameObjectName": "NivelCartago",
+      "questionIndex": 3,
+      "questionText": "Cartago was Costa Rica's first capital.",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "004 Cartago was Costa Rica’s first capital",
+        "file": "audio/004 Cartago was Costa Rica’s first capital.m4a",
+        "durationSeconds": 2.8695
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "True",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "False",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_CT_05",
+      "provinceId": 2,
+      "provinceCode": "CT",
+      "provinceName": "Cartago",
+      "gameObjectName": "NivelCartago",
+      "questionIndex": 4,
+      "questionText": "Turrialba is famous for producing high quality coffee.",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "005 Turrialba is famous for producing high quality coffee",
+        "file": "audio/005 Turrialba is famous for producing high quality coffee.m4a",
+        "durationSeconds": 3.4034
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "True",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "False",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_CT_06",
+      "provinceId": 2,
+      "provinceCode": "CT",
+      "provinceName": "Cartago",
+      "gameObjectName": "NivelCartago",
+      "questionIndex": 5,
+      "questionText": "What should you take with you on the Pacuare River for safety?",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 2,
+      "correctOptionsCount": 2,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "006 What should you take with you on the Pacuare River for safety",
+        "file": "audio/006 What should you take with you on the Pacuare River for safety.m4a",
+        "durationSeconds": 3.6703
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "A helmet",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "A lifejacket",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "Hiking boots",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "Soda",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_CT_07",
+      "provinceId": 2,
+      "provinceCode": "CT",
+      "provinceName": "Cartago",
+      "gameObjectName": "NivelCartago",
+      "questionIndex": 6,
+      "questionText": "What caused the destruction of the Santiago Apostle Church?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "007 What caused the destruction of the Santiago Apostle Church",
+        "file": "audio/007 What caused the destruction of the Santiago Apostle Church.m4a",
+        "durationSeconds": 4.371
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "A fire",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "A burglary",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 2,
+          "text": "An earthquake",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "A volcanic eruption",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_CT_08",
+      "provinceId": 2,
+      "provinceCode": "CT",
+      "provinceName": "Cartago",
+      "gameObjectName": "NivelCartago",
+      "questionIndex": 7,
+      "questionText": "In what direction is Cartago principally located from San José?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "008 In what direction is Cartago principally located from San Jose",
+        "file": "audio/008 In what direction is Cartago principally located from San Jose.m4a",
+        "durationSeconds": 4.2376
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "North",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "South",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 2,
+          "text": "East",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "West",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_CT_09",
+      "provinceId": 2,
+      "provinceCode": "CT",
+      "provinceName": "Cartago",
+      "gameObjectName": "NivelCartago",
+      "questionIndex": 8,
+      "questionText": "Cartago is Costa Rica's smallest province",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "009 Cartago is Costa Rica’s smallest province",
+        "file": "audio/009 Cartago is Costa Rica’s smallest province.m4a",
+        "durationSeconds": 2.7027
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "True",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "False",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_CT_10",
+      "provinceId": 2,
+      "provinceCode": "CT",
+      "provinceName": "Cartago",
+      "gameObjectName": "NivelCartago",
+      "questionIndex": 9,
+      "questionText": "Cartago has a coastline",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "010 Cartago has a coastline",
+        "file": "audio/010 Cartago has a coastline.m4a",
+        "durationSeconds": 1.5349
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "True",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "False",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_AL_01",
+      "provinceId": 3,
+      "provinceCode": "AL",
+      "provinceName": "Alajuela",
+      "gameObjectName": "NivelAlajuela",
+      "questionIndex": 0,
+      "questionText": "Is there an international airport in Alajuela?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "001. Is there an international airport in Alajuela",
+        "file": "audio/001. Is there an international airport in Alajuela.m4a",
+        "durationSeconds": 2.9363
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Yes",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "No",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_AL_02",
+      "provinceId": 3,
+      "provinceCode": "AL",
+      "provinceName": "Alajuela",
+      "gameObjectName": "NivelAlajuela",
+      "questionIndex": 1,
+      "questionText": "Was Costa Rica's national hero born in Alajuela?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "002. Was Costa Rica’s national hero born in Alajuela",
+        "file": "audio/002. Was Costa Rica’s national hero born in Alajuela.m4a",
+        "durationSeconds": 3.37
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Yes",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "No",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_AL_03",
+      "provinceId": 3,
+      "provinceCode": "AL",
+      "provinceName": "Alajuela",
+      "gameObjectName": "NivelAlajuela",
+      "questionIndex": 2,
+      "questionText": "What is Alajuela also called?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "003. What is Alajuela also called",
+        "file": "audio/003. What is Alajuela also called.m4a",
+        "durationSeconds": 1.9686
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "The City Flowers",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "The City of Mangoes",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "The City of Heros",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "The City of Poets",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_AL_04",
+      "provinceId": 3,
+      "provinceCode": "AL",
+      "provinceName": "Alajuela",
+      "gameObjectName": "NivelAlajuela",
+      "questionIndex": 3,
+      "questionText": "Which tourist attractions can you find in La Fortuna de San Carlos?",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 5,
+      "correctOptionsCount": 5,
+      "totalOptionsCount": 6,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "004 What tourist attractions can you find in La Fortuna de San Carlos",
+        "file": "audio/004 What tourist attractions can you find in La Fortuna de San Carlos.m4a",
+        "durationSeconds": 4.1375
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Hot springs",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "A volcano",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "A waterfall",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "Beaches",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 4,
+          "text": "Expensive resorts",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 5,
+          "text": "Hanging bridges",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_AL_05",
+      "provinceId": 3,
+      "provinceCode": "AL",
+      "provinceName": "Alajuela",
+      "gameObjectName": "NivelAlajuela",
+      "questionIndex": 4,
+      "questionText": "What would you take on a trip to Río Celeste?",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 3,
+      "correctOptionsCount": 3,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "005 What would you take on a trip to Rio Celeste",
+        "file": "audio/005 What would you take on a trip to Rio Celeste.m4a",
+        "durationSeconds": 2.4358
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Hiking boots",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "A bathing suit",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "A camera",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "A surfboard",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_AL_06",
+      "provinceId": 3,
+      "provinceCode": "AL",
+      "provinceName": "Alajuela",
+      "gameObjectName": "NivelAlajuela",
+      "questionIndex": 5,
+      "questionText": "Which means forms of transportation can you take to get to Nicaragua from Alajuela?",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 3,
+      "correctOptionsCount": 2,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "006 What forms of transportation can you take to get to Nicaragua from Alajuela",
+        "file": "audio/006 What forms of transportation can you take to get to Nicaragua from Alajuela.m4a",
+        "durationSeconds": 5.1718
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "An airplane",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "A boat",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "A train",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "A car",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_AL_07",
+      "provinceId": 3,
+      "provinceCode": "AL",
+      "provinceName": "Alajuela",
+      "gameObjectName": "NivelAlajuela",
+      "questionIndex": 6,
+      "questionText": "Which volcanoes are located in Alajuela?",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 3,
+      "correctOptionsCount": 3,
+      "totalOptionsCount": 5,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "007 What volcanoes are located in Alajuela",
+        "file": "audio/007 What volcanoes are located in Alajuela.m4a",
+        "durationSeconds": 2.8028
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Poas",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "Turrialba",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 2,
+          "text": "Chato",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "Arenal",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 4,
+          "text": "Orosi",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_AL_08",
+      "provinceId": 3,
+      "provinceCode": "AL",
+      "provinceName": "Alajuela",
+      "gameObjectName": "NivelAlajuela",
+      "questionIndex": 7,
+      "questionText": "What can you find in Alajuela's Historical Museum",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 3,
+      "correctOptionsCount": 3,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "008 What volcanoes are located in Alajuela",
+        "file": "audio/008 What volcanoes are located in Alajuela.m4a",
+        "durationSeconds": 3.2699
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Uniforms",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "Paintings",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "Clothing",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "A statue of the national hero",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_AL_09",
+      "provinceId": 3,
+      "provinceCode": "AL",
+      "provinceName": "Alajuela",
+      "gameObjectName": "NivelAlajuela",
+      "questionIndex": 8,
+      "questionText": "What is the most famous town in Alajuela for its cheese?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "010 What is the most famous town in Alajuela for its cheese",
+        "file": "audio/010 What is the most famous town in Alajuela for its cheese.m4a",
+        "durationSeconds": 3.3367
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Upala",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "Zarcero",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "Palmares",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "Pital",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_PR_01",
+      "provinceId": 4,
+      "provinceCode": "PR",
+      "provinceName": "Puntarenas",
+      "gameObjectName": "NivelPuntarenas",
+      "questionIndex": 0,
+      "questionText": "The following animal(s) can be found in Corcovado National Park:",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 2,
+      "correctOptionsCount": 2,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "001 The following animal(s) can be found in Corcovado National Park",
+        "file": "audio/001 The following animal(s) can be found in Corcovado National Park.m4a",
+        "durationSeconds": 4.4711
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Macaws",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "Lions",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 2,
+          "text": "Elephants",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "Jaguars",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_PR_02",
+      "provinceId": 4,
+      "provinceCode": "PR",
+      "provinceName": "Puntarenas",
+      "gameObjectName": "NivelPuntarenas",
+      "questionIndex": 1,
+      "questionText": "Which of the following is the largest city in the province of Puntarenas?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "002 Which of the following is the largest city in the province of Puntarenas",
+        "file": "audio/002 Which of the following is the largest city in the province of Puntarenas.m4a",
+        "durationSeconds": 3.8705
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "San Vito",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "Puntarenas",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "Buenos Aires",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "Ciudad Neily",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_PR_03",
+      "provinceId": 4,
+      "provinceCode": "PR",
+      "provinceName": "Puntarenas",
+      "gameObjectName": "NivelPuntarenas",
+      "questionIndex": 2,
+      "questionText": "San Vito was founded by French immigrants",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "003 San Vito was founded by French Immigrants",
+        "file": "audio/003 San Vito was founded by French Immigrants.m4a",
+        "durationSeconds": 3.2032
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "True",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "False",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_PR_04",
+      "provinceId": 4,
+      "provinceCode": "PR",
+      "provinceName": "Puntarenas",
+      "gameObjectName": "NivelPuntarenas",
+      "questionIndex": 3,
+      "questionText": "The province of Puntarenas is divided into 20 cantons.",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "004 The province of Puntarenas is divided into 20 cantons",
+        "file": "audio/004 The province of Puntarenas is divided into 20 cantons.m4a",
+        "durationSeconds": 4.004
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "True",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "False",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_PR_05",
+      "provinceId": 4,
+      "provinceCode": "PR",
+      "provinceName": "Puntarenas",
+      "gameObjectName": "NivelPuntarenas",
+      "questionIndex": 4,
+      "questionText": "Which of the following National Parks are not located in the province of Puntarenas?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 2,
+      "correctOptionsCount": 2,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "005 Which of the following National Parks are not located in the province of Puntarenas",
+        "file": "audio/005 Which of the following National Parks are not located in the province of Puntarenas.m4a",
+        "durationSeconds": 5.639
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Arenal Volcano National Park",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "Corcovado National Park",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 2,
+          "text": "Chirripo National Park",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "Piedras Blancas National Park",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_PR_06",
+      "provinceId": 4,
+      "provinceCode": "PR",
+      "provinceName": "Puntarenas",
+      "gameObjectName": "NivelPuntarenas",
+      "questionIndex": 5,
+      "questionText": "Isla del Coco is part of the provnce of Puntarenas",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "006 Isla de Coco is part of the province of Puntarenas",
+        "file": "audio/006 Isla de Coco is part of the province of Puntarenas.m4a",
+        "durationSeconds": 3.7037
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "True",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "False",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_PR_07",
+      "provinceId": 4,
+      "provinceCode": "PR",
+      "provinceName": "Puntarenas",
+      "gameObjectName": "NivelPuntarenas",
+      "questionIndex": 6,
+      "questionText": "The province of Puntarenas is home to which of following indigenous groups?",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 3,
+      "correctOptionsCount": 3,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "007 The Province of Puntarenas is home to which of the following Indigenous Groups",
+        "file": "audio/007 The Province of Puntarenas is home to which of the following Indigenous Groups.m4a",
+        "durationSeconds": 4.4044
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Boruca",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "Bri Bri",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "Cherokee",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "Ngabe",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_PR_08",
+      "provinceId": 4,
+      "provinceCode": "PR",
+      "provinceName": "Puntarenas",
+      "gameObjectName": "NivelPuntarenas",
+      "questionIndex": 7,
+      "questionText": "Which of the following provinces does Puntarenas NOT border",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 2,
+      "correctOptionsCount": 2,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "008 Which of the following provinces does Puntarenas NOT border",
+        "file": "audio/008 Which of the following provinces does Puntarenas NOT border.m4a",
+        "durationSeconds": 4.1375
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Heredia",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "Cartago",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "Limón",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "San José",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_PR_09",
+      "provinceId": 4,
+      "provinceCode": "PR",
+      "provinceName": "Puntarenas",
+      "gameObjectName": "NivelPuntarenas",
+      "questionIndex": 8,
+      "questionText": "The famous \"Whale's Tail\" is located in Jacó Beach.",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "009 The famous “Whale’s Tail” is located in Jaco Beach",
+        "file": "audio/009 The famous “Whale’s Tail” is located in Jaco Beach.m4a",
+        "durationSeconds": 3.7371
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "True",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "False",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_PR_10",
+      "provinceId": 4,
+      "provinceCode": "PR",
+      "provinceName": "Puntarenas",
+      "gameObjectName": "NivelPuntarenas",
+      "questionIndex": 9,
+      "questionText": "Puntarenas has the smallest population of any province in Costa Rica",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "010 Puntarenas has the smallest population of any province in Costa Rica",
+        "file": "audio/010 Puntarenas has the smallest population of any province in Costa Rica.m4a",
+        "durationSeconds": 4.6046
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "True",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "False",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_GN_01",
+      "provinceId": 5,
+      "provinceCode": "GN",
+      "provinceName": "Guanacaste",
+      "gameObjectName": "NivelGuanacaste",
+      "questionIndex": 0,
+      "questionText": "What is the main city of Guanacaste?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 2,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "001 What is the capital of Guanacaste",
+        "file": "audio/001 What is the capital of Guanacaste.m4a",
+        "durationSeconds": 2.3023
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Santa Cruz",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "Tamarindo",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 2,
+          "text": "Liberia",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "La Cruz",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_GN_02",
+      "provinceId": 5,
+      "provinceCode": "GN",
+      "provinceName": "Guanacaste",
+      "gameObjectName": "NivelGuanacaste",
+      "questionIndex": 1,
+      "questionText": "What is the base of the majority of foods in Guanacaste?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "002 What is the base of the majority of the foods in Guanacaste",
+        "file": "audio/002 What is the base of the majority of the foods in Guanacaste.m4a",
+        "durationSeconds": 3.8705
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Rice",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "Beans",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 2,
+          "text": "Milk",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "Corn",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_GN_03",
+      "provinceId": 5,
+      "provinceCode": "GN",
+      "provinceName": "Guanacaste",
+      "gameObjectName": "NivelGuanacaste",
+      "questionIndex": 2,
+      "questionText": "Which of the following are activities that you can do in Guanacaste? (Mark all that apply)",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 3,
+      "correctOptionsCount": 3,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "003 What is the base of the majority of the foods in Guanacaste",
+        "file": "audio/003 What is the base of the majority of the foods in Guanacaste.m4a",
+        "durationSeconds": 5.6723
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Zip lining",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "Scuba diving",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "Mountaing bike",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "Ice skating",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_GN_04",
+      "provinceId": 5,
+      "provinceCode": "GN",
+      "provinceName": "Guanacaste",
+      "gameObjectName": "NivelGuanacaste",
+      "questionIndex": 3,
+      "questionText": "Which of the following cities is best known for its \"fiestas típicas\"?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "004 Which of the following cities is best known for its “Fiestas Tipicas",
+        "file": "audio/004 Which of the following cities is best known for its “Fiestas Tipicas.m4a",
+        "durationSeconds": 4.1041
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Nandayure",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "Jicaral",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 2,
+          "text": "Santa Cruz",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "Liberia",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_GN_05",
+      "provinceId": 5,
+      "provinceCode": "GN",
+      "provinceName": "Guanacaste",
+      "gameObjectName": "NivelGuanacaste",
+      "questionIndex": 4,
+      "questionText": "What is Monteverde's most famous attraction?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "What is Monte Verde´s most famous attraction",
+        "file": "audio/What is Monte Verde´s most famous attraction.m4a",
+        "durationSeconds": 3.2032
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Scuba Diving",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "Mountain Bike",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 2,
+          "text": "Surfing",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "Zip Lining",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_GN_06",
+      "provinceId": 5,
+      "provinceCode": "GN",
+      "provinceName": "Guanacaste",
+      "gameObjectName": "NivelGuanacaste",
+      "questionIndex": 5,
+      "questionText": "All the following are beaches in Guanacaste except?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "006 All of the following are beaches in Guanacaste except",
+        "file": "audio/006 All of the following are beaches in Guanacaste except.m4a",
+        "durationSeconds": 3.6703
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Tamarindo Beach",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "Conchal Beach",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 2,
+          "text": "Grande Beach",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "Miami Beach",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_GN_07",
+      "provinceId": 5,
+      "provinceCode": "GN",
+      "provinceName": "Guanacaste",
+      "gameObjectName": "NivelGuanacaste",
+      "questionIndex": 6,
+      "questionText": "Which of the following is considered the cultural center of Guanacaste?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "007 Which of the following is considered the cultural center of Guanacaste",
+        "file": "audio/007 Which of the following is considered the cultural center of Guanacaste.m4a",
+        "durationSeconds": 4.4711
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Liberia",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "La Cruz",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 2,
+          "text": "Jicaral",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "Santa Cruz",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_GN_08",
+      "provinceId": 5,
+      "provinceCode": "GN",
+      "provinceName": "Guanacaste",
+      "gameObjectName": "NivelGuanacaste",
+      "questionIndex": 7,
+      "questionText": "In which area of Guanacaste is the \"Blue Zone\" located?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "008 In what area of Guanacaste is the “Blue Zone” located",
+        "file": "audio/008 In what area of Guanacaste is the “Blue Zone” located.m4a",
+        "durationSeconds": 3.7371
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Nandayure",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "Hojancha",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "Santa Cruz",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "Liberia",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_GN_09",
+      "provinceId": 5,
+      "provinceCode": "GN",
+      "provinceName": "Guanacaste",
+      "gameObjectName": "NivelGuanacaste",
+      "questionIndex": 8,
+      "questionText": "When did Guanacaste officially become part of Costa Rica?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "009 When did Guanacaste officially become part of Costa Rica",
+        "file": "audio/009 When did Guanacaste officially become part of Costa Rica.m4a",
+        "durationSeconds": 3.8038
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "July 25th, 1828",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "September 14th, 1876",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 2,
+          "text": "July 25th, 1824",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "December 24th, 1850",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_GN_10",
+      "provinceId": 5,
+      "provinceCode": "GN",
+      "provinceName": "Guanacaste",
+      "gameObjectName": "NivelGuanacaste",
+      "questionIndex": 9,
+      "questionText": "What is the name of the indigenous tribes that once populated in the majority of Guanacaste province?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "010 What is the name of the indigenous tribe that once populated the majority of Guanacaste",
+        "file": "audio/010 What is the name of the indigenous tribe that once populated the majority of Guanacaste.m4a",
+        "durationSeconds": 5.5389
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Chorotegas",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "Bri Bri",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 2,
+          "text": "Mayas",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 3,
+          "text": "Cherokees",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_LM_01",
+      "provinceId": 6,
+      "provinceCode": "LM",
+      "provinceName": "Limón",
+      "gameObjectName": "NivelLimon",
+      "questionIndex": 0,
+      "questionText": "Is Limón located on the Pacific coast of Costa Rica?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "001Is Limón located on the Pacific Coast",
+        "file": "audio/001Is Limón located on the Pacific Coast.m4a",
+        "durationSeconds": 2.6026
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Yes",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "No",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_LM_02",
+      "provinceId": 6,
+      "provinceCode": "LM",
+      "provinceName": "Limón",
+      "gameObjectName": "NivelLimon",
+      "questionIndex": 1,
+      "questionText": "Are the stunning Talamanca mountains located at the southern end of Limón?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "002. Are the stunning Talamanca Mountains Located at the southern end of Limon",
+        "file": "audio/002. Are the stunning Talamanca Mountains Located at the southern end of Limon.m4a",
+        "durationSeconds": 4.5379
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Yes",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "No",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_LM_03",
+      "provinceId": 6,
+      "provinceCode": "LM",
+      "provinceName": "Limón",
+      "gameObjectName": "NivelLimon",
+      "questionIndex": 2,
+      "questionText": "Limón has its own airport?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "003. Limón has its own airport",
+        "file": "audio/003. Limón has its own airport.m4a",
+        "durationSeconds": 2.2022
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "True",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "False",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_LM_04",
+      "provinceId": 6,
+      "provinceCode": "LM",
+      "provinceName": "Limón",
+      "gameObjectName": "NivelLimon",
+      "questionIndex": 3,
+      "questionText": "Tortuguero National Park is located in Limón.",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "004. Tortuguero National Park is located in Limón",
+        "file": "audio/004. Tortuguero National Park is located in Limón.m4a",
+        "durationSeconds": 3.3367
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "True",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "False",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_LM_05",
+      "provinceId": 6,
+      "provinceCode": "LM",
+      "provinceName": "Limón",
+      "gameObjectName": "NivelLimon",
+      "questionIndex": 4,
+      "questionText": "Limón is considered one of the country's most geographically diverse regions, since it features everything from mangrove wetlands to towering mountains.",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 2,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "005 Limon is consider",
+        "file": "audio/005 Limon is consider.m4a",
+        "durationSeconds": 11.8118
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "True",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "False",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_LM_06",
+      "provinceId": 6,
+      "provinceCode": "LM",
+      "provinceName": "Limón",
+      "gameObjectName": "NivelLimon",
+      "questionIndex": 5,
+      "questionText": "Mark the fauna you can see at Cahuita's National Park",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 7,
+      "correctOptionsCount": 7,
+      "totalOptionsCount": 10,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "006 fauna cahuita",
+        "file": "audio/006 fauna cahuita.m4a",
+        "durationSeconds": 4.0707
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Turttle nesting",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "Giraffes",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 2,
+          "text": "Howler monkeys",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "Sloths",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 4,
+          "text": "Elephants",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 5,
+          "text": "Iguanas",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 6,
+          "text": "Bats",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 7,
+          "text": "Snakes",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 8,
+          "text": "Hippopotamus",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 9,
+          "text": "Fish species",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_LM_07",
+      "provinceId": 6,
+      "provinceCode": "LM",
+      "provinceName": "Limón",
+      "gameObjectName": "NivelLimon",
+      "questionIndex": 6,
+      "questionText": "What sports can you practice in Limón?",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 3,
+      "correctOptionsCount": 3,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "007 What sports can you practice in Limón",
+        "file": "audio/007 What sports can you practice in Limón.m4a",
+        "durationSeconds": 2.2689
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Canoeing",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "Scuba diving",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "Snorkeling",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "Skiing",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_LM_08",
+      "provinceId": 6,
+      "provinceCode": "LM",
+      "provinceName": "Limón",
+      "gameObjectName": "NivelLimon",
+      "questionIndex": 7,
+      "questionText": "Indentify which of the following is an important event in Limón?",
+      "questionType": "single",
+      "uiMode": "direct_answer_buttons",
+      "minScore": 1,
+      "correctOptionsCount": 1,
+      "totalOptionsCount": 3,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "008. Identify which one of the following is an important event in Limón",
+        "file": "audio/008. Identify which one of the following is an important event in Limón.m4a",
+        "durationSeconds": 4.1041
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "The \"Festival de la Luz\"",
+          "isCorrect": false,
+          "scoreDelta": -1
+        },
+        {
+          "index": 1,
+          "text": "The Carnivals",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "The \"Pasada de la Virgen de Mar\"",
+          "isCorrect": false,
+          "scoreDelta": -1
+        }
+      ]
+    },
+    {
+      "id": "PQ_LM_09",
+      "provinceId": 6,
+      "provinceCode": "LM",
+      "provinceName": "Limón",
+      "gameObjectName": "NivelLimon",
+      "questionIndex": 8,
+      "questionText": "Which of the following are famous beaches in Limón?",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 3,
+      "correctOptionsCount": 4,
+      "totalOptionsCount": 4,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "009. Which of the following are famous beaches in Limón",
+        "file": "audio/009. Which of the following are famous beaches in Limón.m4a",
+        "durationSeconds": 3.0698
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Manzanillo",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "Cocles",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "Carrillo",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "Punta Uva",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    },
+    {
+      "id": "PQ_LM_10",
+      "provinceId": 6,
+      "provinceCode": "LM",
+      "provinceName": "Limón",
+      "gameObjectName": "NivelLimon",
+      "questionIndex": 9,
+      "questionText": "Mark the typical dishes from Limón that you have tasted? No answer is wrong.",
+      "questionType": "multiple",
+      "uiMode": "checkbox_grid_with_evaluate_button",
+      "minScore": 0,
+      "correctOptionsCount": 6,
+      "totalOptionsCount": 6,
+      "scoringFormula": "score = (selectedCorrect * 1) + (selectedIncorrect * -1); passes if score >= minScore",
+      "questionAudio": {
+        "clipName": "Mark the typical dishes form Limón that you have tasted",
+        "file": "audio/Mark the typical dishes form Limón that you have tasted.m4a",
+        "durationSeconds": 5.4054
+      },
+      "options": [
+        {
+          "index": 0,
+          "text": "Bami",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 1,
+          "text": "Rice and beans",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 2,
+          "text": "Black cake",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 3,
+          "text": "Baked fish with species",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 4,
+          "text": "\"Picadillo de papaya\"",
+          "isCorrect": true,
+          "scoreDelta": 1
+        },
+        {
+          "index": 5,
+          "text": "Patí",
+          "isCorrect": true,
+          "scoreDelta": 1
+        }
+      ]
+    }
+  ]
+}

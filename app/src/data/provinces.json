@@ -1,0 +1,670 @@
+{
+  "totalProvinces": 7,
+  "totalMinigames": 21,
+  "mapSceneIndex": 7,
+  "mapSceneName": "MapaCostaRica",
+  "mapSprites": {
+    "windowBackground": "sprites/fondo.png",
+    "costaRicaMap": "sprites/mapa_cr2.png",
+    "starEmptyFrame": "sprites/star_cero.png",
+    "starPieceLeft": "sprites/star_left.png",
+    "starPieceCenter": "sprites/star_center.png",
+    "starPieceRight": "sprites/star_right.png",
+    "modalBackground": "sprites/fondo 1.png",
+    "primaryButton": "sprites/boton_2.png",
+    "secondaryButton": "sprites/boton_3.png",
+    "checkboxBackground": "sprites/UISprite.png",
+    "checkboxCheckmark": "sprites/Checkmark.png"
+  },
+  "mapModals": {
+    "confirmRegionChange": {
+      "promptText": "Do you want to move to this province?\n\nYou must spend 1000 coins to travel \nand answer a question.",
+      "actualCoinsDeductedInCode": 5000,
+      "yesButtonLabel": "Yes, let's go!",
+      "noButtonLabel": "Back to map"
+    },
+    "insufficientCoinsAlert": {
+      "promptText": "You must get more coins to travel to new locations.",
+      "returnButtonLabel": "Return to map",
+      "sfxIndex": 37,
+      "sfxFile": "audio/wrong.m4a"
+    },
+    "popQuizModal": {
+      "evaluateButtonLabel": "Evaluate",
+      "backButtonLabel": "Back",
+      "correctSfxIndex": 36,
+      "correctSfxFile": "audio/win-sound.m4a",
+      "wrongSfxIndex": 37,
+      "wrongSfxFile": "audio/wrong.m4a"
+    }
+  },
+  "provinces": [
+    {
+      "id": 0,
+      "enumName": "SanJose",
+      "code": "SJ",
+      "storageKey": "CRPVMW_level_0",
+      "nameEs": "San José",
+      "nameEn": "San José",
+      "welcomeTitle": "Welcome to San José!",
+      "isStartingProvince": true,
+      "coatOfArmsSprite": "sprites/EscudoSanJosé.png",
+      "mapHitboxSprite": "sprites/mapPack_spritesheet_74.png",
+      "mapBackgroundSprite": "sprites/mapa_cr2.png",
+      "panelBackgroundSprite": "sprites/fondo 1.png",
+      "mapCoordinates": {
+        "anchoredPosition": [
+          -46.9,
+          40.9
+        ],
+        "sizeDelta": [
+          46.3,
+          50
+        ],
+        "defaultPlayerPinPosition": [
+          -22,
+          42.1
+        ]
+      },
+      "welcomeAudio": {
+        "female": {
+          "soundIndex": 53,
+          "clipName": "welcome san jose fem",
+          "file": "audio/welcome san jose fem.m4a",
+          "durationSeconds": 1.5699
+        },
+        "male": {
+          "soundIndex": 52,
+          "clipName": "welcome san jose male",
+          "file": "audio/welcome san jose male.m4a",
+          "durationSeconds": 1.401
+        }
+      },
+      "ambientMusic": {
+        "mapMusicIndex": 1,
+        "mapMusicFile": "audio/Tema del juego 2.m4a"
+      },
+      "culturalDescriptionEn": "San José is the capital and most populated province of Costa Rica, located in the Central Valley. Surrounded by lush coffee plantations, cloud forests, and mountain rivers like the Reventazón and Pacuare, it is home to architectural landmarks such as the National Theater, the Pre-Columbian Gold Museum (Museo del Oro Precolombino), and Chirripó National Park.",
+      "culturalDescriptionEs": "San José es la capital y la provincia más poblada de Costa Rica, ubicada en el Valle Central. Rodeada de cafetales, bosques nubosos y ríos de montaña, alberga el Teatro Nacional, el Museo del Oro Precolombino y el Parque Nacional Chirripó.",
+      "highlights": [
+        "Coffee Farming in the Central Valley & Los Santos region",
+        "Pre-Columbian Gold Museum (Museo del Oro Precolombino) & Plaza de la Cultura",
+        "White-water Rafting on tropical mountain rivers",
+        "Chirripó National Park (highest peak in Costa Rica)"
+      ],
+      "minigames": [
+        {
+          "id": "SJ_FincaCafetalera",
+          "starPieceIndex": 0,
+          "starPieceSprite": "sprites/star_left.png",
+          "buttonLabel": "Coffee Farming",
+          "titleEs": "Finca Cafetalera",
+          "introSceneIndex": 47,
+          "introSceneName": "SJ_FincaCafetalera_Intro",
+          "gameSceneIndex": 48,
+          "gameSceneName": "SJ_FincaCafetalera",
+          "bannerSprite": "sprites/02-CoffeeFarm.png"
+        },
+        {
+          "id": "SJ_Museo_Oro",
+          "starPieceIndex": 1,
+          "starPieceSprite": "sprites/star_center.png",
+          "buttonLabel": "Find the \"Museo del Oro\"",
+          "titleEs": "Museo del Oro Precolombino",
+          "introSceneIndex": 49,
+          "introSceneName": "SJ_Museo_Oro_Intro",
+          "gameSceneIndex": 50,
+          "gameSceneName": "SJ_Museo_Oro",
+          "bannerSprite": "sprites/03-MuseoDelOro.png"
+        },
+        {
+          "id": "SJ_Rafting",
+          "starPieceIndex": 2,
+          "starPieceSprite": "sprites/star_right.png",
+          "buttonLabel": "Rafting",
+          "titleEs": "Rafting en el Río",
+          "introSceneIndex": 51,
+          "introSceneName": "SJ_Rafting_Intro",
+          "gameSceneIndex": 52,
+          "gameSceneName": "SJ_Rafting",
+          "bannerSprite": "sprites/BG_SJ_Rafting.png"
+        }
+      ],
+      "popQuizCount": 10
+    },
+    {
+      "id": 1,
+      "enumName": "Heredia",
+      "code": "HD",
+      "storageKey": "CRPVMW_level_1",
+      "nameEs": "Heredia",
+      "nameEn": "Heredia",
+      "welcomeTitle": "Welcome to Heredia!",
+      "isStartingProvince": false,
+      "coatOfArmsSprite": "sprites/EscudoHeredia.png",
+      "mapHitboxSprite": "sprites/mapPack_spritesheet_60.png",
+      "mapBackgroundSprite": "sprites/mapa_cr2.png",
+      "panelBackgroundSprite": "sprites/fondo 1.png",
+      "mapCoordinates": {
+        "anchoredPosition": [
+          24.71,
+          167.8
+        ],
+        "sizeDelta": [
+          58.9,
+          53.6
+        ]
+      },
+      "welcomeAudio": {
+        "female": {
+          "soundIndex": 59,
+          "clipName": "welcome heredia fem",
+          "file": "audio/welcome heredia fem.m4a",
+          "durationSeconds": 1.6097
+        },
+        "male": {
+          "soundIndex": 58,
+          "clipName": "welcome heredia male",
+          "file": "audio/welcome heredia male.m4a",
+          "durationSeconds": 1.4308
+        }
+      },
+      "ambientMusic": {
+        "mapMusicIndex": 1,
+        "mapMusicFile": "audio/Tema del juego 2.m4a"
+      },
+      "culturalDescriptionEn": "Known as \"The City of Flowers\" (La Ciudad de las Flores), Heredia is famous for its vibrant floriculture, historic adobe architecture, traditional Barva masquerade parades (Mascaradas), Barva Volcano, Braulio Carrillo National Park, and La Paz Waterfall Gardens.",
+      "culturalDescriptionEs": "Conocida como \"La Ciudad de las Flores\", Heredia destaca por su floricultura, sus tradicionales mascaradas de Barva, el Volcán Barva, el Parque Nacional Braulio Carrillo y las cataratas de La Paz.",
+      "highlights": [
+        "Traditional Masquerade Parades (Mascaradas) in Barva",
+        "Floriculture and Flower Delivery in the City of Flowers",
+        "Mountain Biking across Bosque de la Hoja & Barva Volcano trails",
+        "Braulio Carrillo National Park & Sarapiquí rainforest"
+      ],
+      "minigames": [
+        {
+          "id": "HD_Mascarada",
+          "starPieceIndex": 0,
+          "starPieceSprite": "sprites/star_left.png",
+          "buttonLabel": "Masquerade Parade",
+          "titleEs": "Desfile de Mascaradas",
+          "introSceneIndex": 31,
+          "introSceneName": "HD_Mascarada_Intro",
+          "gameSceneIndex": 32,
+          "gameSceneName": "HD_Mascarada",
+          "bannerSprite": "sprites/mascarada.png"
+        },
+        {
+          "id": "HD_Entregar_Flores",
+          "starPieceIndex": 1,
+          "starPieceSprite": "sprites/star_center.png",
+          "buttonLabel": "Delivering Flowers",
+          "titleEs": "Reparto de Flores",
+          "introSceneIndex": 29,
+          "introSceneName": "HD_Entregar_Flores_Intro",
+          "gameSceneIndex": 30,
+          "gameSceneName": "HD_Entregar_Flores",
+          "bannerSprite": "sprites/Floristeria Daniela Rose.png"
+        },
+        {
+          "id": "HD_Mountainbike",
+          "starPieceIndex": 2,
+          "starPieceSprite": "sprites/star_right.png",
+          "buttonLabel": "Mountain Biking",
+          "titleEs": "Ciclismo de Montaña",
+          "introSceneIndex": 33,
+          "introSceneName": "HD_Mountainbike_Intro",
+          "gameSceneIndex": 34,
+          "gameSceneName": "HD_Mountainbike",
+          "bannerSprite": "sprites/bosquehoja.png"
+        }
+      ],
+      "popQuizCount": 9
+    },
+    {
+      "id": 2,
+      "enumName": "Cartago",
+      "code": "CT",
+      "storageKey": "CRPVMW_level_2",
+      "nameEs": "Cartago",
+      "nameEn": "Cartago",
+      "welcomeTitle": "Welcome to Cartago!",
+      "isStartingProvince": false,
+      "coatOfArmsSprite": "sprites/EscudoCartago.png",
+      "mapHitboxSprite": "sprites/mapPack_spritesheet_18.png",
+      "mapBackgroundSprite": "sprites/mapa_cr2.png",
+      "panelBackgroundSprite": "sprites/fondo 1.png",
+      "mapCoordinates": {
+        "anchoredPosition": [
+          102.8,
+          26.5
+        ],
+        "sizeDelta": [
+          50,
+          50
+        ]
+      },
+      "welcomeAudio": {
+        "female": {
+          "soundIndex": 51,
+          "clipName": "welcome to cartago fem",
+          "file": "audio/welcome to cartago fem.m4a",
+          "durationSeconds": 1.5898
+        },
+        "male": {
+          "soundIndex": 50,
+          "clipName": "welcome to cartago male",
+          "file": "audio/welcome to cartago male.m4a",
+          "durationSeconds": 1.406
+        }
+      },
+      "ambientMusic": {
+        "mapMusicIndex": 1,
+        "mapMusicFile": "audio/Tema del juego 2.m4a"
+      },
+      "culturalDescriptionEn": "Cartago was the first capital of Costa Rica until 1823. Nestled in the fertile Orosi and Guarco valleys, it is home to the majestic Irazú and Turrialba volcanoes, the historic Sanatorio Carlos Durán, the Guayabo National Monument, and the Basilica of Our Lady of the Angels.",
+      "culturalDescriptionEs": "Cartago fue la antigua capital colonial de Costa Rica. Ubicada entre fértiles valles montañosos, alberga los volcanes Irazú y Turrialba, el histórico Sanatorio Carlos Durán, el Monumento Nacional Guayabo y la Basílica de Nuestra Señora de los Ángeles.",
+      "highlights": [
+        "Historic Sanatorio Carlos Durán founded in 1918",
+        "Irazú Volcano (highest active volcano in Costa Rica) & Turrialba Volcano",
+        "Basilica of Our Lady of the Angels (La Negrita pilgrimage)",
+        "Guayabo National Monument & Orosi Valley"
+      ],
+      "minigames": [
+        {
+          "id": "CT_Sanatorio_Duran",
+          "starPieceIndex": 0,
+          "starPieceSprite": "sprites/star_left.png",
+          "buttonLabel": "Sanatorio Durán",
+          "titleEs": "Sanatorio Durán",
+          "introSceneIndex": 17,
+          "introSceneName": "CT_Sanatorio_Duran_Intro",
+          "gameSceneIndex": 18,
+          "gameSceneName": "CT_Sanatorio_Duran",
+          "bannerSprite": "sprites/sanatorio.png"
+        },
+        {
+          "id": "CT_Volcanes",
+          "starPieceIndex": 1,
+          "starPieceSprite": "sprites/star_center.png",
+          "buttonLabel": "Volcanoes Challenge",
+          "titleEs": "Reto de los Volcanes",
+          "introSceneIndex": 19,
+          "introSceneName": "CT_Volcanes_Intro",
+          "gameSceneIndex": 20,
+          "gameSceneName": "CT_Volcanes",
+          "bannerSprite": "sprites/volcanes.png"
+        },
+        {
+          "id": "CT_Volcanes2",
+          "starPieceIndex": 2,
+          "starPieceSprite": "sprites/star_right.png",
+          "buttonLabel": "Volcanoes of Costa Rica",
+          "titleEs": "Volcanes de Costa Rica",
+          "introSceneIndex": 21,
+          "introSceneName": "CT_Volcanes2_Intro",
+          "gameSceneIndex": 22,
+          "gameSceneName": "CT_Volcanes2",
+          "bannerSprite": "sprites/volcanes.png"
+        }
+      ],
+      "popQuizCount": 10
+    },
+    {
+      "id": 3,
+      "enumName": "Alajuela",
+      "code": "AL",
+      "storageKey": "CRPVMW_level_3",
+      "nameEs": "Alajuela",
+      "nameEn": "Alajuela",
+      "welcomeTitle": "Welcome to Alajuela!",
+      "isStartingProvince": false,
+      "coatOfArmsSprite": "sprites/EscudoAlajuela.png",
+      "mapHitboxSprite": "sprites/mapPack_spritesheet_46.png",
+      "mapBackgroundSprite": "sprites/mapa_cr2.png",
+      "panelBackgroundSprite": "sprites/fondo 1.png",
+      "mapCoordinates": {
+        "anchoredPosition": [
+          -83.1,
+          162.1
+        ],
+        "sizeDelta": [
+          69.5,
+          66.8
+        ]
+      },
+      "welcomeAudio": {
+        "female": {
+          "soundIndex": 49,
+          "clipName": "welcome alajuela fem",
+          "file": "audio/welcome alajuela fem.m4a",
+          "durationSeconds": 1.6395
+        },
+        "male": {
+          "soundIndex": 48,
+          "clipName": "welcome alajuela male",
+          "file": "audio/welcome alajuela male.m4a",
+          "durationSeconds": 1.5451
+        }
+      },
+      "ambientMusic": {
+        "mapMusicIndex": 1,
+        "mapMusicFile": "audio/Tema del juego 2.m4a"
+      },
+      "culturalDescriptionEn": "Known as the \"City of Mangoes\" and birthplace of national hero Juan Santamaría, Alajuela encompasses diverse landscapes including Arenal Volcano, Poás Volcano, Laguna del Hule, Caño Negro Wildlife Refuge, La Fortuna Waterfall, and the artisan town of Sarchí famous for its colorful painted oxcarts.",
+      "culturalDescriptionEs": "Conocida como la \"Ciudad de los Mangos\" y cuna del héroe nacional Juan Santamaría, Alajuela abarca el Volcán Arenal, el Volcán Poás, la Laguna del Hule, el Refugio Caño Negro y la cuna de la artesanía costarricense en Sarchí.",
+      "highlights": [
+        "Arenal Lake & Laguna del Hule Triathlon (Biking, Running, and Swimming Races)",
+        "Poás & Arenal Volcano National Parks",
+        "Sarchí Traditional Painted Oxcarts (UNESCO Intangible Cultural Heritage)",
+        "Juan Santamaría Historical Museum & Butterfly Sanctuaries"
+      ],
+      "minigames": [
+        {
+          "id": "AL_Ciclismo",
+          "starPieceIndex": 0,
+          "starPieceSprite": "sprites/star_left.png",
+          "buttonLabel": "Biking Race",
+          "titleEs": "Carrera de Ciclismo",
+          "introSceneIndex": 11,
+          "introSceneName": "AL_Ciclismo_Intro",
+          "gameSceneIndex": 12,
+          "gameSceneName": "AL_Ciclismo",
+          "bannerSprite": "sprites/arenallago.png"
+        },
+        {
+          "id": "AL_Correr",
+          "starPieceIndex": 1,
+          "starPieceSprite": "sprites/star_center.png",
+          "buttonLabel": "Running Race",
+          "titleEs": "Carrera de Atletismo",
+          "introSceneIndex": 13,
+          "introSceneName": "AL_Correr_Intro",
+          "gameSceneIndex": 14,
+          "gameSceneName": "AL_Correr",
+          "bannerSprite": "sprites/arenallago.png"
+        },
+        {
+          "id": "Al_Natacion",
+          "starPieceIndex": 2,
+          "starPieceSprite": "sprites/star_right.png",
+          "buttonLabel": "Swimming Race",
+          "titleEs": "Carrera de Natación",
+          "introSceneIndex": 15,
+          "introSceneName": "AL_Natacion_Intro",
+          "gameSceneIndex": 16,
+          "gameSceneName": "Al_Natacion",
+          "bannerSprite": "sprites/arenallago.png"
+        }
+      ],
+      "popQuizCount": 9
+    },
+    {
+      "id": 4,
+      "enumName": "Puntareanas",
+      "code": "PR",
+      "storageKey": "CRPVMW_level_4",
+      "nameEs": "Puntarenas",
+      "nameEn": "Puntarenas",
+      "welcomeTitle": "Welcome to Puntarenas!",
+      "isStartingProvince": false,
+      "coatOfArmsSprite": "sprites/EscudoPuntarenas.png",
+      "mapHitboxSprite": "sprites/mapPack_spritesheet_32.png",
+      "mapBackgroundSprite": "sprites/mapa_cr2.png",
+      "panelBackgroundSprite": "sprites/fondo 1.png",
+      "mapCoordinates": {
+        "anchoredPosition": [
+          218.3,
+          -146.4
+        ],
+        "sizeDelta": [
+          76.6,
+          66.8
+        ]
+      },
+      "welcomeAudio": {
+        "female": {
+          "soundIndex": 55,
+          "clipName": "welcome puntarenas fem",
+          "file": "audio/welcome puntarenas fem.m4a",
+          "durationSeconds": 1.5898
+        },
+        "male": {
+          "soundIndex": 54,
+          "clipName": "welcome puntarenas male",
+          "file": "audio/welcome puntarenas male.m4a",
+          "durationSeconds": 1.9277
+        }
+      },
+      "ambientMusic": {
+        "mapMusicIndex": 1,
+        "mapMusicFile": "audio/Tema del juego 2.m4a"
+      },
+      "culturalDescriptionEn": "Stretching along most of Costa Rica’s Pacific coast, Puntarenas is renowned for the Paseo de los Turistas and its iconic \"Churchill\" snow cones, Manuel Antonio National Park, the Tárcoles River crocodile habitat, Monteverde Cloud Forest, Corcovado National Park, and Cocos Island.",
+      "culturalDescriptionEs": "Extendida a lo largo de la costa pacífica costarricense, Puntarenas es famosa por el Paseo de los Turistas y su tradicional \"Churchill\", el Parque Nacional Manuel Antonio, el río Tárcoles, el Bosque Nuboso de Monteverde y la Isla del Coco.",
+      "highlights": [
+        "Paseo de los Turistas & traditional Churchill shaved ice dessert",
+        "Manuel Antonio National Park wildlife conservation",
+        "Environmental protection & cleanup of the Tárcoles River",
+        "Monteverde Cloud Forest, Corcovado & Cocos Island"
+      ],
+      "minigames": [
+        {
+          "id": "PR_Paseo_Turistas",
+          "starPieceIndex": 0,
+          "starPieceSprite": "sprites/star_left.png",
+          "buttonLabel": "Churchill Express",
+          "titleEs": "Expreso de Churchills en el Paseo de los Turistas",
+          "introSceneIndex": 43,
+          "introSceneName": "PR_Paseo_Turistas_Intro",
+          "gameSceneIndex": 44,
+          "gameSceneName": "PR_Paseo_Turistas",
+          "bannerSprite": "sprites/puntarenas.png"
+        },
+        {
+          "id": "PR_Manuel_Antonio",
+          "starPieceIndex": 1,
+          "starPieceSprite": "sprites/star_center.png",
+          "buttonLabel": "Picnic in Manuel Antonio",
+          "titleEs": "Picnic en Manuel Antonio",
+          "introSceneIndex": 41,
+          "introSceneName": "PR_Manuel_Antonio_Intro",
+          "gameSceneIndex": 42,
+          "gameSceneName": "PR_Manuel_Antonio",
+          "bannerSprite": "sprites/manuelantonio.png"
+        },
+        {
+          "id": "PR_Tarcoles",
+          "starPieceIndex": 2,
+          "starPieceSprite": "sprites/star_right.png",
+          "buttonLabel": "Let's clean Tárcoles River",
+          "titleEs": "Limpiemos el Río Tárcoles",
+          "introSceneIndex": 45,
+          "introSceneName": "PR_Tarcoles_Intro",
+          "gameSceneIndex": 46,
+          "gameSceneName": "PR_Tarcoles",
+          "bannerSprite": "sprites/tarcoles.png"
+        }
+      ],
+      "popQuizCount": 10
+    },
+    {
+      "id": 5,
+      "enumName": "Guanacaste",
+      "code": "GN",
+      "storageKey": "CRPVMW_level_5",
+      "nameEs": "Guanacaste",
+      "nameEn": "Guanacaste",
+      "welcomeTitle": "Welcome to Guanacaste!",
+      "isStartingProvince": false,
+      "coatOfArmsSprite": "sprites/EscudoGuanacaste.png",
+      "mapHitboxSprite": "sprites/mapPack_spritesheet_31.png",
+      "mapBackgroundSprite": "sprites/mapa_cr2.png",
+      "panelBackgroundSprite": "sprites/fondo 1.png",
+      "mapCoordinates": {
+        "anchoredPosition": [
+          -309.6,
+          170.9
+        ],
+        "sizeDelta": [
+          85.1,
+          69.5
+        ]
+      },
+      "welcomeAudio": {
+        "female": {
+          "soundIndex": 61,
+          "clipName": "welcome guanacaste fem",
+          "file": "audio/welcome guanacaste fem.m4a",
+          "durationSeconds": 1.6892
+        },
+        "male": {
+          "soundIndex": 60,
+          "clipName": "welcome guanacaste male",
+          "file": "audio/welcome guanacaste male.m4a",
+          "durationSeconds": 1.5923
+        }
+      },
+      "ambientMusic": {
+        "mapMusicIndex": 1,
+        "mapMusicFile": "audio/Tema del juego 2.m4a"
+      },
+      "culturalDescriptionEn": "Located in northwestern Costa Rica, Guanacaste is celebrated for its tropical dry forests, golden Pacific beaches like Tamarindo and Playas del Coco, world-class surfing and scuba diving, the limestone caverns of Barra Honda National Park, Rincón de la Vieja Volcano, and rich \"Sabanero\" (cowboy) folklore and marimba music.",
+      "culturalDescriptionEs": "Ubicada en el noroeste del país, Guanacaste destaca por su bosque tropical seco, playas como Tamarindo y Playas del Coco, el Parque Nacional Barra Honda y sus cavernas, el Volcán Rincón de la Vieja y su rica tradición cultural sabanera.",
+      "highlights": [
+        "Scuba Diving & Marine Photography at Playas del Coco",
+        "Surfing Pacific Waves at Tamarindo Beach",
+        "Speleology in the Limestone Caverns of Barra Honda National Park",
+        "Santa Rosa & Rincón de la Vieja National Parks"
+      ],
+      "minigames": [
+        {
+          "id": "GN_Buceo",
+          "starPieceIndex": 0,
+          "starPieceSprite": "sprites/star_left.png",
+          "buttonLabel": "Playas del Coco Diving",
+          "titleEs": "Buceo en Playas del Coco",
+          "introSceneIndex": 25,
+          "introSceneName": "GN_Buceo_Intro",
+          "gameSceneIndex": 26,
+          "gameSceneName": "GN_Buceo",
+          "bannerSprite": "sprites/elcoco.png"
+        },
+        {
+          "id": "GN_Surf_Tamarindo",
+          "starPieceIndex": 1,
+          "starPieceSprite": "sprites/star_center.png",
+          "buttonLabel": "Tamarindo Surfing",
+          "titleEs": "Surf en Tamarindo",
+          "introSceneIndex": 27,
+          "introSceneName": "GN_Surf_Tamarindo_Intro",
+          "gameSceneIndex": 28,
+          "gameSceneName": "GN_Surf_Tamarindo",
+          "bannerSprite": "sprites/tamarindo.png"
+        },
+        {
+          "id": "GN_BarraHonda",
+          "starPieceIndex": 2,
+          "starPieceSprite": "sprites/star_right.png",
+          "buttonLabel": "Barra Honda Caverns",
+          "titleEs": "Cavernas de Barra Honda",
+          "introSceneIndex": 23,
+          "introSceneName": "GN_BarraHonda_Intro",
+          "gameSceneIndex": 24,
+          "gameSceneName": "GN_BarraHonda",
+          "bannerSprite": "sprites/barrahonda.png"
+        }
+      ],
+      "popQuizCount": 10
+    },
+    {
+      "id": 6,
+      "enumName": "Limon",
+      "code": "LM",
+      "storageKey": "CRPVMW_level_6",
+      "nameEs": "Limón",
+      "nameEn": "Limón",
+      "welcomeTitle": "Welcome to Limón!",
+      "isStartingProvince": false,
+      "coatOfArmsSprite": "sprites/EscudoLimon.png",
+      "mapHitboxSprite": "sprites/mapPack_spritesheet_17.png",
+      "mapBackgroundSprite": "sprites/mapa_cr2.png",
+      "panelBackgroundSprite": "sprites/fondo 1.png",
+      "mapCoordinates": {
+        "anchoredPosition": [
+          167.6,
+          117.6
+        ],
+        "sizeDelta": [
+          68.3,
+          58.3
+        ]
+      },
+      "welcomeAudio": {
+        "female": {
+          "soundIndex": 57,
+          "clipName": "welcome limon fem",
+          "file": "audio/welcome limon fem.m4a",
+          "durationSeconds": 1.3911
+        },
+        "male": {
+          "soundIndex": 56,
+          "clipName": "welcome limon male",
+          "file": "audio/welcome limon male.m4a",
+          "durationSeconds": 1.4507
+        }
+      },
+      "ambientMusic": {
+        "mapMusicIndex": 1,
+        "mapMusicFile": "audio/Tema del juego 2.m4a"
+      },
+      "culturalDescriptionEn": "Spanning the entire Caribbean coast of Costa Rica, Limón is a vibrant multicultural province shaped by Afro-Caribbean and Indigenous Bribri and Cabécar heritage. It is famous for its Afro-Caribbean cuisine (Rice and Beans, Rondón, Patty, Pan Bon, Agua de Sapo), Calypso music, Cahuita Coral Reefs, and the canals and sea turtle nesting beaches of Tortuguero National Park.",
+      "culturalDescriptionEs": "A lo largo de toda la costa caribeña de Costa Rica, Limón es una provincia multicultural con una rica herencia afrocaribeña e indígena Bribri y Cabécar, famosa por su gastronomía caribeña, el calipso, el Parque Nacional Cahuita y los canales y playas de desove de tortugas en Tortuguero.",
+      "highlights": [
+        "Traditional Afro-Caribbean Cuisine (Rice and Beans, Patty, Rondón, Agua de Sapo, Pan Bon)",
+        "Canal Boat Exploration & Manatee Spotting in Tortuguero National Park",
+        "Sea Turtle Nesting & Hatchling Protection on Tortuguero Beach",
+        "Cahuita National Park & Indigenous Bribri/Cabécar Territories in Talamanca"
+      ],
+      "minigames": [
+        {
+          "id": "Lm_Cocina",
+          "starPieceIndex": 0,
+          "starPieceSprite": "sprites/star_left.png",
+          "buttonLabel": "Caribbean Cuisine",
+          "titleEs": "Cocina Caribeña",
+          "introSceneIndex": 35,
+          "introSceneName": "Lm_Cocina_Intro",
+          "gameSceneIndex": 36,
+          "gameSceneName": "Lm_Cocina",
+          "bannerSprite": "sprites/Negra Juego de Cocinar_0.png"
+        },
+        {
+          "id": "LM_Tortuguero",
+          "starPieceIndex": 1,
+          "starPieceSprite": "sprites/star_center.png",
+          "buttonLabel": "Tortuguero Boat Trip",
+          "titleEs": "Paseo en Bote por Tortuguero",
+          "introSceneIndex": 37,
+          "introSceneName": "LM_Tortuguero_Intro",
+          "gameSceneIndex": 38,
+          "gameSceneName": "LM_Tortuguero",
+          "bannerSprite": "sprites/tortuguero.png"
+        },
+        {
+          "id": "LM_Desove",
+          "starPieceIndex": 2,
+          "starPieceSprite": "sprites/star_right.png",
+          "buttonLabel": "Saving Turtles",
+          "titleEs": "Protegiendo el Desove de Tortugas",
+          "introSceneIndex": 39,
+          "introSceneName": "LM_Desove_Intro",
+          "gameSceneIndex": 40,
+          "gameSceneName": "LM_Desove",
+          "bannerSprite": "sprites/desove.png"
+        }
+      ],
+      "popQuizCount": 10
+    }
+  ]
+}

@@ -1,0 +1,1092 @@
+{
+  "meta": {
+    "gameTitle": "Costa Rica Pura Vida in Many Ways",
+    "subtitle": "Educational English Learning Adventure across the 7 Provinces of Costa Rica",
+    "institution": "Ministerio de Educación Pública (MEP) - Costa Rica",
+    "departments": [
+      "Departamento de Gestión y Producción de Recursos (GESPRO)",
+      "Departamento de Tercer Ciclo y Educación Diversificada"
+    ],
+    "developers": {
+      "studio": "Producciones de la Montaña & Tayassu Games",
+      "coordinator": "Adrian Jurburg Gruskin",
+      "projectManager": "Oscar Loria",
+      "softwareEngineers": [
+        "Juan Navarro",
+        "Jean Arias",
+        "Gabriel Aguiar",
+        "Willbert Sibaja",
+        "Adrian Fernández"
+      ],
+      "artAndDesign": "Kristoffer Vela",
+      "musicComposers": [
+        "Antonio Loria",
+        "Dario Jurburg Chaves"
+      ],
+      "voiceActors": [
+        "Rosa Chinchilla (Female Voiceovers)",
+        "André Mendez (Male Voiceovers)"
+      ],
+      "mepAdvisors": [
+        "Katherine Williams Jiménez",
+        "Marianella Granados Sirias",
+        "Alfredo Ortega Cordero"
+      ]
+    },
+    "releaseYear": 2018,
+    "location": "San José, Costa Rica",
+    "originalEngine": "Unity 2017.3.1f1 WebGL (IL2CPP asm.js)",
+    "targetLanguage": "en-US",
+    "uiLanguage": "en"
+  },
+  "viewport": {
+    "width": 960,
+    "height": 620,
+    "aspectRatio": "48:31",
+    "canvasReferenceResolution": {
+      "width": 800,
+      "height": 600
+    },
+    "backgroundColor": "#231F20"
+  },
+  "economyAndProgression": {
+    "initialCoins": 5000,
+    "travelCostCoins": 5000,
+    "travelCostDisplayedInModalText": 1000,
+    "travelCostNote": "In C# (PopQuiz.NewRegion, asm: Gki), traveling between provinces requires >= 5000 coins and deducts 5000 coins via GameControl.GastarMonedas(5000), whereas the static UI text in PanelConformarCambioRegion reads \"You must spend 1000 coins to travel and answer a question.\"",
+    "startingProvinceId": 0,
+    "startingProvinceName": "San José",
+    "totalProvinces": 7,
+    "minigamesPerProvince": 3,
+    "totalMinigames": 21,
+    "totalStarPieces": 21,
+    "starPieceValues": {
+      "locked": "0",
+      "completed": "1"
+    },
+    "endingCondition": {
+      "trackerSlotIndex": 7,
+      "trackerKey": "CRPVMW_level_7",
+      "trackerInternalName": "MapaCR",
+      "initialState": "000",
+      "readyToDisplayEndingState": "111",
+      "endingAlreadyDisplayedState": "222",
+      "rule": "When all 7 provinces (indices 0..6) reach \"111\" (all 21 minigames completed), GameControl.RegisterMinigameProgress sets avance[7].level (\"MapaCR\") from \"000\" to \"111\". On loading MapaCostaRica (level7), GameEnding.CheckEnding() detects \"111\", sets it to \"222\", saves to localStorage, shows Panel Ending, and plays music track 26 (Ganar (largo).m4a)."
+    }
+  },
+  "storageKeys": {
+    "prefix": "CRPVMW_",
+    "coins": {
+      "key": "CRPVMW_monedas",
+      "type": "int",
+      "defaultValue": 5000
+    },
+    "character": {
+      "key": "CRPVMW_personaje",
+      "type": "int",
+      "defaultValue": 1,
+      "mapping": {
+        "0": "Mike (Male, bool false)",
+        "1": "Lisa (Female, bool true)"
+      }
+    },
+    "currentLocation": {
+      "key": "CRPVMW_location",
+      "type": "int",
+      "defaultValue": 0,
+      "mapping": {
+        "0": "San José",
+        "1": "Heredia",
+        "2": "Cartago",
+        "3": "Alajuela",
+        "4": "Puntarenas",
+        "5": "Guanacaste",
+        "6": "Limón"
+      }
+    },
+    "provinceLevels": [
+      {
+        "provinceId": 0,
+        "key": "CRPVMW_level_0",
+        "name": "SanJose",
+        "defaultValue": "000"
+      },
+      {
+        "provinceId": 1,
+        "key": "CRPVMW_level_1",
+        "name": "Heredia",
+        "defaultValue": "000"
+      },
+      {
+        "provinceId": 2,
+        "key": "CRPVMW_level_2",
+        "name": "Cartago",
+        "defaultValue": "000"
+      },
+      {
+        "provinceId": 3,
+        "key": "CRPVMW_level_3",
+        "name": "Alajuela",
+        "defaultValue": "000"
+      },
+      {
+        "provinceId": 4,
+        "key": "CRPVMW_level_4",
+        "name": "Puntarenas",
+        "defaultValue": "000"
+      },
+      {
+        "provinceId": 5,
+        "key": "CRPVMW_level_5",
+        "name": "Guanacaste",
+        "defaultValue": "000"
+      },
+      {
+        "provinceId": 6,
+        "key": "CRPVMW_level_6",
+        "name": "Limon",
+        "defaultValue": "000"
+      },
+      {
+        "provinceId": 7,
+        "key": "CRPVMW_level_7",
+        "name": "MapaCR",
+        "defaultValue": "000"
+      }
+    ]
+  },
+  "characters": {
+    "selectable": [
+      {
+        "id": "lisa",
+        "name": "Lisa",
+        "fullName": "Lisa Smith",
+        "gender": "female",
+        "idPersonajeBool": true,
+        "playerPrefsInt": 1,
+        "buttonColorRGBA": [
+          0.247,
+          0.616,
+          0.129,
+          1
+        ],
+        "sprites": {
+          "portrait": "sprites/lisa_portrait.png",
+          "fullBodySelect": "sprites/Lisa_1.png",
+          "dialogAvatar": "sprites/Lisa.png",
+          "mapPinAvatar": "sprites/Lisa_4.png",
+          "topDownWalk": [
+            "sprites/Personaje Mujer_0.png",
+            "sprites/Personaje Mujer_1.png"
+          ],
+          "biking": "sprites/Personaje_Sprites_01_bici_0.png",
+          "diving": "sprites/Personaje_Sprites_02_snorkel 1_0.png"
+        },
+        "selectScreenGreeting": "Lisa, Costa Rica it's a wonderful country, a lot of adventures waits!",
+        "introVoiceOvers": [
+          {
+            "clipName": "MASTER MENU LISA 002",
+            "file": "audio/MASTER MENU LISA 002.m4a"
+          },
+          {
+            "clipName": "MASTER MENU LISA 003",
+            "file": "audio/MASTER MENU LISA 003.m4a"
+          }
+        ]
+      },
+      {
+        "id": "mike",
+        "name": "Mike",
+        "fullName": "Mike Smith",
+        "gender": "male",
+        "idPersonajeBool": false,
+        "playerPrefsInt": 0,
+        "buttonColorRGBA": [
+          0.949,
+          0.659,
+          0.188,
+          1
+        ],
+        "sprites": {
+          "portrait": "sprites/mike_portrait.png",
+          "fullBodySelect": "sprites/Mike_1.png",
+          "dialogAvatarRight": "sprites/Mike Smith Right.png",
+          "dialogAvatarLeft": "sprites/Mike Smith Left.png",
+          "mapPinAvatar": "sprites/Mike_4.png",
+          "topDownWalk": [
+            "sprites/Personaje_0.png",
+            "sprites/Personaje_1.png"
+          ],
+          "biking": "sprites/Personaje_Sprites_02b_bike-Sheet_0.png",
+          "running": "sprites/Mike_0.png"
+        },
+        "selectScreenGreeting": "Mike, Costa Rica it's a wonderful country, a lot of adventures waits!",
+        "introVoiceOvers": [
+          {
+            "clipName": "MASTER MENU MIKE 002",
+            "file": "audio/MASTER MENU MIKE 002.m4a"
+          },
+          {
+            "clipName": "MASTER MENU MIKE OO3",
+            "file": "audio/MASTER MENU MIKE OO3.m4a"
+          }
+        ]
+      }
+    ],
+    "guidesAndNpcs": [
+      {
+        "id": "daniel",
+        "name": "Daniel",
+        "role": "Costa Rican Taxi Driver & Main Tour Guide",
+        "sprite": "sprites/Daniel Taxi Driver.png",
+        "introVoiceOvers": [
+          {
+            "clipName": "MASTER MENU DANIEL 001",
+            "file": "audio/MASTER MENU DANIEL 001.m4a"
+          },
+          {
+            "clipName": "MASTER MENU DANIEL 002",
+            "file": "audio/MASTER MENU DANIEL 002.m4a"
+          }
+        ]
+      },
+      {
+        "id": "maria_coffee",
+        "name": "María",
+        "role": "Coffee Farm Host (San José)",
+        "sprite": "sprites/Maria Coffee.png"
+      },
+      {
+        "id": "daniela_rose",
+        "name": "Daniela",
+        "role": "Flower Shop Owner (Heredia)",
+        "sprite": "sprites/Floristeria Daniela Rose.png"
+      },
+      {
+        "id": "manuel_fernandez",
+        "name": "Manuel",
+        "role": "Masquerade Host (Heredia)",
+        "sprite": "sprites/Local Manuel Fernandez.png"
+      },
+      {
+        "id": "miguel_gutierrez",
+        "name": "Miguel",
+        "role": "Park Ranger (Cartago Volcanoes)",
+        "sprite": "sprites/Guarda parques Miguel Gutierrez.png"
+      },
+      {
+        "id": "ester_guevara",
+        "name": "Ester",
+        "role": "Park Ranger (Barra Honda, Guanacaste)",
+        "sprite": "sprites/Guarda parques Ester Guevara.png"
+      },
+      {
+        "id": "luis_araya",
+        "name": "Luis",
+        "role": "Churchill Vendor (Puntarenas)",
+        "sprite": "sprites/Copero Luis Araya.png"
+      },
+      {
+        "id": "ana_cambronero",
+        "name": "Ana",
+        "role": "Sea Turtle Conservationist (Limón)",
+        "sprite": "sprites/Conservacionista Ana Cambronero.png"
+      }
+    ]
+  },
+  "audio": {
+    "musicVolume": {
+      "maxVolume": 0.4,
+      "minVolume": 0,
+      "defaultOn": true
+    },
+    "sfxVolume": 0.8,
+    "keyMusicIndices": {
+      "mainMenuTheme": 0,
+      "costaRicaMapTheme": 1,
+      "creditsTheme": 23,
+      "victoryShortJingle": 24,
+      "defeatShortJingle": 25,
+      "victoryLongTheme": 26,
+      "defeatLongTheme": 27,
+      "introDialoguesTheme": 28
+    },
+    "keySfxIndices": {
+      "itemPickup": 29,
+      "explosionBoom": 30,
+      "doorCreak": 31,
+      "ghostlyMoan": 32,
+      "coinTransaction": 35,
+      "quizCorrectOrWin": 36,
+      "quizWrongOrAlert": 37,
+      "uiButtonClick": 38,
+      "uiButtonBack": 39,
+      "cameraShutter": 40,
+      "swimStroke": 41,
+      "lightsOff": 42,
+      "shaveIceRaspar": 43,
+      "pickCoffeeBean": 44,
+      "boatMotor": 45,
+      "ratSqueak": 46,
+      "crowdCheer": 47
+    },
+    "musicTracks": [
+      {
+        "index": 0,
+        "name": "Tema del juego",
+        "file": "audio/Tema del juego.m4a",
+        "durationSeconds": 56.1863,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 1,
+        "name": "Tema del juego 2",
+        "file": "audio/Tema del juego 2.m4a",
+        "durationSeconds": 83.5835,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 2,
+        "name": "San Jose - Finca cafetalera",
+        "file": "audio/San Jose - Finca cafetalera.m4a",
+        "durationSeconds": 145.1116,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 3,
+        "name": "San Jose - Museo del Oro",
+        "file": "audio/San Jose - Museo del Oro.m4a",
+        "durationSeconds": 157.0235,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 4,
+        "name": "San Jose - Rafting",
+        "file": "audio/San Jose - Rafting.m4a",
+        "durationSeconds": 68.6686,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 5,
+        "name": "Heredia - Reparto de flores",
+        "file": "audio/Heredia - Reparto de flores.m4a",
+        "durationSeconds": 136.0025,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 6,
+        "name": "Heredia - Mascarada 2",
+        "file": "audio/Heredia - Mascarada 2.m4a",
+        "durationSeconds": 14.302,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 7,
+        "name": "Heredia - Mountain Bike",
+        "file": "audio/Heredia - Mountain Bike.m4a",
+        "durationSeconds": 58.3583,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 8,
+        "name": "buceo_mixdown",
+        "file": "audio/buceo_mixdown.m4a",
+        "durationSeconds": 174.6254,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 9,
+        "name": "Guanacaste - Surf",
+        "file": "audio/Guanacaste - Surf.m4a",
+        "durationSeconds": 67.2338,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 10,
+        "name": "Guanacaste - Barra Honda",
+        "file": "audio/Guanacaste - Barra Honda.m4a",
+        "durationSeconds": 79.3793,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 11,
+        "name": "Sanatorio_mix Final",
+        "file": "audio/Sanatorio_mix Final.m4a",
+        "durationSeconds": 150.048,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 12,
+        "name": "Cartago - Volcanes",
+        "file": "audio/Cartago - Volcanes.m4a",
+        "durationSeconds": 66.2995,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 13,
+        "name": "Sanatorio_mix Final",
+        "file": "audio/Sanatorio_mix Final.m4a",
+        "durationSeconds": 150.048,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 14,
+        "name": "Limon - Cocinar",
+        "file": "audio/Limon - Cocinar.m4a",
+        "durationSeconds": 110.4436,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 15,
+        "name": "Limon - Tortuguero",
+        "file": "audio/Limon - Tortuguero.m4a",
+        "durationSeconds": 69.9032,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 16,
+        "name": "Limon - Desove",
+        "file": "audio/Limon - Desove.m4a",
+        "durationSeconds": 100.8051,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 17,
+        "name": "Alajuela - Correr",
+        "file": "audio/Alajuela - Correr.m4a",
+        "durationSeconds": 82.3489,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 18,
+        "name": "Alajuela - Bicicleta",
+        "file": "audio/Alajuela - Bicicleta.m4a",
+        "durationSeconds": 82.3489,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 19,
+        "name": "Alajuela - Nadar",
+        "file": "audio/Alajuela - Nadar.m4a",
+        "durationSeconds": 82.3489,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 20,
+        "name": "Puntarenas - Manuel Antonio",
+        "file": "audio/Puntarenas - Manuel Antonio.m4a",
+        "durationSeconds": 61.4948,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 21,
+        "name": "Puntarenas -Churchill",
+        "file": "audio/Puntarenas -Churchill.m4a",
+        "durationSeconds": 72.072,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 22,
+        "name": "Puntarenas - Tarcoles",
+        "file": "audio/Puntarenas - Tarcoles.m4a",
+        "durationSeconds": 59.1591,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 23,
+        "name": "Credits Costa Rica Pura Vida",
+        "file": "audio/Credits Costa Rica Pura Vida.m4a",
+        "durationSeconds": 139.7062,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 24,
+        "name": "Ganar (corto)",
+        "file": "audio/Ganar (corto).m4a",
+        "durationSeconds": 8.0747,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 25,
+        "name": "Perder (corto)",
+        "file": "audio/Perder (corto).m4a",
+        "durationSeconds": 9.7431,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 26,
+        "name": "Ganar (largo)",
+        "file": "audio/Ganar (largo).m4a",
+        "durationSeconds": 40.0734,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 27,
+        "name": "Perder (largo)",
+        "file": "audio/Perder (largo).m4a",
+        "durationSeconds": 48.0814,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 28,
+        "name": "dialogos",
+        "file": "audio/dialogos.m4a",
+        "durationSeconds": 43.9439,
+        "frequency": 44100,
+        "channels": 2
+      }
+    ],
+    "soundEffects": [
+      {
+        "index": 29,
+        "name": "pickup",
+        "file": "audio/pickup.m4a",
+        "durationSeconds": 0.3438,
+        "frequency": 44100,
+        "channels": 1
+      },
+      {
+        "index": 30,
+        "name": "boom",
+        "file": "audio/boom.m4a",
+        "durationSeconds": 2.9098,
+        "frequency": 44100,
+        "channels": 1
+      },
+      {
+        "index": 31,
+        "name": "door",
+        "file": "audio/door.m4a",
+        "durationSeconds": 2.796,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 32,
+        "name": "ghostlymoan",
+        "file": "audio/ghostlymoan.m4a",
+        "durationSeconds": 2.999,
+        "frequency": 44100,
+        "channels": 1
+      },
+      {
+        "index": 35,
+        "name": "coins",
+        "file": "audio/coins.m4a",
+        "durationSeconds": 0.7417,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 36,
+        "name": "win-sound",
+        "file": "audio/win-sound.m4a",
+        "durationSeconds": 1.7188,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 37,
+        "name": "wrong",
+        "file": "audio/wrong.m4a",
+        "durationSeconds": 0.75,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 38,
+        "name": "button",
+        "file": "audio/button.m4a",
+        "durationSeconds": 0.14,
+        "frequency": 44100,
+        "channels": 1
+      },
+      {
+        "index": 39,
+        "name": "buttonReverse",
+        "file": "audio/buttonReverse.m4a",
+        "durationSeconds": 0.14,
+        "frequency": 44100,
+        "channels": 1
+      },
+      {
+        "index": 40,
+        "name": "Camara V4",
+        "file": "audio/Camara V4.m4a",
+        "durationSeconds": 1.8131,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 41,
+        "name": "Nadar",
+        "file": "audio/Nadar.m4a",
+        "durationSeconds": 0.4092,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 42,
+        "name": "lightsOff",
+        "file": "audio/lightsOff.m4a",
+        "durationSeconds": 3.7355,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 43,
+        "name": "raspar",
+        "file": "audio/raspar.m4a",
+        "durationSeconds": 5,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 44,
+        "name": "coger_cafe",
+        "file": "audio/coger_cafe.m4a",
+        "durationSeconds": 0.7113,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 45,
+        "name": "Motor Bote",
+        "file": "audio/Motor Bote.m4a",
+        "durationSeconds": 5,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 46,
+        "name": "rat",
+        "file": "audio/rat.m4a",
+        "durationSeconds": 2.7484,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 47,
+        "name": "crowd",
+        "file": "audio/crowd.m4a",
+        "durationSeconds": 6.7686,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 48,
+        "name": "welcome alajuela male",
+        "file": "audio/welcome alajuela male.m4a",
+        "durationSeconds": 1.5451,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 49,
+        "name": "welcome alajuela fem",
+        "file": "audio/welcome alajuela fem.m4a",
+        "durationSeconds": 1.6395,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 50,
+        "name": "welcome to cartago male",
+        "file": "audio/welcome to cartago male.m4a",
+        "durationSeconds": 1.406,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 51,
+        "name": "welcome to cartago fem",
+        "file": "audio/welcome to cartago fem.m4a",
+        "durationSeconds": 1.5898,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 52,
+        "name": "welcome san jose male",
+        "file": "audio/welcome san jose male.m4a",
+        "durationSeconds": 1.401,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 53,
+        "name": "welcome san jose fem",
+        "file": "audio/welcome san jose fem.m4a",
+        "durationSeconds": 1.5699,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 54,
+        "name": "welcome puntarenas male",
+        "file": "audio/welcome puntarenas male.m4a",
+        "durationSeconds": 1.9277,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 55,
+        "name": "welcome puntarenas fem",
+        "file": "audio/welcome puntarenas fem.m4a",
+        "durationSeconds": 1.5898,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 56,
+        "name": "welcome limon male",
+        "file": "audio/welcome limon male.m4a",
+        "durationSeconds": 1.4507,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 57,
+        "name": "welcome limon fem",
+        "file": "audio/welcome limon fem.m4a",
+        "durationSeconds": 1.3911,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 58,
+        "name": "welcome heredia male",
+        "file": "audio/welcome heredia male.m4a",
+        "durationSeconds": 1.4308,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 59,
+        "name": "welcome heredia fem",
+        "file": "audio/welcome heredia fem.m4a",
+        "durationSeconds": 1.6097,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 60,
+        "name": "welcome guanacaste male",
+        "file": "audio/welcome guanacaste male.m4a",
+        "durationSeconds": 1.5923,
+        "frequency": 44100,
+        "channels": 2
+      },
+      {
+        "index": 61,
+        "name": "welcome guanacaste fem",
+        "file": "audio/welcome guanacaste fem.m4a",
+        "durationSeconds": 1.6892,
+        "frequency": 44100,
+        "channels": 2
+      }
+    ]
+  },
+  "fonts": [
+    {
+      "name": "Amaranth-BoldItalic",
+      "file": "fonts/Amaranth-BoldItalic.otf",
+      "format": ".otf",
+      "byteLength": 56700
+    },
+    {
+      "name": "Exo2-Bold",
+      "file": "fonts/Exo2-Bold.ttf",
+      "format": ".ttf",
+      "byteLength": 109136
+    },
+    {
+      "name": "Amaranth-Bold",
+      "file": "fonts/Amaranth-Bold.otf",
+      "format": ".otf",
+      "byteLength": 48760
+    },
+    {
+      "name": "Exo2-Regular",
+      "file": "fonts/Exo2-Regular.ttf",
+      "format": ".ttf",
+      "byteLength": 106380
+    },
+    {
+      "name": "Amaranth-Italic",
+      "file": "fonts/Amaranth-Italic.otf",
+      "format": ".otf",
+      "byteLength": 56056
+    },
+    {
+      "name": "Amaranth-Regular",
+      "file": "fonts/Amaranth-Regular.otf",
+      "format": ".otf",
+      "byteLength": 48732
+    },
+    {
+      "name": "Hanken-Light",
+      "file": "fonts/Hanken-Light.ttf",
+      "format": ".ttf",
+      "byteLength": 46044
+    },
+    {
+      "name": "Hanken-Light",
+      "file": "fonts/Hanken-Light__sharedassets0_109.ttf",
+      "format": ".ttf",
+      "byteLength": 46044
+    },
+    {
+      "name": "FredokaOne-Regular",
+      "file": "fonts/FredokaOne-Regular.ttf",
+      "format": ".ttf",
+      "byteLength": 43500
+    },
+    {
+      "name": "Hanken-Book",
+      "file": "fonts/Hanken-Book.ttf",
+      "format": ".ttf",
+      "byteLength": 35364
+    },
+    {
+      "name": "Hanken-Book",
+      "file": "fonts/Hanken-Book__sharedassets0_112.ttf",
+      "format": ".ttf",
+      "byteLength": 35364
+    },
+    {
+      "name": "OpenSansSemibold",
+      "file": "fonts/OpenSansSemibold.ttf",
+      "format": ".ttf",
+      "byteLength": 221328
+    },
+    {
+      "name": "OpenSansLight",
+      "file": "fonts/OpenSansLight.ttf",
+      "format": ".ttf",
+      "byteLength": 222412
+    },
+    {
+      "name": "OpenSansBold",
+      "file": "fonts/OpenSansBold.ttf",
+      "format": ".ttf",
+      "byteLength": 224592
+    },
+    {
+      "name": "OpenSansRegular",
+      "file": "fonts/OpenSansRegular.ttf",
+      "format": ".ttf",
+      "byteLength": 217360
+    }
+  ],
+  "uiScreens": {
+    "mainTitle": {
+      "sceneIndex": 0,
+      "sceneName": "Main",
+      "musicIndex": 0,
+      "backgroundSprite": "sprites/fondo.png",
+      "logoSprite": "sprites/Logo Costa Rica Final Grande.png",
+      "buttonSprite": "sprites/boton_2.png",
+      "buttons": [
+        {
+          "id": "btn_Nuevo",
+          "label": "New Game",
+          "targetSceneIndex": 3,
+          "targetSceneName": "NewGameWarning"
+        },
+        {
+          "id": "btn_Continuar",
+          "label": "Continue",
+          "targetSceneIndex": 7,
+          "targetSceneName": "MapaCostaRica",
+          "action": "GameControl.LoadData()"
+        }
+      ]
+    },
+    "newGameWarning": {
+      "sceneIndex": 3,
+      "sceneName": "NewGameWarning",
+      "backgroundSprite": "sprites/fondo.png",
+      "warningText": "Warning: starting a new game will delete all your previous data.\n\nAre you sure you want to go on?",
+      "buttons": [
+        {
+          "id": "btn_Nuevo",
+          "label": "Yes, start a new game",
+          "targetSceneIndex": 5,
+          "targetSceneName": "SelecGenero",
+          "action": "GameControl.ResetData()"
+        },
+        {
+          "id": "btn_Cancelar",
+          "label": "No, go back",
+          "targetSceneIndex": 0,
+          "targetSceneName": "Main"
+        }
+      ]
+    },
+    "characterGenderSelect": {
+      "sceneIndex": 5,
+      "sceneName": "SelecGenero",
+      "backgroundSprite": "sprites/fondo.png",
+      "title1": "Choose a \ncharacter",
+      "title2": "Please tell me.\nAre you a boy? \nOr are you a girl?",
+      "buttons": [
+        {
+          "id": "btn_Male",
+          "label": "Mike",
+          "characterBool": false,
+          "targetSceneIndex": 4,
+          "targetSceneName": "SelecScreen"
+        },
+        {
+          "id": "btn_Female",
+          "label": "Lisa",
+          "characterBool": true,
+          "targetSceneIndex": 4,
+          "targetSceneName": "SelecScreen"
+        }
+      ]
+    },
+    "characterIntroDialogue": {
+      "sceneIndex": 4,
+      "sceneName": "SelecScreen",
+      "musicIndex": 28,
+      "backgroundSprite": "sprites/fondo.png",
+      "maleTitle": "Mike, Costa Rica it's a wonderful country, a lot of adventures waits!",
+      "femaleTitle": "Lisa, Costa Rica it's a wonderful country, a lot of adventures waits!",
+      "nextSceneIndex": 6,
+      "nextSceneName": "AdventureStart"
+    },
+    "adventureStart": {
+      "sceneIndex": 6,
+      "sceneName": "AdventureStart",
+      "backgroundSprite": "sprites/fondo.png",
+      "bodyText": "Costa Rica is a wonderful country!\n\nLots of adventures await for you.\n\nLet's get started!",
+      "startButtonLabel": "START",
+      "targetSceneIndex": 7,
+      "targetSceneName": "MapaCostaRica"
+    },
+    "optionsMenu": {
+      "sceneIndex": 10,
+      "sceneName": "Opciones",
+      "musicIndex": 28,
+      "backgroundSprite": "sprites/fondo.png",
+      "title": "Options",
+      "playMusicButtonLabel": "Play music",
+      "stopMusicButtonLabel": "No music",
+      "backButtonLabel": "Back to game title",
+      "targetSceneIndex": 0
+    },
+    "globalHudAndModals": {
+      "topBar": {
+        "backgroundColorRGBA": [
+          0.278,
+          0.608,
+          0.839,
+          1
+        ],
+        "menuButtonSprite": "sprites/options_button.png",
+        "cancelMinigameButtonSprite": "sprites/boton_cerrar.png",
+        "coinIconSprite": "sprites/es-moneda.png",
+        "dollIconSprite": "sprites/doll-icon.png",
+        "logIconSprite": "sprites/logicon.png",
+        "basketIconSprite": "sprites/Tilemap_cafetal_32x32 V2_44.png",
+        "flowerIconSprite": "sprites/flores.png",
+        "deliveriesLabel": "Deliveries:"
+      },
+      "pauseMainMenuModal": {
+        "title": "Main Menu",
+        "backgroundSprite": "sprites/fondo_mid.png",
+        "items": [
+          {
+            "id": "NuevaPartida",
+            "label": "New Game",
+            "icon": "sprites/newGame.png",
+            "targetSceneIndex": 3
+          },
+          {
+            "id": "Glosario",
+            "label": "Keywords",
+            "icon": "sprites/icono_glosario.png",
+            "targetSceneIndex": 8
+          },
+          {
+            "id": "Creditos",
+            "label": "Credits",
+            "icon": "sprites/icono_creditos.png",
+            "targetSceneIndex": 9
+          },
+          {
+            "id": "Opciones",
+            "label": "Options",
+            "icon": "sprites/icono_creditos copy.png",
+            "targetSceneIndex": 10
+          },
+          {
+            "id": "Salir",
+            "label": "Exit",
+            "icon": "sprites/icono_exit.png",
+            "action": "ExitToTitle"
+          }
+        ]
+      },
+      "cancelGameModal": {
+        "promptText": "Do you want to exit the current game?",
+        "yesLabel": "Yes",
+        "noLabel": "No",
+        "buttonSprite": "sprites/boton_2.png"
+      },
+      "reloadGameModal": {
+        "promptText": "Do you want to try again?",
+        "yesLabel": "Yes",
+        "noLabel": "Return to map",
+        "buttonSprite": "sprites/boton_2.png"
+      },
+      "loadingScreen": {
+        "label": "Loading",
+        "logoSprite": "sprites/Logo Costa Rica Final copy.png",
+        "backgroundSprite": "sprites/fondo.png"
+      },
+      "gameEndingModal": {
+        "congratulationsText": "Hope you have enjoyed \nyour stay in Costa Rica!  \n\n\nWe hope to see you back soon!",
+        "buttonLabel": "Credits",
+        "targetSceneIndex": 9,
+        "musicIndex": 26,
+        "musicFile": "audio/Ganar (largo).m4a",
+        "starSprites": {
+          "left": "sprites/star_left.png",
+          "center": "sprites/star_center.png",
+          "right": "sprites/star_right.png"
+        }
+      }
+    }
+  }
+}

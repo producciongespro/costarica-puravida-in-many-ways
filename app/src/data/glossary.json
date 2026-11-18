@@ -1,0 +1,667 @@
+{
+  "sceneIndex": 8,
+  "sceneName": "Glosario",
+  "screenTitle": "Keywords",
+  "backButtonLabel": "Back to game title",
+  "backgroundSprite": "sprites/fondo.png",
+  "buttonSprite": "sprites/boton_2.png",
+  "musicIndex": 0,
+  "musicFile": "audio/Tema del juego.m4a",
+  "totalCoreKeywords": 22,
+  "totalExtendedTerms": 15,
+  "totalEntries": 37,
+  "columns": [
+    {
+      "columnIndex": 1,
+      "gameObjectName": "Text (1)",
+      "rawText": "Waterfalls\nSea\nJungles\nVolcanoes\nWildlife\nCloud forest\nBeaches\nCountryside",
+      "terms": [
+        {
+          "id": "KW_01",
+          "termEn": "Waterfalls",
+          "termEs": "Cataratas / Cascadas",
+          "category": "Nature & Ecosystems",
+          "definitionEn": "Cascading streams of water falling from high rocky cliffs in tropical mountains and rivers, such as La Fortuna, Río Celeste, and La Paz Waterfalls.",
+          "definitionEs": "Caídas de agua desde grandes alturas en montañas y ríos tropicales, como las cataratas de La Fortuna, Río Celeste y La Paz.",
+          "sprite": "sprites/arenallago.png",
+          "audioFile": "audio/005 What would you take on a trip to Rio Celeste.m4a"
+        },
+        {
+          "id": "KW_02",
+          "termEn": "Sea",
+          "termEs": "Mar / Océano",
+          "category": "Nature & Ecosystems",
+          "definitionEn": "Costa Rica is bordered by two bodies of salt water: the Caribbean Sea to the east and the Pacific Ocean to the west.",
+          "definitionEs": "Costa Rica está bañada por dos grandes masas de agua salada: el Mar Caribe al este y el Océano Pacífico al oeste.",
+          "sprite": "sprites/elcoco.png",
+          "audioFile": "audio/001 Guanacaste, Diving in coco, Lisa 001.m4a"
+        },
+        {
+          "id": "KW_03",
+          "termEn": "Jungles",
+          "termEs": "Selvas tropicales",
+          "category": "Nature & Ecosystems",
+          "definitionEn": "Dense, humid tropical rainforests teeming with biodiversity, giant trees, lianas, and wildlife in regions like Corcovado, Tortuguero, and Sarapiquí.",
+          "definitionEs": "Bosques tropicales húmedos y densos con enorme biodiversidad en regiones como Corcovado, Tortuguero y Sarapiquí.",
+          "sprite": "sprites/tortuguero.png",
+          "audioFile": "audio/Limon Tortuguero Locutor 001 FEM.m4a"
+        },
+        {
+          "id": "KW_04",
+          "termEn": "Volcanoes",
+          "termEs": "Volcanes",
+          "category": "Nature & Ecosystems",
+          "definitionEn": "Geological mountain formations with craters that emit lava, ash, and gases, including Irazú, Poás, Arenal, Turrialba, and Rincón de la Vieja.",
+          "definitionEs": "Formaciones montañosas con cráteres volcánicos como el Irazú, Poás, Arenal, Turrialba y Rincón de la Vieja.",
+          "sprite": "sprites/volcanes.png",
+          "audioFile": "audio/Volcanes, Irazú Volcano park ranger, 001.m4a"
+        },
+        {
+          "id": "KW_05",
+          "termEn": "Wildlife",
+          "termEs": "Vida silvestre / Fauna",
+          "category": "Biodiversity & Fauna",
+          "definitionEn": "Wild animals and plants living in their natural habitats; Costa Rica holds nearly 5% of the world’s biodiversity.",
+          "definitionEs": "Animales y plantas que viven en su hábitat natural; Costa Rica alberga cerca del 5% de la biodiversidad mundial.",
+          "sprite": "sprites/Mono_manuel_0.png",
+          "audioFile": "audio/Puntarenas Manuel Antonio Guardaparques 1.m4a"
+        },
+        {
+          "id": "KW_06",
+          "termEn": "Cloud forest",
+          "termEs": "Bosque nuboso",
+          "category": "Nature & Ecosystems",
+          "definitionEn": "High-altitude tropical mountain forest characterized by persistent low-level cloud cover, mosses, orchids, and the Resplendent Quetzal, such as Monteverde.",
+          "definitionEs": "Bosque montañoso de gran altitud cubierto de neblina constante, musgos, orquídeas y quetzales, como Monteverde.",
+          "sprite": "sprites/bosquehoja.png",
+          "audioFile": "audio/What is Monte Verde´s most famous attraction.m4a"
+        },
+        {
+          "id": "KW_07",
+          "termEn": "Beaches",
+          "termEs": "Playas",
+          "category": "Nature & Ecosystems",
+          "definitionEn": "Sandy coastal shorelines along the Pacific and Caribbean coasts, ranging from white and golden sand to volcanic black sand beaches.",
+          "definitionEs": "Costas de arena a lo largo del Pacífico y el Caribe, desde arenas blancas y doradas hasta playas de arena volcánica.",
+          "sprite": "sprites/playa.png",
+          "audioFile": "audio/006 All of the following are beaches in Guanacaste except.m4a"
+        },
+        {
+          "id": "KW_08",
+          "termEn": "Countryside",
+          "termEs": "Zona rural / Campo",
+          "category": "Culture & Traditions",
+          "definitionEn": "Rural agricultural landscapes, coffee highlands, dairy pastures, and traditional villages outside urban centers.",
+          "definitionEs": "Paisajes rurales, zonas agrícolas, cafetales, lecherías y pueblos tradicionales fuera de las ciudades.",
+          "sprite": "sprites/02-CoffeeFarm.png",
+          "audioFile": "audio/MASTER CAFE MARIA 001.m4a"
+        }
+      ]
+    },
+    {
+      "columnIndex": 2,
+      "gameObjectName": "Text (2)",
+      "rawText": "National parks\nSurfing\nWatching \nCrocodiles\nHiking\nCamping\nTypical food \nBird watching",
+      "terms": [
+        {
+          "id": "KW_09",
+          "termEn": "National parks",
+          "termEs": "Parques nacionales",
+          "category": "Nature & Ecosystems",
+          "definitionEn": "Protected natural reserves established by SINAC to conserve ecosystems and biodiversity, covering over a quarter of Costa Rica’s territory.",
+          "definitionEs": "Áreas silvestres protegidas para conservar los ecosistemas y la biodiversidad, que cubren más del 25% del territorio nacional.",
+          "sprite": "sprites/manuelantonio.png",
+          "audioFile": "audio/Puntarenas Manuel Antonio Lisa 001.m4a"
+        },
+        {
+          "id": "KW_10",
+          "termEn": "Surfing",
+          "termEs": "Surf / Surfear",
+          "category": "Adventure & Sports",
+          "definitionEn": "Water sport of riding ocean waves on a surfboard, practiced at famous beaches like Tamarindo, Jacó, Hermosa, Pavones, and Puerto Viejo (Salsa Brava).",
+          "definitionEs": "Deporte acuático que consiste en deslizarse sobre las olas del mar en una tabla, famoso en Tamarindo, Jacó, Hermosa y Puerto Viejo.",
+          "sprite": "sprites/tamarindo.png",
+          "audioFile": "audio/002 Guanacaste, tamarindoi, surf lisa 001.m4a"
+        },
+        {
+          "id": "KW_11",
+          "termEn": "Watching Crocodiles",
+          "termEs": "Avistamiento de cocodrilos",
+          "category": "Biodiversity & Fauna",
+          "definitionEn": "Observing wild American crocodiles (Crocodylus acutus) safely from bridges or guided riverboats along the Grande de Tárcoles River and Palo Verde.",
+          "definitionEs": "Observación segura de cocodrilos americanos en su hábitat natural en el río Grande de Tárcoles y Palo Verde.",
+          "sprite": "sprites/tarcoles.png",
+          "audioFile": "audio/Ok lets go to Tarcoles River LISA B.m4a"
+        },
+        {
+          "id": "KW_12",
+          "termEn": "Hiking",
+          "termEs": "Senderismo / Caminata",
+          "category": "Adventure & Sports",
+          "definitionEn": "Walking along nature trails through national parks, mountain peaks like Cerro Chirripó, volcano craters, and rainforest reserves.",
+          "definitionEs": "Caminata por senderos naturales a través de parques nacionales, el Cerro Chirripó, volcanes y reservas biológicas.",
+          "sprite": "sprites/barrahonda.png",
+          "audioFile": "audio/001 Guanacaste, Barra Honda Park ranger 001.m4a"
+        },
+        {
+          "id": "KW_13",
+          "termEn": "Camping",
+          "termEs": "Acampar",
+          "category": "Adventure & Sports",
+          "definitionEn": "Staying overnight outdoors in tents at designated national park sectors such as Santa Rosa, Junquillal, and Barra Honda.",
+          "definitionEs": "Pernoctar al aire libre en tiendas de campaña en áreas autorizadas de parques nacionales como Santa Rosa y Barra Honda.",
+          "sprite": "sprites/Mochileros_Spritesheet_0.png",
+          "audioFile": "audio/001 Is “Bosque de la Hoja” a place where you can enjoy nature.m4a"
+        },
+        {
+          "id": "KW_14",
+          "termEn": "Typical food",
+          "termEs": "Comida típica",
+          "category": "Culture & Traditions",
+          "definitionEn": "Traditional Costa Rican dishes including Gallo Pinto, Casado, Olla de Carne, Chorreadas, Tamales, Churchill, and Caribbean Rice and Beans with Rondón.",
+          "definitionEs": "Gastronomía tradicional costarricense como el Gallo Pinto, Casado, Olla de Carne, Tamales, Churchill y el Rice and Beans caribeño.",
+          "sprite": "sprites/Recetas e ingredientes_2.png",
+          "audioFile": "audio/Mark the typical dishes form Limón that you have tasted.m4a"
+        },
+        {
+          "id": "KW_15",
+          "termEn": "Bird watching",
+          "termEs": "Avistamiento de aves",
+          "category": "Biodiversity & Fauna",
+          "definitionEn": "Observing Costa Rica’s more than 900 bird species, including the Resplendent Quetzal, Scarlet Macaw, Keel-billed Toucan, Hummingbirds, and Yigüirro.",
+          "definitionEs": "Observación de las más de 900 especies de aves del país, como el Quetzal, la Lapa Roja, el Tucán, los Colibríes y el Yigüirro.",
+          "sprite": "sprites/vulture-Sheet_0.png",
+          "audioFile": "audio/006 fauna cahuita.m4a"
+        }
+      ]
+    },
+    {
+      "columnIndex": 3,
+      "gameObjectName": "Text (3)",
+      "rawText": "Rafting on rivers\nCanopy tours\nHot springs \nScuba diving\nSport fishing \nKayaking\nGolfing",
+      "terms": [
+        {
+          "id": "KW_16",
+          "termEn": "Rafting on rivers",
+          "termEs": "Rafting en ríos / Rápidos",
+          "category": "Adventure & Sports",
+          "definitionEn": "Navigating white-water river rapids in an inflatable raft with paddles on rivers such as the Pacuare, Reventazón, Sarapiquí, and Savegre.",
+          "definitionEs": "Descenso en balsa inflable por los rápidos de ríos caudalosos como el Pacuare, Reventazón, Sarapiquí y Savegre.",
+          "sprite": "sprites/BG_SJ_Rafting.png",
+          "audioFile": "audio/006 What should you take with you on the Pacuare River for safety.m4a"
+        },
+        {
+          "id": "KW_17",
+          "termEn": "Canopy tours",
+          "termEs": "Canopy / Tirolesa",
+          "category": "Adventure & Sports",
+          "definitionEn": "Gliding along steel zip-lines suspended high between rainforest treetops in destinations like Monteverde, Arenal, and Sarapiquí.",
+          "definitionEs": "Deslizamiento por cables de acero suspendidos entre las copas de los árboles del bosque en Monteverde, Arenal y Sarapiquí.",
+          "sprite": "sprites/Background 1 Colinas_Long.png",
+          "audioFile": "audio/004 What tourist attractions can you find in La Fortuna de San Carlos.m4a"
+        },
+        {
+          "id": "KW_18",
+          "termEn": "Hot springs",
+          "termEs": "Aguas termales",
+          "category": "Nature & Ecosystems",
+          "definitionEn": "Natural geothermally heated mineral pools fed by volcanic activity around Arenal Volcano (La Fortuna), Rincón de la Vieja, and Orosi.",
+          "definitionEs": "Piscinas naturales de aguas minerales calentadas por la actividad volcánica en La Fortuna de San Carlos, Rincón de la Vieja y Orosi.",
+          "sprite": "sprites/Volcan_01-Sheet_6.png",
+          "audioFile": "audio/007 What volcanoes are located in Alajuela.m4a"
+        },
+        {
+          "id": "KW_19",
+          "termEn": "Scuba diving",
+          "termEs": "Buceo",
+          "category": "Adventure & Sports",
+          "definitionEn": "Swimming underwater with breathing equipment to explore coral reefs and marine life in Playas del Coco, Catalina Islands, Caño Island, and Cocos Island.",
+          "definitionEs": "Inmersión subacuática con equipo de respiración para explorar arrecifes y vida marina en Playas del Coco, Isla del Caño e Isla del Coco.",
+          "sprite": "sprites/Personaje_Sprites_02_snorkel 1_0.png",
+          "audioFile": "audio/003 Guanacaste, diving in coco, locutor 001 MASC.m4a"
+        },
+        {
+          "id": "KW_20",
+          "termEn": "Sport fishing",
+          "termEs": "Pesca deportiva",
+          "category": "Adventure & Sports",
+          "definitionEn": "Catch-and-release recreational fishing for marlin, sailfish, dorado, and tarpon along the Pacific marinas (Quepos, Golfito, Flamingo) and CaribbeanBarra del Colorado.",
+          "definitionEs": "Pesca recreativa de captura y liberación de pez vela, marlín y sábalo en Quepos, Golfito, Flamingo y Barra del Colorado.",
+          "sprite": "sprites/Pez Azul_0.png",
+          "audioFile": "audio/007 What sports can you practice in Limón.m4a"
+        },
+        {
+          "id": "KW_21",
+          "termEn": "Kayaking",
+          "termEs": "Kayak",
+          "category": "Adventure & Sports",
+          "definitionEn": "Paddling a narrow small boat across calm lagoons, mangroves, estuaries, and canals such as Tortuguero, Lake Arenal, and Golfo Dulce.",
+          "definitionEs": "Navegación con remo en una embarcación ligera por canales, manglares y lagos como Tortuguero, Lago Arenal y Golfo Dulce.",
+          "sprite": "sprites/bote down_0.png",
+          "audioFile": "audio/Limon Tortuguero Locutor 002 FEM.m4a"
+        },
+        {
+          "id": "KW_22",
+          "termEn": "Golfing",
+          "termEs": "Golf",
+          "category": "Adventure & Sports",
+          "definitionEn": "Playing golf on scenic coastal and Central Valley courses surrounded by tropical dry forest and ocean views in Guanacaste and Puntarenas.",
+          "definitionEs": "Práctica de golf en campos escénicos rodeados de bosque tropical y vistas al mar en Guanacaste, Puntarenas y el Valle Central.",
+          "sprite": "sprites/fondo.png",
+          "audioFile": "audio/010 What sports can you practice in Heredia.m4a"
+        }
+      ]
+    }
+  ],
+  "coreKeywords": [
+    {
+      "id": "KW_01",
+      "termEn": "Waterfalls",
+      "termEs": "Cataratas / Cascadas",
+      "category": "Nature & Ecosystems",
+      "definitionEn": "Cascading streams of water falling from high rocky cliffs in tropical mountains and rivers, such as La Fortuna, Río Celeste, and La Paz Waterfalls.",
+      "definitionEs": "Caídas de agua desde grandes alturas en montañas y ríos tropicales, como las cataratas de La Fortuna, Río Celeste y La Paz.",
+      "sprite": "sprites/arenallago.png",
+      "audioFile": "audio/005 What would you take on a trip to Rio Celeste.m4a",
+      "columnIndex": 1
+    },
+    {
+      "id": "KW_02",
+      "termEn": "Sea",
+      "termEs": "Mar / Océano",
+      "category": "Nature & Ecosystems",
+      "definitionEn": "Costa Rica is bordered by two bodies of salt water: the Caribbean Sea to the east and the Pacific Ocean to the west.",
+      "definitionEs": "Costa Rica está bañada por dos grandes masas de agua salada: el Mar Caribe al este y el Océano Pacífico al oeste.",
+      "sprite": "sprites/elcoco.png",
+      "audioFile": "audio/001 Guanacaste, Diving in coco, Lisa 001.m4a",
+      "columnIndex": 1
+    },
+    {
+      "id": "KW_03",
+      "termEn": "Jungles",
+      "termEs": "Selvas tropicales",
+      "category": "Nature & Ecosystems",
+      "definitionEn": "Dense, humid tropical rainforests teeming with biodiversity, giant trees, lianas, and wildlife in regions like Corcovado, Tortuguero, and Sarapiquí.",
+      "definitionEs": "Bosques tropicales húmedos y densos con enorme biodiversidad en regiones como Corcovado, Tortuguero y Sarapiquí.",
+      "sprite": "sprites/tortuguero.png",
+      "audioFile": "audio/Limon Tortuguero Locutor 001 FEM.m4a",
+      "columnIndex": 1
+    },
+    {
+      "id": "KW_04",
+      "termEn": "Volcanoes",
+      "termEs": "Volcanes",
+      "category": "Nature & Ecosystems",
+      "definitionEn": "Geological mountain formations with craters that emit lava, ash, and gases, including Irazú, Poás, Arenal, Turrialba, and Rincón de la Vieja.",
+      "definitionEs": "Formaciones montañosas con cráteres volcánicos como el Irazú, Poás, Arenal, Turrialba y Rincón de la Vieja.",
+      "sprite": "sprites/volcanes.png",
+      "audioFile": "audio/Volcanes, Irazú Volcano park ranger, 001.m4a",
+      "columnIndex": 1
+    },
+    {
+      "id": "KW_05",
+      "termEn": "Wildlife",
+      "termEs": "Vida silvestre / Fauna",
+      "category": "Biodiversity & Fauna",
+      "definitionEn": "Wild animals and plants living in their natural habitats; Costa Rica holds nearly 5% of the world’s biodiversity.",
+      "definitionEs": "Animales y plantas que viven en su hábitat natural; Costa Rica alberga cerca del 5% de la biodiversidad mundial.",
+      "sprite": "sprites/Mono_manuel_0.png",
+      "audioFile": "audio/Puntarenas Manuel Antonio Guardaparques 1.m4a",
+      "columnIndex": 1
+    },
+    {
+      "id": "KW_06",
+      "termEn": "Cloud forest",
+      "termEs": "Bosque nuboso",
+      "category": "Nature & Ecosystems",
+      "definitionEn": "High-altitude tropical mountain forest characterized by persistent low-level cloud cover, mosses, orchids, and the Resplendent Quetzal, such as Monteverde.",
+      "definitionEs": "Bosque montañoso de gran altitud cubierto de neblina constante, musgos, orquídeas y quetzales, como Monteverde.",
+      "sprite": "sprites/bosquehoja.png",
+      "audioFile": "audio/What is Monte Verde´s most famous attraction.m4a",
+      "columnIndex": 1
+    },
+    {
+      "id": "KW_07",
+      "termEn": "Beaches",
+      "termEs": "Playas",
+      "category": "Nature & Ecosystems",
+      "definitionEn": "Sandy coastal shorelines along the Pacific and Caribbean coasts, ranging from white and golden sand to volcanic black sand beaches.",
+      "definitionEs": "Costas de arena a lo largo del Pacífico y el Caribe, desde arenas blancas y doradas hasta playas de arena volcánica.",
+      "sprite": "sprites/playa.png",
+      "audioFile": "audio/006 All of the following are beaches in Guanacaste except.m4a",
+      "columnIndex": 1
+    },
+    {
+      "id": "KW_08",
+      "termEn": "Countryside",
+      "termEs": "Zona rural / Campo",
+      "category": "Culture & Traditions",
+      "definitionEn": "Rural agricultural landscapes, coffee highlands, dairy pastures, and traditional villages outside urban centers.",
+      "definitionEs": "Paisajes rurales, zonas agrícolas, cafetales, lecherías y pueblos tradicionales fuera de las ciudades.",
+      "sprite": "sprites/02-CoffeeFarm.png",
+      "audioFile": "audio/MASTER CAFE MARIA 001.m4a",
+      "columnIndex": 1
+    },
+    {
+      "id": "KW_09",
+      "termEn": "National parks",
+      "termEs": "Parques nacionales",
+      "category": "Nature & Ecosystems",
+      "definitionEn": "Protected natural reserves established by SINAC to conserve ecosystems and biodiversity, covering over a quarter of Costa Rica’s territory.",
+      "definitionEs": "Áreas silvestres protegidas para conservar los ecosistemas y la biodiversidad, que cubren más del 25% del territorio nacional.",
+      "sprite": "sprites/manuelantonio.png",
+      "audioFile": "audio/Puntarenas Manuel Antonio Lisa 001.m4a",
+      "columnIndex": 2
+    },
+    {
+      "id": "KW_10",
+      "termEn": "Surfing",
+      "termEs": "Surf / Surfear",
+      "category": "Adventure & Sports",
+      "definitionEn": "Water sport of riding ocean waves on a surfboard, practiced at famous beaches like Tamarindo, Jacó, Hermosa, Pavones, and Puerto Viejo (Salsa Brava).",
+      "definitionEs": "Deporte acuático que consiste en deslizarse sobre las olas del mar en una tabla, famoso en Tamarindo, Jacó, Hermosa y Puerto Viejo.",
+      "sprite": "sprites/tamarindo.png",
+      "audioFile": "audio/002 Guanacaste, tamarindoi, surf lisa 001.m4a",
+      "columnIndex": 2
+    },
+    {
+      "id": "KW_11",
+      "termEn": "Watching Crocodiles",
+      "termEs": "Avistamiento de cocodrilos",
+      "category": "Biodiversity & Fauna",
+      "definitionEn": "Observing wild American crocodiles (Crocodylus acutus) safely from bridges or guided riverboats along the Grande de Tárcoles River and Palo Verde.",
+      "definitionEs": "Observación segura de cocodrilos americanos en su hábitat natural en el río Grande de Tárcoles y Palo Verde.",
+      "sprite": "sprites/tarcoles.png",
+      "audioFile": "audio/Ok lets go to Tarcoles River LISA B.m4a",
+      "columnIndex": 2
+    },
+    {
+      "id": "KW_12",
+      "termEn": "Hiking",
+      "termEs": "Senderismo / Caminata",
+      "category": "Adventure & Sports",
+      "definitionEn": "Walking along nature trails through national parks, mountain peaks like Cerro Chirripó, volcano craters, and rainforest reserves.",
+      "definitionEs": "Caminata por senderos naturales a través de parques nacionales, el Cerro Chirripó, volcanes y reservas biológicas.",
+      "sprite": "sprites/barrahonda.png",
+      "audioFile": "audio/001 Guanacaste, Barra Honda Park ranger 001.m4a",
+      "columnIndex": 2
+    },
+    {
+      "id": "KW_13",
+      "termEn": "Camping",
+      "termEs": "Acampar",
+      "category": "Adventure & Sports",
+      "definitionEn": "Staying overnight outdoors in tents at designated national park sectors such as Santa Rosa, Junquillal, and Barra Honda.",
+      "definitionEs": "Pernoctar al aire libre en tiendas de campaña en áreas autorizadas de parques nacionales como Santa Rosa y Barra Honda.",
+      "sprite": "sprites/Mochileros_Spritesheet_0.png",
+      "audioFile": "audio/001 Is “Bosque de la Hoja” a place where you can enjoy nature.m4a",
+      "columnIndex": 2
+    },
+    {
+      "id": "KW_14",
+      "termEn": "Typical food",
+      "termEs": "Comida típica",
+      "category": "Culture & Traditions",
+      "definitionEn": "Traditional Costa Rican dishes including Gallo Pinto, Casado, Olla de Carne, Chorreadas, Tamales, Churchill, and Caribbean Rice and Beans with Rondón.",
+      "definitionEs": "Gastronomía tradicional costarricense como el Gallo Pinto, Casado, Olla de Carne, Tamales, Churchill y el Rice and Beans caribeño.",
+      "sprite": "sprites/Recetas e ingredientes_2.png",
+      "audioFile": "audio/Mark the typical dishes form Limón that you have tasted.m4a",
+      "columnIndex": 2
+    },
+    {
+      "id": "KW_15",
+      "termEn": "Bird watching",
+      "termEs": "Avistamiento de aves",
+      "category": "Biodiversity & Fauna",
+      "definitionEn": "Observing Costa Rica’s more than 900 bird species, including the Resplendent Quetzal, Scarlet Macaw, Keel-billed Toucan, Hummingbirds, and Yigüirro.",
+      "definitionEs": "Observación de las más de 900 especies de aves del país, como el Quetzal, la Lapa Roja, el Tucán, los Colibríes y el Yigüirro.",
+      "sprite": "sprites/vulture-Sheet_0.png",
+      "audioFile": "audio/006 fauna cahuita.m4a",
+      "columnIndex": 2
+    },
+    {
+      "id": "KW_16",
+      "termEn": "Rafting on rivers",
+      "termEs": "Rafting en ríos / Rápidos",
+      "category": "Adventure & Sports",
+      "definitionEn": "Navigating white-water river rapids in an inflatable raft with paddles on rivers such as the Pacuare, Reventazón, Sarapiquí, and Savegre.",
+      "definitionEs": "Descenso en balsa inflable por los rápidos de ríos caudalosos como el Pacuare, Reventazón, Sarapiquí y Savegre.",
+      "sprite": "sprites/BG_SJ_Rafting.png",
+      "audioFile": "audio/006 What should you take with you on the Pacuare River for safety.m4a",
+      "columnIndex": 3
+    },
+    {
+      "id": "KW_17",
+      "termEn": "Canopy tours",
+      "termEs": "Canopy / Tirolesa",
+      "category": "Adventure & Sports",
+      "definitionEn": "Gliding along steel zip-lines suspended high between rainforest treetops in destinations like Monteverde, Arenal, and Sarapiquí.",
+      "definitionEs": "Deslizamiento por cables de acero suspendidos entre las copas de los árboles del bosque en Monteverde, Arenal y Sarapiquí.",
+      "sprite": "sprites/Background 1 Colinas_Long.png",
+      "audioFile": "audio/004 What tourist attractions can you find in La Fortuna de San Carlos.m4a",
+      "columnIndex": 3
+    },
+    {
+      "id": "KW_18",
+      "termEn": "Hot springs",
+      "termEs": "Aguas termales",
+      "category": "Nature & Ecosystems",
+      "definitionEn": "Natural geothermally heated mineral pools fed by volcanic activity around Arenal Volcano (La Fortuna), Rincón de la Vieja, and Orosi.",
+      "definitionEs": "Piscinas naturales de aguas minerales calentadas por la actividad volcánica en La Fortuna de San Carlos, Rincón de la Vieja y Orosi.",
+      "sprite": "sprites/Volcan_01-Sheet_6.png",
+      "audioFile": "audio/007 What volcanoes are located in Alajuela.m4a",
+      "columnIndex": 3
+    },
+    {
+      "id": "KW_19",
+      "termEn": "Scuba diving",
+      "termEs": "Buceo",
+      "category": "Adventure & Sports",
+      "definitionEn": "Swimming underwater with breathing equipment to explore coral reefs and marine life in Playas del Coco, Catalina Islands, Caño Island, and Cocos Island.",
+      "definitionEs": "Inmersión subacuática con equipo de respiración para explorar arrecifes y vida marina en Playas del Coco, Isla del Caño e Isla del Coco.",
+      "sprite": "sprites/Personaje_Sprites_02_snorkel 1_0.png",
+      "audioFile": "audio/003 Guanacaste, diving in coco, locutor 001 MASC.m4a",
+      "columnIndex": 3
+    },
+    {
+      "id": "KW_20",
+      "termEn": "Sport fishing",
+      "termEs": "Pesca deportiva",
+      "category": "Adventure & Sports",
+      "definitionEn": "Catch-and-release recreational fishing for marlin, sailfish, dorado, and tarpon along the Pacific marinas (Quepos, Golfito, Flamingo) and CaribbeanBarra del Colorado.",
+      "definitionEs": "Pesca recreativa de captura y liberación de pez vela, marlín y sábalo en Quepos, Golfito, Flamingo y Barra del Colorado.",
+      "sprite": "sprites/Pez Azul_0.png",
+      "audioFile": "audio/007 What sports can you practice in Limón.m4a",
+      "columnIndex": 3
+    },
+    {
+      "id": "KW_21",
+      "termEn": "Kayaking",
+      "termEs": "Kayak",
+      "category": "Adventure & Sports",
+      "definitionEn": "Paddling a narrow small boat across calm lagoons, mangroves, estuaries, and canals such as Tortuguero, Lake Arenal, and Golfo Dulce.",
+      "definitionEs": "Navegación con remo en una embarcación ligera por canales, manglares y lagos como Tortuguero, Lago Arenal y Golfo Dulce.",
+      "sprite": "sprites/bote down_0.png",
+      "audioFile": "audio/Limon Tortuguero Locutor 002 FEM.m4a",
+      "columnIndex": 3
+    },
+    {
+      "id": "KW_22",
+      "termEn": "Golfing",
+      "termEs": "Golf",
+      "category": "Adventure & Sports",
+      "definitionEn": "Playing golf on scenic coastal and Central Valley courses surrounded by tropical dry forest and ocean views in Guanacaste and Puntarenas.",
+      "definitionEs": "Práctica de golf en campos escénicos rodeados de bosque tropical y vistas al mar en Guanacaste, Puntarenas y el Valle Central.",
+      "sprite": "sprites/fondo.png",
+      "audioFile": "audio/010 What sports can you practice in Heredia.m4a",
+      "columnIndex": 3
+    }
+  ],
+  "extendedCulturalTerms": [
+    {
+      "id": "CULT_01",
+      "termEn": "Pura Vida",
+      "termEs": "Pura Vida",
+      "category": "Culture & Traditions",
+      "provinceId": 0,
+      "definitionEn": "Costa Rica’s national motto and cultural philosophy signifying gratitude, peace, optimism, hello, goodbye, and living life to the fullest.",
+      "definitionEs": "Expresión nacional y filosofía de vida costarricense que refleja gratitud, optimismo, armonía, saludo y bienestar.",
+      "sprite": "sprites/Logo Costa Rica Final Grande.png",
+      "audioFile": "audio/MASTER MENU DANIEL 001.m4a"
+    },
+    {
+      "id": "CULT_02",
+      "termEn": "Pre-Columbian Gold Museum",
+      "termEs": "Museo del Oro Precolombino",
+      "category": "Pre-Columbian Heritage",
+      "provinceId": 0,
+      "definitionEn": "Underground museum beneath Plaza de la Cultura in San José managed by the Central Bank of Costa Rica, preserving over 1,600 Indigenous gold artifacts.",
+      "definitionEs": "Museo subterráneo bajo la Plaza de la Cultura en San José que conserva más de 1.600 piezas de orfebrería indígena precolombina.",
+      "sprite": "sprites/03-MuseoDelOro.png",
+      "audioFile": "audio/MASTER MUSEO ORO TICO1NPC 001.m4a"
+    },
+    {
+      "id": "CULT_03",
+      "termEn": "Coffee Cherry (Grano de Oro)",
+      "termEs": "Fruto del Café (Grano de Oro)",
+      "category": "Culture & Traditions",
+      "provinceId": 0,
+      "definitionEn": "Ripe red coffee fruit harvested in baskets (canastos) across Costa Rica’s volcanic valleys; historically called the \"Golden Bean\" for driving national development.",
+      "definitionEs": "Fruto rojo maduro del cafeto recolectado en canastos; llamado históricamente el \"Grano de Oro\" por su aporte al desarrollo de Costa Rica.",
+      "sprite": "sprites/Tilemap_cafetal_32x32 V2_44.png",
+      "audioFile": "audio/MASTER CAFE MARIA 002.m4a"
+    },
+    {
+      "id": "CULT_04",
+      "termEn": "Masquerade Parade (Mascarada)",
+      "termEs": "Mascarada tradicional costarricense",
+      "category": "Culture & Traditions",
+      "provinceId": 1,
+      "definitionEn": "Festive street parade featuring giant hand-crafted papier-mâché masks (Gigantas, Diablos, Calaveras) dancing to Cimarrona brass bands in Barva de Heredia and Cartago.",
+      "definitionEs": "Desfile festivo con grandes máscaras artesanales (mantudos y gigantas) que bailan al ritmo de la cimarrona en pueblos como Barva de Heredia.",
+      "sprite": "sprites/Giganta_anim_0.png",
+      "audioFile": "audio/Mascarada Lisa 001.m4a"
+    },
+    {
+      "id": "CULT_05",
+      "termEn": "City of Flowers",
+      "termEs": "Ciudad de las Flores (Heredia)",
+      "category": "Culture & Traditions",
+      "provinceId": 1,
+      "definitionEn": "Popular nickname for Heredia, honoring both its lush gardens and floriculture industry as well as the historic Flores family.",
+      "definitionEs": "Sobrenombre tradicional de la provincia de Heredia, famosa por sus jardines, viveros, floristerías y su herencia histórica.",
+      "sprite": "sprites/flores.png",
+      "audioFile": "audio/003 Is Heredia called the city of flowers.m4a"
+    },
+    {
+      "id": "CULT_06",
+      "termEn": "Sanatorio Carlos Durán",
+      "termEs": "Sanatorio Carlos Durán",
+      "category": "Culture & Traditions",
+      "provinceId": 2,
+      "definitionEn": "Historic hospital complex founded in 1918 in Tierra Blanca, Cartago, by Dr. Carlos Durán Cartín to treat tuberculosis patients; today a cultural and architectural landmark.",
+      "definitionEs": "Histórico hospital fundado en 1918 en Tierra Blanca de Cartago por el Dr. Carlos Durán Cartín; hoy patrimonio arquitectónico y turístico.",
+      "sprite": "sprites/sanatorio.png",
+      "audioFile": "audio/Sanatorio Duran Locutor 001 MASC.m4a"
+    },
+    {
+      "id": "CULT_07",
+      "termEn": "Churchill",
+      "termEs": "Churchill puntarenense",
+      "category": "Culture & Traditions",
+      "provinceId": 4,
+      "definitionEn": "Iconic cold dessert from the Paseo de los Turistas in Puntarenas made with shaved ice, red kola syrup, powdered milk, condensed milk, and ice cream.",
+      "definitionEs": "Tradicional granizado del Paseo de los Turistas en Puntarenas preparado con hielo raspado, sirope de kola, leche en polvo, leche condensada y helado.",
+      "sprite": "sprites/Carrito Churchill.png",
+      "audioFile": "audio/Puntarenas churchil Luis vendedor1.m4a"
+    },
+    {
+      "id": "CULT_08",
+      "termEn": "Caribbean Rice and Beans",
+      "termEs": "Rice and Beans caribeño",
+      "category": "Caribbean Cuisine",
+      "provinceId": 6,
+      "definitionEn": "Signature Afro-Caribbean dish of Limón made by slow-cooking red beans and rice in fresh coconut milk with thyme, garlic, onion, and habanero (Panamanian) pepper.",
+      "definitionEs": "Platillo emblemático afrocaribeño de Limón cocinado con frijoles rojos y arroz en leche de coco, tomillo, ajo, cebolla y chile panameño.",
+      "sprite": "sprites/Recetas e ingredientes_2.png",
+      "audioFile": "audio/RiceAndBeansReceta.m4a"
+    },
+    {
+      "id": "CULT_09",
+      "termEn": "Rondón",
+      "termEs": "Rondón caribeño",
+      "category": "Caribbean Cuisine",
+      "provinceId": 6,
+      "definitionEn": "Traditional Limón coconut milk soup (\"Run Down\") simmered with fresh fish, yucca, yellow yam, sweet potatoes, carrots, plantains, ginger, thyme, and Panama chili.",
+      "definitionEs": "Sopa tradicional de Limón cocinada en leche de coco con pescado fresco, yuca, ñame, camote, zanahoria, jengibre, tomillo y chile panameño.",
+      "sprite": "sprites/Recetas e ingredientes_3.png",
+      "audioFile": "audio/Receta Rondon A-Fix.m4a"
+    },
+    {
+      "id": "CULT_10",
+      "termEn": "Patty",
+      "termEs": "Patí limonense",
+      "category": "Caribbean Cuisine",
+      "provinceId": 6,
+      "definitionEn": "Golden baked pastry turnover stuffed with spiced ground beef, coconut milk, thyme, and fiery habanero/Panama chili pepper.",
+      "definitionEs": "Empanada horneada rellena de carne molida condimentada con leche de coco, tomillo, especias y chile panameño.",
+      "sprite": "sprites/Recetas e ingredientes_0.png",
+      "audioFile": "audio/Receta Paty A.m4a"
+    },
+    {
+      "id": "CULT_11",
+      "termEn": "Agua de Sapo",
+      "termEs": "Agua de Sapo (Hiel)",
+      "category": "Caribbean Cuisine",
+      "provinceId": 6,
+      "definitionEn": "Refreshing Limón beverage made by boiling brown cane sugar (tapa de dulce) and fresh ginger root in water, chilled with fresh lemon juice and ice.",
+      "definitionEs": "Bebida refrescante típica de Limón elaborada con tapa de dulce, jengibre fresco, jugo de limón y hielo.",
+      "sprite": "sprites/Recetas e ingredientes_1.png",
+      "audioFile": "audio/Receta Agua de Sapo A.m4a"
+    },
+    {
+      "id": "CULT_12",
+      "termEn": "Pan Bon",
+      "termEs": "Pan Bon (Pan negro caribeño)",
+      "category": "Caribbean Cuisine",
+      "provinceId": 6,
+      "definitionEn": "Dark spiced sweet bread from Limón baked with brown sugar/molasses, cinnamon, nutmeg, vanilla, raisins, and candied fruit.",
+      "definitionEs": "Pan dulce especiado de Limón horneado con azúcar moreno o melaza, canela, nuez moscada, vainilla, pasas y frutas confitadas.",
+      "sprite": "sprites/Recetas e ingredientes_4.png",
+      "audioFile": "audio/Receta Pan Bon A.m4a"
+    },
+    {
+      "id": "CULT_13",
+      "termEn": "West Indian Manatee",
+      "termEs": "Manatí del Caribe",
+      "category": "Biodiversity & Fauna",
+      "provinceId": 6,
+      "definitionEn": "Gentle herbivorous marine mammal living in the canals of Tortuguero and Barra del Colorado; declared Costa Rica’s National Symbol of Marine Fauna in 2014.",
+      "definitionEs": "Mamífero acuático herbívoro que habita los canales de Tortuguero; declarado Símbolo Nacional de la Fauna Marina de Costa Rica en 2014.",
+      "sprite": "sprites/Manatee-Sheet2_0.png",
+      "audioFile": "audio/Limon Tortuguero Locutor 003 FEM.m4a"
+    },
+    {
+      "id": "CULT_14",
+      "termEn": "Sea Turtle Nesting (Arribada / Desove)",
+      "termEs": "Desove de tortugas marinas",
+      "category": "Biodiversity & Fauna",
+      "provinceId": 6,
+      "definitionEn": "Natural cycle where green, leatherback, hawksbill, and olive ridley sea turtles come ashore at Tortuguero and Ostional to lay their eggs in the sand.",
+      "definitionEs": "Proceso natural en el que las tortugas marinas llegan a playas como Tortuguero y Ostional para depositar sus huevos en la arena.",
+      "sprite": "sprites/Tortu_verde_0__sharedassets40_32.png",
+      "audioFile": "audio/Limon tortugas Sara (conservacionista) 001.m4a"
+    },
+    {
+      "id": "CULT_15",
+      "termEn": "Limestone Caverns (Stalactites & Stalagmites)",
+      "termEs": "Cavernas calcáreas (Estalactitas y Estalagmitas)",
+      "category": "Nature & Ecosystems",
+      "provinceId": 5,
+      "definitionEn": "Underground karst caves in Barra Honda National Park featuring mineral formations hanging from ceilings (stalactites) and rising from floors (stalagmites).",
+      "definitionEs": "Cuevas subterráneas del Parque Nacional Barra Honda con formaciones de carbonato de calcio en el techo (estalactitas) y el suelo (estalagmitas).",
+      "sprite": "sprites/GNBH_Background2.png",
+      "audioFile": "audio/002 Guanacaste, Barra Honda Park ranger 002.m4a"
+    }
+  ]
+}
