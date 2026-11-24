@@ -409,141 +409,125 @@ export default function CostaRicaMapScreen() {
         />
       )}
 
-      {/* Modal 4: Province Hub Modal ("canvasProvincia" / MCR_MostrarJuegos) */}
+      {/* Modal 4: Province Hub Overlay ("canvasProvincia" / MCR_MostrarJuegos - 1:1 Unity Original) */}
       {hubProvince && (
-        <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-          <div
-            className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl border-4 border-amber-300 bg-[#23649e] p-6 sm:p-7 shadow-2xl text-white"
+        <div
+          className="absolute inset-0 z-40 flex flex-col items-center justify-center"
+          style={{
+            backgroundColor: 'rgba(255, 255, 255, 0.72)',
+            backdropFilter: 'blur(2px)',
+            WebkitBackdropFilter: 'blur(2px)',
+            padding: '24px 40px'
+          }}
+        >
+          {/* Top Centered Title: "Welcome to Heredia!" */}
+          <h2
+            className="font-hanken text-center tracking-tight"
             style={{
-              backgroundImage: `url("${assetUrl(hubProvince.panelBackgroundSprite || 'sprites/fondo 1.png')}")`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
+              color: '#111111',
+              fontSize: 'clamp(30px, 4vw, 44px)',
+              fontWeight: 700,
+              lineHeight: 1.15,
+              marginBottom: '26px',
+              textShadow: '0 1px 2px rgba(255, 255, 255, 0.85)'
             }}
           >
-            <button
-              type="button"
-              onClick={() => {
-                playSfx(39);
-                setActiveProvinceHub(null);
-              }}
-              className="absolute top-4 right-4 w-9 h-9 rounded-full bg-rose-600 hover:bg-rose-500 flex items-center justify-center shadow-lg"
-            >
-              <X className="w-5 h-5" />
-            </button>
+            {hubProvince.welcomeTitle}
+          </h2>
 
-            {/* Province Header */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 border-b border-sky-300/30 pb-4 mb-5">
+          {/* Two-Column Body: Left = 3 Blue Buttons + Green Close, Right = Large Coat of Arms */}
+          <div
+            className="w-full flex flex-col sm:flex-row items-center justify-center"
+            style={{
+              maxWidth: '820px',
+              gap: '36px'
+            }}
+          >
+            {/* Left Column: Minigames + Close */}
+            <div
+              className="flex flex-col"
+              style={{
+                width: '100%',
+                maxWidth: '430px',
+                gap: '16px',
+                flexShrink: 0
+              }}
+            >
+              {hubProvince.minigames.map((mg) => (
+                <button
+                  key={mg.id}
+                  type="button"
+                  onClick={() => {
+                    playSfx(38);
+                    launchMinigame(mg.id, false);
+                  }}
+                  style={{
+                    backgroundImage: `url("${assetUrl(provincesData.mapSprites.primaryButton || 'sprites/boton_2.png')}")`,
+                    backgroundSize: '100% 100%',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundColor: 'transparent',
+                    border: 'none',
+                    width: '100%',
+                    height: '66px',
+                    padding: '0 24px',
+                    color: '#ffffff',
+                    fontFamily: "'Hanken', 'OpenSans', sans-serif",
+                    fontWeight: 300,
+                    fontSize: '25px',
+                    letterSpacing: '0.02em',
+                    cursor: 'pointer'
+                  }}
+                  className="flex items-center justify-center transition transform hover:scale-[1.02] active:scale-[0.98] focus:outline-none"
+                >
+                  <span className="truncate">{mg.buttonLabel}</span>
+                </button>
+              ))}
+
+              {/* Green Close Button */}
+              <button
+                type="button"
+                onClick={() => {
+                  playSfx(39);
+                  setActiveProvinceHub(null);
+                }}
+                style={{
+                  backgroundImage: `url("${assetUrl(provincesData.mapSprites.secondaryButton || 'sprites/boton_3.png')}")`,
+                  backgroundSize: '100% 100%',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundColor: 'transparent',
+                  border: 'none',
+                  width: '100%',
+                  height: '66px',
+                  marginTop: '6px',
+                  padding: '0 24px',
+                  color: '#ffffff',
+                  fontFamily: "'Hanken', 'OpenSans', sans-serif",
+                  fontWeight: 300,
+                  fontSize: '26px',
+                  letterSpacing: '0.02em',
+                  cursor: 'pointer'
+                }}
+                className="flex items-center justify-center transition transform hover:scale-[1.02] active:scale-[0.98] focus:outline-none"
+              >
+                Close
+              </button>
+            </div>
+
+            {/* Right Column: Province Coat of Arms */}
+            <div className="flex items-center justify-center" style={{ flex: 1 }}>
               <img
                 src={assetUrl(hubProvince.coatOfArmsSprite)}
                 alt={hubProvince.nameEn}
-                className="w-20 h-20 object-contain drop-shadow-lg"
-              />
-              <div className="flex-1 text-center sm:text-left">
-                <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-                  <h2 className="font-amaranth text-3xl font-bold text-amber-300 drop-shadow">
-                    {hubProvince.welcomeTitle}
-                  </h2>
-                  <button
-                    type="button"
-                    onClick={() => playProvinceWelcome(hubProvince)}
-                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-sky-900/90 hover:bg-sky-800 text-xs font-bold text-amber-200 border border-sky-300/40"
-                  >
-                    <Volume2 className="w-3.5 h-3.5" /> Welcome Voice
-                  </button>
-                </div>
-                <p className="text-xs sm:text-sm text-sky-100 mt-1 leading-relaxed">
-                  {hubProvince.culturalDescriptionEn}
-                </p>
-              </div>
-              <StarMeter
-                levelStr={starsByProvince[hubProvince.id]?.raw || '000'}
-                size="md"
-                showCount
+                style={{
+                  width: '285px',
+                  height: '285px',
+                  maxWidth: '100%',
+                  objectFit: 'contain',
+                  filter: 'drop-shadow(0 6px 14px rgba(0, 0, 0, 0.22))'
+                }}
+                draggable={false}
               />
             </div>
-
-            {/* 3 Official Regional Minigames */}
-            <h3 className="font-amaranth text-xl font-bold text-amber-300 mb-3">
-              Select a Regional Adventure (Complete all 3 to earn the Province Star!)
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
-              {hubProvince.minigames.map((mg) => {
-                const pieceEarned =
-                  starsByProvince[hubProvince.id]?.pieces?.[mg.starPieceIndex] || false;
-                const pieceNames = ['Left Star Piece', 'Center Star Piece', 'Right Star Piece'];
-
-                return (
-                  <div
-                    key={mg.id}
-                    onClick={() => {
-                      playSfx(38);
-                      launchMinigame(mg.id, false);
-                    }}
-                    className="group cursor-pointer rounded-2xl border-2 border-sky-200/60 hover:border-amber-300 bg-sky-950/85 hover:bg-sky-900/90 overflow-hidden flex flex-col justify-between shadow-xl transition transform hover:-translate-y-1"
-                  >
-                    <div className="relative h-32 w-full bg-slate-900 overflow-hidden flex items-center justify-center">
-                      <img
-                        src={assetUrl(mg.bannerSprite)}
-                        alt={mg.buttonLabel}
-                        className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                      />
-                      <div className="absolute top-2 right-2 px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-slate-950/85 border border-amber-300/60 text-amber-300 flex items-center gap-1">
-                        <span>{pieceEarned ? '★ Completed' : '☆ Locked'}</span>
-                      </div>
-                    </div>
-
-                    <div className="p-3.5 flex-1 flex flex-col justify-between">
-                      <div>
-                        <div className="font-amaranth text-lg font-bold text-white leading-snug">
-                          {mg.buttonLabel}
-                        </div>
-                        <div className="text-xs text-sky-300 mt-0.5">{mg.titleEs}</div>
-                        <div className="text-[11px] text-amber-200/90 mt-1">
-                          Awards: {pieceNames[mg.starPieceIndex]}
-                        </div>
-                      </div>
-
-                      <button
-                        type="button"
-                        className="mt-3 w-full py-2 rounded-xl bg-amber-400 group-hover:bg-amber-300 text-slate-950 font-amaranth font-bold text-sm flex items-center justify-center gap-1.5 shadow transition"
-                      >
-                        <Play className="w-4 h-4 fill-current" />
-                        Play Adventure
-                      </button>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Optional Rescued Cultural / Historical Bonus Minigames for Cartago & Alajuela */}
-            {hubBonusMinigames.length > 0 && (
-              <div className="pt-3 border-t border-sky-300/30">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-200 mb-2.5">
-                  <Sparkles className="w-4 h-4 text-amber-300" />
-                  <span>Bonus Cultural & Historical Activities ({hubProvince.nameEn})</span>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  {hubBonusMinigames.map((bmg) => (
-                    <button
-                      key={bmg.id}
-                      type="button"
-                      onClick={() => {
-                        playSfx(38);
-                        launchMinigame(bmg.id, true);
-                      }}
-                      className="p-3 rounded-2xl bg-sky-950/75 hover:bg-sky-900 border border-amber-300/50 text-left flex items-center justify-between gap-2 shadow transition"
-                    >
-                      <div>
-                        <div className="font-bold text-sm text-white">{bmg.titleEn}</div>
-                        <div className="text-[11px] text-amber-300">{bmg.titleEs}</div>
-                      </div>
-                      <Play className="w-4 h-4 text-amber-300 shrink-0" />
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
         </div>
       )}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { assetUrl } from '../../utils/assetUrl';
 import { Flower2, Volume2, MapPin, CheckCircle2, Bike, Sparkles, ArrowUp, ArrowDown } from 'lucide-react';
+import MountainBikeCanvas from './MountainBikeCanvas';
 
 /**
  * 1. HD_Entregar_Flores - Delivering Flowers in Heredia ("The City of Flowers")
@@ -522,185 +523,17 @@ export function MascaradaGame({ minigame, character, onComplete, playSfx }) {
 
 /**
  * 3. HD_Mountainbike - Bosque de la Hoja Mountain Biking (Heredia)
- * Ride your mountain bike along the 3 cypress forest trails of Heredia,
- * jumping cliffs/rocks and collecting trail coins before the timer runs out!
+ * 2D HTML5 Canvas side-scrolling platformer with real slopes, log bridges,
+ * cliffs, multi-layer parallax, original Mike/Lisa bike sprites, coins (+100),
+ * and Ready/Set/Goooo! countdown.
  */
 export function MountainBikeGame({ minigame, character, onComplete, playSfx }) {
-  const [trail, setTrail] = useState(1); // 0, 1, 2
-  const [distance, setDistance] = useState(0); // 0 to 100%
-  const [coins, setCoins] = useState(0);
-  const [energy, setEnergy] = useState(3);
-  const [hazards, setHazards] = useState([]);
-
-  const trailRef = useRef(trail);
-  trailRef.current = trail;
-  const coinsRef = useRef(coins);
-  coinsRef.current = coins;
-  const doneRef = useRef(false);
-  const nextId = useRef(1);
-
-  useEffect(() => {
-    const onKey = (e) => {
-      if (e.key === 'ArrowUp' || e.key === 'w' || e.key === 'W') {
-        e.preventDefault();
-        setTrail((t) => Math.max(0, t - 1));
-      } else if (e.key === 'ArrowDown' || e.key === 's' || e.key === 'S') {
-        e.preventDefault();
-        setTrail((t) => Math.min(2, t + 1));
-      }
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, []);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      if (doneRef.current) return;
-
-      setDistance((d) => {
-        const next = d + 1.25;
-        if (next >= 100 && !doneRef.current) {
-          doneRef.current = true;
-          onComplete({
-            won: true,
-            score: 100 + coinsRef.current * 15,
-            coinsEarned: 1100 + coinsRef.current * 50,
-            summary: `Completed the Bosque de la Hoja Mountain Bike trail with ${coinsRef.current} trail coins!`
-          });
-        }
-        return Math.min(100, next);
-      });
-
-      setHazards((prev) => {
-        const moved = prev.map((h) => ({ ...h, x: h.x - 4.0 })).filter((h) => h.x > -10);
-        const kept = [];
-
-        for (const h of moved) {
-          if (h.x <= 22 && h.x >= 12 && h.trail === trailRef.current) {
-            if (h.type === 'coin') {
-              playSfx(36);
-              setCoins((c) => c + 1);
-            } else {
-              playSfx(37);
-              setEnergy((en) => {
-                const ne = en - 1;
-                if (ne <= 0 && !doneRef.current) {
-                  doneRef.current = true;
-                  onComplete({
-                    won: false,
-                    score: Math.round(distance),
-                    coinsEarned: coinsRef.current * 50,
-                    summary: 'Crashed into too many mountain rocks! Switch trails with Up/Down or click a trail.'
-                  });
-                }
-                return ne;
-              });
-            }
-          } else {
-            kept.push(h);
-          }
-        }
-
-        if (Math.random() < 0.36) {
-          const isCoin = Math.random() < 0.45;
-          kept.push({
-            id: nextId.current++,
-            trail: Math.floor(Math.random() * 3),
-            x: 102,
-            type: isCoin ? 'coin' : 'rock'
-          });
-        }
-
-        return kept;
-      });
-    }, 75);
-
-    return () => clearInterval(timer);
-  }, [distance, onComplete, playSfx]);
-
   return (
-    <div className="relative w-full h-full flex flex-col bg-gradient-to-b from-emerald-950 via-green-900 to-amber-950 text-white overflow-hidden select-none">
-      {/* Top HUD */}
-      <div className="flex items-center justify-between px-4 py-2 bg-slate-950/85 border-b border-emerald-400/40 z-10">
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1">
-            {Array.from({ length: 3 }).map((_, i) => (
-              <span key={i} className={`text-lg ${i < energy ? 'opacity-100' : 'opacity-25'}`}>
-                🚵
-              </span>
-            ))}
-          </div>
-          <span className="px-3 py-1 rounded-xl bg-amber-500/20 border border-amber-400 text-amber-300 font-display text-xs">
-            Trail Coins: +{coins * 50}
-          </span>
-        </div>
-
-        <div className="flex items-center gap-2 w-64">
-          <Bike className="w-4 h-4 text-emerald-300" />
-          <div className="flex-1 h-3 bg-slate-800 rounded-full overflow-hidden border border-white/20">
-            <div className="h-full bg-gradient-to-r from-emerald-400 to-lime-300" style={{ width: `${distance}%` }} />
-          </div>
-          <span className="text-xs font-display">{Math.round(distance)}%</span>
-        </div>
-
-        <span className="text-xs text-emerald-200 font-bold">
-          Switch Trails: ↑ / ↓ or Click Trail
-        </span>
-      </div>
-
-      {/* Cypress Forest Backdrop + 3 Dirt Trails */}
-      <div className="relative flex-1 flex flex-col justify-end py-3">
-        <div className="px-4 pb-2 flex items-center justify-around text-3xl opacity-70 pointer-events-none">
-          <span>🌲</span><span>🌲</span><span>⛰️</span><span>🌲</span><span>🌲</span><span>⛰️</span><span>🌲</span>
-        </div>
-
-        {[0, 1, 2].map((tIdx) => (
-          <div
-            key={tIdx}
-            onClick={() => setTrail(tIdx)}
-            className={`relative flex-1 my-1 mx-3 rounded-2xl border-y-2 border-amber-500/40 flex items-center cursor-pointer transition-colors ${
-              trail === tIdx
-                ? 'bg-amber-900/75 ring-2 ring-amber-300'
-                : 'bg-amber-950/60 hover:bg-amber-900/50'
-            }`}
-          >
-            <span className="ml-3 text-xs font-display text-amber-200/60">
-              Cypress Trail {tIdx + 1}
-            </span>
-
-            {trail === tIdx && (
-              <div
-                style={{ left: '16%' }}
-                className="absolute -translate-x-1/2 px-3 py-1.5 rounded-2xl bg-emerald-400 text-slate-950 border-2 border-white shadow-xl flex items-center gap-1.5 z-20"
-              >
-                <Bike className="w-6 h-6" />
-                <span className="font-display text-xs">{character}</span>
-              </div>
-            )}
-
-            {hazards
-              .filter((h) => h.trail === tIdx)
-              .map((h) => (
-                <div
-                  key={h.id}
-                  style={{ left: `${h.x}%` }}
-                  className="absolute -translate-x-1/2 z-10 pointer-events-none"
-                >
-                  {h.type === 'coin' ? (
-                    <div className="w-9 h-9 rounded-full bg-amber-400/30 border-2 border-amber-300 flex items-center justify-center animate-bounce">
-                      <img src={assetUrl('sprites/moneda.png')} alt="Coin" className="w-6 h-6 object-contain" />
-                    </div>
-                  ) : (
-                    <div className="px-3 py-1.5 rounded-xl bg-stone-800 border-2 border-rose-400 shadow-lg flex items-center gap-1">
-                      <span className="text-lg">🪨</span>
-                      <span className="text-[10px] font-bold text-rose-200">Rock</span>
-                    </div>
-                  )}
-                </div>
-              ))}
-          </div>
-        ))}
-      </div>
-    </div>
+    <MountainBikeCanvas
+      minigame={minigame}
+      character={character}
+      onComplete={onComplete}
+      playSfx={playSfx}
+    />
   );
 }
