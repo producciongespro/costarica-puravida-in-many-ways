@@ -141,7 +141,7 @@ Durante la ingeniería inversa de `PopQuiz.cs` (Fase 3 y Fase 4) se documentó u
 - **Sincronización en la Aplicación Reconstruida:**
   1. `app/src/data/gameConfig.json` define `economyAndProgression.travelCostCoins: 5000` y `travelCostDisplayedInUiText: 1000`.
   2. `app/src/data/provinces.json` conserva el texto original en `mapModals.confirmRegionChange.promptText` y define `actualCoinsDeductedInCode: 5000`.
-  3. `app/src/components/screens/CostaRicaMapScreen.jsx` lee `gameConfig.economyAndProgression.travelCostCoins` (`5000`), muestra una nota aclaratoria transparente al estudiante (*"Note: Traveling deducts 5,000 coins and launches a PopQuiz question"*), y permite eximir el cobro cuando se activa el **Modo Docente MEP (`teacherFreeTravel`)**.
+  3. `app/src/components/screens/CostaRicaMapScreen.jsx` lee `gameConfig.economyAndProgression.travelCostCoins` (`5000`) y muestra una nota aclaratoria transparente al estudiante (*"Note: Traveling deducts 5,000 coins and launches a PopQuiz question"*).
 
 ### 3.4. Los 25 Minijuegos Reconstruidos (`21` Oficiales + `4` Variantes Rescatadas)
 | Provincia (`ID`) | Minijuegos Oficiales (Otorgan Piezas de Estrella `0`, `1`, `2`) | Variantes Rescatadas del Binario (Actividades Culturales Bonus) |
@@ -171,13 +171,6 @@ Durante la ingeniería inversa de `PopQuiz.cs` (Fase 3 y Fase 4) se documentó u
    - Si la pregunta es de **selección única**, haz clic directamente en la respuesta correcta. Si es de **selección múltiple**, marca todas las casillas correctas y presiona **Evaluate**.
 5. **Glosario Bilingüe (`Keywords`):**
    - Accesible desde la pantalla principal o desde la barra superior del mapa. Permite explorar los **22 términos clave originales** en 3 columnas y los **15 términos culturales extendidos**, escuchar su pronunciación/contexto en inglés y leer su explicación en inglés y español.
-
-### 4.2. Modo Docente / Explorador MEP (`MEP Mode`)
-En la esquina superior derecha de la ventana se encuentra el botón **`MEP Mode`** (birrete de graduación), diseñado especialmente para docentes de inglés del MEP, evaluadores de GESPRO y sesiones de aula:
-- **Free Travel (Viaje Libre):** Permite viajar entre las 7 provincias y practicar los `PopQuiz` sin descontar las 5,000 monedas.
-- **Lanzador Directo de los 25 Minijuegos:** Permite abrir instantáneamente cualquiera de los 21 minijuegos oficiales o las 4 actividades culturales rescatadas para demostrarlas en pizarra interactiva o proyector.
-- **Botón `★ Quick Complete` en cada Minijuego:** Ubicado en la barra superior durante la partida, permite completar de inmediato el minijuego actual y acreditar su pieza de estrella durante demostraciones en clase.
-- **Gestión de Monedas y Estrellas:** Botones rápidos para añadir `+5,000 Coins`, desbloquear las `21/21` estrellas (y disparar la secuencia de victoria `GameEnding`), o exportar/importar el progreso del estudiante en un archivo `.json`.
 
 ---
 

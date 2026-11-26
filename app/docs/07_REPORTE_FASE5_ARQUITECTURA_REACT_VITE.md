@@ -22,8 +22,6 @@ En esta **Fase 5** se completó la reconstrucción integral del videojuego educa
    - Al viajar entre provincias en el mapa (`costo real en código: 5,000 monedas`, texto UI original `"You must spend 1000 coins to travel"`), se activa el modal de confirmación y el examen cultural `PopQuiz` con preguntas aleatorias de `popquiz.json`, reproducción de la locución en inglés (`questionAudio`), soporte nativo para selección única (`single`) y selección múltiple (`multiple`), y evaluación exacta `aciertos - errores >= minScore` con los efectos originales (`sfx 36` al aprobar y `sfx 37` al fallar).
 5. **25 Motores Jugables de Minijuegos Regionales (`21` Oficiales + `4` Variantes Culturales Rescatadas):**
    - Cada minijuego cuenta con su **Pantalla `_Intro` Interactiva** (diálogos `Fungus.Say` con retratos de los anfitriones regionales, locución en inglés `.m4a` paso a paso e instrucciones de controles), seguida del **Minijuego Jugable** y la **Pantalla de Resultados (`Well done!`)** que otorga las monedas ganadas y desbloquea la pieza de estrella correspondiente (`starPieceIndex` `0`, `1` o `2`).
-6. **Modo Docente / Explorador MEP (`MEP Mode`):**
-   - Panel de apoyo pedagógico y de pruebas accesible desde cualquier pantalla que permite viajar sin costo entre provincias, lanzar directamente cualquiera de los 25 minijuegos, recargar monedas (`+1,000` / `+5,000`), desbloquear las `21/21` estrellas para verificar la pantalla de victoria final o respaldar partidas en JSON.
 
 ---
 
@@ -60,11 +58,13 @@ c:\xampp\htdocs\costa_rica_puravida_in_many_ways\app\
     │   ├── AudioContext.jsx          # Reproductor global Music_Handler + Sound_Handler + Voiceover
     │   └── GameContext.jsx           # Estado global, economía, 21 estrellas y persistencia localStorage
     └── components/
+        ├── layout/
+        │   └── AppShell.jsx          # App Shell a pantalla completa (Header fijo, Main con scroll selectivo, Footer MEP — GESPRO)
         ├── common/
-        │   ├── TopHudBar.jsx         # Barra superior #479BD6 (Menú, Personaje, Estrellas X/21, Monedas, Audio, MEP Mode)
+        │   ├── TopHudBar.jsx         # Barra superior #479BD6 (Menú, Personaje, Monedas, Audio)
         │   ├── StarMeter.jsx         # Renderizador de estrella de 3 piezas (star_left, star_center, star_right)
         │   ├── FungusDialogBox.jsx   # Motor interactivo de diálogos Fungus.Say con filtro Lisa/Mike y voz .m4a
-        │   └── GlobalModals.jsx      # Modales globales: PauseMenu, CancelGame, GameEnding y TeacherDebugPanel
+        │   └── GlobalModals.jsx      # Modales globales: PauseMenu, CancelGame y GameEnding
         ├── screens/
         │   ├── MainScreen.jsx        # Menú Principal (New Game, Continue, Glossary, Options, Credits)
         │   ├── OnboardingScreens.jsx # NewGameWarning, SelecGenero (Lisa/Mike), SelecScreen y AdventureStart

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Volume2, Play, Sparkles, Compass, X, AlertCircle, BookOpen, Settings, Award } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
 import { useGame } from '../../context/GameContext';
 import { useAudio } from '../../context/AudioContext';
 import provincesData from '../../data/provinces.json';
@@ -10,20 +10,6 @@ import { assetUrl } from '../../utils/assetUrl';
 import StarMeter from '../common/StarMeter';
 import PopQuizModal from './PopQuizModal';
 
-/**
- * Normalized visual positions (% of map container) for the 7 provinces on `sprites/mapa_cr2.png`
- * Derived from the original RectTransform anchoredPositions in level7 (`MapaCostaRica`)
- */
-const PROVINCE_MAP_POSITIONS = {
-  0: { left: '49%', top: '53%' }, // San José (Central Valley)
-  1: { left: '53%', top: '34%' }, // Heredia (North Central)
-  2: { left: '61%', top: '54%' }, // Cartago (East Central Valley)
-  3: { left: '41%', top: '32%' }, // Alajuela (North / Northwest Central)
-  4: { left: '68%', top: '76%' }, // Puntarenas (Pacific Coast & South)
-  5: { left: '22%', top: '31%' }, // Guanacaste (Northwest Peninsula)
-  6: { left: '72%', top: '43%' }  // Limón (Caribbean Coast)
-};
-
 export default function CostaRicaMapScreen() {
   const {
     coins,
@@ -33,12 +19,9 @@ export default function CostaRicaMapScreen() {
     currentLocation,
     setCurrentLocation,
     starsByProvince,
-    totalStarsEarned,
     activeProvinceHub,
     setActiveProvinceHub,
-    launchMinigame,
-    navigateTo,
-    teacherFreeTravel
+    launchMinigame
   } = useGame();
 
   const { playMusic, playSfx, playVoice } = useAudio();
@@ -85,7 +68,7 @@ export default function CostaRicaMapScreen() {
       gameConfig?.economyAndProgression?.travelCostCoins ??
       provincesData.mapModals.confirmRegionChange.actualCoinsDeductedInCode ??
       5000;
-    const requiredCoins = teacherFreeTravel ? 0 : travelCostFromConfig;
+    const requiredCoins = travelCostFromConfig;
 
     if (coins < requiredCoins) {
       playSfx(37); // wrong.m4a
@@ -141,7 +124,7 @@ export default function CostaRicaMapScreen() {
 
   return (
     <div
-      className="relative w-full h-full min-h-[540px] flex flex-col lg:flex-row gap-3 p-3 sm:p-4 select-none overflow-hidden"
+      className="relative w-full h-full flex flex-col p-2 select-none overflow-hidden"
       style={{
         backgroundImage: `url("${assetUrl('sprites/fondo.png')}")`,
         backgroundSize: 'cover',
@@ -149,19 +132,31 @@ export default function CostaRicaMapScreen() {
       }}
     >
       {/* Left / Main Interactive Costa Rica Map Canvas */}
-      <div className="relative flex-1 min-h-[420px] rounded-3xl border-4 border-sky-200/70 bg-[#1a5f8b] shadow-2xl overflow-hidden flex items-center justify-center">
-        {/* Map Image Container */}
-        <div className="relative w-full max-w-[760px] aspect-[1330/1132] mx-auto">
+      <div
+        className="relative flex-1 min-h-0 rounded-3xl border-4 border-sky-200/70 shadow-2xl overflow-hidden flex items-center justify-center"
+        style={{
+          backgroundColor: '#009bdb',
+          containerType: 'size'
+        }}
+      >
+        {/* Map Image Container (749x654 tightly cropped mapa_cr2_clean.png, sized via container query units) */}
+        <div
+          className="relative shrink-0"
+          style={{
+            width: 'min(99cqw, calc(99cqh * 749 / 654))',
+            height: 'min(99cqh, calc(99cqw * 654 / 749))'
+          }}
+        >
           <img
             src={assetUrl(provincesData.mapSprites.costaRicaMap)}
             alt="Map of Costa Rica"
-            className="w-full h-full object-contain drop-shadow-[0_12px_25px_rgba(0,0,0,0.5)]"
+            className="w-full h-full object-fill"
             draggable={false}
           />
 
           {/* 7 Interactive Province Nodes */}
           {provincesData.provinces.map((prov) => {
-            const pos = PROVINCE_MAP_POSITIONS[prov.id] || { left: '50%', top: '50%' };
+            const pos = prov.mapCoordinates?.webMapPosition || { left: '50%', top: '50%' };
             const isCurrent = prov.id === currentLocation;
             const starInfo = starsByProvince[prov.id] || { raw: '000', count: 0 };
 
@@ -213,111 +208,7 @@ export default function CostaRicaMapScreen() {
             );
           })}
         </div>
-
-        {/* Floating Map Legend */}
-        <div className="absolute bottom-3 left-3 right-3 flex flex-wrap items-center justify-between gap-2 bg-sky-950/85 backdrop-blur-md border border-sky-300/40 rounded-2xl px-3.5 py-2 text-xs text-sky-100 shadow-lg">
-          <div className="flex items-center gap-2">
-            <Compass className="w-4 h-4 text-amber-300 shrink-0" />
-            <span>
-              Click <strong className="text-amber-300">{provincesData.provinces[currentLocation]?.nameEn}</strong> to play its 3 minigames, or click another province to travel & answer a PopQuiz!
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => navigateTo('Glosario')}
-              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-sky-800 hover:bg-sky-700 text-white font-bold"
-            >
-              <BookOpen className="w-3.5 h-3.5 text-amber-300" /> Keywords
-            </button>
-            <button
-              type="button"
-              onClick={() => navigateTo('Opciones')}
-              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-sky-800 hover:bg-sky-700 text-white font-bold"
-            >
-              <Settings className="w-3.5 h-3.5 text-sky-300" /> Options
-            </button>
-            <button
-              type="button"
-              onClick={() => navigateTo('Creditos')}
-              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-sky-800 hover:bg-sky-700 text-white font-bold"
-            >
-              <Award className="w-3.5 h-3.5 text-emerald-300" /> Credits
-            </button>
-          </div>
-        </div>
       </div>
-
-      {/* Right Sidebar: 7 Provinces Star Passport & Quick Selector */}
-      <aside className="w-full lg:w-72 bg-sky-950/85 backdrop-blur-md border-2 border-sky-300/50 rounded-3xl p-3.5 flex flex-col justify-between shadow-2xl shrink-0">
-        <div>
-          <div className="flex items-center justify-between border-b border-sky-300/30 pb-2.5 mb-2.5">
-            <div>
-              <h2 className="font-amaranth text-lg font-bold text-amber-300">
-                Costa Rica Passport
-              </h2>
-              <p className="text-[11px] text-sky-200">
-                Collect all 21 star pieces (3 per province)
-              </p>
-            </div>
-            <div className="px-2.5 py-1 rounded-xl bg-amber-400 text-slate-950 font-extrabold text-xs">
-              ★ {totalStarsEarned}/21
-            </div>
-          </div>
-
-          <div className="space-y-1.5 max-h-[340px] lg:max-h-none overflow-y-auto pr-1">
-            {provincesData.provinces.map((prov) => {
-              const isCurrent = prov.id === currentLocation;
-              const starInfo = starsByProvince[prov.id] || { raw: '000', count: 0 };
-
-              return (
-                <button
-                  key={prov.id}
-                  type="button"
-                  onClick={() => handleProvinceClick(prov)}
-                  className={`w-full p-2 rounded-2xl border flex items-center justify-between gap-2 transition ${
-                    isCurrent
-                      ? 'bg-amber-400/20 border-amber-300 text-white shadow'
-                      : 'bg-sky-900/50 hover:bg-sky-800/70 border-sky-300/25 text-sky-100'
-                  }`}
-                >
-                  <div className="flex items-center gap-2.5 min-w-0">
-                    <img
-                      src={assetUrl(prov.coatOfArmsSprite)}
-                      alt={prov.nameEn}
-                      className="w-8 h-8 object-contain shrink-0"
-                    />
-                    <div className="text-left min-w-0">
-                      <div className="font-bold text-sm truncate flex items-center gap-1.5">
-                        <span>{prov.nameEn}</span>
-                        {isCurrent && (
-                          <span className="text-[10px] px-1.5 py-0.2 rounded bg-amber-400 text-slate-950 font-extrabold">
-                            HERE
-                          </span>
-                        )}
-                      </div>
-                      <div className="text-[11px] text-sky-300">
-                        {starInfo.count}/3 Minigames
-                      </div>
-                    </div>
-                  </div>
-
-                  <StarMeter levelStr={starInfo.raw} size="xs" />
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        <button
-          type="button"
-          onClick={() => handleProvinceClick(provincesData.provinces[currentLocation])}
-          className="mt-3 w-full py-2.5 px-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-amaranth text-base font-extrabold shadow-lg flex items-center justify-center gap-2 transition"
-        >
-          <Play className="w-4 h-4 fill-current" />
-          Open {provincesData.provinces[currentLocation]?.nameEn} Minigames
-        </button>
-      </aside>
 
       {/* Modal 1: Confirm Province Travel ("PanelConformarCambioRegion") */}
       {pendingProvince && (
@@ -341,9 +232,7 @@ export default function CostaRicaMapScreen() {
               {provincesData.mapModals.confirmRegionChange.promptText}
             </p>
             <p className="text-xs text-sky-200 bg-sky-950/70 rounded-xl px-3 py-1.5 mb-5">
-              {teacherFreeTravel
-                ? 'Modo Docente MEP Active: Free Travel (0 coins deducted)'
-                : 'Note: Traveling deducts 5,000 coins and launches a PopQuiz question.'}
+              Note: Traveling deducts 5,000 coins and launches a PopQuiz question.
             </p>
 
             <div className="flex items-center justify-center gap-3">

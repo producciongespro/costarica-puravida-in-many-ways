@@ -5,7 +5,7 @@
   "mapSceneName": "MapaCostaRica",
   "mapSprites": {
     "windowBackground": "sprites/fondo.png",
-    "costaRicaMap": "sprites/mapa_cr2.png",
+    "costaRicaMap": "sprites/mapa_cr2_clean.png",
     "starEmptyFrame": "sprites/star_cero.png",
     "starPieceLeft": "sprites/star_left.png",
     "starPieceCenter": "sprites/star_center.png",
@@ -64,7 +64,11 @@
         "defaultPlayerPinPosition": [
           -22,
           42.1
-        ]
+        ],
+        "webMapPosition": {
+          "left": "46%",
+          "top": "47%"
+        }
       },
       "welcomeAudio": {
         "female": {
@@ -153,7 +157,11 @@
         "sizeDelta": [
           58.9,
           53.6
-        ]
+        ],
+        "webMapPosition": {
+          "left": "53%",
+          "top": "25%"
+        }
       },
       "welcomeAudio": {
         "female": {
@@ -242,7 +250,11 @@
         "sizeDelta": [
           50,
           50
-        ]
+        ],
+        "webMapPosition": {
+          "left": "62%",
+          "top": "49%"
+        }
       },
       "welcomeAudio": {
         "female": {
@@ -331,7 +343,11 @@
         "sizeDelta": [
           69.5,
           66.8
-        ]
+        ],
+        "webMapPosition": {
+          "left": "40%",
+          "top": "20%"
+        }
       },
       "welcomeAudio": {
         "female": {
@@ -420,7 +436,11 @@
         "sizeDelta": [
           76.6,
           66.8
-        ]
+        ],
+        "webMapPosition": {
+          "left": "72%",
+          "top": "68%"
+        }
       },
       "welcomeAudio": {
         "female": {
@@ -509,7 +529,11 @@
         "sizeDelta": [
           85.1,
           69.5
-        ]
+        ],
+        "webMapPosition": {
+          "left": "20%",
+          "top": "26%"
+        }
       },
       "welcomeAudio": {
         "female": {
@@ -598,7 +622,11 @@
         "sizeDelta": [
           68.3,
           58.3
-        ]
+        ],
+        "webMapPosition": {
+          "left": "75%",
+          "top": "45%"
+        }
       },
       "welcomeAudio": {
         "female": {

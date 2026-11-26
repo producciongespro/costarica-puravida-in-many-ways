@@ -66,8 +66,6 @@ export function GameProvider({ children }) {
   const [showPauseMenu, setShowPauseMenu] = useState(false);
   const [showCancelGameModal, setShowCancelGameModal] = useState(false);
   const [showEndingModal, setShowEndingModal] = useState(false);
-  const [showTeacherPanel, setShowTeacherPanel] = useState(false);
-  const [teacherFreeTravel, setTeacherFreeTravel] = useState(false);
 
   // Sync to localStorage automatically
   useEffect(() => {
@@ -372,10 +370,6 @@ export function GameProvider({ children }) {
     setShowCancelGameModal,
     showEndingModal,
     setShowEndingModal,
-    showTeacherPanel,
-    setShowTeacherPanel,
-    teacherFreeTravel,
-    setTeacherFreeTravel,
     unlockAllStars,
     exportSaveData,
     importSaveData

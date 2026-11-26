@@ -64,8 +64,7 @@ export default function MinigameRunner() {
     addCoins,
     registerMinigameProgress,
     provinceLevels,
-    returnToMap,
-    teacherFreeTravel
+    returnToMap
   } = useGame();
 
   const { playMusic, playSfx, playVoice, stopVoice } = useAudio();
@@ -440,7 +439,7 @@ export default function MinigameRunner() {
       {/* PHASE 2: ACTIVE PLAYABLE MINIGAME */}
       {phase === 'play' && (
         <div className="relative w-full h-full flex flex-col overflow-hidden">
-          {/* Compact Sub-bar for Instructions, Replay Intro, Restart, and MEP Quick Win */}
+          {/* Compact Sub-bar for Instructions, Replay Intro and Restart */}
           <div className="flex items-center justify-between px-3 py-1 bg-slate-900 border-b border-white/15 text-xs text-white z-20">
             <div className="flex items-center gap-2">
               <span className="font-display text-amber-300">{displayTitle}</span>
@@ -448,20 +447,6 @@ export default function MinigameRunner() {
             </div>
 
             <div className="flex items-center gap-1.5">
-              <button
-                onClick={() =>
-                  handleMinigameComplete({
-                    won: true,
-                    coinsEarned: 1500,
-                    score: 100,
-                    summary: `Completed ${displayTitle} via Quick Demo / MEP Teacher verification!`
-                  })
-                }
-                className="px-2.5 py-0.5 rounded bg-emerald-600/80 hover:bg-emerald-500 text-white font-bold text-[11px] border border-emerald-300/40"
-                title="Complete this minigame and award its Star Piece (MEP Teacher / Reviewer helper)"
-              >
-                ★ Quick Complete
-              </button>
               <button
                 onClick={() => setShowInstructionsModal(true)}
                 className="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 border border-white/20 text-[11px] flex items-center gap-1"

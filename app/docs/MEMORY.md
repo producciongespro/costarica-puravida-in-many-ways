@@ -84,7 +84,7 @@
   - **Componentes Implementados:**
     - `GameContext.jsx` (persistencia en `localStorage` compatible 1:1 con `CRPVMW_*` + Exportar/Importar JSON) y `AudioContext.jsx` (`MusicHandler` 29 pistas, `SoundHandler` 62 efectos y `VoicePlayer` `Fungus.Say`).
     -Las 12 pantallas del sistema (`Main`, `NewGameWarning`, `SelecGenero`, `SelecScreen`, `AdventureStart`, `MapaCostaRica`, `PopQuiz`, `Glosario`, `Opciones`, `Creditos`, `GameEnding`).
-    - Los **25 motores de minijuegos regionales** (`21` oficiales de campaña + `4` variantes culturales/históricas rescatadas) con su pantalla `_Intro` interactiva (`Fungus.Say`), juego activo y modal de resultados (`Well done!`), además del **Modo Docente / Explorador MEP (`MEP Mode`)**.
+    - Los **25 motores de minijuegos regionales** (`21` oficiales de campaña + `4` variantes culturales/históricas rescatadas) con su pantalla `_Intro` interactiva (`Fungus.Say`), juego activo y modal de resultados (`Well done!`).
   - Documentado en: `app/docs/07_REPORTE_FASE5_ARQUITECTURA_REACT_VITE.md`.
 
 ### [2026-11-17] 9. Fase 6 Completada (`qa-documenter`) — Auditoría QA 1:1, Cero Enlaces Rotos y Cierre del Proyecto
@@ -97,6 +97,24 @@
     - **Compilación de producción (`npm.cmd run build`):** Exitosa en `app/dist/` con **0 errores** (`1,604` módulos transformados).
   - Documentado en: `app/docs/08_REPORTE_FASE6_AUDITORIA_QA_Y_MANUAL.md`.
 - **Estado Final del Proyecto:** **COMPLETADO AL 100% (Fases 1 a 6 Cerradas y Certificadas).**
+
+### [2026-11-26] 10. Depuración de Interfaz Principal para Fidelidad 1:1 con el Original
+- Se eliminaron elementos añadidos en la reconstrucción que no existían en la versión original de Unity WebGL (2018):
+  - **Panel derecho *Costa Rica Passport*** y **barra flotante inferior** (*"Click [Provincia] to play..."* + accesos duplicados) en `app/src/components/screens/CostaRicaMapScreen.jsx`, dejando el mapa a ancho completo.
+  - **Barra superior (`TopHudBar.jsx`):** eliminados el contador global `X / 21` y el botón rápido `Keywords` (el glosario sigue accesible desde el Menú Principal, igual que en el original).
+  - **Modo Docente / Explorador MEP (`MEP Mode`)**: eliminado el botón en `TopHudBar.jsx`, el modal `TeacherDebugPanel` en `GlobalModals.jsx`, los estados `showTeacherPanel` / `teacherFreeTravel` en `GameContext.jsx` y el botón `★ Quick Complete` en `MinigameRunner.jsx`.
+- Se depuró la documentación en `app/docs/07_REPORTE_FASE5_ARQUITECTURA_REACT_VITE.md`, `app/docs/08_REPORTE_FASE6_AUDITORIA_QA_Y_MANUAL.md` y este archivo `MEMORY.md`.
+
+### [2026-11-26] 11. Implementación de App Shell Institucional (`AppShell.jsx`)
+- Se implementó `app/src/components/layout/AppShell.jsx` a pantalla completa (`h-dvh w-screen overflow-hidden flex flex-col`):
+  - **Encabezado fijo (`TopHudBar.jsx`):** Contextual (en `MapaCostaRica` y `Minigame` muestra menú hamburguesa, personaje/provincia, monedas, audio y salir; en pantallas de inicio/sistema muestra identidad y control de audio).
+  - **Área central (`<main>`):** Scroll selectivo (`overflow-hidden` en `MapaCostaRica` y `Minigame`, `overflow-y-auto` en pantallas informativas).
+  - **Pie de página fijo y compacto (`h-8`):** `Ministerio de Educación Pública — GESPRO`.
+- Se limpió el botón flotante residual de `MEP Mode` en `app/src/App.jsx`.
+
+### [2026-11-26] 12. Secuencia de Inicio 1:1 (Splash Screen 4s + Menú Principal)
+- Se creó `app/src/components/screens/SplashScreen.jsx` con fondo negro (`#000000`), el logo original `textures/Logo Costa Rica Loading B.png` y animación `splashZoom` de **4 segundos** antes de mostrar el menú principal.
+- Se limpió `app/src/components/screens/MainScreen.jsx` para igualar 1:1 al original: solo fondo `sprites/fondo.png`, logo central `sprites/Logo Costa Rica Final Grande.png` y los dos botones `New Game` y `Continue` (`sprites/boton_2.png`), eliminando logo MEP superior, botón de Modo Docente, barra de progreso guardado y botones inferiores de Glosario/Opciones/Créditos.
 
 ---
 

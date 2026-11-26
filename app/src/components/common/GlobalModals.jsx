@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import confetti from 'canvas-confetti';
-import { X, Download, Upload, Coins, Sparkles, CheckCircle2, RotateCcw, Play } from 'lucide-react';
+import { X, Sparkles } from 'lucide-react';
 import { useGame } from '../../context/GameContext';
 import { useAudio } from '../../context/AudioContext';
 import provincesData from '../../data/provinces.json';
-import minigamesData from '../../data/minigames.json';
 import { assetUrl } from '../../utils/assetUrl';
 import StarMeter from './StarMeter';
 
@@ -16,31 +15,11 @@ export default function GlobalModals() {
     setShowCancelGameModal,
     showEndingModal,
     setShowEndingModal,
-    showTeacherPanel,
-    setShowTeacherPanel,
     navigateTo,
-    returnToMap,
-    coins,
-    addCoins,
-    setCoins,
-    characterId,
-    selectCharacter,
-    currentLocation,
-    setCurrentLocation,
-    starsByProvince,
-    registerMinigameProgress,
-    unlockAllStars,
-    resetNewGame,
-    launchMinigame,
-    teacherFreeTravel,
-    setTeacherFreeTravel,
-    exportSaveData,
-    importSaveData
+    returnToMap
   } = useGame();
 
   const { playSfx, playMusic } = useAudio();
-  const [importText, setImportText] = useState('');
-  const [importStatus, setImportStatus] = useState(null);
 
   // Trigger victory music (track 26) and confetti when GameEndingModal opens
   useEffect(() => {
@@ -57,29 +36,6 @@ export default function GlobalModals() {
       }
     }
   }, [showEndingModal, playMusic]);
-
-  const handleExportDownload = () => {
-    const json = exportSaveData();
-    const blob = new Blob([json], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `costa_rica_puravida_save_${new Date().toISOString().slice(0, 10)}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
-  };
-
-  const handleImportSubmit = () => {
-    if (!importText.trim()) return;
-    const ok = importSaveData(importText);
-    setImportStatus(ok ? 'Save data imported successfully!' : 'Invalid JSON format.');
-    if (ok) {
-      playSfx(36);
-      setTimeout(() => setImportStatus(null), 3000);
-    } else {
-      playSfx(37);
-    }
-  };
 
   return (
     <>
@@ -293,283 +249,6 @@ export default function GlobalModals() {
               >
                 Keep Exploring Map
               </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* 4. MEP Teacher / QA Explorer Panel */}
-      {showTeacherPanel && (
-        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6">
-          <div className="w-full max-w-4xl max-h-[90vh] flex flex-col rounded-3xl border-2 border-amber-400 bg-slate-900 text-white shadow-2xl overflow-hidden">
-            <div className="px-5 py-3.5 bg-slate-800 border-b border-slate-700 flex items-center justify-between">
-              <div>
-                <h3 className="text-lg sm:text-xl font-bold text-amber-300 flex items-center gap-2">
-                  <span>Modo Explorador / Docente MEP</span>
-                  <span className="text-xs px-2 py-0.5 rounded bg-amber-400/20 text-amber-200 border border-amber-400/40">
-                    QA & Classroom Tool
-                  </span>
-                </h3>
-                <p className="text-xs text-slate-300">
-                  Test any province or minigame immediately, manage coins/stars, or export/import student progress in JSON.
-                </p>
-              </div>
-              <button
-                type="button"
-                onClick={() => setShowTeacherPanel(false)}
-                className="w-8 h-8 rounded-lg bg-slate-700 hover:bg-rose-600 flex items-center justify-center transition"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            <div className="p-5 overflow-y-auto space-y-6 text-sm">
-              {/* Quick Controls Row */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div className="p-3.5 rounded-2xl bg-slate-800/90 border border-slate-700">
-                  <div className="text-xs uppercase font-bold text-slate-400 mb-2">
-                    Economy & Coins ({coins.toLocaleString()})
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <button
-                      type="button"
-                      onClick={() => addCoins(5000)}
-                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs"
-                    >
-                      <Coins className="w-3.5 h-3.5" /> +5,000 Coins
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setCoins(50000)}
-                      className="px-3 py-1.5 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-semibold text-xs"
-                    >
-                      Set 50,000
-                    </button>
-                  </div>
-                </div>
-
-                <div className="p-3.5 rounded-2xl bg-slate-800/90 border border-slate-700">
-                  <div className="text-xs uppercase font-bold text-slate-400 mb-2">
-                    Character & Travel Mode
-                  </div>
-                  <div className="flex flex-wrap items-center gap-2">
-                    <button
-                      type="button"
-                      onClick={() => selectCharacter(characterId === 'lisa' ? 'mike' : 'lisa')}
-                      className="px-3 py-1.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs"
-                    >
-                      Switch: {characterId === 'lisa' ? 'Lisa (Girl)' : 'Mike (Boy)'}
-                    </button>
-                    <label className="inline-flex items-center gap-1.5 text-xs cursor-pointer select-none">
-                      <input
-                        type="checkbox"
-                        checked={teacherFreeTravel}
-                        onChange={(e) => setTeacherFreeTravel(e.target.checked)}
-                        className="rounded text-amber-400"
-                      />
-                      <span>Free Travel (Skip 5000 fee)</span>
-                    </label>
-                  </div>
-                </div>
-
-                <div className="p-3.5 rounded-2xl bg-slate-800/90 border border-slate-700">
-                  <div className="text-xs uppercase font-bold text-slate-400 mb-2">
-                    Global Progression
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        playSfx(36);
-                        unlockAllStars();
-                      }}
-                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs"
-                    >
-                      <CheckCircle2 className="w-3.5 h-3.5" /> Unlock 21/21 Stars & Ending
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        resetNewGame();
-                        playSfx(39);
-                      }}
-                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-rose-600/80 hover:bg-rose-600 text-white font-bold text-xs"
-                    >
-                      <RotateCcw className="w-3.5 h-3.5" /> Reset Save
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Direct Launcher for All 7 Provinces & 21 Minigames */}
-              <div>
-                <h4 className="font-bold text-amber-300 mb-2">
-                  7 Provinces & 21 Official Minigames (Direct Launch & Star Toggles)
-                </h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {provincesData.provinces.map((prov) => {
-                    const provStars = starsByProvince[prov.id]?.pieces || [false, false, false];
-                    return (
-                      <div
-                        key={prov.id}
-                        className="p-3 rounded-2xl bg-slate-800/70 border border-slate-700 flex flex-col justify-between gap-2"
-                      >
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-2">
-                            <img
-                              src={assetUrl(prov.coatOfArmsSprite)}
-                              alt={prov.nameEn}
-                              className="w-7 h-7 object-contain"
-                            />
-                            <span className="font-bold text-white">{prov.nameEn}</span>
-                            {currentLocation === prov.id && (
-                              <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
-                                Current
-                              </span>
-                            )}
-                          </div>
-                          <button
-                            type="button"
-                            onClick={() => {
-                              setCurrentLocation(prov.id);
-                              navigateTo('MapaCostaRica');
-                              setShowTeacherPanel(false);
-                            }}
-                            className="text-xs px-2.5 py-1 rounded-lg bg-sky-700 hover:bg-sky-600 text-white font-semibold"
-                          >
-                            Teleport Here
-                          </button>
-                        </div>
-
-                        <div className="space-y-1.5 mt-1">
-                          {prov.minigames.map((mg) => {
-                            const hasStar = provStars[mg.starPieceIndex];
-                            return (
-                              <div
-                                key={mg.id}
-                                className="flex items-center justify-between gap-2 bg-slate-900/80 px-2.5 py-1.5 rounded-xl border border-slate-700/80"
-                              >
-                                <div className="flex items-center gap-2 min-w-0">
-                                  <button
-                                    type="button"
-                                    onClick={() =>
-                                      registerMinigameProgress(
-                                        prov.id,
-                                        mg.starPieceIndex,
-                                        hasStar ? '0' : '1'
-                                      )
-                                    }
-                                    title="Toggle Star Piece"
-                                    className={`w-5 h-5 rounded flex items-center justify-center text-xs font-bold ${
-                                      hasStar
-                                        ? 'bg-amber-400 text-slate-950'
-                                        : 'bg-slate-700 text-slate-400'
-                                    }`}
-                                  >
-                                    ★
-                                  </button>
-                                  <span className="truncate text-xs font-medium text-slate-200">
-                                    {mg.buttonLabel}
-                                  </span>
-                                </div>
-                                <div className="flex items-center gap-1 shrink-0">
-                                  <button
-                                    type="button"
-                                    onClick={() => {
-                                      setCurrentLocation(prov.id);
-                                      launchMinigame(mg.id, false);
-                                      setShowTeacherPanel(false);
-                                    }}
-                                    className="px-2 py-1 rounded bg-sky-600/80 hover:bg-sky-500 text-[11px] font-semibold"
-                                  >
-                                    Intro
-                                  </button>
-                                  <button
-                                    type="button"
-                                    onClick={() => {
-                                      setCurrentLocation(prov.id);
-                                      launchMinigame(mg.id, true);
-                                      setShowTeacherPanel(false);
-                                    }}
-                                    className="inline-flex items-center gap-0.5 px-2 py-1 rounded bg-emerald-600 hover:bg-emerald-500 text-[11px] font-bold"
-                                  >
-                                    <Play className="w-3 h-3" /> Play
-                                  </button>
-                                </div>
-                              </div>
-                            );
-                          })}
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* 4 Rescued Cultural / Historical Bonus Minigames */}
-              <div>
-                <h4 className="font-bold text-amber-300 mb-2">
-                  4 Bonus Cultural & Historical Minigames (Rescued from Assets & C# Metadata)
-                </h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2.5">
-                  {(minigamesData.legacyAndSiblingMinigames || []).map((bmg) => (
-                    <div
-                      key={bmg.id}
-                      className="p-3 rounded-2xl bg-slate-800/80 border border-amber-400/30 flex flex-col justify-between gap-2"
-                    >
-                      <div>
-                        <span className="text-[10px] uppercase tracking-wider font-bold text-amber-300">
-                          {bmg.provinceName}
-                        </span>
-                        <div className="font-bold text-xs text-white mt-0.5">{bmg.titleEn}</div>
-                      </div>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          launchMinigame(bmg.id, true);
-                          setShowTeacherPanel(false);
-                        }}
-                        className="w-full py-1.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs"
-                      >
-                        Play Bonus Activity
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* JSON Save Export / Import */}
-              <div className="p-4 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-3">
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="font-bold text-amber-300">
-                    LocalStorage Persistence (CRPVMW_*) — Export / Import JSON
-                  </span>
-                  <button
-                    type="button"
-                    onClick={handleExportDownload}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs"
-                  >
-                    <Download className="w-3.5 h-3.5" /> Download Save (.json)
-                  </button>
-                </div>
-                <div className="flex gap-2">
-                  <input
-                    type="text"
-                    value={importText}
-                    onChange={(e) => setImportText(e.target.value)}
-                    placeholder='Paste exported JSON save here (e.g. {"CRPVMW_monedas":12000,...})'
-                    className="flex-1 px-3 py-1.5 rounded-xl bg-slate-950 border border-slate-700 text-xs text-white"
-                  />
-                  <button
-                    type="button"
-                    onClick={handleImportSubmit}
-                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs"
-                  >
-                    <Upload className="w-3.5 h-3.5" /> Import JSON
-                  </button>
-                </div>
-                {importStatus && <p className="text-xs text-amber-300 font-semibold">{importStatus}</p>}
-              </div>
             </div>
           </div>
         </div>
